@@ -9,6 +9,7 @@ const HomepageProjectContainer = props => (
         </div>
         <div>
             { props.project.icon }
+            { props.project.iconAlt }
         </div>
         <div>
             { props.project.summary }
