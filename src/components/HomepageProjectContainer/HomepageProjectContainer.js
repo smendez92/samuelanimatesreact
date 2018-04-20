@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react";
+import { Link } from "react-router-dom";
 import "./HomepageProjectContainer.css";
 
 const HomepageProjectContainer = props => (
@@ -20,11 +20,11 @@ const HomepageProjectContainer = props => (
                         {result.icon}
                     </div>
                     <div>
-                        
+                        {result.location === "internal" &&
+                            <Link to={ result.exactPath }>{ result.title }</Link>
+                        }
                         {result.location === "external" &&
-                            <div>
-                                <a href={result.url} target="_blank">{ result.title }</a>
-                            </div>
+                            <a href={result.url} target="_blank">{ result.title }</a>
                         }
                     </div>
                 </div>
