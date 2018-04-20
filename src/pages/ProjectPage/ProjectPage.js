@@ -10,4 +10,5 @@ const ProjectPage = () => (
       </Switch>
     </div>
 );
+
 export default ProjectPage;
