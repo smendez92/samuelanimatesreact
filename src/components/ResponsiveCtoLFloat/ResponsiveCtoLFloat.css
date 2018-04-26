@@ -1,0 +1,12 @@
+@media screen and (max-width:849px){
+	.ResponsiveCtoLFloat{
+		margin: auto;
+	}
+}
+
+
+@media screen and (min-width: 850px){
+	.ResponsiveCtoLFloat{
+		float: left;
+	}
+}

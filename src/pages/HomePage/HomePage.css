@@ -1,9 +1,39 @@
+.display-inline{
+	display: inline;
+}
+.float-left{
+	float: left;
+}
+.height-2em{
+	height: 2em;
+}
+.height-3em{
+	height: 3em;
+}
 .margin-auto{
 	margin: auto;
+}
+.max-width-45em{
+	max-width: 45em;
+}
+.padding-left-p25em{
+	padding-left: .25em;
+}
+.padding-right-p25em{
+	padding-right: .25em;
+}
+.padding-top-1em{
+	padding-top: 1em;
 }
 .text-center{
 	text-align: center;
 }
+.width-10pc{
+	width: 10%;
+}
 .width-85pc{
 	width: 85%;
+}
+.width-100pc{
+	width: 100%;
 }

@@ -10,8 +10,20 @@
 .border-width-2px-0-0-0{
 	border-width: 2px 0 0 0;
 }
+.clear-both{
+	clear: both;
+}
 .color-black{
 	color: rgb(5,5,5);
+}
+.display-inline-block{
+	display: inline-block;
+}
+.float-left{
+	float: left;
+}
+.margin-auto{
+	margin: auto;
 }
 .padding-T-1p5em{
 	padding-top: 1.5em;

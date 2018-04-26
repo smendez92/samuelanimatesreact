@@ -1,0 +1,33 @@
+.bg-242-242-242{
+	background-color: rgb(242,242,242);
+}
+.border-color-rgba-150-150-150-p2{
+	border-color: rgba(150,150,150,0.2);
+}
+.border-top-2px{
+	border-top: 2px;
+}
+.border-style-solid{
+	border-style: solid;
+}
+.clear-both{
+	clear: both;
+}
+.font-size-p75em{
+	font-size: 0.75em;
+}
+.margin-auto{
+	margin: auto;
+}
+.padding-left-p5em{
+	padding-left: .5em;
+}
+.padding-right-p5em{
+	padding-right: .5em;
+}
+.padding-top-p5em{
+	padding-top: 0.5em;
+}
+.width-90pc{
+	width: 90%;
+}

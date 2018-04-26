@@ -4,7 +4,122 @@ import HomepageProjectsSection from '../../components/HomepageProjectsSection';
 
 class HomePage extends Component {
   state = { 
-    projectSections: [
+    highlightsSection: [
+		{
+			"title": "10 Days in Saigon",
+			"description": "A 10-week web series documenting wheelchair travel in Ho Chi Minh City, Vietnam.",
+			"icon": "./assets/images/homepageIcons/homepage-icon-saigon.svg",
+			"iconAlt": "'10 Days' logo: three overlayed Accessible Icons, suggesting fast forward movement.",
+			"projectPagePath": "/projects/saigon",
+			"links": [
+				{
+					"location": "internal",
+					"exactPath": "/projects/saigon",
+					"componentPage": "SaigonProject",
+					"title": "'10 Days' Overview Page",
+					"icon": "page",
+				},
+				{
+					"location": "external",
+					"title": "'10 Days' Trailer on Facebook",
+					"icon": "video",
+					"url": "https://www.facebook.com/wearemuui/videos/1834490626823232/"
+				},
+				{
+					"location": "external",
+					"title": "'10 Days' Google Map",
+					"icon": "map",
+					"url": "https://www.google.com/maps/d/viewer?mid=1msCQD_ab_Lz6mLz80wyu1qHXCBk&hl=en_US&ll=10.798291852220926%2C106.67387433398437&z=13"
+				},
+				{
+					"location": "external",
+					"title": "'10 Days' Article",
+					"icon": "",
+					"url": "https://www.giantrobot.media/stories/2017/5/30/muui"
+				}
+			]
+		},
+		{
+			"title": "Wheelchair Travel A11Y Wiki",
+			"description": "In-progress demo of a wheelchair travel accessibility (A11Y) wiki.",
+			"icon": "./assets/images/homepageIcons/homepage-icon-wiki.svg",
+			"iconAlt": "'A11Y Wiki' logo: a spinning gear/flower made up of geometric shapes.",
+			"projectPagePath": "/projects/wiki",
+			"links": [
+				{
+					"location": "internal",
+					"exactPath": "/projects/wiki",
+					"componentPage": "WikiProject",
+					"title": "'A11Y Wiki' Overview Page",
+					"icon": "page",
+					
+				},
+				{
+					"location": "external",
+					"title": "'A11Y Wiki' GitHub Repo",
+					"url": "https://github.com/smendez92/wheelchairWiki",
+					"icon": "code"
+				},
+				{
+					"location": "external",
+					"title": "'A11Y Wiki' Google Slides Presentation",
+					"url": "https://docs.google.com/presentation/d/e/2PACX-1vSHgkq7e-YyAYJNcxFAidPSJn6Cho9bl-xoMKEzgYgUIz3cC0RQ8colsHKmRzDYNjA2iLB6hDlDOKXO/pub?start=false&loop=false&delayms=3000",
+					"icon": "slides"
+				},
+				{
+					"location": "external",
+					"title": "'A11Y Wiki' Demo on Heroku",
+					"url": "https://wheelchairtravelwiki.herokuapp.com",
+					"icon": ""
+				}
+			]
+		},
+		{
+			"title": "A Bodega",
+			"description": "An experimental documentary; an asset-based look at health equity, made with ingredients from a bodega in Lawrence, MA.",
+			"icon": "./assets/images/homepageIcons/homepage-icon-bodega.svg",
+			"iconAlt": "'A Bodega' cartoon logo: a frying pan.",
+			"projectPagePath": "/projects/bodega",
+			"links": [
+				{
+					"location": "internal",
+					"exactPath": "/projects/bodega",
+					"componentPage": "BodegaProject",
+					"title": "'A Bodega' Overview Page",
+					"icon": "page"
+				},
+				{
+					"location": "external",
+					"title": "'A Bodega' Film on Vimeo",
+					"url": "https://vimeo.com/91566613",
+					"icon": "film"
+				}
+			]
+		}
+	],
+	newsitems: [
+		{
+			"date": "2017 Dec",
+			"update": "'By Foot: Busan and the Sea' screened at Chinh India Kids Film Festival in New Delhi, India."
+		},
+		{
+			"date": "2017 Dec",
+			"update": "'A Bodega' selected for inclusion in the National Academy of Medicine's Visualizing Health Equity project. The film was included in a pop-up gallery, and I was personally invited to speak at a panel event in Washington DC."
+		},
+		{
+			"date": "2017 Oct",
+			"update": "'By Foot: Busan and the Sea' won the Exceptional Artistry award for animation at the Official Latino Short Film Festival in New York City."
+		},
+		{
+			"date": "2017 Oct",
+			"update": "'10 Days in Saigon' was nominated for Best Travel Web Series and screened in Limassol, Cyprus, as part of the TRAVEL FilmFest."
+		},
+		{
+			"date": "2017 Sep",
+			"update": "'A Bodega' screened in three Chicago parks as part of the Chicago Onscreen program by the Chicago Park District."
+		}
+	],
+	projectSections: [
 		{
 			"title": "ANIMATED FILMS",
 			"id": "animation",
@@ -211,8 +326,8 @@ class HomePage extends Component {
 			"projects": [
 				{
 					"title": "AR-Tarot",
-					"icon": "./assets/images/homepage-icon-tarot.svg",
-					"iconAlt": "AR-Tarot cartoon logo: 8-pointed star.",
+					"icon": "./assets/images/homepageIcons/homepage-icon-tarot.svg",
+					"iconAlt": "AR-Tarot cartoon logo: 8-pointed star circled by 8 smaller stars.",
 					"description": "An online tarot reading utilizing A-frame to embed an augmented reality display.",
 					"projectPagePath": "/projects/tarot",
 					"links": [
@@ -239,7 +354,7 @@ class HomePage extends Component {
 				},
 				{
 					"title": "Everything But Apples",
-					"icon": "./assets/images/homepage-icon-apples.svg",
+					"icon": "./assets/images/homepageIcons/homepage-icon-apples.svg",
 					"iconAlt": "'Apples' logo: the letters E and B overlayed on an apple outline.",
 					"description": "A multiplayer web-enabled party game; a social-digital version of Apples to Apples.",
 					"projectPagePath": "/projects/apples",
@@ -457,17 +572,33 @@ class HomePage extends Component {
 
   render() {
     return (
-      <div className="margin-auto width-85pc">
-        <div className="text-center">
-			<h1>SAMUEL R. MENDEZ</h1>
+		<div>
+			<header className="margin-auto padding-top-1em text-center width-85pc">
+					<img alt="Samuel Animates" src="./assets/images/branding/logo.svg" className="display-inline height-2em padding-left-p25em padding-right-p25em"/>
+					<h1 className="display-inline padding-left-p25em padding-right-p25em">SAMUEL R. MENDEZ</h1>
+			</header>
+			<main className="margin-auto max-width-45em width-85pc">
+				<HomepageProjectsSection
+					title = "HIGHLIGHTED PROJECTS"
+					projects = { this.state.highlightsSection }
+				/>
+				<section className="font-Assistant">
+					<ul class="display-block list-style-position-outside">
+						{ this.state.newsitems.map(newsItem =>
+							<li class="display-block text-indent-neg1p7em margin-bottom-1em margin-left-1p7em">
+								<span class="font-weight-600">{ newsItem.update }:</span> { newsItem.update }
+							</li>
+						)}
+					</ul>
+				</section>
+				{ this.state.projectSections.map(projectSection =>
+					<HomepageProjectsSection
+						title = { projectSection.title}
+						projects = { projectSection.projects }
+					/>
+				)}
+			</main>
 		</div>
-		{ this.state.projectSections.map(projectSection =>
-			<HomepageProjectsSection
-				title = { projectSection.title}
-				projects = { projectSection.projects }
-			/>
-		)}
-      </div>
     );
   };
 }
