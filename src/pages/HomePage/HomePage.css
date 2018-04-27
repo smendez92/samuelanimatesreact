@@ -10,6 +10,10 @@
 .height-3em{
 	height: 3em;
 }
+.homepage-background-gradient{
+	background: rgb(250, 250, 250);
+	background: linear-gradient(to bottom, rgb(250, 250, 250) 0%, #fffcfc 7%, #e3f0ff 17%, #fcffe0 43%, #fde9f3 69%, #fcffd0 95%, #f8ff8f 100%);	
+}
 .margin-auto{
 	margin: auto;
 }

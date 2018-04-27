@@ -1,12 +1,12 @@
+.height-5em{
+	height: 5em;
+}
 .margin-auto{
 	margin: auto;
 }
-.max-width-200px{
-	max-width: 200px;
+.max-width-100pc{
+	max-width: 100%;
 }
-.min-width-50px{
-	min-width: 50px;
-}
-.width-6em{
-	width: 6em;
+.width-auto{
+	width: auto;
 }

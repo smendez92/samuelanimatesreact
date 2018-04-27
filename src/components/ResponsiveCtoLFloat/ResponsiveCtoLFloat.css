@@ -1,11 +1,15 @@
-@media screen and (max-width:849px){
+.display-inline-block{
+	display: inline-block;
+}
+
+@media screen and (max-width:699px){
 	.ResponsiveCtoLFloat{
+		display: block !important;
 		margin: auto;
 	}
 }
 
-
-@media screen and (min-width: 850px){
+@media screen and (min-width: 700px){
 	.ResponsiveCtoLFloat{
 		float: left;
 	}

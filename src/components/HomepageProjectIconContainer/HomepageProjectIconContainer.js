@@ -3,7 +3,7 @@ import "./HomepageProjectIconContainer.css";
 import HomepageProjectIcon from "../HomepageProjectIcon";
 
 const HomepageProjectIconContainer = props => (
-	<div className="max-width-200px margin-auto width-6em">
+	<div className="height-5em margin-auto max-width-100pc width-auto">
 		<HomepageProjectIcon
 			icon = { props.icon }
 			iconAlt = { props.iconAlt }

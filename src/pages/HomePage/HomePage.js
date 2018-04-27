@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './HomePage.css';
 import HomepageProjectsSection from '../../components/HomepageProjectsSection';
+import UnorderedBulletlessList from '../../components/UnorderedBulletlessList';
 
 class HomePage extends Component {
   state = { 
@@ -34,7 +35,7 @@ class HomePage extends Component {
 				{
 					"location": "external",
 					"title": "'10 Days' Article",
-					"icon": "",
+					"icon": "website",
 					"url": "https://www.giantrobot.media/stories/2017/5/30/muui"
 				}
 			]
@@ -70,7 +71,7 @@ class HomePage extends Component {
 					"location": "external",
 					"title": "'A11Y Wiki' Demo on Heroku",
 					"url": "https://wheelchairtravelwiki.herokuapp.com",
-					"icon": ""
+					"icon": "website"
 				}
 			]
 		},
@@ -97,26 +98,26 @@ class HomePage extends Component {
 			]
 		}
 	],
-	newsitems: [
+	newsItems: [
 		{
-			"date": "2017 Dec",
-			"update": "'By Foot: Busan and the Sea' screened at Chinh India Kids Film Festival in New Delhi, India."
+			"lead": "2017 Dec",
+			"body": "'By Foot: Busan and the Sea' screened at Chinh India Kids Film Festival in New Delhi, India."
 		},
 		{
-			"date": "2017 Dec",
-			"update": "'A Bodega' selected for inclusion in the National Academy of Medicine's Visualizing Health Equity project. The film was included in a pop-up gallery, and I was personally invited to speak at a panel event in Washington DC."
+			"lead": "2017 Dec",
+			"body": "'A Bodega' selected for inclusion in the National Academy of Medicine's Visualizing Health Equity project. The film was included in a pop-up gallery, and I was personally invited to speak at a panel event in Washington DC."
 		},
 		{
-			"date": "2017 Oct",
-			"update": "'By Foot: Busan and the Sea' won the Exceptional Artistry award for animation at the Official Latino Short Film Festival in New York City."
+			"lead": "2017 Oct",
+			"body": "'By Foot: Busan and the Sea' won the Exceptional Artistry award for animation at the Official Latino Short Film Festival in New York City."
 		},
 		{
-			"date": "2017 Oct",
-			"update": "'10 Days in Saigon' was nominated for Best Travel Web Series and screened in Limassol, Cyprus, as part of the TRAVEL FilmFest."
+			"lead": "2017 Oct",
+			"body": "'10 Days in Saigon' was nominated for Best Travel Web Series and screened in Limassol, Cyprus, as part of the TRAVEL FilmFest."
 		},
 		{
-			"date": "2017 Sep",
-			"update": "'A Bodega' screened in three Chicago parks as part of the Chicago Onscreen program by the Chicago Park District."
+			"lead": "2017 Sep",
+			"body": "'A Bodega' screened in three Chicago parks as part of the Chicago Onscreen program by the Chicago Park District."
 		}
 	],
 	projectSections: [
@@ -187,7 +188,7 @@ class HomePage extends Component {
 							"location": "external",
 							"title": "'Persefone's Breakfast' Film on Vimeo",
 							"url": "http://www.vimeo.com/134973465",
-							"icon": "Film",
+							"icon": "film",
 							
 						}
 					]
@@ -210,7 +211,7 @@ class HomePage extends Component {
 							"location": "external",
 							"title": "'Yuca' Film on Vimeo",
 							"url": "http://www.vimeo.com/95826024",
-							"icon": "Film"
+							"icon": "film"
 						}
 					]
 				},
@@ -291,7 +292,7 @@ class HomePage extends Component {
 						{
 							"location": "external",
 							"title": "Research Article on BMC Public Healt",
-							"icon": "",
+							"icon": "website",
 							"url": "https://bmcpublichealth.biomedcentral.com/articles/10.1186/1471-2458-13-1129"
 						}
 					]
@@ -347,7 +348,7 @@ class HomePage extends Component {
 						{
 							"location": "external",
 							"title": "'AR-Tarot' Demo on GitHub Pages",
-							"icon": "",
+							"icon": "website",
 							"url": "https://smendez92.github.io/AR-tarot/index"
 						}
 					]
@@ -375,7 +376,7 @@ class HomePage extends Component {
 						{
 							"location": "external",
 							"title": "'Apples' Demo on Heroku",
-							"icon": "",
+							"icon": "website",
 							"url": "https://everythingbutapples.herokuapp.com"
 						}
 					]
@@ -403,7 +404,7 @@ class HomePage extends Component {
 						{
 							"location": "external",
 							"title": "GiftPitch GitHub Repo",
-							"icon": "",
+							"icon": "code",
 							"url": "https://github.com/jmoc1181/GiftProject"
 						}
 					]
@@ -459,7 +460,7 @@ class HomePage extends Component {
 						{
 							"location": "external",
 							"title": "'Artemis I' Fundraising Campaign",
-							"icon": "",
+							"icon": "website",
 							"url": "https://www.generosity.com/education-fundraising/experience-the-2017-eclipse-with-us-artemis-i"
 						}
 					]
@@ -521,7 +522,7 @@ class HomePage extends Component {
 						{
 							"location": "external",
 							"title": "Teeny' Fundraising Campaign",
-							"icon": "",
+							"icon": "website",
 							"url": "https://www.kickstarter.com/projects/849732009/teeny-artisan-coin-holders-for-your-change-and-ess"
 						}
 					]
@@ -572,7 +573,7 @@ class HomePage extends Component {
 
   render() {
     return (
-		<div>
+		<div className="homepage-background-gradient">
 			<header className="margin-auto padding-top-1em text-center width-85pc">
 					<img alt="Samuel Animates" src="./assets/images/branding/logo.svg" className="display-inline height-2em padding-left-p25em padding-right-p25em"/>
 					<h1 className="display-inline padding-left-p25em padding-right-p25em">SAMUEL R. MENDEZ</h1>
@@ -583,13 +584,9 @@ class HomePage extends Component {
 					projects = { this.state.highlightsSection }
 				/>
 				<section className="font-Assistant">
-					<ul class="display-block list-style-position-outside">
-						{ this.state.newsitems.map(newsItem =>
-							<li class="display-block text-indent-neg1p7em margin-bottom-1em margin-left-1p7em">
-								<span class="font-weight-600">{ newsItem.update }:</span> { newsItem.update }
-							</li>
-						)}
-					</ul>
+					<UnorderedBulletlessList
+						listItems = { this.state.newsItems }
+					/>
 				</section>
 				{ this.state.projectSections.map(projectSection =>
 					<HomepageProjectsSection
