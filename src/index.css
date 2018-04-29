@@ -52,8 +52,9 @@ textarea {
 [hidden] {
 	display: none;
 }
+/*! End normalize.css */
 
-/*!   */
+/* Custom site-wide styles  */
 * {
 	box-sizing: border-box;
 }
@@ -85,4 +86,8 @@ h3 {
 }
 .font-Overpass{
 	font-family: 'Overpass Mono', monospace;
+}
+p{
+	margin: 0;
+	padding: 0;
 }

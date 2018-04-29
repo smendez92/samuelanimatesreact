@@ -2,10 +2,46 @@ import React, { Component } from 'react';
 import './HomePage.css';
 import HomepageProjectsSection from '../../components/HomepageProjectsSection';
 import UnorderedBulletlessList from '../../components/UnorderedBulletlessList';
+import GenericFloatingSection from '../../components/GenericFloatingSection';
+import SheerWhiteContainer from '../../components/SheerWhiteContainer';
+import HomepageProjectLinksContainer from '../../components/HomepageProjectLinksContainer';
+import ResponsiveCtoLFloat from '../../components/ResponsiveCtoLFloat';
 
 class HomePage extends Component {
   state = { 
-    highlightsSection: [
+	aboutMeSection:{
+		quote: "I could trace back about 80% of my humor to specific SpongeBob episodes.",
+		blurb: "I make animations. I am a community-based researcher. And I do front end web development, with an eye on web accessibility. I see the privilege of having chances to gain these skills; I want use these chances to make the spaces I occupy more accessible to a wider range of people.",
+		detailsLead: "Interests",
+		detailsBody: "community-based research, social determinants of health, accessibility, digital documentary.",
+		links: [
+			{
+				"location": "external",
+				"title": "My CV as a Published Google Doc",
+				"icon": "document",
+				"url": "https://docs.google.com/document/d/e/2PACX-1vSMS4XleOQlHUDp5mbn00Z29u8Pbg3EhHyVDzDJag1cWMi6uTh6vCOnqk6BYG7L16BAlchdHuvuq5zb/pub"
+			},
+			{
+				"location": "external",
+				"title": "My Vimeo Profile",
+				"icon": "video",
+				"url": "https://www.vimeo.com/user15152945"
+			},
+			{
+				"location": "external",
+				"title": "My GitHub Profile",
+				"icon": "code",
+				"url": "https://github.com/smendez92"
+			},
+			{
+				"location": "external",
+				"title": "My LinkedIn Profile",
+				"icon": "",
+				"url": "https://www.linkedin.com/in/samuel-r-mendez/"
+			},
+		]
+	},
+	highlightsSection: [
 		{
 			"title": "10 Days in Saigon",
 			"description": "A 10-week web series documenting wheelchair travel in Ho Chi Minh City, Vietnam.",
@@ -568,7 +604,9 @@ class HomePage extends Component {
 			]
 		}
     ],
-    isHighContrast: false 
+	isHighContrast: false,
+	fontSizeLevel: 1,
+	isMobileView: true
   };
 
   render() {
@@ -579,15 +617,44 @@ class HomePage extends Component {
 					<h1 className="display-inline padding-left-p25em padding-right-p25em">SAMUEL R. MENDEZ</h1>
 			</header>
 			<main className="margin-auto max-width-45em width-85pc">
+				<GenericFloatingSection>
+					<SheerWhiteContainer>
+						<h2 className="text-center">ABOUT ME</h2>
+					</SheerWhiteContainer>
+					<ResponsiveCtoLFloat width="80%">
+						<div className="max-height-12em width-100pc">
+							<img className="height-auto max-height-12em max-width-100pc" src="./assets/images/branding/portrait.svg"></img>
+						</div>
+						<div class="font-Overpass font-size-p75em padding-T-1p5em">
+							"{ this.state.aboutMeSection.quote }"
+						</div>
+					</ResponsiveCtoLFloat>
+					<ResponsiveCtoLFloat width="80%">
+						<p>{ this.state.aboutMeSection.blurb }</p>
+						<p><span className="font-weight-600">{ this.state.aboutMeSection.detailsLead }:</span> { this.state.aboutMeSection.detailsBody }</p>
+					</ResponsiveCtoLFloat>
+					<div className="bg-white border-color-rgba100-100-100-p9 border-style-solid border-width-2px-0-0-0 color-black font-Assistant height-100pc padding-top-1em">
+						<div className="padding-bottom-p25em">
+								<HomepageProjectLinksContainer
+									links = { this.state.aboutMeSection.links }
+								/>
+						</div>	
+					</div>
+				</GenericFloatingSection>
 				<HomepageProjectsSection
 					title = "HIGHLIGHTED PROJECTS"
 					projects = { this.state.highlightsSection }
 				/>
-				<section className="font-Assistant">
-					<UnorderedBulletlessList
-						listItems = { this.state.newsItems }
-					/>
-				</section>
+				<GenericFloatingSection>
+					<SheerWhiteContainer>
+						<h2 className="text-center">RECENT NEWS</h2>
+					</SheerWhiteContainer>
+					<div className="bg-white border-color-rgba100-100-100-p9 border-style-solid border-width-2px-0-0-0 color-black font-Assistant height-100pc margin-auto padding-left-3em padding-right-3em padding-top-2em">
+						<UnorderedBulletlessList
+							listItems = { this.state.newsItems }
+						/>
+					</div>
+				</GenericFloatingSection>
 				{ this.state.projectSections.map(projectSection =>
 					<HomepageProjectsSection
 						title = { projectSection.title}

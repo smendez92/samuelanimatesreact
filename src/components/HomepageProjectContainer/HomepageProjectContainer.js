@@ -20,7 +20,7 @@ const HomepageProjectContainer = props => (
 					{ props.project.title }
 					</Link>
 				</h3>
-				{ props.project.description }
+				<p>{ props.project.description }</p>
 			</ResponsiveCtoLFloat>
 		</div>
 		<div className="padding-bottom-p25em">
