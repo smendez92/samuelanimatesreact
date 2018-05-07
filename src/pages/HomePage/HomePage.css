@@ -1,5 +1,5 @@
-.bg-white{
-	color: rgb(251,251,251);
+.bg-rgb-251-251-251{
+	background-color: rgb(251,251,251);
 }
 .border-color-rgba100-100-100-p9
 {
@@ -11,6 +11,9 @@
 }
 .border-width-2px-0-0-0{
 	border-width: 2px 0 0 0;
+}
+.clear-both{
+	clear: both;
 }
 .color-black{
 	color: rgb(5,5,5);
@@ -58,6 +61,15 @@
 .max-width-100pc{
 	max-width: 100%;
 }
+.padding-bottom-p5em{
+	padding-bottom: 0.5em;
+}
+.padding-left-20px{
+	padding-left: 20px;
+}
+.padding-right-20px{
+	padding-right: 20px;
+}
 .padding-left-p25em{
 	padding-left: .25em;
 }
@@ -69,6 +81,9 @@
 }
 .padding-right-3em{
 	padding-right: 3em;
+}
+.padding-top-p5em{
+	padding-top: 0.5em;
 }
 .padding-top-1em{
 	padding-top: 1em;
@@ -84,6 +99,9 @@
 }
 .width-10pc{
 	width: 10%;
+}
+.width-75pc{
+	width: 50%;
 }
 .width-85pc{
 	width: 85%;

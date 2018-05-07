@@ -165,7 +165,7 @@ class HomePage extends Component {
 					"title": "No One Can Hear You",
 					"description": "A mixed-media animation: the memories of Officer Hernández, an astronaut losing contact with her crewmates and drifting off into space.",
 					"icon": "./assets/images/homepageIcons/homepage-icon-hernandez.svg",
-					"iconAlt": "'No One Can Hear You' cartoon logo: an astronaut's helmet.",
+					"iconAlt": "",
 					"projectPagePath": "/projects/hernandez",
 					"links": [
 						{
@@ -187,7 +187,7 @@ class HomePage extends Component {
 					"title": "By Foot: Busan and the Sea",
 					"description": "An experimental documentary: a solo trip through Busan, South Korea.",
 					"icon": "./assets/images/homepageIcons/homepage-icon-busan.svg",
-					"iconAlt": "'By Foot' cartoon logo: a sunflower.",
+					"iconAlt": "",
 					"projectPagePath": "/projects/busan",
 					"links": [
 						{
@@ -209,7 +209,7 @@ class HomePage extends Component {
 					"title": "Persefone's Breakfast",
 					"description": "An experimental animation: Persephone's voice messages to Hades as she leaves the Underworld once and for all.",
 					"icon": "./assets/images/homepageIcons/homepage-icon-breakfast.svg",
-					"iconAlt": "'Persefone's Breakfast' cartoon logo",
+					"iconAlt": "",
 					"projectPagePath": "/projects/breakfast",
 					"links": [
 						{
@@ -233,7 +233,7 @@ class HomePage extends Component {
 					"title": "How to Make Yuca Frita",
 					"description": "An instructional animation: peel, chop, remove the stringy core, boil, fry, and eat.",
 					"icon": "./assets/images/homepageIcons/homepage-icon-yuca.svg",
-					"iconAlt": "Yuca cartoon logo: 3 pieces of chopped yuca.",
+					"iconAlt": "",
 					"projectPagePath": "/projects/yuca",
 					"links": [
 						{
@@ -254,7 +254,7 @@ class HomePage extends Component {
 				{
 					"title":"After, After That",
 					"icon":"./assets/images/homepageIcons/homepage-icon-after.svg",
-					"iconAlt": "'After, After That' cartoon logo: a jellyfish floating in front of a cross.",
+					"iconAlt": "",
 					"description":"An experimental documentary. A cross between two marks.",
 					"projectPagePath": "/projects/after",
 					"links":[
@@ -282,7 +282,7 @@ class HomePage extends Component {
 				{
 					"title": "Health for All",
 					"icon": "./assets/images/homepageIcons/homepage-icon-nlm.svg",
-					"iconAlt": "Health for All logo",
+					"iconAlt": "",
 					"description": "Ongoing prototype development for a clinical trial informational tool under development in partnership with Chicago Public Libraries.",
 					"projectPagePath": "/projects/health",
 					"links": [
@@ -298,7 +298,7 @@ class HomePage extends Component {
 				{
 					"title": "Perceptions of Planned Parenthood",
 					"icon": "./assets/images/homepageIcons/homepage-icon-pp.svg",
-					"iconAlt": "Planned Parenthood Study cartoon logo: the letters 'PP' underneath a magnifying glass",
+					"iconAlt": "",
 					"description": "Qualitative study on medical providers' perceptions of Planned Parenthood in family planning referrals.",
 					"projectPagePath": "/projects/plannedparenthood",
 					"links": [
@@ -314,7 +314,7 @@ class HomePage extends Component {
 				{
 					"title": "Social Media Use by Community-Based Organizations",
 					"icon": "./assets/images/homepageIcons/homepage-icon-media.svg",
-					"iconAlt": "Social Media Study cartoon logo: intersecting waves.",
+					"iconAlt": "",
 					"description": "A content analysis of social media content by community-based organizations conducting health outreach.",
 					"projectPagePath": "/projects/media",
 					"links": [
@@ -336,7 +336,7 @@ class HomePage extends Component {
 				{
 					"title": "Bodegas Saludables",
 					"icon": "./assets/images/homepageIcons/homepage-icon-lmhtf.svg",
-					"iconAlt": "'Bodegas Saludables' cartoon logo: a bar graph in a circle.",
+					"iconAlt": "",
 					"description": "Video explaining a community research partner's public health program.",
 					"projectPagePath": "/projects/lmhtf",
 					"links": [
@@ -364,7 +364,7 @@ class HomePage extends Component {
 				{
 					"title": "AR-Tarot",
 					"icon": "./assets/images/homepageIcons/homepage-icon-tarot.svg",
-					"iconAlt": "AR-Tarot cartoon logo: 8-pointed star circled by 8 smaller stars.",
+					"iconAlt": "",
 					"description": "An online tarot reading utilizing A-frame to embed an augmented reality display.",
 					"projectPagePath": "/projects/tarot",
 					"links": [
@@ -392,7 +392,7 @@ class HomePage extends Component {
 				{
 					"title": "Everything But Apples",
 					"icon": "./assets/images/homepageIcons/homepage-icon-apples.svg",
-					"iconAlt": "'Apples' logo: the letters E and B overlayed on an apple outline.",
+					"iconAlt": "",
 					"description": "A multiplayer web-enabled party game; a social-digital version of Apples to Apples.",
 					"projectPagePath": "/projects/apples",
 					"links": [
@@ -420,7 +420,7 @@ class HomePage extends Component {
 				{
 					"title": "GiftPitch Demo",
 					"icon": "./assets/images/homepageIcons/homepage-icon-giftpitch.svg",
-					"iconAlt": "GiftPitch logo: a stylized letter P.",
+					"iconAlt": "",
 					"description": "Front-end logic for a web app letting users take a personality quiz to help find the perfect gift for someone from Amazon, Etsy, or Ebay.",
 					"projectPagePath": "/projects/giftpitch",
 					"links": [
@@ -454,7 +454,7 @@ class HomePage extends Component {
 				{
 					"title": "Spanish Community Center (SCC) Promo Video",
 					"icon": "./assets/images/homepageIcons/homepage-icon-joliet.svg",
-					"iconAlt": "SCC Promo Video cartoon logo: a green, white, and blue schoolhouse building.",
+					"iconAlt": "",
 					"description": "A promotional video for the Spanish Community Center in Joliet.",
 					"projectPagePath": "/projects/joliet",
 					"links": [
@@ -476,7 +476,7 @@ class HomePage extends Component {
 				{
 					"title": "Artemis I Fundraiser Video",
 					"icon": "./assets/images/homepageIcons/homepage-icon-artemis.svg",
-					"iconAlt": "'Artemis I' cartoon logo: solar eclipse.",
+					"iconAlt": "",
 					"description": "A fundraising video for a high-altitude balloon launch by South Side Hackerspace: Chicago to document the 2017 solar eclipse.",
 					"projectPagePath": "/projects/artemis",
 					"links": [
@@ -504,7 +504,7 @@ class HomePage extends Component {
 				{
 					"title": "WhyUEdu Info Series",
 					"icon": "./assets/images/homepageIcons/homepage-icon-whyu.svg",
-					"iconAlt": "WhyUEdu Series cartoon logo: a question mark in a light green circle.",
+					"iconAlt": "",
 					"description": "2 sets of informational videos & worksheets on aspects of the US college application process.",
 					"projectPagePath": "/projects/whyu",
 					"links": [
@@ -538,7 +538,7 @@ class HomePage extends Component {
 				{
 					"title": "'Teeny' Kickstarter Video",
 					"icon": "./assets/images/homepageIcons/homepage-icon-teeny.svg",
-					"iconAlt": "Teeny logo",
+					"iconAlt": "",
 					"description": "A fundraising video for a Kickstarter campaign promoting a Taiwanese artisan's work.",
 					"projectPagePath": "/projects/teeny",
 					"links": [
@@ -572,7 +572,7 @@ class HomePage extends Component {
 				{
 					"title": "Connect the Dots!",
 					"icon": "./assets/images/homepageIcons/homepage-icon-dots.svg",
-					"iconAlt": "'Connect the Dots!' cartoon logo: a circle of dots.",
+					"iconAlt": "",
 					"description": "An interactive art installation taking place in a public bathroom.",
 					"projectPagePath": "/projects/dots",
 					"links": [
@@ -588,7 +588,7 @@ class HomePage extends Component {
 				{
 					"title": "Walks Through Cambridge",
 					"icon": "./assets/images/homepageIcons/homepage-icon-walks.svg",
-					"iconAlt": "'Walks' cartoon logo: an overlapping pair of rectangles.",
+					"iconAlt": " ",
 					"description": "A site-specific public art installation in Harvard Yard, produced for Harvard ARTS FIRST 2011.",
 					"projectPagePath": "/projects/walks",
 					"links": [
@@ -606,7 +606,29 @@ class HomePage extends Component {
     ],
 	isHighContrast: false,
 	fontSizeLevel: 1,
-	isMobileView: true
+	isMobileView: true,
+	responsiveFloat: "none",
+	portraitWidth: "50%",
+	blurbWidth: "90%"
+  };
+
+  	componentWillMount(){
+		this.updateIsMobileVariable();
+	};
+	componentDidMount() {
+		window.addEventListener("resize", this.updateIsMobileVariable.bind(this));
+	};
+	componentWillUnmount() {
+		window.removeEventListener('resize', this.updateIsMobileVariable.bind(this));
+	};
+
+  updateIsMobileVariable(){
+	if(window.innerWidth < 750) {
+		this.setState({isMobileView: true, portraitWidth: "75%", blurbWidth: "90%", responsiveFloat:"none"});
+	}
+	else {
+		this.setState({isMobileView: false, portraitWidth: "40%", blurbWidth: "60%", responsiveFloat:"left"});
+	}
   };
 
   render() {
@@ -618,28 +640,41 @@ class HomePage extends Component {
 			</header>
 			<main className="margin-auto max-width-45em width-85pc">
 				<GenericFloatingSection>
-					<SheerWhiteContainer>
-						<h2 className="text-center">ABOUT ME</h2>
-					</SheerWhiteContainer>
-					<ResponsiveCtoLFloat width="80%">
-						<div className="max-height-12em width-100pc">
-							<img className="height-auto max-height-12em max-width-100pc" src="./assets/images/branding/portrait.svg"></img>
-						</div>
-						<div class="font-Overpass font-size-p75em padding-T-1p5em">
-							"{ this.state.aboutMeSection.quote }"
-						</div>
-					</ResponsiveCtoLFloat>
-					<ResponsiveCtoLFloat width="80%">
-						<p>{ this.state.aboutMeSection.blurb }</p>
-						<p><span className="font-weight-600">{ this.state.aboutMeSection.detailsLead }:</span> { this.state.aboutMeSection.detailsBody }</p>
-					</ResponsiveCtoLFloat>
-					<div className="bg-white border-color-rgba100-100-100-p9 border-style-solid border-width-2px-0-0-0 color-black font-Assistant height-100pc padding-top-1em">
+					<div className="bg-rgb-251-251-251 color-black">
+						<SheerWhiteContainer>
+							<h2 className="text-center">ABOUT ME</h2>
+						</SheerWhiteContainer>
+						<ResponsiveCtoLFloat 
+							width = { this.state.portraitWidth }
+							float = { this.state.responsiveFloat }
+						>
+							<div className="font-Assistant padding-bottom-1em padding-left-20px padding-right-20px padding-top-1em">
+								<div className="max-height-12em margin-auto text-center width-75pc">
+									<img alt="" className="height-auto margin-auto max-height-12em max-width-100pc" src="./assets/images/branding/portrait.svg"></img>
+								</div>
+								<div className="font-Overpass font-size-p75em padding-T-1p5em">
+									"{ this.state.aboutMeSection.quote }"
+								</div>
+							</div>
+						</ResponsiveCtoLFloat>
+						<ResponsiveCtoLFloat
+							width= { this.state.blurbWidth }
+							float = { this.state.responsiveFloat }
+						>
+								<div className="font-Assistant padding-bottom-1em padding-left-20px padding-right-20px padding-top-1em">
+									<p className="padding-top-p5em padding-bottom-p5em">{ this.state.aboutMeSection.blurb }</p>
+									<p className="padding-top-p5em padding-bottom-p5em"><span className="font-weight-600">{ this.state.aboutMeSection.detailsLead }:</span> { this.state.aboutMeSection.detailsBody }</p>
+								</div>
+						</ResponsiveCtoLFloat>
+					<div className="border-color-rgba100-100-100-p9 border-style-solid border-width-2px-0-0-0 clear-both color-black font-Assistant height-100pc padding-top-1em">
 						<div className="padding-bottom-p25em">
-								<HomepageProjectLinksContainer
-									links = { this.state.aboutMeSection.links }
-								/>
+							<h3 className="text-center">PERSONAL LINKS</h3>
+							<HomepageProjectLinksContainer
+								links = { this.state.aboutMeSection.links }
+							/>
 						</div>	
 					</div>
+				</div>
 				</GenericFloatingSection>
 				<HomepageProjectsSection
 					title = "HIGHLIGHTED PROJECTS"
@@ -649,7 +684,7 @@ class HomePage extends Component {
 					<SheerWhiteContainer>
 						<h2 className="text-center">RECENT NEWS</h2>
 					</SheerWhiteContainer>
-					<div className="bg-white border-color-rgba100-100-100-p9 border-style-solid border-width-2px-0-0-0 color-black font-Assistant height-100pc margin-auto padding-left-3em padding-right-3em padding-top-2em">
+					<div className="bg-rgb-251-251-251 border-color-rgba100-100-100-p9 border-style-solid border-width-2px-0-0-0 color-black font-Assistant height-100pc margin-auto padding-left-3em padding-right-3em padding-top-2em">
 						<UnorderedBulletlessList
 							listItems = { this.state.newsItems }
 						/>
@@ -657,6 +692,7 @@ class HomePage extends Component {
 				</GenericFloatingSection>
 				{ this.state.projectSections.map(projectSection =>
 					<HomepageProjectsSection
+						float = { this.state.responsiveFloat }	
 						title = { projectSection.title}
 						projects = { projectSection.projects }
 					/>

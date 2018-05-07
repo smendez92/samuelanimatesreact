@@ -1,9 +1,10 @@
 /*! Adapted by Samuel R. Mendez from from normalize.css v8.0.0 by Nicolas Gallagher| MIT License | github.com/necolas/normalize.css */
 html {
-	line-height: 1.15;
+	line-height: 1em;
 	-webkit-text-size-adjust: 100%;
 }
 body {
+	line-height: 1.3em;
 	margin: 0;
 } 
 a {
@@ -58,6 +59,22 @@ textarea {
 * {
 	box-sizing: border-box;
 }
+a{
+	color: inherit;
+	 text-decoration: underline;
+	 text-decoration-color: rgb(20,20,255);
+	 text-decoration-style: double; 
+}
+a:active, a:focus, a:hover{
+	background-color: rgb(0,0,87);
+	color: rgb(251,251,251);
+	text-decoration-color: rgb(255,254,91);
+	border: solid 2px rgb(209,0,129);
+	cursor: pointer;
+}
+p::selection, span::selection, a::selection{
+	background-color:rgb(254, 187, 195);
+}
 ol, ul {
 	margin: 0;
 	padding: 0;
@@ -67,18 +84,21 @@ h1 {
 	font-family: 'Overpass Mono', monospace;
 	font-size: 2.5em;
 	font-weight: 700;
+	line-height: 1.15em;
 	margin: 0;
 }
 h2 {
 	font-family: 'Overpass Mono', monospace;
 	font-size: 1.5em;
 	font-weight: 700;
+	line-height: 1.15em;
 	margin: 0;
 }
 h3 {
 	font-family: 'Overpass Mono', monospace;
 	font-size: 1.25em;
 	font-weight: 600;
+	line-height: 1.15em;
 	margin: 0;
 }
 .font-Assistant{

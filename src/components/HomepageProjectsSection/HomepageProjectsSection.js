@@ -11,6 +11,7 @@ const HomepageProjectsSection = props => (
 		</SheerWhiteContainer>
 		{ props.projects.map(project =>
 			<HomepageProjectContainer
+				isMobile={ props.isMobile }
 				project = { project }
 			/>
 		)}

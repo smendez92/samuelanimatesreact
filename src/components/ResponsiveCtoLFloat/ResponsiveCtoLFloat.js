@@ -5,11 +5,12 @@ class ResponsiveCtoLFloat extends React.Component {
 
 	render(){
 		var style = {
+			float: this.props.float,
 			width: this.props.width
 		};
 
 		return (
-			<div className="display-inline-block ResponsiveCtoLFloat" style={ style }>
+			<div className="margin-auto" style={ style }>
 				{ this.props.children }
 			</div>
 		)

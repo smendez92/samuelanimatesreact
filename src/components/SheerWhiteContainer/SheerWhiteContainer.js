@@ -3,7 +3,7 @@ import "./SheerWhiteContainer.css";
 
 const SheerWhiteContainer = ({ children }) => (
 	<div className="bg-rgba-250-250-250-p7">
-		<div className="padding-bottom-p5em padding-top-2em">
+		<div className="padding-bottom-p5em padding-top-1p5em">
 			{ children }
 		</div>
 	</div>
