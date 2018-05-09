@@ -11,7 +11,8 @@ const HomepageProjectsSection = props => (
 		</SheerWhiteContainer>
 		{ props.projects.map(project =>
 			<HomepageProjectContainer
-				isMobile={ props.isMobile }
+			float = { props.float }	
+			isMobile={ props.isMobile }
 				project = { project }
 			/>
 		)}
