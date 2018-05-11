@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './HomePage.css';
 import GenericFloatingSection from '../../components/GenericFloatingSection';
+import Header from '../../components/Header';
 import HomepageNewsSection from '../../components/HomepageNewsSection';
 import HomepageProjectLinksContainer from '../../components/HomepageProjectLinksContainer';
 import HomepageProjectsSection from '../../components/HomepageProjectsSection';
@@ -46,112 +47,115 @@ class HomePage extends Component {
 			},
 		]
 	},
-	highlightsSection: [
-		{
-			"id": "HIGHLIGHTS",
-			"title": "10 Days in Saigon",
-			"description": "A 10-week web series documenting wheelchair travel in Ho Chi Minh City, Vietnam.",
-			"icon": "./assets/images/homepageIcons/homepage-icon-saigon.svg",
-			"iconAlt": "'10 Days' logo: three overlayed Accessible Icons, suggesting fast forward movement.",
-			"projectPagePath": "/projects/saigon",
-			"links": [
-				{
-					"location": "internal",
-					"exactPath": "/projects/saigon",
-					"componentPage": "SaigonProject",
-					"id": "highlights0101",
-					"title": "'10 Days' Overview Page",
-					"icon": "page",
-				},
-				{
-					"location": "external",
-					"id": "highlights0102",
-					"title": "'10 Days' Trailer on Facebook",
-					"icon": "video",
-					"url": "https://www.facebook.com/wearemuui/videos/1834490626823232/"
-				},
-				{
-					"location": "external",
-					"id": "highlights0103",
-					"title": "'10 Days' Google Map",
-					"icon": "map",
-					"url": "https://www.google.com/maps/d/viewer?mid=1msCQD_ab_Lz6mLz80wyu1qHXCBk&hl=en_US&ll=10.798291852220926%2C106.67387433398437&z=13"
-				},
-				{
-					"location": "external",
-					"id": "highlights0104",
-					"title": "'10 Days' Article",
-					"icon": "website",
-					"url": "https://www.giantrobot.media/stories/2017/5/30/muui"
-				}
-			]
-		},
-		{
-			"id": "highlights02",
-			"title": "Wheelchair Travel A11Y Wiki",
-			"description": "In-progress demo of a wheelchair travel accessibility (A11Y) wiki.",
-			"icon": "./assets/images/homepageIcons/homepage-icon-wiki.svg",
-			"iconAlt": "'A11Y Wiki' logo: a spinning gear/flower made up of geometric shapes.",
-			"projectPagePath": "/projects/wiki",
-			"links": [
-				{
-					"location": "internal",
-					"exactPath": "/projects/wiki",
-					"componentPage": "WikiProject",
-					"id": "highlights0201",
-					"title": "'A11Y Wiki' Overview Page",
-					"icon": "page",
-					
-				},
-				{
-					"location": "external",
-					"id": "highlights0202",
-					"title": "'A11Y Wiki' GitHub Repo",
-					"url": "https://github.com/smendez92/wheelchairWiki",
-					"icon": "code"
-				},
-				{
-					"location": "external",
-					"id": "highlights0203",
-					"title": "'A11Y Wiki' Google Slides Presentation",
-					"url": "https://docs.google.com/presentation/d/e/2PACX-1vSHgkq7e-YyAYJNcxFAidPSJn6Cho9bl-xoMKEzgYgUIz3cC0RQ8colsHKmRzDYNjA2iLB6hDlDOKXO/pub?start=false&loop=false&delayms=3000",
-					"icon": "slides"
-				},
-				{
-					"location": "external",
-					"id": "highlights0204",
-					"title": "'A11Y Wiki' Demo on Heroku",
-					"url": "https://wheelchairtravelwiki.herokuapp.com",
-					"icon": "website"
-				}
-			]
-		},
-		{
-			"id": "highlights03",
-			"title": "A Bodega",
-			"description": "An experimental documentary; an asset-based look at health equity, made with ingredients from a bodega in Lawrence, MA.",
-			"icon": "./assets/images/homepageIcons/homepage-icon-bodega.svg",
-			"iconAlt": "'A Bodega' cartoon logo: a frying pan.",
-			"projectPagePath": "/projects/bodega",
-			"links": [
-				{
-					"location": "internal",
-					"exactPath": "/projects/bodega",
-					"componentPage": "BodegaProject",
-					"id": "highlights0301",
-					"title": "'A Bodega' Overview Page",
-					"icon": "page"
-				},
-				{
-					"location": "external",
-					"id": "highlights0302",
-					"title": "'A Bodega' Film on Vimeo",
-					"url": "https://vimeo.com/91566613",
-					"icon": "film"
-				}
-			]
-		}
-	],
+	highlightsSection: {
+		id: "HIGHLIGHTS",
+		projects:	[
+			{
+				"id": "highlights01",
+				"title": "10 Days in Saigon",
+				"description": "A 10-week web series documenting wheelchair travel in Ho Chi Minh City, Vietnam.",
+				"icon": "./assets/images/homepageIcons/homepage-icon-saigon.svg",
+				"iconAlt": "'10 Days' logo: three overlayed Accessible Icons, suggesting fast forward movement.",
+				"projectPagePath": "/projects/saigon",
+				"links": [
+					{
+						"location": "internal",
+						"exactPath": "/projects/saigon",
+						"componentPage": "SaigonProject",
+						"id": "highlights0101",
+						"title": "'10 Days' Overview Page",
+						"icon": "page",
+					},
+					{
+						"location": "external",
+						"id": "highlights0102",
+						"title": "'10 Days' Trailer on Facebook",
+						"icon": "video",
+						"url": "https://www.facebook.com/wearemuui/videos/1834490626823232/"
+					},
+					{
+						"location": "external",
+						"id": "highlights0103",
+						"title": "'10 Days' Google Map",
+						"icon": "map",
+						"url": "https://www.google.com/maps/d/viewer?mid=1msCQD_ab_Lz6mLz80wyu1qHXCBk&hl=en_US&ll=10.798291852220926%2C106.67387433398437&z=13"
+					},
+					{
+						"location": "external",
+						"id": "highlights0104",
+						"title": "'10 Days' Article",
+						"icon": "website",
+						"url": "https://www.giantrobot.media/stories/2017/5/30/muui"
+					}
+				]
+			},
+			{
+				"id": "highlights02",
+				"title": "Wheelchair Travel A11Y Wiki",
+				"description": "In-progress demo of a wheelchair travel accessibility (A11Y) wiki.",
+				"icon": "./assets/images/homepageIcons/homepage-icon-wiki.svg",
+				"iconAlt": "'A11Y Wiki' logo: a spinning gear/flower made up of geometric shapes.",
+				"projectPagePath": "/projects/wiki",
+				"links": [
+					{
+						"location": "internal",
+						"exactPath": "/projects/wiki",
+						"componentPage": "WikiProject",
+						"id": "highlights0201",
+						"title": "'A11Y Wiki' Overview Page",
+						"icon": "page",
+						
+					},
+					{
+						"location": "external",
+						"id": "highlights0202",
+						"title": "'A11Y Wiki' GitHub Repo",
+						"url": "https://github.com/smendez92/wheelchairWiki",
+						"icon": "code"
+					},
+					{
+						"location": "external",
+						"id": "highlights0203",
+						"title": "'A11Y Wiki' Google Slides Presentation",
+						"url": "https://docs.google.com/presentation/d/e/2PACX-1vSHgkq7e-YyAYJNcxFAidPSJn6Cho9bl-xoMKEzgYgUIz3cC0RQ8colsHKmRzDYNjA2iLB6hDlDOKXO/pub?start=false&loop=false&delayms=3000",
+						"icon": "slides"
+					},
+					{
+						"location": "external",
+						"id": "highlights0204",
+						"title": "'A11Y Wiki' Demo on Heroku",
+						"url": "https://wheelchairtravelwiki.herokuapp.com",
+						"icon": "website"
+					}
+				]
+			},
+			{
+				"id": "highlights03",
+				"title": "A Bodega",
+				"description": "An experimental documentary; an asset-based look at health equity, made with ingredients from a bodega in Lawrence, MA.",
+				"icon": "./assets/images/homepageIcons/homepage-icon-bodega.svg",
+				"iconAlt": "'A Bodega' cartoon logo: a frying pan.",
+				"projectPagePath": "/projects/bodega",
+				"links": [
+					{
+						"location": "internal",
+						"exactPath": "/projects/bodega",
+						"componentPage": "BodegaProject",
+						"id": "highlights0301",
+						"title": "'A Bodega' Overview Page",
+						"icon": "page"
+					},
+					{
+						"location": "external",
+						"id": "highlights0302",
+						"title": "'A Bodega' Film on Vimeo",
+						"url": "https://vimeo.com/91566613",
+						"icon": "film"
+					}
+				]
+			}
+		]
+	},
 	newsSection: {
 		id: "NEWS",
 		newsItems: [
@@ -692,7 +696,7 @@ class HomePage extends Component {
 	isHighContrast: false,
 	isMobileView: true,
 	mainPaddingLeftClassName: "padding-left-0em",
-	navbarClassName: "",
+	navbarClassName: "margin-auto margin-bottom-2em",
 	navbarLinksClassName: "float-left font-size-p85em padding-left-0 text-center",
 	navbarLinks: [{title:"ABOUT", href: "#ABOUT"},{title:"HIGHLIGHTS", href: "#HIGHLIGHTS"},{title:"NEWS", href: "#NEWS"},{title:"ANIMATION", href: "#ANIMATION"},{title:"HEALTH", href: "#HEALTH"},{title:"WEB", href: "#WEB"},{title:"VIDEO", href: "#VIDEO"},{title:"ART", href: "#ART"}],
 	portraitWidth: "50%",
@@ -711,7 +715,7 @@ class HomePage extends Component {
 
   updateIsMobileVariable(){
 	if(window.innerWidth < 750) {
-		this.setState({isMobileView: true, portraitWidth: "75%", blurbWidth: "90%", mainPaddingLeftClassName: "padding-left-0", navbarClassName: "margin-bottom-2em", navbarLinksClassName: "float-left font-size-p85em text-center width-33p3pc", responsiveFloat:"none"});
+		this.setState({isMobileView: true, portraitWidth: "75%", blurbWidth: "90%", mainPaddingLeftClassName: "padding-left-0", navbarClassName: "margin-auto margin-bottom-2em", navbarLinksClassName: "float-left font-size-p85em text-center width-33p3pc", responsiveFloat:"none"});
 	}
 	else {
 		this.setState({isMobileView: false, portraitWidth: "40%", blurbWidth: "60%", mainPaddingLeftClassName: "padding-left-6p5em", navbarClassName: "left-0 position-fixed top-0", navbarLinksClassName: "float-none padding-left-1em width-8em", responsiveFloat:"left"});
@@ -721,10 +725,10 @@ class HomePage extends Component {
   render() {
     return (
 		<div className="homepage-background-gradient">
-			<header className={ "margin-auto padding-top-1em text-center width-85pc " + this.state.mainPaddingLeftClassName }>
-					<img alt="Samuel Animates: Portfolio Page" src="./assets/images/branding/logo.svg" className="display-inline height-2em padding-left-p25em padding-right-p25em"/>
-					<h1 className="display-inline padding-left-p25em padding-right-p25em">SAMUEL R. MENDEZ</h1>
-			</header>
+			<Header
+				mainPaddingLeftClassName = { this.state.mainPaddingLeftClassName }
+				title = "SAMUEL R. MENDEZ"
+			/>
 			<MenuBar
 				navbarClassName = { this.state.navbarClassName }
 				navbarLinks = { this.state.navbarLinks }
@@ -769,9 +773,10 @@ class HomePage extends Component {
 				</div>
 				</GenericFloatingSection>
 				<HomepageProjectsSection
+					id = { this.state.highlightsSection.id }
 					float = { this.state.responsiveFloat }	
 					title = "HIGHLIGHTED PROJECTS"
-					projects = { this.state.highlightsSection }
+					projects = { this.state.highlightsSection.projects }
 				/>
 				<HomepageNewsSection
 					id = { this.state.newsSection.id }
@@ -786,6 +791,15 @@ class HomePage extends Component {
 					/>
 				)}
 			</main>
+			{ this.state.isMobileView === true &&
+				<button>
+					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="icon" fill="#000000" width="16" height="16" viewBox="0 0 24 24">
+						<path fill="none" d="M0 0h24v24H0V0z"/>
+						<path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+					</svg>
+					TOP
+				</button>
+			}
 		</div>
     );
   };

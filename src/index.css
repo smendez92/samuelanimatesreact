@@ -72,6 +72,21 @@ a:active, a:focus, a:hover{
 	border: solid 2px rgb(209,0,129);
 	cursor: pointer;
 }
+button{
+	background-color: rgb(250,250,250);
+	border-radius: 12px;
+	color: rgb(5,5,5);
+	font-family: 'Overpass Mono', monospace;
+	font-size: 0.9em;
+	padding: 0.5em;
+}
+button:active, button:focus, button:hover{
+	background-color: rgb(0,0,87);
+	color: rgb(251,251,251);
+	text-decoration-color: rgb(255,254,91);
+	border: solid 2px rgb(209,0,129);
+	cursor: pointer;
+}
 p::selection, span::selection, a::selection{
 	background-color:rgb(254, 187, 195);
 }
@@ -82,21 +97,21 @@ ol, ul {
 }
 h1 {
 	font-family: 'Overpass Mono', monospace;
-	font-size: 2.5em;
+	font-size: 2.75em;
 	font-weight: 700;
 	line-height: 1.15em;
 	margin: 0;
 }
 h2 {
 	font-family: 'Overpass Mono', monospace;
-	font-size: 1.5em;
+	font-size: 1.75em;
 	font-weight: 700;
 	line-height: 1.15em;
 	margin: 0;
 }
 h3 {
 	font-family: 'Overpass Mono', monospace;
-	font-size: 1.25em;
+	font-size: 1.5em;
 	font-weight: 600;
 	line-height: 1.15em;
 	margin: 0;
@@ -111,3 +126,30 @@ p{
 	margin: 0;
 	padding: 0;
 }
+
+/* This is the only place I define this accessibility media query.*/
+@media screen and (-ms-high-contrast: active) {
+	.icon svg {
+	  fill: green;
+	}
+  }
+  
+@media screen and (-ms-high-contrast: black-on-white) {
+	 .icon svg {
+	   /* select a dark color that will 
+		  contrast on black 
+		  (#fff is too much contrast) 
+	   */
+	  fill: #333;
+	}
+  }
+  
+@media screen and (-ms-high-contrast: white-on-black) {
+   .icon svg {
+	  /* select a light color that will 
+		 contrast on white 
+		 (#000 is too much contrast)
+	  */
+	  fill: #efefef;
+	}
+  }

@@ -3,7 +3,7 @@ import "./MenuBar.css";
 import NavBar from '../NavBar';
 
 const MenuBar = props => (	
-	<div className="font-Overpass" style={{maxWidth: "85%", margin: "auto"}}>
+	<div className="font-Overpass margin-auto max-width-85pc">
 		<NavBar
 			navbarClassName = { props.navbarClassName }
 			navbarLinks = { props.navbarLinks }
