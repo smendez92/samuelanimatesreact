@@ -689,6 +689,7 @@ class HomePage extends Component {
 	isHighContrast: false,
 	isMobileView: true,
 	mainPaddingLeftClassName: "padding-left-0em",
+	navbarClassName: "float-left padding-left-0",
 	portraitWidth: "50%",
 	responsiveFloat: "none"
   };
@@ -715,11 +716,13 @@ class HomePage extends Component {
   render() {
     return (
 		<div className="homepage-background-gradient">
-			<header className="margin-auto padding-top-1em text-center width-85pc">
+			<header className={ "margin-auto padding-top-1em text-center width-85pc " + this.state.mainPaddingLeftClassName }>
 					<img alt="Samuel Animates" src="./assets/images/branding/logo.svg" className="display-inline height-2em padding-left-p25em padding-right-p25em"/>
 					<h1 className="display-inline padding-left-p25em padding-right-p25em">SAMUEL R. MENDEZ</h1>
 			</header>
-			<MenuBar/>
+			<MenuBar
+				navbarClassName = { this.state.navbarClassName }
+			/>
 			<main className={ "margin-auto max-width-45em width-85pc "  + this.state.mainPaddingLeftClassName }>
 				<GenericFloatingSection>
 					<div className="bg-rgb-251-251-251 color-black">
