@@ -7,12 +7,12 @@ import GenericFloatingSection from "../GenericFloatingSection";
 const HomepageProjectsSection = props => (
 	<GenericFloatingSection>
 		<SheerWhiteContainer>
-			<h2 className="text-center">{ props.title }</h2>
+			<h2 id={ props.id } className="text-center">{ props.title }</h2>
 		</SheerWhiteContainer>
 		{ props.projects.map(project =>
 			<HomepageProjectContainer
-			float = { props.float }	
-			isMobile={ props.isMobile }
+				float = { props.float }	
+				isMobile={ props.isMobile }
 				project = { project }
 			/>
 		)}

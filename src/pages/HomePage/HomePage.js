@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './HomePage.css';
 import GenericFloatingSection from '../../components/GenericFloatingSection';
+import HomepageNewsSection from '../../components/HomepageNewsSection';
 import HomepageProjectLinksContainer from '../../components/HomepageProjectLinksContainer';
 import HomepageProjectsSection from '../../components/HomepageProjectsSection';
 import ResponsiveCtoLFloat from '../../components/ResponsiveCtoLFloat';
 import MenuBar from '../../components/MenuBar';
 import SheerWhiteContainer from '../../components/SheerWhiteContainer';
-import UnorderedBulletlessList from '../../components/UnorderedBulletlessList';
 
 class HomePage extends Component {
   state = { 
@@ -48,7 +48,7 @@ class HomePage extends Component {
 	},
 	highlightsSection: [
 		{
-			"id": "highlights",
+			"id": "HIGHLIGHTS",
 			"title": "10 Days in Saigon",
 			"description": "A 10-week web series documenting wheelchair travel in Ho Chi Minh City, Vietnam.",
 			"icon": "./assets/images/homepageIcons/homepage-icon-saigon.svg",
@@ -152,37 +152,40 @@ class HomePage extends Component {
 			]
 		}
 	],
-	newsItems: [
-		{
-			"id": "news20171202",
-			"lead": "2017 Dec",
-			"body": "'By Foot: Busan and the Sea' screened at Chinh India Kids Film Festival in New Delhi, India."
-		},
-		{
-			"id": "news20171201",
-			"lead": "2017 Dec",
-			"body": "'A Bodega' selected for inclusion in the National Academy of Medicine's Visualizing Health Equity project. The film was included in a pop-up gallery, and I was personally invited to speak at a panel event in Washington DC."
-		},
-		{
-			"id": "news20171002",
-			"lead": "2017 Oct",
-			"body": "'By Foot: Busan and the Sea' won the Exceptional Artistry award for animation at the Official Latino Short Film Festival in New York City."
-		},
-		{
-			"id": "news20171001",
-			"lead": "2017 Oct",
-			"body": "'10 Days in Saigon' was nominated for Best Travel Web Series and screened in Limassol, Cyprus, as part of the TRAVEL FilmFest."
-		},
-		{
-			"id": "news20170901",
-			"lead": "2017 Sep",
-			"body": "'A Bodega' screened in three Chicago parks as part of the Chicago Onscreen program by the Chicago Park District."
-		}
-	],
+	newsSection: {
+		id: "NEWS",
+		newsItems: [
+			{
+				"id": "news20171202",
+				"lead": "2017 Dec",
+				"body": "'By Foot: Busan and the Sea' screened at Chinh India Kids Film Festival in New Delhi, India."
+			},
+			{
+				"id": "news20171201",
+				"lead": "2017 Dec",
+				"body": "'A Bodega' selected for inclusion in the National Academy of Medicine's Visualizing Health Equity project. The film was included in a pop-up gallery, and I was personally invited to speak at a panel event in Washington DC."
+			},
+			{
+				"id": "news20171002",
+				"lead": "2017 Oct",
+				"body": "'By Foot: Busan and the Sea' won the Exceptional Artistry award for animation at the Official Latino Short Film Festival in New York City."
+			},
+			{
+				"id": "news20171001",
+				"lead": "2017 Oct",
+				"body": "'10 Days in Saigon' was nominated for Best Travel Web Series and screened in Limassol, Cyprus, as part of the TRAVEL FilmFest."
+			},
+			{
+				"id": "news20170901",
+				"lead": "2017 Sep",
+				"body": "'A Bodega' screened in three Chicago parks as part of the Chicago Onscreen program by the Chicago Park District."
+			}
+		]
+	},
 	projectSections: [
 		{
 			"title": "ANIMATED FILMS",
-			"id": "animation",
+			"id": "ANIMATION",
 			"projects": [
 				{
 					"id": "animation01",
@@ -315,7 +318,7 @@ class HomePage extends Component {
 		},
 		{
 			"title": "PUBLIC HEALTH RESEARCH",
-			"id": "health",
+			"id": "HEALTH",
 			"projects": [
 				{
 					"id": "health01",
@@ -407,7 +410,7 @@ class HomePage extends Component {
 		},
 		{
 			"title": "WEB DEVELOPMENT",
-			"id": "web",
+			"id": "WEB",
 			"projects": [
 				{
 					"id": "web01",
@@ -509,7 +512,7 @@ class HomePage extends Component {
 		},
 		{
 			"title": "VIDEO",
-			"id": "video",
+			"id": "VIDEO",
 			"projects": [
 				{
 					"id": "video01",
@@ -643,7 +646,7 @@ class HomePage extends Component {
 		},
 		{
 			"title": "PUBLIC ART",
-			"id": "art",
+			"id": "ART",
 			"projects": [
 				{
 					"id": "art01",
@@ -689,7 +692,9 @@ class HomePage extends Component {
 	isHighContrast: false,
 	isMobileView: true,
 	mainPaddingLeftClassName: "padding-left-0em",
-	navbarClassName: "float-left padding-left-0",
+	navbarClassName: "",
+	navbarLinksClassName: "float-left font-size-p85em padding-left-0 text-center",
+	navbarLinks: [{title:"ABOUT", href: "#ABOUT"},{title:"HIGHLIGHTS", href: "#HIGHLIGHTS"},{title:"NEWS", href: "#NEWS"},{title:"ANIMATION", href: "#ANIMATION"},{title:"HEALTH", href: "#HEALTH"},{title:"WEB", href: "#WEB"},{title:"VIDEO", href: "#VIDEO"},{title:"ART", href: "#ART"}],
 	portraitWidth: "50%",
 	responsiveFloat: "none"
   };
@@ -706,10 +711,10 @@ class HomePage extends Component {
 
   updateIsMobileVariable(){
 	if(window.innerWidth < 750) {
-		this.setState({isMobileView: true, portraitWidth: "75%", blurbWidth: "90%", mainPaddingLeftClassName: "padding-left-0", responsiveFloat:"none"});
+		this.setState({isMobileView: true, portraitWidth: "75%", blurbWidth: "90%", mainPaddingLeftClassName: "padding-left-0", navbarClassName: "margin-bottom-2em", navbarLinksClassName: "float-left font-size-p85em text-center width-33p3pc", responsiveFloat:"none"});
 	}
 	else {
-		this.setState({isMobileView: false, portraitWidth: "40%", blurbWidth: "60%", mainPaddingLeftClassName: "padding-left-5em", responsiveFloat:"left"});
+		this.setState({isMobileView: false, portraitWidth: "40%", blurbWidth: "60%", mainPaddingLeftClassName: "padding-left-6p5em", navbarClassName: "left-0 position-fixed top-0", navbarLinksClassName: "float-none padding-left-1em width-8em", responsiveFloat:"left"});
 	}
   };
 
@@ -717,13 +722,15 @@ class HomePage extends Component {
     return (
 		<div className="homepage-background-gradient">
 			<header className={ "margin-auto padding-top-1em text-center width-85pc " + this.state.mainPaddingLeftClassName }>
-					<img alt="Samuel Animates" src="./assets/images/branding/logo.svg" className="display-inline height-2em padding-left-p25em padding-right-p25em"/>
+					<img alt="Samuel Animates: Portfolio Page" src="./assets/images/branding/logo.svg" className="display-inline height-2em padding-left-p25em padding-right-p25em"/>
 					<h1 className="display-inline padding-left-p25em padding-right-p25em">SAMUEL R. MENDEZ</h1>
 			</header>
 			<MenuBar
 				navbarClassName = { this.state.navbarClassName }
+				navbarLinks = { this.state.navbarLinks }
+				navbarLinksClassName = { this.state.navbarLinksClassName }
 			/>
-			<main className={ "margin-auto max-width-45em width-85pc "  + this.state.mainPaddingLeftClassName }>
+			<main className={ "margin-auto max-width-50em width-85pc "  + this.state.mainPaddingLeftClassName }>
 				<GenericFloatingSection>
 					<div className="bg-rgb-251-251-251 color-black">
 						<SheerWhiteContainer>
@@ -766,18 +773,13 @@ class HomePage extends Component {
 					title = "HIGHLIGHTED PROJECTS"
 					projects = { this.state.highlightsSection }
 				/>
-				<GenericFloatingSection>
-					<SheerWhiteContainer>
-						<h2 className="text-center">RECENT NEWS</h2>
-					</SheerWhiteContainer>
-					<div className="bg-rgb-251-251-251 border-color-rgba100-100-100-p9 border-style-solid border-width-2px-0-0-0 color-black font-Assistant height-100pc margin-auto padding-left-3em padding-right-3em padding-top-2em">
-						<UnorderedBulletlessList
-							listItems = { this.state.newsItems }
-						/>
-					</div>
-				</GenericFloatingSection>
+				<HomepageNewsSection
+					id = { this.state.newsSection.id }
+					newsItems = { this.state.newsSection.newsItems }
+				/>
 				{ this.state.projectSections.map(projectSection =>
 					<HomepageProjectsSection
+						id = {projectSection.id}
 						float = { this.state.responsiveFloat }	
 						title = { projectSection.title}
 						projects = { projectSection.projects }
