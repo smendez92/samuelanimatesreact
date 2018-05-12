@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './HomePage.css';
+import Button from '../../components/Button';
+import ButtonContainer from '../../components/ButtonContainer';
 import GenericFloatingSection from '../../components/GenericFloatingSection';
 import Header from '../../components/Header';
 import HomepageNewsSection from '../../components/HomepageNewsSection';
@@ -13,9 +15,16 @@ class HomePage extends Component {
   state = { 
 	aboutMeSection:{
 		quote: "I could trace back about 80% of my humor to specific SpongeBob episodes.",
-		blurb: "I make animations. I am a community-based researcher. And I do front end web development, with an eye on web accessibility. I see the privilege of having chances to gain these skills; I want use these chances to make the spaces I occupy more accessible to a wider range of people.",
-		detailsLead: "Interests",
-		detailsBody: "community-based research, social determinants of health, accessibility, digital documentary.",
+		paragraphs: [
+			{
+				lead: "In short",
+				body: "I make animations. I'm a community-based researcher. And I do front end web development, with an eye on web accessibility. I see the privilege of having chances to gain these skills; I want to use these chances to open up more rom for more people in the spaces I occupy."
+			},
+			{	
+				lead: "Interests",
+				body: "community-based research, social determinants of health, accessibility, digital documentary."
+			}
+		],
 		links: [
 			{
 				"location": "external",
@@ -724,7 +733,7 @@ class HomePage extends Component {
 
   render() {
     return (
-		<div className="homepage-background-gradient">
+		<div className="clearfix homepage-background-gradient">
 			<Header
 				mainPaddingLeftClassName = { this.state.mainPaddingLeftClassName }
 				title = "SAMUEL R. MENDEZ"
@@ -749,7 +758,7 @@ class HomePage extends Component {
 									<img alt="" className="height-auto margin-auto max-height-12em max-width-100pc" src="./assets/images/branding/portrait.svg"></img>
 								</div>
 								<div className="font-Overpass font-size-p75em padding-T-1p5em">
-									"{ this.state.aboutMeSection.quote }"
+									<p>"{ this.state.aboutMeSection.quote }"</p>
 								</div>
 							</div>
 						</ResponsiveCtoLFloat>
@@ -758,8 +767,9 @@ class HomePage extends Component {
 							float = { this.state.responsiveFloat }
 						>
 								<div className="font-Assistant padding-bottom-1em padding-left-20px padding-right-20px padding-top-1em">
-									<p className="padding-top-p5em padding-bottom-p5em">{ this.state.aboutMeSection.blurb }</p>
-									<p className="padding-top-p5em padding-bottom-p5em"><span className="font-weight-600">{ this.state.aboutMeSection.detailsLead }:</span> { this.state.aboutMeSection.detailsBody }</p>
+									{this.state.aboutMeSection.paragraphs.map(paragraph =>
+										<p className="padding-top-p5em padding-bottom-p5em"><span className="font-weight-600">{ paragraph.lead }:</span> { paragraph.body }</p>
+									)}
 								</div>
 						</ResponsiveCtoLFloat>
 					<div className="border-color-rgba100-100-100-p9 border-style-solid border-width-2px-0-0-0 clear-both color-black font-Assistant height-100pc padding-top-1em">
@@ -792,13 +802,17 @@ class HomePage extends Component {
 				)}
 			</main>
 			{ this.state.isMobileView === true &&
-				<button>
-					<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="icon" fill="#000000" width="16" height="16" viewBox="0 0 24 24">
-						<path fill="none" d="M0 0h24v24H0V0z"/>
-						<path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
-					</svg>
-					TOP
-				</button>
+				<div className="bottom-0 position-fixed right-0">
+					<ButtonContainer>
+						<Button>
+							<svg aria-labelledby="scrollToTopArrowId"  xmlns="http://www.w3.org/2000/svg" className="icon" fill="#000000" width="16" height="16" viewBox="0 0 24 24" role="img">
+								<title id="scrollToTopArrowId">Jump back up to the top of the page</title>
+								<path fill="none" d="M0 0h24v24H0V0z"/>
+								<path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+							</svg>
+						</Button>
+					</ButtonContainer>
+				</div>
 			}
 		</div>
     );

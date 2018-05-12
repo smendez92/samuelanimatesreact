@@ -1,5 +1,7 @@
 import React from "react";
 import "./Header.css";
+import Button from "../Button";
+import ButtonContainer from "../ButtonContainer";
 
 const Header = props => (
 	<header className={ "margin-auto padding-bottom-1em padding-top-2em text-center width-85pc " + props.mainPaddingLeftClassName }>
@@ -9,10 +11,18 @@ const Header = props => (
 		</div>
 		<div className="padding-bottom-1em padding-top-1em">
 			<div className="display-inline-block padding-bottom-p25em padding-left-p25em padding-right-p25em padding-top-p25em">
-				<button>Click to toggle high contrast mode</button>
+				<ButtonContainer>
+					<Button>
+						<span>Click to toggle high contrast view</span>
+					</Button>
+				</ButtonContainer>
 			</div>
 			<div className="display-inline-block padding-bottom-p25em padding-left-p25em padding-right-p25em padding-top-p25em">
-				<button>Click to toggle font size</button>
+				<ButtonContainer>	
+					<Button>
+						<span>Click to toggle font size</span>
+					</Button>
+				</ButtonContainer>
 			</div>
 		</div>
 	</header>

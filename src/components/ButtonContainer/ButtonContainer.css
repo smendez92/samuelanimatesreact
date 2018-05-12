@@ -1,0 +1,41 @@
+.bg-rgb-251-251-251{
+	background-color: rgb(251,251,251);
+}
+.border-radius-12px{
+	border-radius: 12px;
+}
+.border-color-rgba-150-150-150-p3{
+	border-color: rgba(150,150,150,0.3);
+}
+.color-black{
+	color: rgb(5,5,5);
+}
+.font-size-p9em{
+	font-size: 0.9em;
+}
+.padding-p5em{
+	padding: 0.5em;
+}
+
+
+.bg-rgb-0-0-87{
+	background-color: rgb(151, 2, 128);
+}
+.color-rgb-251-251-251{
+	color: rgb(251,251,251);
+}
+.text-decoration-color-rgb-255-254-91{
+	text-decoration-color: rgb(255,254,91);
+}
+.border-style-outset{
+	border-style: outset;
+}
+.border-width-2px{
+	border-width: 2px;
+}
+.border-color-rgb-209-0-129{
+	border-color: rgb(209,0,129);
+}
+.cursor-pointer{
+	cursor: pointer;
+}
