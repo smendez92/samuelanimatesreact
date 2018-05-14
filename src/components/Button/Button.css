@@ -39,3 +39,7 @@
 .cursor-pointer{
 	cursor: pointer;
 }
+
+.z2{
+	z-index: 2;	
+}

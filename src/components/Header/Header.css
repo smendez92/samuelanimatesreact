@@ -1,6 +1,18 @@
 .padding-bottom-1em{
 	padding-bottom: 1em;
 }
-.padding-top-1em{
-	padding-top: 1em;
+.padding-bottom-p25em{
+	padding-bottom: 0.25em;
+}
+padding-left-p25em{
+	padding-left: 0.25em;
+}
+padding-right-p25em{
+	padding-right: 0.25em;
+}
+.padding-top-p5em{
+	padding-top: 0.5em;
+}
+padding-top-p25em{
+	padding-top: 0.25em;
 }

@@ -9,7 +9,7 @@ const NavBar = props => (
 		</SheerWhiteContainer>
 		<div>
 			{props.navbarLinks.map(link => 
-				<a href={ link.href } className={ "bg-white border-style-solid border-color-rgba-150-150-150-p2 border-2px display-block padding-bottom-p15em padding-top-p15em " + props.navbarLinksClassName }>{ link.title }</a>
+				<a key={ link.id } href={ link.href } className={ "bg-white border-style-solid border-color-rgba-150-150-150-p2 border-2px display-block padding-bottom-p15em padding-top-p15em " + props.navbarLinksClassName }>{ link.title }</a>
 			)}
 		</div>
 	</nav>

@@ -12,16 +12,20 @@ const Header = props => (
 		<div className="padding-bottom-1em padding-top-1em">
 			<div className="display-inline-block padding-bottom-p25em padding-left-p25em padding-right-p25em padding-top-p25em">
 				<ButtonContainer>
-					<Button>
-						<span>Click to toggle high contrast view</span>
-					</Button>
+					<Button
+						buttontype="contrastToggle"
+						onClickFunction={ props.handleButtonClick }
+						text="Click to toggle high contrast view"
+					/>
 				</ButtonContainer>
 			</div>
 			<div className="display-inline-block padding-bottom-p25em padding-left-p25em padding-right-p25em padding-top-p25em">
 				<ButtonContainer>	
-					<Button>
-						<span>Click to toggle font size</span>
-					</Button>
+					<Button
+						buttontype="fontSizeToggle"
+						onClickFunction={ props.handleButtonClick }
+						text="Click to toggle font size"
+					/>
 				</ButtonContainer>
 			</div>
 		</div>
