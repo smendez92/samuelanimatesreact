@@ -738,29 +738,25 @@ class HomePage extends Component {
 	handleFontSizeToggleButtonClick = () =>{
 		
 		if (this.state.fontSizeLevel === 1){
-			this.setState({fontSizeLevel: 1.5, isMobileView: true});
+			this.setState({fontSizeLevel: 1.5, isMobileView: true}, this.updateIsMobileVariable);
 			document.body.style.fontSize ="1.25em";
-			this.updateIsMobileVariable();
+			
 		}
 		else if (this.state.fontSizeLevel === 1.5){
-			this.setState({fontSizeLevel: 2, isMobileView: true});
+			this.setState({fontSizeLevel: 2, isMobileView: true}, this.updateIsMobileVariable);
 			document.body.style.fontSize = "2em";
-			this.updateIsMobileVariable();
 		}
 		else if (this.state.fontSizeLevel === 2){
-			this.setState({fontSizeLevel: 2.5, isMobileView: true});
+			this.setState({fontSizeLevel: 2.5, isMobileView: true}, this.updateIsMobileVariable);
 			document.body.style.fontSize = "2.5em";
-			this.updateIsMobileVariable();
 		}
 		else if (this.state.fontSizeLevel === 2.5){
-			this.setState({fontSizeLevel: 3, isMobileView: true});
+			this.setState({fontSizeLevel: 3, isMobileView: true}, this.updateIsMobileVariable);
 			document.body.style.fontSize = "3em";
-			this.updateIsMobileVariable();
 		}
 		else {
-			this.setState({fontSizeLevel: 1, isMobileView: false});
+			this.setState({fontSizeLevel: 1, isMobileView: false}, this.updateIsMobileVariable);
 			document.body.style.fontSize = "1em";
-			this.updateIsMobileVariable();
 		}
 
 	};
@@ -778,7 +774,7 @@ class HomePage extends Component {
 		if(window.innerWidth < 750) {
 			this.setState({isMobileView: true, portraitWidth: "75%", blurbWidth: "90%", mainPaddingLeftClassName: "padding-left-0", navbarClassName: "margin-auto margin-bottom-2em", navbarLinksClassName: "float-left font-size-p85em text-center width-33p3pc", responsiveFloat:"none"});
 		}
-		else if(this.state.fontSizeLevel > 1) {
+		else if(this.state.fontSizeLevel > 1.0) {
 			this.setState({isMobileView: true, portraitWidth: "75%", blurbWidth: "90%", mainPaddingLeftClassName: "padding-left-0", navbarClassName: "margin-auto margin-bottom-2em", navbarLinksClassName: "float-left font-size-p85em text-center width-33p3pc", responsiveFloat:"none"});
 		}
 		else {
