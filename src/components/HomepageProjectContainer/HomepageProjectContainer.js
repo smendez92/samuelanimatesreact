@@ -6,7 +6,7 @@ import HomepageProjectLinksContainer from "../HomepageProjectLinksContainer";
 import ResponsiveCtoLFloat from "../ResponsiveCtoLFloat";
 
 const HomepageProjectContainer = props => (
-    <div className="homepage-project-container bg-white border-style-solid border-color-rgba-150-150-150-p2 border-width-2px clear-both color-black font-Assistant padding-left-1em padding-right-1em padding-top-1p5em width-100pc">
+    <div className="homepage-project-container border-style-solid border-color-rgba-150-150-150-p2 border-width-2px clear-both color-inherit font-Assistant padding-left-1em padding-right-1em padding-top-1p5em width-100pc">
 		<div className="padding-bottom-1em">
 			<ResponsiveCtoLFloat
 				float = { props.float }

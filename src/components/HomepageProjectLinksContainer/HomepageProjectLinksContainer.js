@@ -2,22 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./HomepageProjectLinksContainer.css";
 import MaterialIcon from "../MaterialIcon";
+import InlineA from "../InlineA";
 
 const HomepageProjectLinksContainer = props => (
-	<div className="bg-242-242-242 border-color-rgba-150-150-150-p2 border-style-solid border-width-2-0-0-0 clear-both font-size-p75em margin-auto padding-top-p5em width-90pc">
-		{ props.links.map(result =>
-			<div key={ result.id } className="display-inline-block padding-left-p25em padding-right-p25em">				
+	<div className="bg-242-242-242 border-color-rgba-150-150-150-p2 border-style-solid border-width-2-0-0-0 clear-both color-inherit font-size-p75em margin-auto padding-top-p5em width-90pc">
+		{ props.links.map(projectLink =>
+			<div key={ projectLink.id } className="display-inline-block padding-left-p3em padding-right-p3em">				
 				<MaterialIcon
-					iconName = { result.icon } 
+					iconName={ projectLink.icon } 
 				/>
-				<div className="display-inline-block">
-					{ result.location === "internal" &&
-						<Link to={ result.exactPath }>{ result.title }</Link>
-					}
-					{ result.location === "external" &&
-						<a href={result.url} target="_blank">{ result.title }</a>
-					}
-				</div>
+				<InlineA
+					isInternalLink={ projectLink.isInternalLink }	
+					text={ projectLink.text }
+					urlPath={ projectLink.path }
+				/>
 			</div>
 		)}
 	</div>

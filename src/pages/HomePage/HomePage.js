@@ -30,32 +30,32 @@ class HomePage extends Component {
 			],
 			links: [
 				{
-					"location": "external",
+					"isInternalLink": false,
 					"id": "aboutLink01",
-					"title": "My CV as a Published Google Doc",
+					"text": "My CV as a Published Google Doc",
 					"icon": "document",
-					"url": "https://docs.google.com/document/d/e/2PACX-1vSMS4XleOQlHUDp5mbn00Z29u8Pbg3EhHyVDzDJag1cWMi6uTh6vCOnqk6BYG7L16BAlchdHuvuq5zb/pub"
+					"path": "https://docs.google.com/document/d/e/2PACX-1vSMS4XleOQlHUDp5mbn00Z29u8Pbg3EhHyVDzDJag1cWMi6uTh6vCOnqk6BYG7L16BAlchdHuvuq5zb/pub"
 				},
 				{
-					"location": "external",
+					"isInternalLink": false,
 					"id": "aboutLink02",
-					"title": "My Vimeo Profile",
+					"text": "My Vimeo Profile",
 					"icon": "video",
-					"url": "https://www.vimeo.com/user15152945"
+					"path": "https://www.vimeo.com/user15152945"
 				},
 				{
-					"location": "external",
+					"isInternalLink": false,
 					"id": "aboutLink03",
-					"title": "My GitHub Profile",
+					"text": "My GitHub Profile",
 					"icon": "code",
-					"url": "https://github.com/smendez92"
+					"path": "https://github.com/smendez92"
 				},
 				{
-					"location": "external",
+					"isInternalLink": false,
 					"id": "aboutLink04",
-					"title": "My LinkedIn Profile",
+					"text": "My LinkedIn Profile",
 					"icon": "",
-					"url": "https://www.linkedin.com/in/samuel-r-mendez/"
+					"path": "https://www.linkedin.com/in/samuel-r-mendez/"
 				},
 			]
 		},
@@ -71,33 +71,33 @@ class HomePage extends Component {
 					"projectPagePath": "/projects/saigon",
 					"links": [
 						{
-							"location": "internal",
-							"exactPath": "/projects/saigon",
+							"isInternalLink": true,
+							"path": "/projects/saigon",
 							"componentPage": "SaigonProject",
 							"id": "highlights0101",
-							"title": "'10 Days' Overview Page",
+							"text": "'10 Days' Overview",
 							"icon": "page",
 						},
 						{
-							"location": "external",
+							"isInternalLink": false,
 							"id": "highlights0102",
-							"title": "'10 Days' Trailer on Facebook",
+							"text": "'10 Days' Trailer on Facebook",
 							"icon": "video",
-							"url": "https://www.facebook.com/wearemuui/videos/1834490626823232/"
+							"path": "https://www.facebook.com/wearemuui/videos/1834490626823232/"
 						},
 						{
-							"location": "external",
+							"isInternalLink": false,
 							"id": "highlights0103",
-							"title": "'10 Days' Google Map",
+							"text": "'10 Days' Google Map",
 							"icon": "map",
-							"url": "https://www.google.com/maps/d/viewer?mid=1msCQD_ab_Lz6mLz80wyu1qHXCBk&hl=en_US&ll=10.798291852220926%2C106.67387433398437&z=13"
+							"path": "https://www.google.com/maps/d/viewer?mid=1msCQD_ab_Lz6mLz80wyu1qHXCBk&hl=en_US&ll=10.798291852220926%2C106.67387433398437&z=13"
 						},
 						{
-							"location": "external",
+							"isInternalLink": false,
 							"id": "highlights0104",
-							"title": "'10 Days' Article",
+							"text": "'10 Days' Article",
 							"icon": "website",
-							"url": "https://www.giantrobot.media/stories/2017/5/30/muui"
+							"path": "https://www.giantrobot.media/stories/2017/5/30/muui"
 						}
 					]
 				},
@@ -110,33 +110,33 @@ class HomePage extends Component {
 					"projectPagePath": "/projects/wiki",
 					"links": [
 						{
-							"location": "internal",
-							"exactPath": "/projects/wiki",
+							"isInternalLink": true,
+							"path": "/projects/wiki",
 							"componentPage": "WikiProject",
 							"id": "highlights0201",
-							"title": "'A11Y Wiki' Overview Page",
+							"text": "'A11Y Wiki' Overview",
 							"icon": "page",
 							
 						},
 						{
-							"location": "external",
+							"isInternalLink": false,
 							"id": "highlights0202",
-							"title": "'A11Y Wiki' GitHub Repo",
-							"url": "https://github.com/smendez92/wheelchairWiki",
+							"text": "'A11Y Wiki' GitHub Repo",
+							"path": "https://github.com/smendez92/wheelchairWiki",
 							"icon": "code"
 						},
 						{
-							"location": "external",
+							"isInternalLink": false,
 							"id": "highlights0203",
-							"title": "'A11Y Wiki' Google Slides Presentation",
-							"url": "https://docs.google.com/presentation/d/e/2PACX-1vSHgkq7e-YyAYJNcxFAidPSJn6Cho9bl-xoMKEzgYgUIz3cC0RQ8colsHKmRzDYNjA2iLB6hDlDOKXO/pub?start=false&loop=false&delayms=3000",
+							"text": "'A11Y Wiki' Google Slides Presentation",
+							"path": "https://docs.google.com/presentation/d/e/2PACX-1vSHgkq7e-YyAYJNcxFAidPSJn6Cho9bl-xoMKEzgYgUIz3cC0RQ8colsHKmRzDYNjA2iLB6hDlDOKXO/pub?start=false&loop=false&delayms=3000",
 							"icon": "slides"
 						},
 						{
-							"location": "external",
+							"isInternalLink": false,
 							"id": "highlights0204",
-							"title": "'A11Y Wiki' Demo on Heroku",
-							"url": "https://wheelchairtravelwiki.herokuapp.com",
+							"text": "'A11Y Wiki' Demo on Heroku",
+							"path": "https://wheelchairtravelwiki.herokuapp.com",
 							"icon": "website"
 						}
 					]
@@ -150,18 +150,18 @@ class HomePage extends Component {
 					"projectPagePath": "/projects/bodega",
 					"links": [
 						{
-							"location": "internal",
-							"exactPath": "/projects/bodega",
+							"isInternalLink": true,
+							"path": "/projects/bodega",
 							"componentPage": "BodegaProject",
 							"id": "highlights0301",
-							"title": "'A Bodega' Overview Page",
+							"text": "'A Bodega' Overview",
 							"icon": "page"
 						},
 						{
-							"location": "external",
+							"isInternalLink": false,
 							"id": "highlights0302",
-							"title": "'A Bodega' Film on Vimeo",
-							"url": "https://vimeo.com/91566613",
+							"text": "'A Bodega' Film on Vimeo",
+							"path": "https://vimeo.com/91566613",
 							"icon": "film"
 						}
 					]
@@ -212,19 +212,19 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/hernandez",
 						"links": [
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "animation0101",
-								"exactPath": "/projects/hernandez",
+								"path": "/projects/hernandez",
 								"componentPage": "HernandezProject",
-								"title": "'No One Can Hear You' Overview Page",
+								"text": "'No One Can Hear You' Overview",
 								"icon": "page",
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "animation0102",
-								"title": "'No One Can Hear You' excerpt on Vimeo",
+								"text": "'No One Can Hear You' excerpt on Vimeo",
 								"icon": "video",
-								"url": "http://www.vimeo.com/233932687"
+								"path": "http://www.vimeo.com/233932687"
 							}
 						]
 					},
@@ -237,18 +237,18 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/busan",
 						"links": [
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "animation0201",
-								"exactPath": "/projects/busan",
+								"path": "/projects/busan",
 								"componentPage": "BusanProject",
-								"title": "'Busan' Overview Page",
+								"text": "'Busan' Overview",
 								"icon": "page"
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "animation0202",
-								"title": "'Busan' Trailer on Vimeo",
-								"url": "https://vimeo.com/203944431",
+								"text": "'Busan' Trailer on Vimeo",
+								"path": "https://vimeo.com/203944431",
 								"icon": "video"
 							}
 						]
@@ -262,19 +262,19 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/breakfast",
 						"links": [
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "animation0301",
-								"exactPath": "/projects/breakfast",
+								"path": "/projects/breakfast",
 								"componentPage": "BreakfastProject",
-								"title": "'Persefone's Breakfast' Overview Page",
+								"text": "'Persefone's Breakfast' Overview",
 								"icon": "page",
 								
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "animation0302",
-								"title": "'Persefone's Breakfast' Film on Vimeo",
-								"url": "http://www.vimeo.com/134973465",
+								"text": "'Persefone's Breakfast' Film on Vimeo",
+								"path": "http://www.vimeo.com/134973465",
 								"icon": "film",
 								
 							}
@@ -289,18 +289,18 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/yuca",
 						"links": [
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "animation0401",
-								"exactPath": "/projects/yuca",
+								"path": "/projects/yuca",
 								"componentPage": "YucaProject",
-								"title": "'Yuca' Overview Page",
+								"text": "'Yuca' Overview",
 								"icon": "page",
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "animation0402",
-								"title": "'Yuca' Film on Vimeo",
-								"url": "http://www.vimeo.com/95826024",
+								"text": "'Yuca' Film on Vimeo",
+								"path": "http://www.vimeo.com/95826024",
 								"icon": "film"
 							}
 						]
@@ -314,19 +314,19 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/after",
 						"links":[
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "animation0501",
-								"exactPath": "/projects/after",
+								"path": "/projects/after",
 								"componentPage": "AfterProject",
-								"title": "'After, After That' Overview Page",
+								"text": "'After, After That' Overview",
 								"icon": "page",
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "animation0502",
-								"title": "After, After That' Film on Vimeo",
+								"text": "After, After That' Film on Vimeo",
 								"icon": "film",
-								"url": "https://vimeo.com/55657740"
+								"path": "https://vimeo.com/55657740"
 							}
 						]
 					}
@@ -345,11 +345,11 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/health",
 						"links": [
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "health0101",
-								"exactPath": "/projects/healthforall",
+								"path": "/projects/healthforall",
 								"componentPage": "HealthforallProject",
-								"title": "'Health for All' Overview Page",
+								"text": "'Health for All' Overview",
 								"icon": "page"
 							}
 						]
@@ -363,11 +363,11 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/plannedparenthood",
 						"links": [
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "health0201",
-								"exactPath": "/projects/plannedparenthood",
+								"path": "/projects/plannedparenthood",
 								"componentPage": "PlannedParenthoodProject",
-								"title": "Planned Parenthood Study Overview Page",
+								"text": "Planned Parenthood Study Overview",
 								"icon": "page"
 							}
 						]
@@ -381,19 +381,19 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/media",
 						"links": [
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "health0301",
-								"exactPath": "/projects/media",
+								"path": "/projects/media",
 								"componentPage": "Project",
-								"title": "Social Media Study Overview Page",
+								"text": "Social Media Study Overview",
 								"icon": "page"
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "health0302",
-								"title": "Research Article on BMC Public Healt",
+								"text": "Research Article on BMC Public Healt",
 								"icon": "website",
-								"url": "https://bmcpublichealth.biomedcentral.com/articles/10.1186/1471-2458-13-1129"
+								"path": "https://bmcpublichealth.biomedcentral.com/articles/10.1186/1471-2458-13-1129"
 							}
 						]
 					},
@@ -406,19 +406,19 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/lmhtf",
 						"links": [
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "health0401",
-								"exactPath": "/projects/lmhtf",
+								"path": "/projects/lmhtf",
 								"componentPage": "LmhtfProject",
-								"title": "'Bodegas Saludables' Overview Page",
+								"text": "'Bodegas Saludables' Overview",
 								"icon": "page"
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "health0402",
-								"title": "'Bodegas Saludables'excerpt on Vimeo",
+								"text": "'Bodegas Saludables'excerpt on Vimeo",
 								"icon": "video",
-								"url": "http://www.vimeo.com/231980215"
+								"path": "http://www.vimeo.com/231980215"
 							}
 						]
 					}
@@ -437,26 +437,26 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/tarot",
 						"links": [
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "web0101",
-								"exactPath": "/projects/tarot",
+								"path": "/projects/tarot",
 								"componentPage": "TarotProject",
-								"title": "'AR-Tarot' Overview Page",
+								"text": "'AR-Tarot' Overview",
 								"icon": "page"
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "web0102",
-								"title": "'AR-Tarot' GitHub Repo",
+								"text": "'AR-Tarot' GitHub Repo",
 								"icon": "code",
-								"url": "https://github.com/smendez92/AR-tarot"
+								"path": "https://github.com/smendez92/AR-tarot"
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "web0103",
-								"title": "'AR-Tarot' Demo on GitHub Pages",
+								"text": "'AR-Tarot' Demo on GitHub Pages",
 								"icon": "website",
-								"url": "https://smendez92.github.io/AR-tarot/index"
+								"path": "https://smendez92.github.io/AR-tarot/index"
 							}
 						]
 					},
@@ -469,26 +469,26 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/apples",
 						"links": [
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "web0201",
-								"exactPath": "/projects/apples",
+								"path": "/projects/apples",
 								"componentPage": "ApplesProject",
-								"title": "'Apples' Overview Page",
+								"text": "'Apples' Overview",
 								"icon": "page"
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "web0202",
-								"title": "''Apples' GitHub Repo",
+								"text": "''Apples' GitHub Repo",
 								"icon": "code",
-								"url": "https://github.com/amgault/everythingButApples"
+								"path": "https://github.com/amgault/everythingButApples"
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "web0203",
-								"title": "'Apples' Demo on Heroku",
+								"text": "'Apples' Demo on Heroku",
 								"icon": "website",
-								"url": "https://everythingbutapples.herokuapp.com"
+								"path": "https://everythingbutapples.herokuapp.com"
 							}
 						]
 					},
@@ -501,26 +501,26 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/giftpitch",
 						"links": [
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "web0301",
-								"exactPath": "/projects/giftpitch",
+								"path": "/projects/giftpitch",
 								"componentPage": "GiftpitchProject",
-								"title": "GiftPitch Overview Page",
+								"text": "GiftPitch Overview",
 								"icon": "page"
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "web0302",
-								"title": "GiftPitch Walkthrough Video on Vimeo",
+								"text": "GiftPitch Walkthrough Video on Vimeo",
 								"icon": "video",
-								"url": "http://www.vimeo.com/235300604"
+								"path": "http://www.vimeo.com/235300604"
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "web0303",
-								"title": "GiftPitch GitHub Repo",
+								"text": "GiftPitch GitHub Repo",
 								"icon": "code",
-								"url": "https://github.com/jmoc1181/GiftProject"
+								"path": "https://github.com/jmoc1181/GiftProject"
 							}
 						]
 					}
@@ -539,19 +539,19 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/joliet",
 						"links": [
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "video0101",
-								"exactPath": "/projects/joliet",
+								"path": "/projects/joliet",
 								"componentPage": "JolietProject",
-								"title": "SCC Promo Video Overview Page",
+								"text": "SCC Promo Video Overview",
 								"icon": "page"
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "video0102",
-								"title": "SCC Promo Video on Vimeo",
+								"text": "SCC Promo Video on Vimeo",
 								"icon": "video",
-								"url": "http://www.vimeo.com/221224584"
+								"path": "http://www.vimeo.com/221224584"
 							}
 						]
 					},
@@ -564,26 +564,26 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/artemis",
 						"links": [
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "video0201",
-								"exactPath": "/projects/artemis",
+								"path": "/projects/artemis",
 								"componentPage": "ArtemisProject",
-								"title": "'Artemis I' Video Overview Page",
+								"text": "'Artemis I' Video Overview",
 								"icon": "page"
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "video0202",
-								"title": "'Artemis I' Video on Vimeo",
+								"text": "'Artemis I' Video on Vimeo",
 								"icon": "video",
-								"url": "http://www.vimeo.com/223448852"
+								"path": "http://www.vimeo.com/223448852"
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "video0203",
-								"title": "'Artemis I' Fundraising Campaign",
+								"text": "'Artemis I' Fundraising Campaign",
 								"icon": "website",
-								"url": "https://www.generosity.com/education-fundraising/experience-the-2017-eclipse-with-us-artemis-i"
+								"path": "https://www.generosity.com/education-fundraising/experience-the-2017-eclipse-with-us-artemis-i"
 							}
 						]
 					},
@@ -596,33 +596,33 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/whyu",
 						"links": [
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "video0301",
-								"exactPath": "/projects/whyu",
+								"path": "/projects/whyu",
 								"componentPage": "WhyuProject",
-								"title": "WhyUEdu Series Overview Page",
+								"text": "WhyUEdu Series Overview",
 								"icon": "page"
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "video0302",
-								"title": "WhyUEdu Series Excerpt 1 on Vimeo",
+								"text": "WhyUEdu Series Excerpt 1 on Vimeo",
 								"icon": "video",
-								"url": "http://www.vimeo.com/128663374/341f06632a"
+								"path": "http://www.vimeo.com/128663374/341f06632a"
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "video0303",
-								"title": "WhyUEdu Series Excerpt 2 on Vimeo",
+								"text": "WhyUEdu Series Excerpt 2 on Vimeo",
 								"icon": "video",
-								"url": "http://www.vimeo.com/128663372/553014bdd5"
+								"path": "http://www.vimeo.com/128663372/553014bdd5"
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "video0304",
-								"title": "WhyUEdu Series Worksheet PDF",
+								"text": "WhyUEdu Series Worksheet PDF",
 								"icon": "document",
-								"url": "./assets/documents/Why+Essay+Planning+Worksheet.pdf"
+								"path": "./assets/documents/Why+Essay+Planning+Worksheet.pdf"
 							}
 						]
 					},
@@ -635,26 +635,26 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/teeny",
 						"links": [
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "video0401",
-								"exactPath": "/projects/teeny",
+								"path": "/projects/teeny",
 								"componentPage": "TeenyProject",
-								"title": "'Teeny' Video Overview Page",
+								"text": "'Teeny' Video Overview",
 								"icon": "page"
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "video0402",
-								"title": "'Teeny' Fundraising Video on Vimeo",
+								"text": "'Teeny' Fundraising Video on Vimeo",
 								"icon": "video",
-								"url": "http://www.vimeo.com/172990828"
+								"path": "http://www.vimeo.com/172990828"
 							},
 							{
-								"location": "external",
+								"isInternalLink": false,
 								"id": "video0403",
-								"title": "Teeny' Fundraising Campaign",
+								"text": "Teeny' Fundraising Campaign",
 								"icon": "website",
-								"url": "https://www.kickstarter.com/projects/849732009/teeny-artisan-coin-holders-for-your-change-and-ess"
+								"path": "https://www.kickstarter.com/projects/849732009/teeny-artisan-coin-holders-for-your-change-and-ess"
 							}
 						]
 					}
@@ -673,11 +673,11 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/dots",
 						"links": [
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "art0101",
-								"exactPath": "/projects/dots",
+								"path": "/projects/dots",
 								"componentPage": "DotsProject",
-								"title": "'Dots' Overview Page",
+								"text": "'Dots' Overview",
 								"icon": "page"
 							}
 						]
@@ -691,11 +691,11 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/walks",
 						"links": [
 							{
-								"location": "internal",
+								"isInternalLink": true,
 								"id": "art0201",
-								"exactPath": "/projects/walks",
+								"path": "/projects/walks",
 								"componentPage": "WalksProject",
-								"title": "'Walks' Overview Page",
+								"text": "'Walks' Overview",
 								"icon": "page"
 							}
 						]
@@ -704,6 +704,7 @@ class HomePage extends Component {
 			}
 		],
 		blurbWidth: "90%",
+		fontColorClassName: "color-rgb-5-5-5",
 		fontSizeLevel: 1,
 		isHighContrast: false,
 		isMobileView: true,
@@ -739,20 +740,16 @@ class HomePage extends Component {
 		
 		if (this.state.fontSizeLevel === 1){
 			this.setState({fontSizeLevel: 1.5, isMobileView: true}, this.updateIsMobileVariable);
-			document.body.style.fontSize ="1.25em";
+			document.body.style.fontSize ="1.5em";
 			
 		}
 		else if (this.state.fontSizeLevel === 1.5){
+			this.setState({fontSizeLevel: 1.75, isMobileView: true}, this.updateIsMobileVariable);
+			document.body.style.fontSize = "1.75em";
+		}
+		else if (this.state.fontSizeLevel === 1.75){
 			this.setState({fontSizeLevel: 2, isMobileView: true}, this.updateIsMobileVariable);
 			document.body.style.fontSize = "2em";
-		}
-		else if (this.state.fontSizeLevel === 2){
-			this.setState({fontSizeLevel: 2.5, isMobileView: true}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "2.5em";
-		}
-		else if (this.state.fontSizeLevel === 2.5){
-			this.setState({fontSizeLevel: 3, isMobileView: true}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "3em";
 		}
 		else {
 			this.setState({fontSizeLevel: 1, isMobileView: false}, this.updateIsMobileVariable);
@@ -784,7 +781,7 @@ class HomePage extends Component {
 
   render() {
     return (
-		<div className="clearfix homepage-background-gradient">
+		<div className={ "clearfix homepage-background-gradient " + this.state.fontColorClassName }>
 			<Header
 				mainPaddingLeftClassName = { this.state.mainPaddingLeftClassName }
 				title = "SAMUEL R. MENDEZ"

@@ -60,19 +60,6 @@ textarea {
 * {
 	box-sizing: border-box;
 }
-a{
-	color: inherit;
-	 text-decoration: underline;
-	 text-decoration-color: rgb(20,20,255);
-	 text-decoration-style: double; 
-}
-a:focus, a:hover{
-	background-color: rgb(0,0,87);
-	color: rgb(251,251,251);
-	text-decoration-color: rgb(255,254,91);
-	border: solid 2px rgb(209,0,129);
-	cursor: pointer;
-}
 a::selection, h1::selection, h2::selection, h3::selection, h4::selection, img::selection, li::selection, p::selection, span::selection {
 	background-color:rgb(254, 187, 195);
 }

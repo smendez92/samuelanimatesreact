@@ -13,11 +13,20 @@
 .clear-both{
 	clear: both;
 }
+.color-inherit{
+	color: inherit;
+}
 .font-size-p75em{
 	font-size: 0.75em;
 }
 .margin-auto{
 	margin: auto;
+}
+.padding-left-p3em{
+	padding-left: .3em;
+}
+.padding-right-p3em{
+	padding-right: .3em;
 }
 .padding-left-p5em{
 	padding-left: .5em;
