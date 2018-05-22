@@ -1,3 +1,13 @@
+.homepage-color-scheme-default{
+	background: rgb(251, 251, 251);
+	background: linear-gradient(to bottom, rgb(251, 251, 251) 0%, #fffcfc 7%, #e3f0ff 17%,#94C6FF 25%, #e3f0ff 32% #fcffe0 35%, #fcffe0 50%, #fde9f3 65%, rgb(255, 178, 236) 77%, #fde9f3 84%, #fcffd0 89%, #f8ff8f 95%);
+	color: rgb(5,5,5);
+}
+.homepage-color-scheme-highContrast{
+	background-image: "./assets/images/branding/png/portrait.png";
+	background-color: rgb(3,3,3);
+	color: rgb(252,252,252);
+}
 .bg-rgb-251-251-251{
 	background-color: rgb(251,251,251);
 }
@@ -46,10 +56,6 @@
 }
 .height-auto{
 	height: auto;
-}
-.homepage-background-gradient{
-	background: rgb(250, 250, 250);
-	background: linear-gradient(to bottom, rgb(250, 250, 250) 0%, #fffcfc 7%, #e3f0ff 17%,#94C6FF 25%, #e3f0ff 32% #fcffe0 35%, #fcffe0 50%, #fde9f3 65%, rgb(255, 178, 236) 77%, #fde9f3 84%, #fcffd0 89%, #f8ff8f 95%);	
 }
 .margin-auto{
 	margin: auto;
@@ -126,7 +132,6 @@
 .text-center{
 	text-align: center;
 }
-
 .width-10pc{
 	width: 10%;
 }

@@ -5,8 +5,8 @@ import SheerWhiteContainer from "../SheerWhiteContainer";
 import GenericFloatingSection from "../GenericFloatingSection";
 
 const HomepageProjectsSection = props => (
-	<GenericFloatingSection>
-		<SheerWhiteContainer>
+	<GenericFloatingSection colorSchemeSuffix={props.colorSchemeSuffix}>
+		<SheerWhiteContainer colorSchemeSuffix={ props.colorSchemeSuffix }>
 			<h2 id={ props.id } className="color-inherit text-center">{ props.title }</h2>
 		</SheerWhiteContainer>
 		{ props.projects.map(project =>
@@ -15,6 +15,7 @@ const HomepageProjectsSection = props => (
 				float = { props.float }	
 				isMobile={ props.isMobile }
 				project = { project }
+				colorSchemeSuffix = { props.colorSchemeSuffix }
 			/>
 		)}
 	</GenericFloatingSection>	

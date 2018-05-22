@@ -661,7 +661,7 @@ class HomePage extends Component {
 				]
 			},
 			{
-				"title": "PUBLIC ART",
+				"title": "ART IN PERSON",
 				"id": "ART",
 				"projects": [
 					{
@@ -704,6 +704,7 @@ class HomePage extends Component {
 			}
 		],
 		blurbWidth: "90%",
+		colorSchemeSuffix: "default",
 		fontColorClassName: "color-rgb-5-5-5",
 		fontSizeLevel: 1,
 		isHighContrast: false,
@@ -739,20 +740,20 @@ class HomePage extends Component {
 	handleFontSizeToggleButtonClick = () =>{
 		
 		if (this.state.fontSizeLevel === 1){
-			this.setState({fontSizeLevel: 1.5, isMobileView: true}, this.updateIsMobileVariable);
+			this.setState({fontSizeLevel: 1.5}, this.updateIsMobileVariable);
 			document.body.style.fontSize ="1.5em";
 			
 		}
 		else if (this.state.fontSizeLevel === 1.5){
-			this.setState({fontSizeLevel: 1.75, isMobileView: true}, this.updateIsMobileVariable);
+			this.setState({fontSizeLevel: 1.75}, this.updateIsMobileVariable);
 			document.body.style.fontSize = "1.75em";
 		}
 		else if (this.state.fontSizeLevel === 1.75){
-			this.setState({fontSizeLevel: 2, isMobileView: true}, this.updateIsMobileVariable);
+			this.setState({fontSizeLevel: 2}, this.updateIsMobileVariable);
 			document.body.style.fontSize = "2em";
 		}
 		else {
-			this.setState({fontSizeLevel: 1, isMobileView: false}, this.updateIsMobileVariable);
+			this.setState({fontSizeLevel: 1}, this.updateIsMobileVariable);
 			document.body.style.fontSize = "1em";
 		}
 
@@ -760,19 +761,21 @@ class HomePage extends Component {
 
 	handleContrastToggleButtonClick = () =>{
 		if (this.state.isHighContrast === true){
-			this.setState({isHighContrast: false});
+			this.setState({isHighContrast: false,colorSchemeSuffix: "default"});
 		}
 		else{
-			this.setState({isHighContrast: true});
+			this.setState({isHighContrast: true,colorSchemeSuffix: "highContrast"});
 		}
 	};
 
+
+
 	updateIsMobileVariable = () =>{
 		if(window.innerWidth < 750) {
-			this.setState({isMobileView: true, portraitWidth: "75%", blurbWidth: "90%", mainPaddingLeftClassName: "padding-left-0", navbarClassName: "margin-auto margin-bottom-2em", navbarLinksClassName: "float-left font-size-p85em text-center width-33p3pc", responsiveFloat:"none"});
+			this.setState({isMobileView: true, portraitWidth: "75%", blurbWidth: "90%", mainPaddingLeftClassName: "padding-left-0", navbarClassName: "margin-auto margin-bottom-2em", navbarLinksClassName: "float-left font-size-p85em text-center width-50pc", responsiveFloat:"none"});
 		}
 		else if(this.state.fontSizeLevel > 1.0) {
-			this.setState({isMobileView: true, portraitWidth: "75%", blurbWidth: "90%", mainPaddingLeftClassName: "padding-left-0", navbarClassName: "margin-auto margin-bottom-2em", navbarLinksClassName: "float-left font-size-p85em text-center width-33p3pc", responsiveFloat:"none"});
+			this.setState({isMobileView: true, portraitWidth: "75%", blurbWidth: "90%", mainPaddingLeftClassName: "padding-left-0", navbarClassName: "margin-auto margin-bottom-2em", navbarLinksClassName: "float-left font-size-p85em text-center width-50pc", responsiveFloat:"none"});
 		}
 		else {
 			this.setState({isMobileView: false, portraitWidth: "40%", blurbWidth: "60%", mainPaddingLeftClassName: "padding-left-6p5em", navbarClassName: "left-0 position-fixed top-0", navbarLinksClassName: "float-none padding-left-1em width-8em", responsiveFloat:"left"});
@@ -781,16 +784,18 @@ class HomePage extends Component {
 
   render() {
     return (
-		<div className={ "clearfix homepage-background-gradient " + this.state.fontColorClassName }>
+		<div className={ "clearfix homepage-color-scheme-" + this.state.colorSchemeSuffix }>
 			<Header
 				mainPaddingLeftClassName = { this.state.mainPaddingLeftClassName }
 				title = "SAMUEL R. MENDEZ"
 				handleButtonClick = { this.handleButtonClick }
+				colorSchemeSuffix = { this.state.colorSchemeSuffix }
 			/>
 			<MenuBar
 				navbarClassName = { this.state.navbarClassName }
 				navbarLinks = { this.state.navbarLinks }
 				navbarLinksClassName = { this.state.navbarLinksClassName }
+				colorSchemeSuffix = { this.state.colorSchemeSuffix }
 			/>
 			<main className={ "margin-auto max-width-50em width-85pc "  + this.state.mainPaddingLeftClassName }>
 				<GenericFloatingSection>
@@ -836,10 +841,12 @@ class HomePage extends Component {
 					float = { this.state.responsiveFloat }	
 					title = "HIGHLIGHTED PROJECTS"
 					projects = { this.state.highlightsSection.projects }
+					colorSchemeSuffix = { this.state.colorSchemeSuffix }
 				/>
 				<HomepageNewsSection
 					id = { this.state.newsSection.id }
 					newsItems = { this.state.newsSection.newsItems }
+					colorSchemeSuffix = { this.state.colorSchemeSuffix }
 				/>
 				{ this.state.projectSections.map(projectSection =>
 					<HomepageProjectsSection
@@ -848,13 +855,14 @@ class HomePage extends Component {
 						float = { this.state.responsiveFloat }	
 						title = { projectSection.title}
 						projects = { projectSection.projects }
+						colorSchemeSuffix = { this.state.colorSchemeSuffix }
 					/>
 				)}
 			</main>
 			{ this.state.isMobileView === true &&
 				<div className="bottom-0 position-fixed right-0">
-					<ButtonContainer>
-						<Button>
+					<ButtonContainer colorSchemeSuffix = { this.state.colorSchemeSuffix }>
+						<Button colorSchemeSuffix = { this.state.colorSchemeSuffix }> 
 							<svg aria-labelledby="scrollToTopArrowId"  xmlns="http://www.w3.org/2000/svg" className="icon" fill="#000000" width="16" height="16" viewBox="0 0 24 24" role="img">
 								<title id="scrollToTopArrowId">Jump back up to the top of the page</title>
 								<path fill="none" d="M0 0h24v24H0V0z"/>

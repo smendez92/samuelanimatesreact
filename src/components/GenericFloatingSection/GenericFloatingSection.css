@@ -13,6 +13,9 @@
 .clear-both{
 	clear: both;
 }
+.color-inherit{
+	color: inherit;
+}
 .margin-bottom-2em{
 	margin-bottom: 2em;
 }

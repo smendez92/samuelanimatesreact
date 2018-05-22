@@ -5,9 +5,10 @@ import NavBar from '../NavBar';
 const MenuBar = props => (	
 	<div className="font-Overpass margin-auto max-width-85pc">
 		<NavBar
-			navbarClassName = { props.navbarClassName }
-			navbarLinks = { props.navbarLinks }
-			navbarLinksClassName = { props.navbarLinksClassName }
+			colorSchemeSuffix={ props.colorSchemeSuffix }
+			navbarClassName={ props.navbarClassName }
+			navbarLinks={ props.navbarLinks }
+			navbarLinksClassName={ props.navbarLinksClassName }
 		/>
 	</div>
 );

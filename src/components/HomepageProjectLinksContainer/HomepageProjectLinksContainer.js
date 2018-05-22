@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./HomepageProjectLinksContainer.css";
 import MaterialIcon from "../MaterialIcon";
 import InlineA from "../InlineA";
@@ -15,6 +14,7 @@ const HomepageProjectLinksContainer = props => (
 					isInternalLink={ projectLink.isInternalLink }	
 					text={ projectLink.text }
 					urlPath={ projectLink.path }
+					colorSchemeSuffix ={ props.colorSchemeSuffix }
 				/>
 			</div>
 		)}
