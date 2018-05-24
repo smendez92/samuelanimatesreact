@@ -11,11 +11,12 @@ const HomepageProjectsSection = props => (
 		</SheerWhiteContainer>
 		{ props.projects.map(project =>
 			<HomepageProjectContainer
-				key = {project.id}
-				float = { props.float }	
+				key={project.id}
+				float={ props.float }	
 				isMobile={ props.isMobile }
-				project = { project }
-				colorSchemeSuffix = { props.colorSchemeSuffix }
+				project={ project }
+				colorSchemeSuffix={ props.colorSchemeSuffix }
+				materialIconFill={ props.materialIconFill }
 			/>
 		)}
 	</GenericFloatingSection>	

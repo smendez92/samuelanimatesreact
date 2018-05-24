@@ -54,7 +54,7 @@ class HomePage extends Component {
 					"isInternalLink": false,
 					"id": "aboutLink04",
 					"text": "My LinkedIn Profile",
-					"icon": "",
+					"icon": "accountCircle",
 					"path": "https://www.linkedin.com/in/samuel-r-mendez/"
 				},
 			]
@@ -124,13 +124,6 @@ class HomePage extends Component {
 							"text": "'A11Y Wiki' GitHub Repo",
 							"path": "https://github.com/smendez92/wheelchairWiki",
 							"icon": "code"
-						},
-						{
-							"isInternalLink": false,
-							"id": "highlights0203",
-							"text": "'A11Y Wiki' Google Slides Presentation",
-							"path": "https://docs.google.com/presentation/d/e/2PACX-1vSHgkq7e-YyAYJNcxFAidPSJn6Cho9bl-xoMKEzgYgUIz3cC0RQ8colsHKmRzDYNjA2iLB6hDlDOKXO/pub?start=false&loop=false&delayms=3000",
-							"icon": "slides"
 						},
 						{
 							"isInternalLink": false,
@@ -710,6 +703,7 @@ class HomePage extends Component {
 		isHighContrast: false,
 		isMobileView: true,
 		mainPaddingLeftClassName: "padding-left-0em",
+		materialIconFill: "rgb(3,3,3)",
 		navbarClassName: "margin-auto margin-bottom-2em",
 		navbarLinksClassName: "float-left font-size-p85em padding-left-0 text-center",
 		navbarLinks: [{title:"ABOUT", id:"navBarLinkABOUT",href: "#ABOUT"},{title:"HIGHLIGHTS", id:"navBarLinkHIGHLIGHTS",href: "#HIGHLIGHTS"},{title:"NEWS", id:"navBarLinkNEWS",href: "#NEWS"},{title:"ANIMATION", id:"navBarLinkANIMATION",href: "#ANIMATION"},{title:"HEALTH", id:"navBarLinkHEALTH",href: "#HEALTH"},{title:"WEB", id:"navBarLink",href: "#WEB"},{title:"VIDEO", id:"navBarLinkVIDEO",href: "#VIDEO"},{title:"ART", id:"navBarLinkART",href: "#ART"}],
@@ -761,10 +755,10 @@ class HomePage extends Component {
 
 	handleContrastToggleButtonClick = () =>{
 		if (this.state.isHighContrast === true){
-			this.setState({isHighContrast: false,colorSchemeSuffix: "default"});
+			this.setState({isHighContrast: false,colorSchemeSuffix: "default", materialIconFill: "rgb(3,3,3)"});
 		}
 		else{
-			this.setState({isHighContrast: true,colorSchemeSuffix: "highContrast"});
+			this.setState({isHighContrast: true,colorSchemeSuffix: "highContrast", materialIconFill: "rgb(251,251,251)"});
 		}
 	};
 
@@ -831,17 +825,19 @@ class HomePage extends Component {
 							<h3 className="text-center">PERSONAL LINKS</h3>
 							<HomepageProjectLinksContainer
 								links = { this.state.aboutMeSection.links }
+								materialIconFill={ this.state.materialIconFill }
 							/>
 						</div>	
 					</div>
 				</div>
 				</GenericFloatingSection>
 				<HomepageProjectsSection
-					id = { this.state.highlightsSection.id }
-					float = { this.state.responsiveFloat }	
-					title = "HIGHLIGHTED PROJECTS"
-					projects = { this.state.highlightsSection.projects }
-					colorSchemeSuffix = { this.state.colorSchemeSuffix }
+					id={ this.state.highlightsSection.id }
+					float={ this.state.responsiveFloat }	
+					title="HIGHLIGHTED PROJECTS"
+					projects={ this.state.highlightsSection.projects }
+					colorSchemeSuffix={ this.state.colorSchemeSuffix }
+					materialIconFill={ this.state.materialIconFill }
 				/>
 				<HomepageNewsSection
 					id = { this.state.newsSection.id }
@@ -856,6 +852,7 @@ class HomePage extends Component {
 						title = { projectSection.title}
 						projects = { projectSection.projects }
 						colorSchemeSuffix = { this.state.colorSchemeSuffix }
+						materialIconFill={ this.state.materialIconFill }
 					/>
 				)}
 			</main>

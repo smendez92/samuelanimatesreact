@@ -4,7 +4,10 @@
 }
 .sheerWhiteContainer-color-scheme-highContrast{
 	background-color: rgb(3,3,3);
-	border-color: rgba(251,251,251,0.9);
+	border-color: rgba(251,251,251,0.8);
+}
+.border-width-2px{
+	border-width: 2px;
 }
 .color-inherit{
 	color: inherit;

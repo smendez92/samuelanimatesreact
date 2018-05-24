@@ -1,8 +1,10 @@
-.bg-white{
+.homepage-project-container-color-scheme-default{
 	background-color: rgb(251,251,251);
-}
-.border-color-rgba-150-150-150-p2{
 	border-color: rgba(150,150,150,0.2);
+}
+.homepage-project-container-color-scheme-highContrast{
+	background-color: rgb(3,3,3);
+	border-color: rgba(251,251,251,0.8);
 }
 .border-style-solid{
 	border-style: solid;
