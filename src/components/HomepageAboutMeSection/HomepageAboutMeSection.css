@@ -1,8 +1,8 @@
-.homepageNewsSection-color-scheme-default{
+.homepageAboutMeSection-color-scheme-default{
 	background-color: rgb(251,251,251);
 	border-color: rgba(150,150,150,0.2);
 }
-.homepageNewsSection-color-scheme-highContrast{
+.homepageAboutMeSection-color-scheme-highContrast{
 	background-color: rgb(3,3,3);
 	border-color: rgba(251,251,251,0.8);
 }

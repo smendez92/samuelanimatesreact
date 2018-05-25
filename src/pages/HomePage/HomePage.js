@@ -2,14 +2,11 @@ import React, { Component } from 'react';
 import './HomePage.css';
 import Button from '../../components/Button';
 import ButtonContainer from '../../components/ButtonContainer';
-import GenericFloatingSection from '../../components/GenericFloatingSection';
 import Header from '../../components/Header';
+import HomepageAboutMeSection from '../../components/HomepageAboutMeSection';
 import HomepageNewsSection from '../../components/HomepageNewsSection';
-import HomepageProjectLinksContainer from '../../components/HomepageProjectLinksContainer';
 import HomepageProjectsSection from '../../components/HomepageProjectsSection';
-import ResponsiveCtoLFloat from '../../components/ResponsiveCtoLFloat';
 import MenuBar from '../../components/MenuBar';
-import SheerWhiteContainer from '../../components/SheerWhiteContainer';
 
 class HomePage extends Component {
 
@@ -792,45 +789,17 @@ class HomePage extends Component {
 				colorSchemeSuffix = { this.state.colorSchemeSuffix }
 			/>
 			<main className={ "margin-auto max-width-50em width-85pc "  + this.state.mainPaddingLeftClassName }>
-				<GenericFloatingSection>
-					<div className="bg-rgb-251-251-251 color-black">
-						<SheerWhiteContainer>
-							<h2 className="text-center">ABOUT ME</h2>
-						</SheerWhiteContainer>
-						<ResponsiveCtoLFloat 
-							width = { this.state.portraitWidth }
-							float = { this.state.responsiveFloat }
-						>
-							<div className="font-Assistant padding-bottom-1em padding-left-20px padding-right-20px padding-top-1em">
-								<div className="max-height-12em margin-auto text-center width-75pc">
-									<img alt="" className="height-auto margin-auto max-height-12em max-width-100pc" src="./assets/images/branding/portrait.svg"></img>
-								</div>
-								<div className="font-Overpass font-size-p75em padding-T-1p5em">
-									<p>"{ this.state.aboutMeSection.quote }"</p>
-								</div>
-							</div>
-						</ResponsiveCtoLFloat>
-						<ResponsiveCtoLFloat
-							width= { this.state.blurbWidth }
-							float = { this.state.responsiveFloat }
-						>
-								<div className="font-Assistant padding-bottom-1em padding-left-20px padding-right-20px padding-top-1em">
-									{this.state.aboutMeSection.paragraphs.map(paragraph =>
-										<p key={ paragraph.id } className="padding-top-p5em padding-bottom-p5em"><span className="font-weight-600">{ paragraph.lead }:</span> { paragraph.body }</p>
-									)}
-								</div>
-						</ResponsiveCtoLFloat>
-					<div className="border-color-rgba100-100-100-p9 border-style-solid border-width-2px-0-0-0 clear-both color-black font-Assistant height-100pc padding-top-1em">
-						<div className="padding-bottom-p25em">
-							<h3 className="text-center">PERSONAL LINKS</h3>
-							<HomepageProjectLinksContainer
-								links = { this.state.aboutMeSection.links }
-								materialIconFill={ this.state.materialIconFill }
-							/>
-						</div>	
-					</div>
-				</div>
-				</GenericFloatingSection>
+				<HomepageAboutMeSection
+					paragraphs={ this.state.aboutMeSection.paragraphs }
+					width={ this.state.portraitWidth }
+					colorSchemeSuffix={ this.state.colorSchemeSuffix }
+					float={ this.state.responsiveFloat }
+					quote={ this.state.aboutMeSection.quote }
+					blurbWidth={ this.state.blurbWidth }
+					links={ this.state.aboutMeSection.links }
+					materialIconFill={ this.state.materialIconFill }
+					responsiveFloat={ this.state.responsiveFloat }
+				/>
 				<HomepageProjectsSection
 					id={ this.state.highlightsSection.id }
 					float={ this.state.responsiveFloat }	
