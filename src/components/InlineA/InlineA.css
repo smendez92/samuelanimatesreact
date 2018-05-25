@@ -11,7 +11,7 @@
 }
 .a-color-scheme-highContrast{
 	border: solid 2px rgba(0,0,0,0);
-	text-decoration: underline rgb(74, 250, 74) double;
+	text-decoration: underline rgb(75, 250, 75) double;
 }
 .a-color-scheme-highContrast:focus, .a-color-scheme-highContrast:hover{
 	background-color: rgb(251,251,251);
