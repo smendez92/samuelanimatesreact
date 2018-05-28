@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './HomePage.css';
-import Button from '../../components/Button';
-import ButtonContainer from '../../components/ButtonContainer';
 import Header from '../../components/Header';
 import HomepageAboutMeSection from '../../components/HomepageAboutMeSection';
 import HomepageNewsSection from '../../components/HomepageNewsSection';
@@ -726,6 +724,9 @@ class HomePage extends Component {
 		if(event.target.attributes.getNamedItem("buttontype").value === "contrastToggle"){
 			this.handleContrastToggleButtonClick();
 		};
+		if(event.target.attributes.getNamedItem("buttontype").value === "top"){
+			this.handleTopButtonClick();
+		};
 	}
 
 	handleFontSizeToggleButtonClick = () =>{
@@ -759,17 +760,15 @@ class HomePage extends Component {
 		}
 	};
 
-
-
 	updateIsMobileVariable = () =>{
 		if(window.innerWidth < 750) {
-			this.setState({isMobileView: true, portraitWidth: "75%", blurbWidth: "90%", mainPaddingLeftClassName: "padding-left-0", navbarClassName: "margin-auto margin-bottom-2em", navbarLinksClassName: "float-left font-size-p85em text-center width-50pc", responsiveFloat:"none"});
+			this.setState({isMobileView: true, portraitWidth: "75%", blurbWidth: "90%", mainPaddingLeftClassName: "padding-left-0", responsiveFloat:"none"});
 		}
 		else if(this.state.fontSizeLevel > 1.0) {
-			this.setState({isMobileView: true, portraitWidth: "75%", blurbWidth: "90%", mainPaddingLeftClassName: "padding-left-0", navbarClassName: "margin-auto margin-bottom-2em", navbarLinksClassName: "float-left font-size-p85em text-center width-50pc", responsiveFloat:"none"});
+			this.setState({isMobileView: true, portraitWidth: "75%", blurbWidth: "90%", mainPaddingLeftClassName: "padding-left-0", responsiveFloat:"none"});
 		}
 		else {
-			this.setState({isMobileView: false, portraitWidth: "40%", blurbWidth: "60%", mainPaddingLeftClassName: "padding-left-6p5em", navbarClassName: "left-0 position-fixed top-0", navbarLinksClassName: "float-none padding-left-1em width-8em", responsiveFloat:"left"});
+			this.setState({isMobileView: false, portraitWidth: "40%", blurbWidth: "60%", mainPaddingLeftClassName: "padding-left-6p5em", responsiveFloat:"left"});
 		}
 	};
 
@@ -783,10 +782,9 @@ class HomePage extends Component {
 				colorSchemeSuffix = { this.state.colorSchemeSuffix }
 			/>
 			<MenuBar
-				navbarClassName = { this.state.navbarClassName }
-				navbarLinks = { this.state.navbarLinks }
-				navbarLinksClassName = { this.state.navbarLinksClassName }
-				colorSchemeSuffix = { this.state.colorSchemeSuffix }
+				navbarLinks={ this.state.navbarLinks }
+				colorSchemeSuffix={ this.state.colorSchemeSuffix }
+				isMobileView={ this.state.isMobileView }
 			/>
 			<main className={ "margin-auto max-width-50em width-85pc "  + this.state.mainPaddingLeftClassName }>
 				<HomepageAboutMeSection
@@ -825,19 +823,6 @@ class HomePage extends Component {
 					/>
 				)}
 			</main>
-			{ this.state.isMobileView === true &&
-				<div className="bottom-0 position-fixed right-0">
-					<ButtonContainer colorSchemeSuffix = { this.state.colorSchemeSuffix }>
-						<Button colorSchemeSuffix = { this.state.colorSchemeSuffix }> 
-							<svg aria-labelledby="scrollToTopArrowId"  xmlns="http://www.w3.org/2000/svg" className="icon" fill="#000000" width="16" height="16" viewBox="0 0 24 24" role="img">
-								<title id="scrollToTopArrowId">Jump back up to the top of the page</title>
-								<path fill="none" d="M0 0h24v24H0V0z"/>
-								<path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
-							</svg>
-						</Button>
-					</ButtonContainer>
-				</div>
-			}
 		</div>
     );
   };

@@ -13,20 +13,22 @@ const Header = props => (
 			<div className="display-inline-block padding-bottom-p25em padding-left-p25em padding-right-p25em padding-top-p25em">
 				<ButtonContainer colorSchemeSuffix={ props.colorSchemeSuffix }>
 					<Button
-						buttontype="contrastToggle"
+						buttonType="contrastToggle"
 						onClickFunction={ props.handleButtonClick }
 						text="Click to toggle high contrast view"
 						colorSchemeSuffix={ props.colorSchemeSuffix }
+						tabIndex="0"
 					/>
 				</ButtonContainer>
 			</div>
 			<div className="display-inline-block padding-bottom-p25em padding-left-p25em padding-right-p25em padding-top-p25em">
 				<ButtonContainer colorSchemeSuffix={ props.colorSchemeSuffix }>	
 					<Button
-						buttontype="fontSizeToggle"
+						buttonType="fontSizeToggle"
 						onClickFunction={ props.handleButtonClick }
 						text="Click to toggle font size"
 						colorSchemeSuffix={ props.colorSchemeSuffix }
+						tabIndex="0"
 					/>
 				</ButtonContainer>
 			</div>
