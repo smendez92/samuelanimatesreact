@@ -4,9 +4,9 @@ import Header from '../../components/Header';
 import HomepageAboutMeSection from '../../components/HomepageAboutMeSection';
 import HomepageNewsSection from '../../components/HomepageNewsSection';
 import HomepageProjectsSection from '../../components/HomepageProjectsSection';
-import InlineA from "../../components/InlineA";
 import MenuBar from '../../components/MenuBar';
 import NavBar from '../../components/NavBar';
+import NavBarLink from '../../components/NavBarLink';
 import NavBarMobile from '../../components/NavBarMobile';
 import SheerWhiteContainer from "../../components/SheerWhiteContainer";
 
@@ -705,16 +705,19 @@ class HomePage extends Component {
 		materialIconFill: "rgb(3,3,3)",
 		navbarClassName: "margin-auto margin-bottom-2em",
 		navbarLinksClassName: "float-left font-size-p85em padding-left-0 text-center",
-		navbarLinks: [{title:"ABOUT", id:"navBarLinkABOUT",href: "#ABOUT"},{title:"HIGHLIGHTS", id:"navBarLinkHIGHLIGHTS",href: "#HIGHLIGHTS"},{title:"NEWS", id:"navBarLinkNEWS",href: "#NEWS"},{title:"ANIMATION", id:"navBarLinkANIMATION",href: "#ANIMATION"},{title:"HEALTH", id:"navBarLinkHEALTH",href: "#HEALTH"},{title:"WEB", id:"navBarLink",href: "#WEB"},{title:"VIDEO", id:"navBarLinkVIDEO",href: "#VIDEO"},{title:"ART", id:"navBarLinkART",href: "#ART"}],
+		navbarLinks: [{title:"ABOUT", id:"navBarLinkAbout"},{title:"HIGHLIGHTS", id:"navBarLinkHighlights",href: "#HIGHLIGHTS"},{title:"NEWS", id:"navBarLinkNews",href: "#NEWS"},{title:"ANIMATION", id:"navBarLinkANIMATION",href: "#ANIMATION"},{title:"HEALTH", id:"navBarLinkHEALTH",href: "#HEALTH"},{title:"WEB", id:"navBarLink",href: "#WEB"},{title:"VIDEO", id:"navBarLinkVIDEO",href: "#VIDEO"},{title:"ART", id:"navBarLinkART",href: "#ART"}],
 		portraitWidth: "50%",
 		responsiveFloat: "none"
 	};
 
-	ANIMATION = React.createRef();
-	HEALTH = React.createRef();
-	WEB = React.createRef();
-	VIDEO = React.createRef();
-	ART = React.createRef();
+	aboutSectionRef = React.createRef();
+	newsSectionRef = React.createRef();
+	highlightsSectionRef = React.createRef();
+	animationSectionRef = React.createRef();
+	healthSectionRef = React.createRef();
+	webSectionRef = React.createRef();
+	videoSectionRef = React.createRef();
+	artSectionRef = React.createRef();
 	navbarRef = React.createRef();
 
   	componentWillMount(){
@@ -771,6 +774,41 @@ class HomePage extends Component {
 
 	};
 
+	handleNavLinkClick = event => {
+		if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkAbout"){
+			this.aboutSectionRef.current.scrollIntoView();
+			this.aboutSectionRef.current.focus();
+		};
+		if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkHighlights"){
+			this.highlightsSectionRef.current.scrollIntoView();
+			this.highlightsSectionRef.current.focus();
+		};
+		if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkNews"){
+			this.newsSectionRef.current.scrollIntoView();
+			this.newsSectionRef.current.focus();
+		};
+		if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkANIMATION"){
+			this.ANIMATION.current.scrollIntoView();
+			this.ANIMATION.current.focus();
+		};
+		if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkHEALTH"){
+			this.navbarRef.current.scrollIntoView();
+			this.navbarRef.current.focus();
+		};
+		if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkWEB"){
+			this.navbarRef.current.scrollIntoView();
+			this.navbarRef.current.focus();
+		};
+		if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkVIDEO"){
+			this.navbarRef.current.scrollIntoView();
+			this.navbarRef.current.focus();
+		};
+		if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkART"){
+			this.navbarRef.current.scrollIntoView();
+			this.navbarRef.current.focus();
+		};
+	}
+
 	handleScrollToTopButtonClick = () =>{
 		this.navbarRef.current.scrollIntoView();
 		this.navbarRef.current.focus();
@@ -813,12 +851,12 @@ class HomePage extends Component {
 						<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px clearfix color-inherit padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + this.state.colorSchemeSuffix }>
 							{this.state.navbarLinks.map(link =>
 								<div className="padding-bottom-p25em padding-top-p25em float-none padding-left-1em width-8em">
-									<InlineA
-										key={ link.id }	
+									<NavBarLink
+										key={ link.id }
+										navLinkid={ link.id }
 										colorSchemeSuffix={ this.state.colorSchemeSuffix }
-										isInternalLink={ true }	
 										text={ link.title }
-										urlPath={ link.href }
+										onClickFunction={ this.handleNavLinkClick }
 									/>
 								</div>
 							)}
@@ -837,12 +875,12 @@ class HomePage extends Component {
 						<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px clearfix color-inherit padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + this.state.colorSchemeSuffix}>
 							{this.state.navbarLinks.map(link =>
 								<div className="padding-bottom-p25em padding-top-p25em float-left font-size-p85em text-center width-50pc">
-									<InlineA
-										key={ link.id }	
+									<NavBarLink
+										key={ link.id }
+										navLinkid={ link.id }
 										colorSchemeSuffix={ this.state.colorSchemeSuffix }
-										isInternalLink={ true }	
 										text={ link.title }
-										urlPath={ link.href }
+										onClickFunction={ this.handleNavLinkClick }
 									/>
 								</div>
 							)}
@@ -861,6 +899,7 @@ class HomePage extends Component {
 					links={ this.state.aboutMeSection.links }
 					materialIconFill={ this.state.materialIconFill }
 					responsiveFloat={ this.state.responsiveFloat }
+					ref={ this.aboutSectionRef }
 				/>
 				<HomepageProjectsSection
 					id={ this.state.highlightsSection.id }
@@ -869,11 +908,13 @@ class HomePage extends Component {
 					projects={ this.state.highlightsSection.projects }
 					colorSchemeSuffix={ this.state.colorSchemeSuffix }
 					materialIconFill={ this.state.materialIconFill }
+					ref={ this.highlightsSectionRef }
 				/>
 				<HomepageNewsSection
 					id = { this.state.newsSection.id }
 					newsItems = { this.state.newsSection.newsItems }
 					colorSchemeSuffix = { this.state.colorSchemeSuffix }
+					ref={ this.newsSectionRef }
 				/>
 				{ this.state.projectSections.map(projectSection =>
 					<HomepageProjectsSection
