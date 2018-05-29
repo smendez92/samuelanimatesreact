@@ -4,7 +4,11 @@ import Header from '../../components/Header';
 import HomepageAboutMeSection from '../../components/HomepageAboutMeSection';
 import HomepageNewsSection from '../../components/HomepageNewsSection';
 import HomepageProjectsSection from '../../components/HomepageProjectsSection';
+import InlineA from "../../components/InlineA";
 import MenuBar from '../../components/MenuBar';
+import NavBar from '../../components/NavBar';
+import NavBarMobile from '../../components/NavBarMobile';
+import SheerWhiteContainer from "../../components/SheerWhiteContainer";
 
 class HomePage extends Component {
 
@@ -706,6 +710,13 @@ class HomePage extends Component {
 		responsiveFloat: "none"
 	};
 
+	ANIMATION = React.createRef();
+	HEALTH = React.createRef();
+	WEB = React.createRef();
+	VIDEO = React.createRef();
+	ART = React.createRef();
+	navbarRef = React.createRef();
+
   	componentWillMount(){
 		this.updateIsMobileVariable();
 	};
@@ -724,10 +735,19 @@ class HomePage extends Component {
 		if(event.target.attributes.getNamedItem("buttontype").value === "contrastToggle"){
 			this.handleContrastToggleButtonClick();
 		};
-		if(event.target.attributes.getNamedItem("buttontype").value === "top"){
-			this.handleTopButtonClick();
+		if(event.target.attributes.getNamedItem("buttontype").value === "scrollToTop"){
+			this.handleScrollToTopButtonClick();
 		};
 	}
+
+	handleContrastToggleButtonClick = () =>{
+		if (this.state.isHighContrast === true){
+			this.setState({isHighContrast: false,colorSchemeSuffix: "default", materialIconFill: "rgb(3,3,3)"});
+		}
+		else{
+			this.setState({isHighContrast: true,colorSchemeSuffix: "highContrast", materialIconFill: "rgb(251,251,251)"});
+		}
+	};
 
 	handleFontSizeToggleButtonClick = () =>{
 		
@@ -751,13 +771,9 @@ class HomePage extends Component {
 
 	};
 
-	handleContrastToggleButtonClick = () =>{
-		if (this.state.isHighContrast === true){
-			this.setState({isHighContrast: false,colorSchemeSuffix: "default", materialIconFill: "rgb(3,3,3)"});
-		}
-		else{
-			this.setState({isHighContrast: true,colorSchemeSuffix: "highContrast", materialIconFill: "rgb(251,251,251)"});
-		}
+	handleScrollToTopButtonClick = () =>{
+		this.navbarRef.current.scrollIntoView();
+		this.navbarRef.current.focus();
 	};
 
 	updateIsMobileVariable = () =>{
@@ -785,7 +801,55 @@ class HomePage extends Component {
 				navbarLinks={ this.state.navbarLinks }
 				colorSchemeSuffix={ this.state.colorSchemeSuffix }
 				isMobileView={ this.state.isMobileView }
-			/>
+			>
+				{ this.state.isMobileView === false &&
+					<NavBar
+						colorSchemeSuffix={ this.state.colorSchemeSuffix }
+						navbarLinks={ this.state.navbarLinks }
+					>
+						<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
+							<h2 className="text-center">NAV</h2>
+						</SheerWhiteContainer>
+						<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px clearfix color-inherit padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + this.state.colorSchemeSuffix }>
+							{this.state.navbarLinks.map(link =>
+								<div className="padding-bottom-p25em padding-top-p25em float-none padding-left-1em width-8em">
+									<InlineA
+										key={ link.id }	
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										isInternalLink={ true }	
+										text={ link.title }
+										urlPath={ link.href }
+									/>
+								</div>
+							)}
+						</div>
+					</NavBar>
+				}
+				{ this.state.isMobileView === true &&
+					<NavBarMobile
+						colorSchemeSuffix={ this.state.colorSchemeSuffix }
+						navbarLinks={ this.state.navbarLinks }
+						handleButtonClick={ this.handleButtonClick }
+					>
+						<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
+							<h2 tabindex="0" className="text-center" ref={ this.navbarRef }>NAV</h2>
+						</SheerWhiteContainer>
+						<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px clearfix color-inherit padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + this.state.colorSchemeSuffix}>
+							{this.state.navbarLinks.map(link =>
+								<div className="padding-bottom-p25em padding-top-p25em float-left font-size-p85em text-center width-50pc">
+									<InlineA
+										key={ link.id }	
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										isInternalLink={ true }	
+										text={ link.title }
+										urlPath={ link.href }
+									/>
+								</div>
+							)}
+						</div>
+					</NavBarMobile>
+				}
+			</MenuBar>
 			<main className={ "margin-auto max-width-50em width-85pc "  + this.state.mainPaddingLeftClassName }>
 				<HomepageAboutMeSection
 					paragraphs={ this.state.aboutMeSection.paragraphs }
@@ -813,13 +877,14 @@ class HomePage extends Component {
 				/>
 				{ this.state.projectSections.map(projectSection =>
 					<HomepageProjectsSection
-						id = {projectSection.id}
-						key = {projectSection.id}
-						float = { this.state.responsiveFloat }	
-						title = { projectSection.title}
-						projects = { projectSection.projects }
-						colorSchemeSuffix = { this.state.colorSchemeSuffix }
+						id={ projectSection.id }
+						key={ projectSection.id }
+						float={ this.state.responsiveFloat }	
+						title={ projectSection.title }
+						projects={ projectSection.projects }
+						colorSchemeSuffix={ this.state.colorSchemeSuffix }
 						materialIconFill={ this.state.materialIconFill }
+						ref={ projectSection.id }
 					/>
 				)}
 			</main>
