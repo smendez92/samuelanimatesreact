@@ -193,7 +193,7 @@ class HomePage extends Component {
 		projectSections: [
 			{
 				"title": "ANIMATED FILMS",
-				"id": "ANIMATION",
+				"id": "animationSection",
 				"projects": [
 					{
 						"id": "animation01",
@@ -326,7 +326,7 @@ class HomePage extends Component {
 			},
 			{
 				"title": "PUBLIC HEALTH RESEARCH",
-				"id": "HEALTH",
+				"id": "healthSection",
 				"projects": [
 					{
 						"id": "health01",
@@ -418,7 +418,7 @@ class HomePage extends Component {
 			},
 			{
 				"title": "WEB DEVELOPMENT",
-				"id": "WEB",
+				"id": "webSection",
 				"projects": [
 					{
 						"id": "web01",
@@ -520,7 +520,7 @@ class HomePage extends Component {
 			},
 			{
 				"title": "VIDEO",
-				"id": "VIDEO",
+				"id": "videoSection",
 				"projects": [
 					{
 						"id": "video01",
@@ -654,7 +654,7 @@ class HomePage extends Component {
 			},
 			{
 				"title": "ART IN PERSON",
-				"id": "ART",
+				"id": "artSection",
 				"projects": [
 					{
 						"id": "art01",
@@ -705,7 +705,7 @@ class HomePage extends Component {
 		materialIconFill: "rgb(3,3,3)",
 		navbarClassName: "margin-auto margin-bottom-2em",
 		navbarLinksClassName: "float-left font-size-p85em padding-left-0 text-center",
-		navbarLinks: [{title:"ABOUT", id:"navBarLinkAbout"},{title:"HIGHLIGHTS", id:"navBarLinkHighlights",href: "#HIGHLIGHTS"},{title:"NEWS", id:"navBarLinkNews",href: "#NEWS"},{title:"ANIMATION", id:"navBarLinkANIMATION",href: "#ANIMATION"},{title:"HEALTH", id:"navBarLinkHEALTH",href: "#HEALTH"},{title:"WEB", id:"navBarLink",href: "#WEB"},{title:"VIDEO", id:"navBarLinkVIDEO",href: "#VIDEO"},{title:"ART", id:"navBarLinkART",href: "#ART"}],
+		navbarLinks: [{title:"ABOUT", id:"navBarLinkAbout"},{title:"HIGHLIGHTS", id:"navBarLinkHighlights",href: "#HIGHLIGHTS"},{title:"NEWS", id:"navBarLinkNews",href: "#NEWS"},{title:"ANIMATION", id:"navBarLinkAnimation",href: "#ANIMATION"},{title:"HEALTH", id:"navBarLinkHealth",href: "#HEALTH"},{title:"WEB", id:"navBarLinkWeb",href: "#WEB"},{title:"VIDEO", id:"navBarLinkVideo",href: "#VIDEO"},{title:"ART", id:"navBarLinkArt",href: "#ART"}],
 		portraitWidth: "50%",
 		responsiveFloat: "none"
 	};
@@ -713,12 +713,13 @@ class HomePage extends Component {
 	aboutSectionRef = React.createRef();
 	newsSectionRef = React.createRef();
 	highlightsSectionRef = React.createRef();
+	navbarRef = React.createRef();
 	animationSectionRef = React.createRef();
 	healthSectionRef = React.createRef();
 	webSectionRef = React.createRef();
 	videoSectionRef = React.createRef();
 	artSectionRef = React.createRef();
-	navbarRef = React.createRef();
+	projectSectionRefs = [this.animationSectionRef, this.healthSectionRef, this.webSectionRef, this.videoSectionRef, this.artSectionRef]
 
   	componentWillMount(){
 		this.updateIsMobileVariable();
@@ -731,6 +732,41 @@ class HomePage extends Component {
 		window.removeEventListener('resize', this.updateIsMobileVariable.bind(this));
 
 	};
+
+	scrollToEventTarget = eventTarget =>{
+		if(eventTarget.attributes.getNamedItem("navLinkid").value === "navBarLinkAbout"){
+			this.aboutSectionRef.current.scrollIntoView();
+			this.aboutSectionRef.current.focus();
+		};
+		if(eventTarget.attributes.getNamedItem("navLinkid").value === "navBarLinkHighlights"){
+			this.highlightsSectionRef.current.scrollIntoView();
+			this.highlightsSectionRef.current.focus();
+		};
+		if(eventTarget.attributes.getNamedItem("navLinkid").value === "navBarLinkNews"){
+			this.newsSectionRef.current.scrollIntoView();
+			this.newsSectionRef.current.focus();
+		};
+		if(eventTarget.attributes.getNamedItem("navLinkid").value === "navBarLinkAnimation"){
+			this.animationSectionRef.current.scrollIntoView();
+			this.animationSectionRef.current.focus();
+		};
+		if(eventTarget.attributes.getNamedItem("navLinkid").value === "navBarLinkHealth"){
+			this.healthSectionRef.current.scrollIntoView();
+			this.healthSectionRef.current.focus();
+		};
+		if(eventTarget.attributes.getNamedItem("navLinkid").value === "navBarLinkWeb"){
+			this.webSectionRef.current.scrollIntoView();
+			this.webSectionRef.current.focus();
+		};
+		if(eventTarget.attributes.getNamedItem("navLinkid").value === "navBarLinkVideo"){
+			this.videoSectionRef.current.scrollIntoView();
+			this.videoSectionRef.current.focus();
+		};
+		if(eventTarget.attributes.getNamedItem("navLinkid").value === "navBarLinkArt"){
+			this.artSectionRef.current.scrollIntoView();
+			this.artSectionRef.current.focus();
+		};
+	}
 
 	handleButtonClick = event => {
 		event.preventDefault();
@@ -776,55 +812,13 @@ class HomePage extends Component {
 
 	handleKeyPress = event =>{
 		if (event.key ==="Enter"){
-			if(event.target.attributes.getNamedItem("navLinkId").value === "navBarLinkAbout"){
-				this.aboutSectionRef.current.scrollIntoView();
-				this.aboutSectionRef.current.focus();
-			};
-			if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkHighlights"){
-				this.highlightsSectionRef.current.scrollIntoView();
-				this.highlightsSectionRef.current.focus();
-			};
-			if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkNews"){
-				this.newsSectionRef.current.scrollIntoView();
-				this.newsSectionRef.current.focus();
-			};
+			this.scrollToEventTarget(event.target);
 		}
 	};
 
 
 	handleNavLinkClick = event => {
-		if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkAbout"){
-			this.aboutSectionRef.current.scrollIntoView();
-			this.aboutSectionRef.current.focus();
-		};
-		if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkHighlights"){
-			this.highlightsSectionRef.current.scrollIntoView();
-			this.highlightsSectionRef.current.focus();
-		};
-		if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkNews"){
-			this.newsSectionRef.current.scrollIntoView();
-			this.newsSectionRef.current.focus();
-		};
-		if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkANIMATION"){
-			this.ANIMATION.current.scrollIntoView();
-			this.ANIMATION.current.focus();
-		};
-		if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkHEALTH"){
-			this.navbarRef.current.scrollIntoView();
-			this.navbarRef.current.focus();
-		};
-		if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkWEB"){
-			this.navbarRef.current.scrollIntoView();
-			this.navbarRef.current.focus();
-		};
-		if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkVIDEO"){
-			this.navbarRef.current.scrollIntoView();
-			this.navbarRef.current.focus();
-		};
-		if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkART"){
-			this.navbarRef.current.scrollIntoView();
-			this.navbarRef.current.focus();
-		};
+		this.scrollToEventTarget(event.target);
 	}
 
 	handleScrollToTopButtonClick = () =>{
@@ -936,7 +930,7 @@ class HomePage extends Component {
 					colorSchemeSuffix = { this.state.colorSchemeSuffix }
 					ref={ this.newsSectionRef }
 				/>
-				{ this.state.projectSections.map(projectSection =>
+				{ this.state.projectSections.map((projectSection, index) =>
 					<HomepageProjectsSection
 						id={ projectSection.id }
 						key={ projectSection.id }
@@ -945,7 +939,7 @@ class HomePage extends Component {
 						projects={ projectSection.projects }
 						colorSchemeSuffix={ this.state.colorSchemeSuffix }
 						materialIconFill={ this.state.materialIconFill }
-						ref={ projectSection.id }
+						ref={ this.projectSectionRefs[index] }
 					/>
 				)}
 			</main>
