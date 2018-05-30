@@ -725,9 +725,11 @@ class HomePage extends Component {
 	};
 	componentDidMount() {
 		window.addEventListener("resize", this.updateIsMobileVariable.bind(this));
+
 	};
 	componentWillUnmount() {
 		window.removeEventListener('resize', this.updateIsMobileVariable.bind(this));
+
 	};
 
 	handleButtonClick = event => {
@@ -752,8 +754,7 @@ class HomePage extends Component {
 		}
 	};
 
-	handleFontSizeToggleButtonClick = () =>{
-		
+	handleFontSizeToggleButtonClick = () =>{	
 		if (this.state.fontSizeLevel === 1){
 			this.setState({fontSizeLevel: 1.5}, this.updateIsMobileVariable);
 			document.body.style.fontSize ="1.5em";
@@ -771,8 +772,25 @@ class HomePage extends Component {
 			this.setState({fontSizeLevel: 1}, this.updateIsMobileVariable);
 			document.body.style.fontSize = "1em";
 		}
-
 	};
+
+	handleKeyPress = event =>{
+		if (event.key ==="Enter"){
+			if(event.target.attributes.getNamedItem("navLinkId").value === "navBarLinkAbout"){
+				this.aboutSectionRef.current.scrollIntoView();
+				this.aboutSectionRef.current.focus();
+			};
+			if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkHighlights"){
+				this.highlightsSectionRef.current.scrollIntoView();
+				this.highlightsSectionRef.current.focus();
+			};
+			if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkNews"){
+				this.newsSectionRef.current.scrollIntoView();
+				this.newsSectionRef.current.focus();
+			};
+		}
+	};
+
 
 	handleNavLinkClick = event => {
 		if(event.target.attributes.getNamedItem("navLinkid").value === "navBarLinkAbout"){
@@ -857,6 +875,7 @@ class HomePage extends Component {
 										colorSchemeSuffix={ this.state.colorSchemeSuffix }
 										text={ link.title }
 										onClickFunction={ this.handleNavLinkClick }
+										onKeyPressFunction={ this.handleKeyPress }
 									/>
 								</div>
 							)}
@@ -881,6 +900,7 @@ class HomePage extends Component {
 										colorSchemeSuffix={ this.state.colorSchemeSuffix }
 										text={ link.title }
 										onClickFunction={ this.handleNavLinkClick }
+										onKeyPressFunction={ this.handleKeyPress }
 									/>
 								</div>
 							)}

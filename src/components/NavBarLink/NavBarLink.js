@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./NavBarLink.css";
 
 const NavBarLink = props => (
-	<span navLinkid={ props.navLinkid } onClick={ props.onClickFunction } role="link" tabindex="0" className={ "color-inherit navBarLink-color-scheme-" + props.colorSchemeSuffix }>
+	<span navLinkid={ props.navLinkid } onKeyPress={ props.onKeyPressFunction } onClick={ props.onClickFunction } role="link" tabindex="0" className={ "color-inherit navBarLink-color-scheme-" + props.colorSchemeSuffix }>
 		{ props.text }
 	</span>
 );

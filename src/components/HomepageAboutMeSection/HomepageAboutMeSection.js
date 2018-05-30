@@ -5,11 +5,11 @@ import HomepageProjectLinksContainer from "../HomepageProjectLinksContainer";
 import ResponsiveCtoLFloat from "../ResponsiveCtoLFloat";
 import SheerWhiteContainer from '../SheerWhiteContainer';
 
-const HomepageAboutMeSection = props => (
+const HomepageAboutMeSection = React.forwardRef((props, ref) => (
 	<GenericFloatingSection colorSchemeSuffix={ props.colorSchemeSuffix }>
 		<div className={ "homepageAboutMeSection-color-scheme-" + props.colorSchemeSuffix + " color-inherit"}>
 			<SheerWhiteContainer colorSchemeSuffix={ props.colorSchemeSuffix }>
-				<h2 className="text-center">ABOUT ME</h2>
+				<h2 tabindex="0" className="text-center" ref={ ref }>ABOUT ME</h2>
 			</SheerWhiteContainer>
 			<ResponsiveCtoLFloat 
 				width = { props.portraitWidth }
@@ -46,6 +46,6 @@ const HomepageAboutMeSection = props => (
 			</div>
 		</div>
 	</GenericFloatingSection>
-);
+));
 
 export default HomepageAboutMeSection;
