@@ -733,41 +733,6 @@ class HomePage extends Component {
 
 	};
 
-	scrollToEventTarget = eventTarget =>{
-		if(eventTarget.attributes.getNamedItem("navLinkid").value === "navBarLinkAbout"){
-			this.aboutSectionRef.current.scrollIntoView();
-			this.aboutSectionRef.current.focus();
-		};
-		if(eventTarget.attributes.getNamedItem("navLinkid").value === "navBarLinkHighlights"){
-			this.highlightsSectionRef.current.scrollIntoView();
-			this.highlightsSectionRef.current.focus();
-		};
-		if(eventTarget.attributes.getNamedItem("navLinkid").value === "navBarLinkNews"){
-			this.newsSectionRef.current.scrollIntoView();
-			this.newsSectionRef.current.focus();
-		};
-		if(eventTarget.attributes.getNamedItem("navLinkid").value === "navBarLinkAnimation"){
-			this.animationSectionRef.current.scrollIntoView();
-			this.animationSectionRef.current.focus();
-		};
-		if(eventTarget.attributes.getNamedItem("navLinkid").value === "navBarLinkHealth"){
-			this.healthSectionRef.current.scrollIntoView();
-			this.healthSectionRef.current.focus();
-		};
-		if(eventTarget.attributes.getNamedItem("navLinkid").value === "navBarLinkWeb"){
-			this.webSectionRef.current.scrollIntoView();
-			this.webSectionRef.current.focus();
-		};
-		if(eventTarget.attributes.getNamedItem("navLinkid").value === "navBarLinkVideo"){
-			this.videoSectionRef.current.scrollIntoView();
-			this.videoSectionRef.current.focus();
-		};
-		if(eventTarget.attributes.getNamedItem("navLinkid").value === "navBarLinkArt"){
-			this.artSectionRef.current.scrollIntoView();
-			this.artSectionRef.current.focus();
-		};
-	}
-
 	handleButtonClick = event => {
 		event.preventDefault();
 		if(event.target.attributes.getNamedItem("buttontype").value === "fontSizeToggle"){
@@ -778,6 +743,9 @@ class HomePage extends Component {
 		};
 		if(event.target.attributes.getNamedItem("buttontype").value === "scrollToTop"){
 			this.handleScrollToTopButtonClick();
+		};
+		if(event.target.attributes.getNamedItem("buttontype").value === "navbarLink"){
+			this.handleNavLinkClick();
 		};
 	}
 
@@ -810,15 +778,39 @@ class HomePage extends Component {
 		}
 	};
 
-	handleKeyPress = event =>{
-		if (event.key ==="Enter"){
-			this.scrollToEventTarget(event.target);
-		}
-	};
-
-
 	handleNavLinkClick = event => {
-		this.scrollToEventTarget(event.target);
+		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkAbout"){
+			this.aboutSectionRef.current.scrollIntoView();
+			this.aboutSectionRef.current.focus();
+		};
+		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkHighlights"){
+			this.highlightsSectionRef.current.scrollIntoView();
+			this.highlightsSectionRef.current.focus();
+		};
+		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkNews"){
+			this.newsSectionRef.current.scrollIntoView();
+			this.newsSectionRef.current.focus();
+		};
+		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkAnimation"){
+			this.animationSectionRef.current.scrollIntoView();
+			this.animationSectionRef.current.focus();
+		};
+		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkHealth"){
+			this.healthSectionRef.current.scrollIntoView();
+			this.healthSectionRef.current.focus();
+		};
+		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkWeb"){
+			this.webSectionRef.current.scrollIntoView();
+			this.webSectionRef.current.focus();
+		};
+		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkVideo"){
+			this.videoSectionRef.current.scrollIntoView();
+			this.videoSectionRef.current.focus();
+		};
+		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkArt"){
+			this.artSectionRef.current.scrollIntoView();
+			this.artSectionRef.current.focus();
+		};
 	}
 
 	handleScrollToTopButtonClick = () =>{
@@ -858,14 +850,14 @@ class HomePage extends Component {
 						navbarLinks={ this.state.navbarLinks }
 					>
 						<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
-							<h2 className="text-center">NAV</h2>
+							<h2 className="text-center">JUMP TO</h2>
 						</SheerWhiteContainer>
 						<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px clearfix color-inherit padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + this.state.colorSchemeSuffix }>
 							{this.state.navbarLinks.map(link =>
-								<div className="padding-bottom-p25em padding-top-p25em float-none padding-left-1em width-8em">
+								<div className="font-size-p85em padding-bottom-p25em padding-top-p25em float-none padding-left-1em width-8em">
 									<NavBarLink
 										key={ link.id }
-										navLinkid={ link.id }
+										buttonId={ link.id }
 										colorSchemeSuffix={ this.state.colorSchemeSuffix }
 										text={ link.title }
 										onClickFunction={ this.handleNavLinkClick }
@@ -883,14 +875,14 @@ class HomePage extends Component {
 						handleButtonClick={ this.handleButtonClick }
 					>
 						<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
-							<h2 tabindex="0" className="text-center" ref={ this.navbarRef }>NAV</h2>
+							<h2 tabindex="0" className="text-center" ref={ this.navbarRef }>JUMP TO</h2>
 						</SheerWhiteContainer>
 						<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px clearfix color-inherit padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + this.state.colorSchemeSuffix}>
 							{this.state.navbarLinks.map(link =>
-								<div className="padding-bottom-p25em padding-top-p25em float-left font-size-p85em text-center width-50pc">
+								<div className="font-size-p85em padding-bottom-p25em padding-top-p25em float-left font-size-p85em text-center width-50pc">
 									<NavBarLink
 										key={ link.id }
-										navLinkid={ link.id }
+										buttonId={ link.id }
 										colorSchemeSuffix={ this.state.colorSchemeSuffix }
 										text={ link.title }
 										onClickFunction={ this.handleNavLinkClick }

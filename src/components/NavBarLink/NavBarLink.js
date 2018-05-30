@@ -1,11 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./NavBarLink.css";
+import Button from "../Button";
 
 const NavBarLink = props => (
-	<span navLinkid={ props.navLinkid } onKeyPress={ props.onKeyPressFunction } onClick={ props.onClickFunction } role="link" tabindex="0" className={ "color-inherit navBarLink-color-scheme-" + props.colorSchemeSuffix }>
-		{ props.text }
-	</span>
+	<Button
+		tabIndex="0"
+		buttonType="navbarLink"
+		buttonId={ props.buttonId }
+		onClickFunction={ props.onClickFunction }
+		colorSchemeSuffix={ props.colorSchemeSuffix }
+		text={ props.text }
+	/>
 );
 
 export default NavBarLink;
