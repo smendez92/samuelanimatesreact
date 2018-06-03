@@ -853,18 +853,22 @@ class HomePage extends Component {
 							<h2 className="text-center">JUMP TO</h2>
 						</SheerWhiteContainer>
 						<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px clearfix color-inherit padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + this.state.colorSchemeSuffix }>
-							{this.state.navbarLinks.map(link =>
-								<div className="font-size-p85em padding-bottom-p25em padding-top-p25em float-none padding-left-1em width-8em">
-									<NavBarLink
-										key={ link.id }
-										buttonId={ link.id }
-										colorSchemeSuffix={ this.state.colorSchemeSuffix }
-										text={ link.title }
-										onClickFunction={ this.handleNavLinkClick }
-										onKeyPressFunction={ this.handleKeyPress }
-									/>
-								</div>
-							)}
+							<ul>
+								{this.state.navbarLinks.map(link =>
+									<li>
+										<div className="font-size-p85em padding-bottom-p25em padding-top-p25em float-none padding-left-1em width-8em">
+											<NavBarLink
+												key={ link.id }
+												buttonId={ link.id }
+												colorSchemeSuffix={ this.state.colorSchemeSuffix }
+												text={ link.title }
+												onClickFunction={ this.handleNavLinkClick }
+												onKeyPressFunction={ this.handleKeyPress }
+											/>
+										</div>
+									</li>
+								)}
+							</ul>
 						</div>
 					</NavBar>
 				}

@@ -12,11 +12,13 @@
 	border-color: rgb(209,0,129);
 	background-color: rgb(151, 2, 128);
 	color: rgb(251,251,251);
+	cursor: pointer;
 }
 .button-color-scheme-highContrast:hover, .button-color-scheme-highContrast:focus{
 	border-color: rgb(3,3,3);
 	background-color: rgb(3,3,3);
 	color: rgb(251,251,251);
+	cursor: pointer;
 }
 .border-radius-12px{
 	border-radius: 12px;
@@ -34,9 +36,6 @@
 }
 .border-width-2px{
 	border-width: 2px;
-}
-.cursor-pointer{
-	cursor: pointer;
 }
 
 .z2{
