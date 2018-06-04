@@ -12,8 +12,8 @@ const HomepageAboutMeSection = React.forwardRef((props, ref) => (
 				<h2 tabindex="0" className="text-center" ref={ ref }>ABOUT ME</h2>
 			</SheerWhiteContainer>
 			<ResponsiveCtoLFloat 
-				width = { props.portraitWidth }
-				float = { props.responsiveFloat }
+				width={ props.portraitWidth }
+				float={ props.responsiveFloat }
 			>
 				<div className="font-Assistant padding-bottom-1em padding-left-20px padding-right-20px padding-top-1em">
 					<div className="max-height-12em margin-auto text-center width-75pc">
@@ -25,8 +25,8 @@ const HomepageAboutMeSection = React.forwardRef((props, ref) => (
 				</div>
 			</ResponsiveCtoLFloat>
 				<ResponsiveCtoLFloat
-					width= { props.blurbWidth }
-					float = { props.responsiveFloat }
+					width={ props.blurbWidth }
+					float={ props.responsiveFloat }
 				>
 						<div className="font-Assistant padding-bottom-1em padding-left-20px padding-right-20px padding-top-1em">
 							{props.paragraphs.map(paragraph =>

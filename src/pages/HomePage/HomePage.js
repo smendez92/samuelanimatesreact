@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './HomePage.css';
+import ButtonContainer from '../../components/ButtonContainer'
 import Header from '../../components/Header';
 import HomepageAboutMeSection from '../../components/HomepageAboutMeSection';
 import HomepageNewsSection from '../../components/HomepageNewsSection';
@@ -730,7 +731,6 @@ class HomePage extends Component {
 	};
 	componentWillUnmount() {
 		window.removeEventListener('resize', this.updateIsMobileVariable.bind(this));
-
 	};
 
 	handleButtonClick = event => {
@@ -835,7 +835,7 @@ class HomePage extends Component {
 		<div className={ "clearfix homepage-color-scheme-" + this.state.colorSchemeSuffix }>
 			<Header
 				mainPaddingLeftClassName = { this.state.mainPaddingLeftClassName }
-				title = "SAMUEL R. MENDEZ"
+				title = "SAMUEL R. Mendez"
 				handleButtonClick = { this.handleButtonClick }
 				colorSchemeSuffix = { this.state.colorSchemeSuffix }
 			/>
@@ -850,21 +850,23 @@ class HomePage extends Component {
 						navbarLinks={ this.state.navbarLinks }
 					>
 						<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
-							<h2 className="text-center">JUMP TO</h2>
+							<h2 className="text-center">JUMP<br/>DOWN</h2>
 						</SheerWhiteContainer>
 						<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px clearfix color-inherit padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + this.state.colorSchemeSuffix }>
 							<ul>
 								{this.state.navbarLinks.map(link =>
 									<li>
-										<div className="font-size-p85em padding-bottom-p25em padding-top-p25em float-none padding-left-1em width-8em">
-											<NavBarLink
-												key={ link.id }
-												buttonId={ link.id }
-												colorSchemeSuffix={ this.state.colorSchemeSuffix }
-												text={ link.title }
-												onClickFunction={ this.handleNavLinkClick }
-												onKeyPressFunction={ this.handleKeyPress }
-											/>
+										<div className="font-size-p8em padding-bottom-p1em padding-top-p1em float-none padding-left-p5em padding-right-p5em width-9em">
+											<ButtonContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
+												<NavBarLink
+													key={ link.id }
+													buttonId={ link.id }
+													colorSchemeSuffix={ this.state.colorSchemeSuffix }
+													text={ link.title }
+													onClickFunction={ this.handleNavLinkClick }
+													onKeyPressFunction={ this.handleKeyPress }
+												/>
+											</ButtonContainer>
 										</div>
 									</li>
 								)}
@@ -883,15 +885,17 @@ class HomePage extends Component {
 						</SheerWhiteContainer>
 						<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px clearfix color-inherit padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + this.state.colorSchemeSuffix}>
 							{this.state.navbarLinks.map(link =>
-								<div className="font-size-p85em padding-bottom-p25em padding-top-p25em float-left font-size-p85em text-center width-50pc">
-									<NavBarLink
-										key={ link.id }
-										buttonId={ link.id }
-										colorSchemeSuffix={ this.state.colorSchemeSuffix }
-										text={ link.title }
-										onClickFunction={ this.handleNavLinkClick }
-										onKeyPressFunction={ this.handleKeyPress }
-									/>
+								<div className="font-size-p8em padding-bottom-p25em padding-left-p2em padding-right-p2em padding-top-p25em float-left font-size-p85em text-center width-50pc">
+									<ButtonContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
+										<NavBarLink
+											key={ link.id }
+											buttonId={ link.id }
+											colorSchemeSuffix={ this.state.colorSchemeSuffix }
+											text={ link.title }
+											onClickFunction={ this.handleNavLinkClick }
+											onKeyPressFunction={ this.handleKeyPress }
+										/>
+									</ButtonContainer>
 								</div>
 							)}
 						</div>
@@ -908,6 +912,7 @@ class HomePage extends Component {
 					blurbWidth={ this.state.blurbWidth }
 					links={ this.state.aboutMeSection.links }
 					materialIconFill={ this.state.materialIconFill }
+					portraitWidth={ this.state.portraitWidth }
 					responsiveFloat={ this.state.responsiveFloat }
 					ref={ this.aboutSectionRef }
 				/>
