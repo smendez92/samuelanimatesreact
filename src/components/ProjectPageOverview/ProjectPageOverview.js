@@ -14,11 +14,18 @@ const ProjectPageOverview = React.forwardRef((props, ref) => (
 			<GenericFloatingSection colorSchemeSuffix={props.colorSchemeSuffix}>
 				<div className={ "color-inherit paddng-bottom-1em paddng-left-1em paddng-right-1em paddng-top-1em text-center projectPageOverview-color-scheme-" + props.colorSchemeSuffix }> 
 					<div>
-						<h2 tabindex="0" ref={ ref }>Overview</h2>
+						<h2 tabIndex="0" ref={ ref }>Overview</h2>
 					</div>
 					<div className="padding-bottom-p5em padding-top-p5em text-left">
 						{ props.overview.map( overviewSection =>
-							<p className="padding-bottom-p5em padding-top-p5em"><h3 class="display-inline">{ overviewSection.lead }:</h3> { overviewSection.body }</p>
+							<div key={ overviewSection.id } className="padding-bottom-p5em padding-top-p5em">
+								<h3 className="display-inline">
+									{ overviewSection.lead }:
+								</h3>
+								<p className="display-inline padding-bottom-p5em padding-top-p5em">
+									&nbsp;{ overviewSection.body }
+								</p>
+							</div>
 						)}
 					</div>
 				</div>

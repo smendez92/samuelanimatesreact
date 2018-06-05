@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import './HomePage.css';
-import ButtonContainer from '../../components/ButtonContainer'
 import Header from '../../components/Header';
 import HomepageAboutMeSection from '../../components/HomepageAboutMeSection';
 import HomepageNewsSection from '../../components/HomepageNewsSection';
 import HomepageProjectsSection from '../../components/HomepageProjectsSection';
 import MenuBar from '../../components/MenuBar';
-import NavBar from '../../components/NavBar';
-import NavBarLink from '../../components/NavBarLink';
-import NavBarMobile from '../../components/NavBarMobile';
-import SheerWhiteContainer from "../../components/SheerWhiteContainer";
+import SamePageNavBar from '../../components/SamePageNavBar';
+import SamePageNavBarMobile from '../../components/SamePageNavBarMobile';
+import SheerWhiteContainer from '../../components/SheerWhiteContainer';
 
 class HomePage extends Component {
 
@@ -706,7 +704,7 @@ class HomePage extends Component {
 		materialIconFill: "rgb(3,3,3)",
 		navbarClassName: "margin-auto margin-bottom-2em",
 		navbarLinksClassName: "float-left font-size-p85em padding-left-0 text-center",
-		navbarLinks: [{title:"ABOUT", id:"navBarLinkAbout"},{title:"HIGHLIGHTS", id:"navBarLinkHighlights",href: "#HIGHLIGHTS"},{title:"NEWS", id:"navBarLinkNews",href: "#NEWS"},{title:"ANIMATION", id:"navBarLinkAnimation",href: "#ANIMATION"},{title:"HEALTH", id:"navBarLinkHealth",href: "#HEALTH"},{title:"WEB", id:"navBarLinkWeb",href: "#WEB"},{title:"VIDEO", id:"navBarLinkVideo",href: "#VIDEO"},{title:"ART", id:"navBarLinkArt",href: "#ART"}],
+		navbarLinks: [{title:"About", id:"navBarLinkAbout"},{title:"Highlights", id:"navBarLinkHighlights"},{title:"News", id:"navBarLinkNews"},{title:"Animation", id:"navBarLinkAnimation"},{title:"Health", id:"navBarLinkHealth"},{title:"Web", id:"navBarLinkWeb"},{title:"Video", id:"navBarLinkVideo"},{title:"Art", id:"navBarLinkArt"}],
 		portraitWidth: "50%",
 		responsiveFloat: "none"
 	};
@@ -835,71 +833,34 @@ class HomePage extends Component {
 		<div className={ "clearfix homepage-color-scheme-" + this.state.colorSchemeSuffix }>
 			<Header
 				mainPaddingLeftClassName = { this.state.mainPaddingLeftClassName }
-				title = "SAMUEL R. Mendez"
+				title = "Samuel R. Mendez"
 				handleButtonClick = { this.handleButtonClick }
 				colorSchemeSuffix = { this.state.colorSchemeSuffix }
 			/>
 			<MenuBar
-				navbarLinks={ this.state.navbarLinks }
 				colorSchemeSuffix={ this.state.colorSchemeSuffix }
 				isMobileView={ this.state.isMobileView }
 			>
 				{ this.state.isMobileView === false &&
-					<NavBar
+					<SamePageNavBar
 						colorSchemeSuffix={ this.state.colorSchemeSuffix }
+						handleNavLinkClick={ this.handleNavLinkClick }
+						handleKeyPress={ this.handleKeyPress }
 						navbarLinks={ this.state.navbarLinks }
-					>
-						<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
-							<h2 className="text-center">JUMP<br/>DOWN</h2>
-						</SheerWhiteContainer>
-						<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px clearfix color-inherit padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + this.state.colorSchemeSuffix }>
-							<ul>
-								{this.state.navbarLinks.map(link =>
-									<li>
-										<div className="font-size-p8em padding-bottom-p1em padding-top-p1em float-none padding-left-p5em padding-right-p5em width-9em">
-											<ButtonContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
-												<NavBarLink
-													key={ link.id }
-													buttonId={ link.id }
-													colorSchemeSuffix={ this.state.colorSchemeSuffix }
-													text={ link.title }
-													onClickFunction={ this.handleNavLinkClick }
-													onKeyPressFunction={ this.handleKeyPress }
-												/>
-											</ButtonContainer>
-										</div>
-									</li>
-								)}
-							</ul>
-						</div>
-					</NavBar>
+					/>
 				}
 				{ this.state.isMobileView === true &&
-					<NavBarMobile
+					<SamePageNavBarMobile
 						colorSchemeSuffix={ this.state.colorSchemeSuffix }
 						navbarLinks={ this.state.navbarLinks }
 						handleButtonClick={ this.handleButtonClick }
+						handleNavLinkClick={ this.handleNavLinkClick }
+						navbarRef={ this.navbarRef }
 					>
 						<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
-							<h2 tabindex="0" className="text-center" ref={ this.navbarRef }>JUMP TO</h2>
+							<p tabindex="0" className="font-weight-600 text-center" ref={ this.navbarRef }>Jump Down</p>
 						</SheerWhiteContainer>
-						<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px clearfix color-inherit padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + this.state.colorSchemeSuffix}>
-							{this.state.navbarLinks.map(link =>
-								<div className="font-size-p8em padding-bottom-p25em padding-left-p2em padding-right-p2em padding-top-p25em float-left font-size-p85em text-center width-50pc">
-									<ButtonContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
-										<NavBarLink
-											key={ link.id }
-											buttonId={ link.id }
-											colorSchemeSuffix={ this.state.colorSchemeSuffix }
-											text={ link.title }
-											onClickFunction={ this.handleNavLinkClick }
-											onKeyPressFunction={ this.handleKeyPress }
-										/>
-									</ButtonContainer>
-								</div>
-							)}
-						</div>
-					</NavBarMobile>
+					</SamePageNavBarMobile>
 				}
 			</MenuBar>
 			<main className={ "margin-auto max-width-50em width-85pc "  + this.state.mainPaddingLeftClassName }>

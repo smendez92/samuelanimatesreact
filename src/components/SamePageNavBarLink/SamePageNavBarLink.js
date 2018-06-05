@@ -1,8 +1,8 @@
 import React from "react";
-import "./NavBarLink.css";
+import "./SamePageNavBarLink.css";
 import Button from "../Button";
 
-const NavBarLink = props => (
+const SamePageNavBarLink = props => (
 	<Button
 		tabIndex="0"
 		buttonType="navbarLink"
@@ -13,4 +13,4 @@ const NavBarLink = props => (
 	/>
 );
 
-export default NavBarLink;
+export default SamePageNavBarLink;

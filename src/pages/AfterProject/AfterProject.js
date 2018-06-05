@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import "./AfterProject.css";
 import Header from '../../components/Header';
-import ProjectPageSynopsis from '../../components/ProjectPageSynopsis';
-import ProjectPageHighlights from '../../components/ProjectPageHighlights';
-import ProjectPageOverview from '../../components/ProjectPageOverview';
+import MenuBar from '../../components/MenuBar';
+import SamePageNavBar from '../../components/SamePageNavBar';
+import SamePageNavBarMobile from '../../components/SamePageNavBarMobile';
+import SheerWhiteContainer from "../../components/SheerWhiteContainer";
+import ProjectPageMainSections from '../../components/ProjectPageMainSections';
 
 class AfterProject extends Component {
 	state = {
@@ -12,7 +14,8 @@ class AfterProject extends Component {
 		isMobileView: true,
 		mainPaddingLeftClassName: "padding-left-0em",
 		responsiveFloat:"none",
-		responsiveWidth:"50%"
+		responsiveWidth:"50%",
+		navbarLinks: [{title:"Synopsis", id:"navBarLinkSynopsis"},{title:"Highlights", id:"navBarLinkHighlights"},{title:"Overview", id:"navBarLinkOverview"}]
 	}
 
 	projectInfo = {
@@ -58,13 +61,16 @@ class AfterProject extends Component {
 		]
 		
 	}
+	synopsisSectionRef = React.createRef();
+	highlightsSectionRef = React.createRef();
+	navbarRef = React.createRef();
+	overviewSectionRef = React.createRef();
 
 	componentWillMount(){
 		this.updateIsMobileVariable();
 	};
 	componentDidMount() {
 		window.addEventListener("resize", this.updateIsMobileVariable.bind(this));
-
 	};
 	componentWillUnmount() {
 		window.removeEventListener('resize', this.updateIsMobileVariable.bind(this));
@@ -116,37 +122,17 @@ class AfterProject extends Component {
 	};
 
 	handleNavLinkClick = event => {
-		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkAbout"){
-			this.aboutSectionRef.current.scrollIntoView();
-			this.aboutSectionRef.current.focus();
+		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkSynopsis"){
+			this.synopsisSectionRef.current.scrollIntoView();
+			this.synopsisSectionRef.current.focus();
 		};
 		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkHighlights"){
 			this.highlightsSectionRef.current.scrollIntoView();
 			this.highlightsSectionRef.current.focus();
 		};
-		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkNews"){
-			this.newsSectionRef.current.scrollIntoView();
-			this.newsSectionRef.current.focus();
-		};
-		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkAnimation"){
-			this.animationSectionRef.current.scrollIntoView();
-			this.animationSectionRef.current.focus();
-		};
-		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkHealth"){
-			this.healthSectionRef.current.scrollIntoView();
-			this.healthSectionRef.current.focus();
-		};
-		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkWeb"){
-			this.webSectionRef.current.scrollIntoView();
-			this.webSectionRef.current.focus();
-		};
-		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkVideo"){
-			this.videoSectionRef.current.scrollIntoView();
-			this.videoSectionRef.current.focus();
-		};
-		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkArt"){
-			this.artSectionRef.current.scrollIntoView();
-			this.artSectionRef.current.focus();
+		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkOverview"){
+			this.overviewSectionRef.current.scrollIntoView();
+			this.overviewSectionRef.current.focus();
 		};
 	}
 
@@ -177,25 +163,42 @@ class AfterProject extends Component {
 					handleButtonClick = { this.handleButtonClick }
 					colorSchemeSuffix = { this.state.colorSchemeSuffix }
 				/>
+				<MenuBar
+					navbarLinks={ this.state.navbarLinks }
+					colorSchemeSuffix={ this.state.colorSchemeSuffix }
+					isMobileView={ this.state.isMobileView }
+				>
+					{ this.state.isMobileView === false &&
+						<SamePageNavBar
+							colorSchemeSuffix={ this.state.colorSchemeSuffix }
+							handleNavLinkClick={ this.handleNavLinkClick }
+							navbarLinks={ this.state.navbarLinks }
+						/>
+					}
+					{ this.state.isMobileView === true &&
+						<SamePageNavBarMobile
+							colorSchemeSuffix={ this.state.colorSchemeSuffix }
+							navbarLinks={ this.state.navbarLinks }
+							handleButtonClick={ this.handleButtonClick }
+							handleNavLinkClick={ this.handleNavLinkClick }
+							navbarRef={ this.navbarRef }
+						>
+							<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
+								<p tabindex="0" className="font-weight-600 text-center" ref={ this.navbarRef }>Jump Down</p>
+							</SheerWhiteContainer>
+						</SamePageNavBarMobile>
+					}
+				</MenuBar>
 				<main className={ "margin-auto max-width-60em width-90pc "  + this.state.mainPaddingLeftClassName }>
-					<ProjectPageSynopsis
+					<ProjectPageMainSections
 						colorSchemeSuffix={ this.state.colorSchemeSuffix }
 						float={ this.state.responsiveFloat }
 						isMobile={ this.state.isMobileView }
-						synopsis={ this.projectInfo.synopsis }
+						projectInfo={ this.projectInfo }
 						width={ this.state.responsiveWidth }
-					/>
-					<ProjectPageHighlights
-						colorSchemeSuffix={ this.state.colorSchemeSuffix }
-						float={ this.state.responsiveFloat }
-						highlights={ this.projectInfo.highlights }
-						isMobile={ this.state.isMobileView }
-						synopsis={ this.projectInfo.synopsis }
-						width={ this.state.responsiveWidth }
-					/>
-					<ProjectPageOverview
-						colorSchemeSuffix={ this.state.colorSchemeSuffix }
-						overview={ this.projectInfo.overview }
+						synopsisSectionRef={ this.synopsisSectionRef }
+						highlightsSectionRef={ this.highlightsSectionRef }
+						overviewSectionRef={ this.overviewSectionRef }
 					/>
 				</main>
 			</div>

@@ -6,7 +6,7 @@ import InlineA from "../InlineA";
 import ResponsiveCtoLFloat from "../ResponsiveCtoLFloat";
 
 const HomepageProjectContainer = props => (
-    <div className={ "homepage-project-container-color-scheme-" + props.colorSchemeSuffix + " border-style-solid border-width-2px clear-both color-inherit font-Assistant padding-left-1em padding-right-1em padding-top-1p5em width-100pc"}>
+    <div className={ "homepage-project-container-color-scheme-" + props.colorSchemeSuffix + " border-style-solid border-width-2px clear-both color-inherit font-Assistant padding-left-p5em padding-right-p5em padding-top-1p5em width-100pc"}>
 		<div className="padding-bottom-1em">
 			<ResponsiveCtoLFloat
 				float = { props.float }
