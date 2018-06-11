@@ -5,7 +5,7 @@ import ButtonContainer from '../ButtonContainer';
 import SamePageNavBarLink from '../SamePageNavBarLink';
 
 const SamePageNavBarMobile = props => (
-	<nav className="clearfix box-shadow-3px-4px-2px-rgba-221-126-192-p3 border-style-solid border-color-rgba-150-150-150-p2 border-2px margin-auto margin-bottom-2em">
+	<nav className="clearfix box-shadow-3px-4px-2px-rgba-221-126-192-p3 border-style-solid border-color-rgba-150-150-150-p75 border-2px margin-auto margin-bottom-2em">
 		{ props.children }
 		<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px clearfix color-inherit padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + props.colorSchemeSuffix}>
 			{ props.navbarLinks.map(link =>

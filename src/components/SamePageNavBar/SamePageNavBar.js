@@ -5,7 +5,7 @@ import ButtonContainer from '../ButtonContainer';
 import SamePageNavBarLink from '../SamePageNavBarLink';
 
 const SamePageNavBar = props => (
-	<nav className="box-shadow-3px-4px-2px-rgba-221-126-192-p3 border-style-solid border-color-rgba-150-150-150-p2 border-2px left-0 position-fixed top-0">
+	<nav className="box-shadow-3px-4px-2px-rgba-221-126-192-p3 border-style-solid border-color-rgba-150-150-150-p75 border-2px">
 		<SheerWhiteContainer colorSchemeSuffix={ props.colorSchemeSuffix }>
 							<p className="font-weight-600 text-center">Jump<br/>Down</p>
 						</SheerWhiteContainer>
@@ -13,7 +13,7 @@ const SamePageNavBar = props => (
 							<ul>
 								{ props.navbarLinks.map(link =>
 									<li>
-										<div className="font-size-p8em padding-bottom-p1em padding-top-p1em float-none padding-left-p5em padding-right-p5em width-9em">
+										<div className="font-size-p75em padding-bottom-p1em padding-top-p1em float-none padding-left-p5em padding-right-p5em width-9em">
 											<ButtonContainer colorSchemeSuffix={ props.colorSchemeSuffix }>
 												<SamePageNavBarLink
 													key={ link.id }

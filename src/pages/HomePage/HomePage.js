@@ -5,6 +5,7 @@ import HomepageAboutMeSection from '../../components/HomepageAboutMeSection';
 import HomepageNewsSection from '../../components/HomepageNewsSection';
 import HomepageProjectsSection from '../../components/HomepageProjectsSection';
 import MenuBar from '../../components/MenuBar';
+import MenuBarMobile from '../../components/MenuBarMobile';
 import SamePageNavBar from '../../components/SamePageNavBar';
 import SamePageNavBarMobile from '../../components/SamePageNavBarMobile';
 import SheerWhiteContainer from '../../components/SheerWhiteContainer';
@@ -837,19 +838,25 @@ class HomePage extends Component {
 				handleButtonClick = { this.handleButtonClick }
 				colorSchemeSuffix = { this.state.colorSchemeSuffix }
 			/>
-			<MenuBar
-				colorSchemeSuffix={ this.state.colorSchemeSuffix }
-				isMobileView={ this.state.isMobileView }
-			>
-				{ this.state.isMobileView === false &&
+			
+			{ this.state.isMobileView === false &&
+				<MenuBar
+					colorSchemeSuffix={ this.state.colorSchemeSuffix }
+					isMobileView={ this.state.isMobileView }
+				>
 					<SamePageNavBar
 						colorSchemeSuffix={ this.state.colorSchemeSuffix }
 						handleNavLinkClick={ this.handleNavLinkClick }
 						handleKeyPress={ this.handleKeyPress }
 						navbarLinks={ this.state.navbarLinks }
 					/>
-				}
-				{ this.state.isMobileView === true &&
+				</MenuBar>
+			}
+			{ this.state.isMobileView === true &&
+				<MenuBarMobile
+					colorSchemeSuffix={ this.state.colorSchemeSuffix }
+					isMobileView={ this.state.isMobileView }
+				>
 					<SamePageNavBarMobile
 						colorSchemeSuffix={ this.state.colorSchemeSuffix }
 						navbarLinks={ this.state.navbarLinks }
@@ -861,8 +868,9 @@ class HomePage extends Component {
 							<p tabindex="0" className="font-weight-600 text-center" ref={ this.navbarRef }>Jump Down</p>
 						</SheerWhiteContainer>
 					</SamePageNavBarMobile>
-				}
-			</MenuBar>
+				</MenuBarMobile>
+			}
+			
 			<main className={ "margin-auto max-width-50em width-85pc "  + this.state.mainPaddingLeftClassName }>
 				<HomepageAboutMeSection
 					paragraphs={ this.state.aboutMeSection.paragraphs }

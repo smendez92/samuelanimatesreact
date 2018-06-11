@@ -2,7 +2,7 @@ import React from "react";
 import "./MenuBar.css";
 
 const MenuBar = props => (	
-	<div className="font-Overpass margin-auto max-width-85pc">
+	<div className="font-Overpass position-fixed top-0">
 		{ props.children }		
 	</div>
 );

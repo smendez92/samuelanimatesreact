@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import "./AfterProject.css";
 import Header from '../../components/Header';
 import MenuBar from '../../components/MenuBar';
+import MenuBarMobile from '../../components/MenuBarMobile';
+import NewPageNavBar from '../../components/NewPageNavBar';
+import NewPageNavBarMobile from '../../components/NewPageNavBarMobile';
 import SamePageNavBar from '../../components/SamePageNavBar';
 import SamePageNavBarMobile from '../../components/SamePageNavBarMobile';
 import SheerWhiteContainer from "../../components/SheerWhiteContainer";
@@ -19,6 +22,7 @@ class AfterProject extends Component {
 	}
 
 	projectInfo = {
+		title: "After, After That",
 		synopsis:{
 			mediaType: "video",
 			blurb: "An experimental documentary. A cross between two marks. Full film below.",
@@ -49,15 +53,20 @@ class AfterProject extends Component {
 		],
 		overview: [
 			{
-				id: "afterAfterOVerview01",
+				id: "afterAfterOverview01",
 				lead: "Background",
 				body: "This film was inspired by animated documentaries like Chris Landreth's 'Ryan' and Jonathon Hodgson's 'Feeling My Way'."
 			},
 			{
-				id: "afterAfterOVerview02",
+				id: "afterAfterOverview02",
 				lead: "Process",
 				body: "I started off by reaching out through personal contacts and listservs to find people with tattoos/scars that had a story behind them. I ended up interviewing 3 people on camera and making several trips to a tattoo parlor to film the tattoo process, as well as an interview with a tattoo artist. After transcribing the interviews and putting together multiple combinations of the footage, I discovered the final format of this film. I was interested in the similarities of two subjects' verbal storytelling, as well as some of the common themes in their vastly different stories. I started with sound editing on these two interviews. Then, I eited the video to underscore the features of the marks that the interviewees focused on. This was important in documenting these stories, in which the physical marks played a narrative role where theinterviewees couldn't rely on spoken words alone."
-			}
+			},
+			{
+				id: "afterAfterOverview03",
+				lead: "Support",
+				body: "I made this film with equipment from Harvard VES. Thank you to Alfred Guzzetti and George Olken for being great teachers. And thank you to my VES 52R classmates for the feedback."
+			},
 		]
 		
 	}
@@ -156,39 +165,50 @@ class AfterProject extends Component {
 
 	render() {
 		return (
-			<div className={ "clearfix font-Assistant videoProjectPage-color-scheme-" + this.state.colorSchemeSuffix }>
+			<div className={ "clearfix font-Assistant filmProjectPage-color-scheme-" + this.state.colorSchemeSuffix }>
 				<Header
 					mainPaddingLeftClassName = { this.state.mainPaddingLeftClassName }
-					title = "After, After That"
+					title = { this.projectInfo.title }
 					handleButtonClick = { this.handleButtonClick }
 					colorSchemeSuffix = { this.state.colorSchemeSuffix }
 				/>
-				<MenuBar
-					navbarLinks={ this.state.navbarLinks }
-					colorSchemeSuffix={ this.state.colorSchemeSuffix }
-					isMobileView={ this.state.isMobileView }
-				>
-					{ this.state.isMobileView === false &&
+				{ this.state.isMobileView === false &&
+					<MenuBar
+						navbarLinks={ this.state.navbarLinks }
+						colorSchemeSuffix={ this.state.colorSchemeSuffix }
+						isMobileView={ this.state.isMobileView }
+					>
 						<SamePageNavBar
 							colorSchemeSuffix={ this.state.colorSchemeSuffix }
 							handleNavLinkClick={ this.handleNavLinkClick }
 							navbarLinks={ this.state.navbarLinks }
 						/>
-					}
-					{ this.state.isMobileView === true &&
-						<SamePageNavBarMobile
+						<NewPageNavBar
 							colorSchemeSuffix={ this.state.colorSchemeSuffix }
-							navbarLinks={ this.state.navbarLinks }
-							handleButtonClick={ this.handleButtonClick }
-							handleNavLinkClick={ this.handleNavLinkClick }
-							navbarRef={ this.navbarRef }
-						>
-							<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
-								<p tabindex="0" className="font-weight-600 text-center" ref={ this.navbarRef }>Jump Down</p>
-							</SheerWhiteContainer>
-						</SamePageNavBarMobile>
-					}
-				</MenuBar>
+						/>
+					</MenuBar>
+				}
+				{ this.state.isMobileView === true &&
+					<div className="margin-auto max-width-60em width-90pc">
+						<MenuBarMobile>
+							<SamePageNavBarMobile
+								colorSchemeSuffix={ this.state.colorSchemeSuffix }
+								navbarLinks={ this.state.navbarLinks }
+								handleButtonClick={ this.handleButtonClick }
+								handleNavLinkClick={ this.handleNavLinkClick }
+								navbarRef={ this.navbarRef }
+							>
+								<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
+									<p tabindex="0" className="font-weight-600 text-center" ref={ this.navbarRef }>Jump Down</p>
+								</SheerWhiteContainer>	
+							</SamePageNavBarMobile>
+							<NewPageNavBarMobile
+								colorSchemeSuffix={ this.state.colorSchemeSuffix }
+							/>
+						</MenuBarMobile>
+					</div>
+				}
+					
 				<main className={ "margin-auto max-width-60em width-90pc "  + this.state.mainPaddingLeftClassName }>
 					<ProjectPageMainSections
 						colorSchemeSuffix={ this.state.colorSchemeSuffix }
