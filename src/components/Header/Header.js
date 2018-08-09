@@ -9,7 +9,7 @@ const Header = props => (
 			<img alt="Samuel Animates: Portfolio Page" src="../assets/images/branding/logo.svg" className="display-inline height-2em padding-left-p25em padding-right-p25em"/>
 			<h1 className="display-inline padding-left-p25em padding-right-p25em">{ props.title }</h1>
 		</div>
-		<div className="padding-bottom-1em padding-top-1em">
+		<div className="font-size-p85em padding-bottom-1em padding-top-1em">
 			<div className="display-inline-block padding-bottom-p25em padding-left-p25em padding-right-p25em padding-top-p25em">
 				<ButtonContainer colorSchemeSuffix={ props.colorSchemeSuffix }>
 					<Button

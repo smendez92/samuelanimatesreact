@@ -13,7 +13,7 @@ import ProjectPageMainSections from '../../components/ProjectPageMainSections';
 class ArtemisProject extends Component {
 	state = {
 		colorSchemeSuffix: "default",
-		fontSizeLevel: 1,
+		fontSizeLevel: 1.15,
 		isMobileView: true,
 		mainPaddingLeftClassName: "padding-left-0em",
 		responsiveFloat:"none",
@@ -25,7 +25,7 @@ class ArtemisProject extends Component {
 		title: "Artemis 1 Fundraiser Video",
 		synopsis:{
 			mediaType: "video",
-			blurb: "An experimental documentary. A cross between two marks. Full film below.",
+			blurb: "A fundraiser video for South Side Hackerspace",
 			embed: {
 				url: "https://player.vimeo.com/video/223448852",
 				title: "Artemis 1 fundraiser video Vimeo."
@@ -40,7 +40,7 @@ class ArtemisProject extends Component {
 				{
 					id: "artemisSpecs02",
 					lead: "Length",
-					body: "04 min. 16 sec."
+					body: "01 min. 27 sec."
 				}
 			]
 		},
@@ -48,30 +48,25 @@ class ArtemisProject extends Component {
 			{
 				id: "artemisHighlights01",
 				lead: "Goal",
-				body: "Video editing takes on some qualities of animation. If I think about video editing like animation, I can work with it frame by frame. I can use this to focus in on motion and color in nonfiction work."
+				body: "Produce a short video introduction to a fundraising campaign for a high altitude balloon flight documenting the August 2017 solar eclipse through live-stream video, photography, and 360 video."
 			},
 			{
 				id: "artemisHighlights02",
 				lead: "Outcome",
-				body: "Video editing takes on some qualities of animation. If I think about video editing like animation, I can work with it frame by frame. I can use this to focus in on motion and color in nonfiction work."
+				body: "A promo video for a nonprofit fundraiser campaign that raised over $8,000."
 			}
 		],
 		overview: [
 			{
 				id: "artemisOverview01",
-				lead: "Background",
-				body: "This film was inspired by animated documentaries like Chris Landreth's 'Ryan' and Jonathon Hodgson's 'Feeling My Way'."
+				lead: "Motivation",
+				body: "I did this volunteer project to help a local group of makers. The excitement they had for this project was contagious. Their resourcefulness in it was inspiring. I know how important it is to be in a community of creators. I was very happy to support this process in my own way."
 			},
 			{
 				id: "artemisOverview02",
 				lead: "Process",
-				body: "I started off by reaching out through personal contacts and listservs to find people with tattoos/scars that had a story behind them. I ended up interviewing 3 people on camera and making several trips to a tattoo parlor to film the tattoo process, as well as an interview with a tattoo artist. After transcribing the interviews and putting together multiple combinations of the footage, I discovered the final format of this film. I was interested in the similarities of two subjects' verbal storytelling, as well as some of the common themes in their vastly different stories. I started with sound editing on these two interviews. Then, I eited the video to underscore the features of the marks that the interviewees focused on. This was important in documenting these stories, in which the physical marks played a narrative role where theinterviewees couldn't rely on spoken words alone."
-			},
-			{
-				id: "artemisOverview03",
-				lead: "Support",
-				body: "I made this film with equipment from Harvard VES. Thank you to Alfred Guzzetti and George Olken for being great teachers. And thank you to my VES 52R classmates for the feedback."
-			},
+				body: "I storyboarded a video based off of the group's needs. Then I edited itin cycles. I Shot footage on-location at the South Side Hackerspace (SSH). I also used SSH members' video recordings. I also used public domain footage courtesy of NASA. I did all the sound editing, animation, and video editing."
+			}
 		]
 		
 	}
@@ -116,7 +111,7 @@ class ArtemisProject extends Component {
 	};
 
 	handleFontSizeToggleButtonClick = () =>{	
-		if (this.state.fontSizeLevel === 1){
+		if (this.state.fontSizeLevel === 1.15){
 			this.setState({fontSizeLevel: 1.5}, this.updateIsMobileVariable);
 			document.body.style.fontSize ="1.5em";
 			
@@ -130,8 +125,8 @@ class ArtemisProject extends Component {
 			document.body.style.fontSize = "2em";
 		}
 		else {
-			this.setState({fontSizeLevel: 1}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "1em";
+			this.setState({fontSizeLevel: 1.15}, this.updateIsMobileVariable);
+			document.body.style.fontSize = "1.15em";
 		}
 	};
 
@@ -204,7 +199,7 @@ class ArtemisProject extends Component {
 								navbarRef={ this.navbarRef }
 							>
 								<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
-									<p tabindex="0" className="font-weight-600 text-center" ref={ this.navbarRef }>Jump Down</p>
+									<p tabIndex="0" className="font-weight-600 text-center" ref={ this.navbarRef }>Jump Down</p>
 								</SheerWhiteContainer>	
 							</SamePageNavBarMobile>
 							<NewPageNavBarMobile

@@ -13,7 +13,7 @@ import ProjectPageMainSections from '../../components/ProjectPageMainSections';
 class TeenyProject extends Component {
 	state = {
 		colorSchemeSuffix: "default",
-		fontSizeLevel: 1,
+		fontSizeLevel: 1.15,
 		isMobileView: true,
 		mainPaddingLeftClassName: "padding-left-0em",
 		responsiveFloat:"none",
@@ -48,30 +48,20 @@ class TeenyProject extends Component {
 			{
 				id: "teenyHighlights01",
 				lead: "Goal",
-				body: "Video editing takes on some qualities of animation. If I think about video editing like animation, I can work with it frame by frame. I can use this to focus in on motion and color in nonfiction work."
+				body: "Use existing narration and product photos as a starting point to create a 1-minute promo video for a Kickstarter campaign."
 			},
 			{
 				id: "teenyHighlights02",
 				lead: "Outcome",
-				body: "Video editing takes on some qualities of animation. If I think about video editing like animation, I can work with it frame by frame. I can use this to focus in on motion and color in nonfiction work."
+				body: "A short promo video for a successfully funded Kickstarter campaign."
 			}
 		],
 		overview: [
 			{
 				id: "teenyOverview01",
-				lead: "Background",
-				body: "This film was inspired by animated documentaries like Chris Landreth's 'Ryan' and Jonathon Hodgson's 'Feeling My Way'."
-			},
-			{
-				id: "teenyOverview02",
 				lead: "Process",
-				body: "I started off by reaching out through personal contacts and listservs to find people with tattoos/scars that had a story behind them. I ended up interviewing 3 people on camera and making several trips to a tattoo parlor to film the tattoo process, as well as an interview with a tattoo artist. After transcribing the interviews and putting together multiple combinations of the footage, I discovered the final format of this film. I was interested in the similarities of two subjects' verbal storytelling, as well as some of the common themes in their vastly different stories. I started with sound editing on these two interviews. Then, I eited the video to underscore the features of the marks that the interviewees focused on. This was important in documenting these stories, in which the physical marks played a narrative role where theinterviewees couldn't rely on spoken words alone."
-			},
-			{
-				id: "teenyOverview03",
-				lead: "Support",
-				body: "I made this film with equipment from Harvard VES. Thank you to Alfred Guzzetti and George Olken for being great teachers. And thank you to my VES 52R classmates for the feedback."
-			},
+				body: "I started off with a storyboard based on a pre-recorded voiceover. Then I wrote a shorter version of the narration to re-record. I made animation segments and shot new product footage. I also included existing product photos. I edited the final video for use on the Kickstarter campaign page."
+			}
 		]
 		
 	}
@@ -116,7 +106,7 @@ class TeenyProject extends Component {
 	};
 
 	handleFontSizeToggleButtonClick = () =>{	
-		if (this.state.fontSizeLevel === 1){
+		if (this.state.fontSizeLevel === 1.15){
 			this.setState({fontSizeLevel: 1.5}, this.updateIsMobileVariable);
 			document.body.style.fontSize ="1.5em";
 			
@@ -130,8 +120,8 @@ class TeenyProject extends Component {
 			document.body.style.fontSize = "2em";
 		}
 		else {
-			this.setState({fontSizeLevel: 1}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "1em";
+			this.setState({fontSizeLevel: 1.15}, this.updateIsMobileVariable);
+			document.body.style.fontSize = "1.15em";
 		}
 	};
 
@@ -204,7 +194,7 @@ class TeenyProject extends Component {
 								navbarRef={ this.navbarRef }
 							>
 								<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
-									<p tabindex="0" className="font-weight-600 text-center" ref={ this.navbarRef }>Jump Down</p>
+									<p tabIndex="0" className="font-weight-600 text-center" ref={ this.navbarRef }>Jump Down</p>
 								</SheerWhiteContainer>	
 							</SamePageNavBarMobile>
 							<NewPageNavBarMobile

@@ -13,7 +13,7 @@ import ProjectPageMainSections from '../../components/ProjectPageMainSections';
 class HernandezProject extends Component {
 	state = {
 		colorSchemeSuffix: "default",
-		fontSizeLevel: 1,
+		fontSizeLevel: 1.15,
 		isMobileView: true,
 		mainPaddingLeftClassName: "padding-left-0em",
 		responsiveFloat:"none",
@@ -47,15 +47,15 @@ class HernandezProject extends Component {
 		highlights: [
 			{
 				id: "hernandezHighlights01",
-				lead: "Lessons learned",
-				body: "Video editing takes on some qualities of animation. If I think about video editing like animation, I can work with it frame by frame. I can use this to focus in on motion and color in nonfiction work."
+				lead: "Progress",
+				body: "The sound is laid out. Key pieces of animation are in place. And I'm feeling good!"
 			}
 		],
 		overview: [
 			{
-				id: "hernandezOverview02",
-				lead: "Progress",
-				body: "I started off by reaching out through personal contacts and listservs to find people with tattoos/scars that had a story behind them. I ended up interviewing 3 people on camera and making several trips to a tattoo parlor to film the tattoo process, as well as an interview with a tattoo artist. After transcribing the interviews and putting together multiple combinations of the footage, I discovered the final format of this film. I was interested in the similarities of two subjects' verbal storytelling, as well as some of the common themes in their vastly different stories. I started with sound editing on these two interviews. Then, I eited the video to underscore the features of the marks that the interviewees focused on. This was important in documenting these stories, in which the physical marks played a narrative role where theinterviewees couldn't rely on spoken words alone."
+				id: "hernandezOverview01",
+				lead: "Motivation",
+				body: "I want to play with documentary animation methods. I think I can use a fictional character to help me do this. But I'm not sure yet. There's also something in here about my experiences with alienation and forming my own identity as a first generation college student. We'll just have to wait and see."
 			}
 		]
 		
@@ -101,7 +101,7 @@ class HernandezProject extends Component {
 	};
 
 	handleFontSizeToggleButtonClick = () =>{	
-		if (this.state.fontSizeLevel === 1){
+		if (this.state.fontSizeLevel === 1.15){
 			this.setState({fontSizeLevel: 1.5}, this.updateIsMobileVariable);
 			document.body.style.fontSize ="1.5em";
 			
@@ -115,8 +115,8 @@ class HernandezProject extends Component {
 			document.body.style.fontSize = "2em";
 		}
 		else {
-			this.setState({fontSizeLevel: 1}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "1em";
+			this.setState({fontSizeLevel: 1.15}, this.updateIsMobileVariable);
+			document.body.style.fontSize = "1.15em";
 		}
 	};
 
@@ -189,7 +189,7 @@ class HernandezProject extends Component {
 								navbarRef={ this.navbarRef }
 							>
 								<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
-									<p tabindex="0" className="font-weight-600 text-center" ref={ this.navbarRef }>Jump Down</p>
+									<p tabIndex="0" className="font-weight-600 text-center" ref={ this.navbarRef }>Jump Down</p>
 								</SheerWhiteContainer>	
 							</SamePageNavBarMobile>
 							<NewPageNavBarMobile

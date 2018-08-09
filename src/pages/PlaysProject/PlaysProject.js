@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./JolietProject.css";
+import "./PlaysProject.css";
 import Header from '../../components/Header';
 import MenuBar from '../../components/MenuBar';
 import MenuBarMobile from '../../components/MenuBarMobile';
@@ -10,7 +10,7 @@ import SamePageNavBarMobile from '../../components/SamePageNavBarMobile';
 import SheerWhiteContainer from "../../components/SheerWhiteContainer";
 import ProjectPageMainSections from '../../components/ProjectPageMainSections';
 
-class JolietProject extends Component {
+class PlaysProject extends Component {
 	state = {
 		colorSchemeSuffix: "default",
 		fontSizeLevel: 1.15,
@@ -22,45 +22,45 @@ class JolietProject extends Component {
 	}
 
 	projectInfo = {
-		title: "Joliet Spanish Community Center Promo Video",
+		title: "2 Minute Plays",
 		synopsis:{
 			mediaType: "video",
 			blurb: "An experimental documentary. A cross between two marks. Full film below.",
 			embed: {
-				url: "https://player.vimeo.com/video/221224584",
-				title: "Joliet Spanish Community Center video on Vimeo."
+				url: "https://player.vimeo.com/video/128663374",
+				title: "WhyUEdu informational series excerpt on Vimeo."
 			},
-			year: "2017",
+			year: "2014",
 			specs: [
 				{
-					id: "jolietSpecs01",
+					id: "whyuSpecs01",
 					lead: "Role",
-					body: "Director, videographer, editor."
+					body: "Director, editor, and project manager."
 				},
 				{
-					id: "jolietSpecs02",
-					lead: "Length",
-					body: "02 min. 18 sec."
+					id: "whyuSpecs02",
+					lead: "Composition",
+					body: "4 videos and 5 worksheets in simplified Chinese."
 				}
 			]
 		},
 		highlights: [
 			{
-				id: "jolietHighlights01",
+				id: "whyuHighlights01",
 				lead: "Goal",
-				body: "Create a short bilingual promotional video introducing the Spanish Community Center (SCC) to potential donors and community members."
+				body: "Create resources to help Chinese high school students in the US college application process. Create material that could double as promotion for Dipont Education Management's online pilot program, 'WhyUEdu'."
+			},
+			{
+				id: "whyuHighlights02",
+				lead: "Outcome",
+				body: "2 distinct sets of video and text resources about US college application essays and interviews.The videos received over 36,000 views on the QQ Video mobile platform."
 			}
 		],
 		overview: [
 			{
-				id: "jolietOverview01",
-				lead: "Motivation",
-				body: "I chose to take this on as a volunteer project because of the amazing and necessary work that the SCC does for the Joliet community. Just a few words into conversation with staff, volunteers, or leadership, and you can see just how dedicated this group is to serving the significant, but often ignored, Spanish-speaking population of Will County, IL."
-			},
-			{
-				id: "jolietOverview02",
+				id: "whyuOverview02",
 				lead: "Process",
-				body: "I fleshed out the concept and went to Joliet to record interviews with SCC staff and volunteers. I worked with the SCC executive director to frame the community and staff experience within the broad scope of services they offer."
+				body: "First, I interviewed the company's college counselors. I wanted to see what common pitfalls were in the US college application process. Then, I narrowed the scope of the project down to 2 topics that could be covered in short videos and worksheets. I decided to create 2 videos about interviews. One was about self-introductions in video interviews. The other was about common interview mistakes to avoid. I also decided to make 2 videos about admissions essays. One was a counselor critiquing an example essay filled with common mistakes. The other showed viewers how to use info from a college website write about the school's 'fit' for them. All 4 of these videos came with links to related worksheets to help draw people to the WhyUEdu website. I led a team of 6 to complete this project. Together, we did background research, wrote scripts, made subtitles, and made worksheets. I personally filmed and edited the videos."
 			}
 		]
 		
@@ -160,10 +160,10 @@ class JolietProject extends Component {
 
 	render() {
 		return (
-			<div className={ "clearfix font-Assistant videoProjectPage-color-scheme-" + this.state.colorSchemeSuffix }>
+			<div className={ "clearfix font-Assistant artProjectPage-color-scheme-" + this.state.colorSchemeSuffix }>
 				<Header
 					mainPaddingLeftClassName = { this.state.mainPaddingLeftClassName }
-					ttitle = { this.projectInfo.title }
+					title = { this.projectInfo.title }
 					handleButtonClick = { this.handleButtonClick }
 					colorSchemeSuffix = { this.state.colorSchemeSuffix }
 				/>
@@ -221,4 +221,4 @@ class JolietProject extends Component {
   	}
 }
 
-export default JolietProject;
+export default PlaysProject;

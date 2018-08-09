@@ -698,7 +698,7 @@ class HomePage extends Component {
 		blurbWidth: "90%",
 		colorSchemeSuffix: "default",
 		fontColorClassName: "color-rgb-5-5-5",
-		fontSizeLevel: 1,
+		fontSizeLevel: 1.15,
 		isHighContrast: false,
 		isMobileView: true,
 		mainPaddingLeftClassName: "padding-left-0em",
@@ -758,7 +758,7 @@ class HomePage extends Component {
 	};
 
 	handleFontSizeToggleButtonClick = () =>{	
-		if (this.state.fontSizeLevel === 1){
+		if (this.state.fontSizeLevel === 1.15){
 			this.setState({fontSizeLevel: 1.5}, this.updateIsMobileVariable);
 			document.body.style.fontSize ="1.5em";
 			
@@ -772,8 +772,8 @@ class HomePage extends Component {
 			document.body.style.fontSize = "2em";
 		}
 		else {
-			this.setState({fontSizeLevel: 1}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "1em";
+			this.setState({fontSizeLevel: 1.15}, this.updateIsMobileVariable);
+			document.body.style.fontSize = "1.15em";
 		}
 	};
 
@@ -852,26 +852,25 @@ class HomePage extends Component {
 					/>
 				</MenuBar>
 			}
-			{ this.state.isMobileView === true &&
-				<MenuBarMobile
-					colorSchemeSuffix={ this.state.colorSchemeSuffix }
-					isMobileView={ this.state.isMobileView }
-				>
-					<SamePageNavBarMobile
-						colorSchemeSuffix={ this.state.colorSchemeSuffix }
-						navbarLinks={ this.state.navbarLinks }
-						handleButtonClick={ this.handleButtonClick }
-						handleNavLinkClick={ this.handleNavLinkClick }
-						navbarRef={ this.navbarRef }
-					>
-						<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
-							<p tabindex="0" className="font-weight-600 text-center" ref={ this.navbarRef }>Jump Down</p>
-						</SheerWhiteContainer>
-					</SamePageNavBarMobile>
-				</MenuBarMobile>
-			}
-			
 			<main className={ "margin-auto max-width-50em width-85pc "  + this.state.mainPaddingLeftClassName }>
+				{ this.state.isMobileView === true &&
+					<MenuBarMobile
+						colorSchemeSuffix={ this.state.colorSchemeSuffix }
+						isMobileView={ this.state.isMobileView }
+					>
+						<SamePageNavBarMobile
+							colorSchemeSuffix={ this.state.colorSchemeSuffix }
+							navbarLinks={ this.state.navbarLinks }
+							handleButtonClick={ this.handleButtonClick }
+							handleNavLinkClick={ this.handleNavLinkClick }
+							navbarRef={ this.navbarRef }
+						>
+							<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
+								<p tabindex="0" className="font-weight-600 text-center" ref={ this.navbarRef }>Jump Down</p>
+							</SheerWhiteContainer>
+						</SamePageNavBarMobile>
+					</MenuBarMobile>
+				}
 				<HomepageAboutMeSection
 					paragraphs={ this.state.aboutMeSection.paragraphs }
 					width={ this.state.portraitWidth }

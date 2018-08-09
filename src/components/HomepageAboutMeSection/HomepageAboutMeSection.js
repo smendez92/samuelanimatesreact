@@ -9,7 +9,7 @@ const HomepageAboutMeSection = React.forwardRef((props, ref) => (
 	<GenericFloatingSection colorSchemeSuffix={ props.colorSchemeSuffix }>
 		<div className={ "homepageAboutMeSection-color-scheme-" + props.colorSchemeSuffix + " color-inherit"}>
 			<SheerWhiteContainer colorSchemeSuffix={ props.colorSchemeSuffix }>
-				<h2 tabindex="0" className="text-center" ref={ ref }>ABOUT ME</h2>
+				<h2 tabIndex="0" className="text-center" ref={ ref }>ABOUT ME</h2>
 			</SheerWhiteContainer>
 			<ResponsiveCtoLFloat 
 				width={ props.portraitWidth }

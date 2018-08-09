@@ -13,7 +13,7 @@ import ProjectPageMainSections from '../../components/ProjectPageMainSections';
 class WhyuProject extends Component {
 	state = {
 		colorSchemeSuffix: "default",
-		fontSizeLevel: 1,
+		fontSizeLevel: 1.15,
 		isMobileView: true,
 		mainPaddingLeftClassName: "padding-left-0em",
 		responsiveFloat:"none",
@@ -39,8 +39,8 @@ class WhyuProject extends Component {
 				},
 				{
 					id: "whyuSpecs02",
-					lead: "Length",
-					body: "04 min. 16 sec."
+					lead: "Composition",
+					body: "4 videos and 5 worksheets in simplified Chinese."
 				}
 			]
 		},
@@ -48,30 +48,20 @@ class WhyuProject extends Component {
 			{
 				id: "whyuHighlights01",
 				lead: "Goal",
-				body: "Video editing takes on some qualities of animation. If I think about video editing like animation, I can work with it frame by frame. I can use this to focus in on motion and color in nonfiction work."
+				body: "Create resources to help Chinese high school students in the US college application process. Create material that could double as promotion for Dipont Education Management's online pilot program, 'WhyUEdu'."
 			},
 			{
 				id: "whyuHighlights02",
 				lead: "Outcome",
-				body: "Video editing takes on some qualities of animation. If I think about video editing like animation, I can work with it frame by frame. I can use this to focus in on motion and color in nonfiction work."
+				body: "2 distinct sets of video and text resources about US college application essays and interviews.The videos received over 36,000 views on the QQ Video mobile platform."
 			}
 		],
 		overview: [
 			{
-				id: "whyuOverview01",
-				lead: "Background",
-				body: "This film was inspired by animated documentaries like Chris Landreth's 'Ryan' and Jonathon Hodgson's 'Feeling My Way'."
-			},
-			{
 				id: "whyuOverview02",
 				lead: "Process",
-				body: "I started off by reaching out through personal contacts and listservs to find people with tattoos/scars that had a story behind them. I ended up interviewing 3 people on camera and making several trips to a tattoo parlor to film the tattoo process, as well as an interview with a tattoo artist. After transcribing the interviews and putting together multiple combinations of the footage, I discovered the final format of this film. I was interested in the similarities of two subjects' verbal storytelling, as well as some of the common themes in their vastly different stories. I started with sound editing on these two interviews. Then, I eited the video to underscore the features of the marks that the interviewees focused on. This was important in documenting these stories, in which the physical marks played a narrative role where theinterviewees couldn't rely on spoken words alone."
-			},
-			{
-				id: "whyuOverview03",
-				lead: "Support",
-				body: "I made this film with equipment from Harvard VES. Thank you to Alfred Guzzetti and George Olken for being great teachers. And thank you to my VES 52R classmates for the feedback."
-			},
+				body: "First, I interviewed the company's college counselors. I wanted to see what common pitfalls were in the US college application process. Then, I narrowed the scope of the project down to 2 topics that could be covered in short videos and worksheets. I decided to create 2 videos about interviews. One was about self-introductions in video interviews. The other was about common interview mistakes to avoid. I also decided to make 2 videos about admissions essays. One was a counselor critiquing an example essay filled with common mistakes. The other showed viewers how to use info from a college website write about the school's 'fit' for them. All 4 of these videos came with links to related worksheets to help draw people to the WhyUEdu website. I led a team of 6 to complete this project. Together, we did background research, wrote scripts, made subtitles, and made worksheets. I personally filmed and edited the videos."
+			}
 		]
 		
 	}
@@ -116,7 +106,7 @@ class WhyuProject extends Component {
 	};
 
 	handleFontSizeToggleButtonClick = () =>{	
-		if (this.state.fontSizeLevel === 1){
+		if (this.state.fontSizeLevel === 1.15){
 			this.setState({fontSizeLevel: 1.5}, this.updateIsMobileVariable);
 			document.body.style.fontSize ="1.5em";
 			
@@ -130,8 +120,8 @@ class WhyuProject extends Component {
 			document.body.style.fontSize = "2em";
 		}
 		else {
-			this.setState({fontSizeLevel: 1}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "1em";
+			this.setState({fontSizeLevel: 1.15}, this.updateIsMobileVariable);
+			document.body.style.fontSize = "1.15em";
 		}
 	};
 
@@ -204,7 +194,7 @@ class WhyuProject extends Component {
 								navbarRef={ this.navbarRef }
 							>
 								<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
-									<p tabindex="0" className="font-weight-600 text-center" ref={ this.navbarRef }>Jump Down</p>
+									<p tabIndex="0" className="font-weight-600 text-center" ref={ this.navbarRef }>Jump Down</p>
 								</SheerWhiteContainer>	
 							</SamePageNavBarMobile>
 							<NewPageNavBarMobile

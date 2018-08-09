@@ -8,7 +8,7 @@ const HomepageProjectsSection = React.forwardRef((props, ref) => (
 	
 	<GenericFloatingSection colorSchemeSuffix={props.colorSchemeSuffix}>
 		<SheerWhiteContainer colorSchemeSuffix={ props.colorSchemeSuffix }>
-			<h2 tabindex="0" ref={ ref } className="color-inherit text-center">{ props.title }</h2>
+			<h2 tabIndex="0" ref={ ref } className="color-inherit text-center">{ props.title }</h2>
 		</SheerWhiteContainer>
 		{ props.projects.map(project =>
 			<HomepageProjectContainer

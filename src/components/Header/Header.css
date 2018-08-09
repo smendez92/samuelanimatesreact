@@ -6,6 +6,9 @@
 	background-color: rgb(3,3,3);
 	color: rgb(251,251,251);
 }
+.font-size-p85em{
+	font-size: 0.85em;
+}
 .padding-bottom-1em{
 	padding-bottom: 1em;
 }

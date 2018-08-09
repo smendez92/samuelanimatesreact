@@ -1,6 +1,7 @@
 import React from "react";
 import "./ProjectPageSynopsis.css";
 import GenericFloatingSection from "../GenericFloatingSection";
+import PhotoEmbedContainer from "../PhotoEmbedContainer";
 import ResponsiveCtoLFloat from "../ResponsiveCtoLFloat";
 import UnorderedBulletlessList from "../UnorderedBulletlessList";
 import VideoEmbedContainer from "../VideoEmbedContainer";
@@ -21,6 +22,11 @@ const ProjectPageSynopsis = React.forwardRef((props, ref) => (
 					</div>
 					{ props.synopsis.mediaType === "video" &&
 						<VideoEmbedContainer
+							embed={ props.synopsis.embed }
+						/>
+					}
+					{ props.synopsis.mediaType === "photo" &&
+						<PhotoEmbedContainer
 							embed={ props.synopsis.embed }
 						/>
 					}
