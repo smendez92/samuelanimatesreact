@@ -13,7 +13,7 @@ import ProjectPageMainSections from '../../components/ProjectPageMainSections';
 class JolietProject extends Component {
 	state = {
 		colorSchemeSuffix: "default",
-		fontSizeLevel: 1.15,
+		fontSizeLevel: 1,
 		isMobileView: true,
 		mainPaddingLeftClassName: "padding-left-0em",
 		responsiveFloat:"none",
@@ -75,6 +75,7 @@ class JolietProject extends Component {
 	};
 	componentDidMount() {
 		window.addEventListener("resize", this.updateIsMobileVariable.bind(this));
+		document.title = "Joliet SCC Intro Video Project Page";
 	};
 	componentWillUnmount() {
 		window.removeEventListener('resize', this.updateIsMobileVariable.bind(this));
@@ -106,7 +107,7 @@ class JolietProject extends Component {
 	};
 
 	handleFontSizeToggleButtonClick = () =>{	
-		if (this.state.fontSizeLevel === 1.15){
+		if (this.state.fontSizeLevel === 1){
 			this.setState({fontSizeLevel: 1.5}, this.updateIsMobileVariable);
 			document.body.style.fontSize ="1.5em";
 			
@@ -120,8 +121,8 @@ class JolietProject extends Component {
 			document.body.style.fontSize = "2em";
 		}
 		else {
-			this.setState({fontSizeLevel: 1.15}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "1.15em";
+			this.setState({fontSizeLevel: 1}, this.updateIsMobileVariable);
+			document.body.style.fontSize = "1em";
 		}
 	};
 

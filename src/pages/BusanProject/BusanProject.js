@@ -14,7 +14,7 @@ import ProjectPageMainSections from '../../components/ProjectPageMainSections';
 class BusanProject extends Component {
 	state = {
 		colorSchemeSuffix: "default",
-		fontSizeLevel: 1.15,
+		fontSizeLevel: 1,
 		isMobileView: true,
 		mainPaddingLeftClassName: "padding-left-0em",
 		responsiveFloat:"none",
@@ -86,6 +86,7 @@ class BusanProject extends Component {
 	};
 	componentDidMount() {
 		window.addEventListener("resize", this.updateIsMobileVariable.bind(this));
+		document.title = "'By Foot: Busan and the Sea' Project Page";
 	};
 	componentWillUnmount() {
 		window.removeEventListener('resize', this.updateIsMobileVariable.bind(this));
@@ -117,7 +118,7 @@ class BusanProject extends Component {
 	};
 
 	handleFontSizeToggleButtonClick = () =>{	
-		if (this.state.fontSizeLevel === 1.15){
+		if (this.state.fontSizeLevel === 1){
 			this.setState({fontSizeLevel: 1.5}, this.updateIsMobileVariable);
 			document.body.style.fontSize ="1.5em";
 			
@@ -131,8 +132,8 @@ class BusanProject extends Component {
 			document.body.style.fontSize = "2em";
 		}
 		else {
-			this.setState({fontSizeLevel: 1.15}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "1.15em";
+			this.setState({fontSizeLevel: 1}, this.updateIsMobileVariable);
+			document.body.style.fontSize = "1em";
 		}
 	};
 

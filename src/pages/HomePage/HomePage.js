@@ -698,7 +698,7 @@ class HomePage extends Component {
 		blurbWidth: "90%",
 		colorSchemeSuffix: "default",
 		fontColorClassName: "color-rgb-5-5-5",
-		fontSizeLevel: 1.15,
+		fontSizeLevel: 1,
 		isHighContrast: false,
 		isMobileView: true,
 		mainPaddingLeftClassName: "padding-left-0em",
@@ -726,6 +726,7 @@ class HomePage extends Component {
 	};
 	componentDidMount() {
 		window.addEventListener("resize", this.updateIsMobileVariable.bind(this));
+		document.title = "Samuel Animates";
 
 	};
 	componentWillUnmount() {
@@ -758,7 +759,7 @@ class HomePage extends Component {
 	};
 
 	handleFontSizeToggleButtonClick = () =>{	
-		if (this.state.fontSizeLevel === 1.15){
+		if (this.state.fontSizeLevel === 1){
 			this.setState({fontSizeLevel: 1.5}, this.updateIsMobileVariable);
 			document.body.style.fontSize ="1.5em";
 			
@@ -772,8 +773,8 @@ class HomePage extends Component {
 			document.body.style.fontSize = "2em";
 		}
 		else {
-			this.setState({fontSizeLevel: 1.15}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "1.15em";
+			this.setState({fontSizeLevel: 1}, this.updateIsMobileVariable);
+			document.body.style.fontSize = "1em";
 		}
 	};
 
