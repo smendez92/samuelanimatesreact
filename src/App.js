@@ -15,6 +15,7 @@ import JolietProject from "./pages/JolietProject";
 import LmhtfProject from "./pages/LmhtfProject";
 import MediaProject from "./pages/MediaProject";
 import PlannedparenthoodProject from "./pages/PlannedparenthoodProject";
+import ProjectsPageSkeleton from "./pages/ProjectsPageSkeleton";
 import SaigonProject from "./pages/SaigonProject";
 import TarotProject from "./pages/TarotProject";
 import TeenyProject from "./pages/TeenyProject";
@@ -42,6 +43,7 @@ const App = () =>(
 		<Route exact path='/projects/lmhtf' component={LmhtfProject}/>
 		<Route exact path='/projects/media' component={MediaProject}/>
 		<Route exact path='/projects/plannedparenthood' component={PlannedparenthoodProject}/>
+		<Route exact path='/projects' component={ProjectsPageSkeleton}/>
 		<Route exact path='/projects/saigon' component={SaigonProject}/>
 		<Route exact path='/projects/tarot' component={TarotProject}/>
 		<Route exact path='/projects/teeny' component={TeenyProject}/>
