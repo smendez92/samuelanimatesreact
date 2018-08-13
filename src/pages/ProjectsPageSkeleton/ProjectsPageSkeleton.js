@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./ProjectsPageSkeleton.css";
+import Button from '../../components/Button';
+import ButtonContainer from '../../components/ButtonContainer';
+import GenericFloatingSection from '../../components/GenericFloatingSection';
 import Header from '../../components/Header';
 import MenuBar from '../../components/MenuBar';
 import MenuBarMobile from '../../components/MenuBarMobile';
@@ -10,15 +13,32 @@ import SamePageNavBar from '../../components/SamePageNavBar';
 import SamePageNavBarMobile from '../../components/SamePageNavBarMobile';
 import SheerWhiteContainer from "../../components/SheerWhiteContainer";
 import ProjectPageMainSections from '../../components/ProjectPageMainSections';
-
-import DotsProject from "../DotsProject";
-import BreakfastProject from "../BreakfastProject";
-import HernandezProject from "../HernandezProject";
+import AfterProject from "../../pages/AfterProject";
+import ApplesProject from "../../pages/ApplesProject";
+import ArtemisProject from "../../pages/ArtemisProject";
+import BodegaProject from "../../pages/BodegaProject";
+import BreakfastProject from "../../pages/BreakfastProject";
+import BusanProject from "../../pages/BusanProject";
+import DotsProject from "../../pages/DotsProject";
+import GiftpitchProject from "../../pages/GiftpitchProject";
+import HealthforallProject from "../../pages/HealthforallProject";
+import HernandezProject from "../../pages/HernandezProject";
+import JolietProject from "../../pages/JolietProject";
+import LmhtfProject from "../../pages/LmhtfProject";
+import MediaProject from "../../pages/MediaProject";
+import PlannedparenthoodProject from "../../pages/PlannedparenthoodProject";
+import SaigonProject from "../../pages/SaigonProject";
+import TarotProject from "../../pages/TarotProject";
+import TeenyProject from "../../pages/TeenyProject";
+import WalksProject from "../../pages/WalksProject";
+import WhyuProject from "../../pages/WhyuProject";
+import WikiProject from "../../pages/WikiProject";
+import YucaProject from "../../pages/YucaProject";
 
 class ProjectsPageSkeleton extends Component {
 	state = {
 		colorSchemeSuffix: "default",
-		fontSizeLevel: 1,
+		fontSizeLevel: "14pt",
 		isMobileView: true,
 		mainPaddingLeftClassName: "padding-left-0em",
 		responsiveFloat:"none",
@@ -28,12 +48,13 @@ class ProjectsPageSkeleton extends Component {
 
 	synopsisSectionRef = React.createRef();
 	highlightsSectionRef = React.createRef();
-	navbarRef = React.createRef();
+	headerRef = React.createRef();
 	overviewSectionRef = React.createRef();
 
-	componentWillMount(){
+	componentWillMount() {
 		this.updateIsMobileVariable();
 	};
+
 	componentDidMount() {
 		window.addEventListener("resize", this.updateIsMobileVariable.bind(this));
 	};
@@ -67,22 +88,22 @@ class ProjectsPageSkeleton extends Component {
 	};
 
 	handleFontSizeToggleButtonClick = () =>{	
-		if (this.state.fontSizeLevel === 1){
-			this.setState({fontSizeLevel: 1.5}, this.updateIsMobileVariable);
-			document.body.style.fontSize ="1.5em";
+		if (this.state.fontSizeLevel === "14pt"){
+			this.setState({fontSizeLevel: "16pt"}, this.updateIsMobileVariable);
+			document.body.style.fontSize ="16pt";
 			
 		}
-		else if (this.state.fontSizeLevel === 1.5){
-			this.setState({fontSizeLevel: 1.75}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "1.75em";
+		else if (this.state.fontSizeLevel === "16pt"){
+			this.setState({fontSizeLevel: "20pt"}, this.updateIsMobileVariable);
+			document.body.style.fontSize = "20pt";
 		}
-		else if (this.state.fontSizeLevel === 1.75){
-			this.setState({fontSizeLevel: 2}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "2em";
+		else if (this.state.fontSizeLevel === "20pt"){
+			this.setState({fontSizeLevel: "24pt"}, this.updateIsMobileVariable);
+			document.body.style.fontSize = "24pt";
 		}
 		else {
-			this.setState({fontSizeLevel: 1}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "1em";
+			this.setState({fontSizeLevel: "14pt"}, this.updateIsMobileVariable);
+			document.body.style.fontSize = "14pt";
 		}
 	};
 
@@ -102,16 +123,17 @@ class ProjectsPageSkeleton extends Component {
 	}
 
 	handleScrollToTopButtonClick = () =>{
-		this.navbarRef.current.scrollIntoView();
-		this.navbarRef.current.focus();
+		this.headerRef.current.scrollIntoView();
+		this.headerRef.current.focus();
 	};
 
 
 	updateIsMobileVariable = () =>{
-		if(window.innerWidth < 750) {
+		console.log("we out here");
+		if(window.innerWidth < 800) {
 			this.setState({isMobileView: true,  mainPaddingLeftClassName: "padding-left-0", responsiveFloat:"none", responsiveWidth: "100%"});
 		}
-		else if(this.state.fontSizeLevel > 1.0) {
+		else if(this.state.fontSizeLevel != "14pt") {
 			this.setState({isMobileView: true,  mainPaddingLeftClassName: "padding-left-0", responsiveFloat:"none", responsiveWidth: "100%"});
 		}
 		else {
@@ -121,26 +143,86 @@ class ProjectsPageSkeleton extends Component {
 
 	render() {
 		return (
-			<div className={ "clearfix font-Assistant filmProjectPage-color-scheme-" + this.state.colorSchemeSuffix }>
-				<Router>
-					<div>
-					<ul>
-						<li>
-						<Link to="/projectsTest/breakfast">Breakfast</Link>
-						</li>
-						<li>
-						<Link to="/projectsTest/hernandez">Hernandez</Link>
-						</li>
-						<li>
-						<Link to="/projectsTest/dots">Dots</Link>
-						</li>
-					</ul>
-					<hr />
-					<Route exact path="/projectsTest/breakfast" component={BreakfastProject} />
-					<Route path="/projectsTest/hernandez" component={HernandezProject} />
-					<Route path="/projectsTest/dots" component={DotsProject} />
+			<div className={ "clearfix font-Assistant projectPage-color-scheme-" + this.state.colorSchemeSuffix }>
+				<Header
+					mainPaddingLeftClassName={ this.state.mainPaddingLeftClassName }
+					handleButtonClick={ this.handleButtonClick }
+					colorSchemeSuffix={ this.state.colorSchemeSuffix }
+					headerRef={this.headerRef}
+				/>
+				{ this.state.isMobileView === false &&
+					<MenuBar
+						navbarLinks={ this.state.navbarLinks }
+						colorSchemeSuffix={ this.state.colorSchemeSuffix }
+						isMobileView={ this.state.isMobileView }
+					>
+						<NewPageNavBar
+							colorSchemeSuffix={ this.state.colorSchemeSuffix }
+						/>
+					</MenuBar>
+				}
+				{ this.state.isMobileView === true &&
+					<div className="margin-auto max-width-60em width-90pc">
+						<MenuBarMobile>
+							<NewPageNavBarMobile
+								colorSchemeSuffix={ this.state.colorSchemeSuffix }
+							/>
+						</MenuBarMobile>
 					</div>
-				</Router>
+				}
+				<main className={"margin-auto max-width-60em width-90pc " + this.state.mainPaddingLeftClassName}>
+					<Router>
+						<GenericFloatingSection
+							colorSchemeSuffix={this.state.colorSchemeSuffix}
+						>
+							<Route exact path='/projects/after' component={AfterProject}/>
+							<Route exact path='/projects/apples' component={ApplesProject}/>
+							<Route exact path='/projects/artemis' component={ArtemisProject}/>
+							<Route exact path='/projects/bodega' component={BodegaProject}/>
+							<Route exact path='/projects/breakfast' component={BreakfastProject}/>
+							<Route exact path='/projects/busan' component={BusanProject}/>
+							<Route exact path='/projects/dots' component={DotsProject}/>
+							<Route exact path='/projects/giftpitch' component={GiftpitchProject}/>
+							<Route exact path='/projects/healthforall' component={HealthforallProject}/>
+							<Route exact path='/projects/hernandez' component={HernandezProject}/>
+							<Route exact path='/projects/joliet' component={JolietProject}/>
+							<Route exact path='/projects/lmhtf' component={LmhtfProject}/>
+							<Route exact path='/projects/media' component={MediaProject}/>
+							<Route exact path='/projects/plannedparenthood' component={PlannedparenthoodProject}/>
+							<Route exact path='/projects' component={ProjectsPageSkeleton}/>
+							<Route exact path='/projects/saigon' component={SaigonProject}/>
+							<Route exact path='/projects/tarot' render={props => (
+								<TarotProject
+									colorSchemeNameRoot="webProjectPage-color-scheme-"
+									colorSchemeSuffix={this.state.colorSchemeSuffix}
+									fontSizeLevel={this.state.fontSizeLevel}
+									isMobileView={this.state.isMobileView}
+									responsiveFloat={this.state.responsiveFloat}
+									responsiveWidth={this.state.responsiveWidth}
+								/>
+							)}/>
+							<Route exact path='/projects/tarots' component={TarotProject}/>
+							<Route exact path='/projects/teeny' component={TeenyProject}/>
+							<Route exact path='/projects/walks' component={WalksProject}/>
+							<Route exact path='/projects/whyu' component={WhyuProject}/>
+							<Route exact path='/projects/wiki' component={WikiProject}/>
+							<Route exact path='/projects/yuca' component={YucaProject}/>
+						</GenericFloatingSection>
+					</Router>
+				</main>
+				{ this.state.isMobileView === true &&
+					<div className="bottom-0 position-fixed right-0 width-3em">
+						<ButtonContainer colorSchemeSuffix = { this.state.colorSchemeSuffix }>
+							<Button
+								buttonType="scrollToTop"
+								colorSchemeSuffix={ this.state.colorSchemeSuffix }
+								onClickFunction={ this.handleButtonClick }
+								text="Top"
+								tabIndex="0"
+							/> 
+						</ButtonContainer>
+					</div>
+				}
 			</div>
 		);
   	}

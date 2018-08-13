@@ -1,10 +1,9 @@
 /*! Adapted by Samuel R. Mendez from from normalize.css v8.0.0 by Nicolas Gallagher| MIT License | github.com/necolas/normalize.css */
 html {
-	line-height: 1.1em;
 	-webkit-text-size-adjust: 100%;
 }
 body {
-	font-size: 1.15em;
+	font-size: 14pt;
 	line-height: 1.3em;
 	margin: 0;
 } 
@@ -97,6 +96,7 @@ h3 {
 p{
 	margin: 0;
 	padding: 0;
+	font-size: 1em;
 }
 
 /*	Media Query to change the color of SVGs to correspond with Microsoft's high contrast mode.
