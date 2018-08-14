@@ -1,29 +1,23 @@
-.filmProjectPage-color-scheme-default{
-	background-color: rgb(251,251,251);
-	background: linear-gradient(to bottom, rgb(251, 251, 251) 0%, #fffcfc 50%, #e3f0ff 85%,#94C6FF 95%);
-	color: rgb(5,5,5);
-}
-.filmProjectPage-color-scheme-highContrast{
-	background-color: rgb(0,0,0);
-	color: rgb(252,252,252);
-}
 .clearfix:after {
 	content: "";
 	display: table;
 	clear: both;
 }
-.margin-auto{
-	margin: auto;
+.left-0{
+	left: 0;
 }
-.max-width-60em{
-	max-width: 60em;
+.padding-bottom-p25em{
+	padding-bottom: 0.25em;
 }
-.padding-left-0em{
-	padding-left: 0;
+.padding-left-p25em{
+	padding-left: 0.25em;
 }
-.padding-left-6p5em{
-	padding-left: 6.5em;
+.padding-right-p25em{
+	padding-right: 0.25em;
 }
-.width-90pc{
-	width:90%;
+.padding-top-p5em{
+	padding-top: 0.5em;
+}
+.text-center{
+	text-align: center;
 }

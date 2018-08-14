@@ -11,8 +11,8 @@ const SamePageNavBar = props => (
 		</SheerWhiteContainer>
 		<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px clearfix color-inherit padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + props.colorSchemeSuffix }>
 			<ul>
-				{ props.navbarLinks.map(link =>
-					<li>
+				{ props.navbarLinks.map((link, i) =>
+					<li key={ i }>
 						<div className="font-size-p75em padding-bottom-p1em padding-top-p1em float-none width-9em">
 							<ButtonContainer colorSchemeSuffix={ props.colorSchemeSuffix }>
 								<SamePageNavBarLink

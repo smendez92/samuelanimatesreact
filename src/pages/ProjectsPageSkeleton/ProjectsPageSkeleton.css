@@ -10,7 +10,7 @@
 }
 .projectPage-color-scheme-default{
 	background-color: rgb(251,251,251);
-	background: linear-gradient(to bottom, rgb(251, 251, 251) 0%, rgb(244, 247, 255) 50%, #e3f0ff 85%,rgb(74, 159, 255) 95%);
+	background: linear-gradient(to bottom, rgb(251, 251, 251) 0%, rgb(244, 249, 255) 77%,rgb(144, 188, 255) 87%, rgb(110, 77, 255) 97%);
 	color: rgb(5,5,5);
 }
 .projectPage-color-scheme-highContrast{
@@ -20,7 +20,7 @@
 }
 .filmProjectPage-color-scheme-default{
 	background-color: rgb(251,251,251);
-	background: linear-gradient(to bottom, rgb(251, 251, 251) 0%, #fffcfc 50%, #e3f0ff 85%,#94C6FF 95%);
+	background: linear-gradient(to bottom, rgb(235, 249, 255) 0%, rgb(235, 249, 255) 10%, rgb(193, 232, 255) 40%, rgb(104, 200, 255)75%, rgb(89, 194, 255) 90%, rgb(10, 165, 255) 95%);
 	color: rgb(5,5,5);
 }
 .filmProjectPage-color-scheme-highContrast{
@@ -29,7 +29,7 @@
 }
 .videoProjectPage-color-scheme-default{
 	background-color: rgb(251,251,251);
-	background: linear-gradient(to bottom, rgb(251, 251, 251) 0%, #fffcfc 50%, rgb(255, 187, 235) 85%,rgb(255, 137, 200) 95%);
+	background: linear-gradient(to bottom, rgb(251, 251, 251) 0%, rgb(255, 252, 252) 50%, rgb(255, 187, 235) 85%,rgb(255, 137, 200) 95%);
 	color: rgb(5,5,5);
 }
 .videoProjectPage-color-scheme-highContrast{

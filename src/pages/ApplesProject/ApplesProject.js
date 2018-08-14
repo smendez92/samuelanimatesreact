@@ -1,36 +1,20 @@
 import React, { Component } from 'react';
 import "./ApplesProject.css";
-import Header from '../../components/Header';
-import MenuBar from '../../components/MenuBar';
-import MenuBarMobile from '../../components/MenuBarMobile';
-import NewPageNavBar from '../../components/NewPageNavBar';
-import NewPageNavBarMobile from '../../components/NewPageNavBarMobile';
 import SamePageNavBar from '../../components/SamePageNavBar';
 import SamePageNavBarMobile from '../../components/SamePageNavBarMobile';
-import SheerWhiteContainer from "../../components/SheerWhiteContainer";
 import ProjectPageMainSections from '../../components/ProjectPageMainSections';
 
 class ApplesProject extends Component {
-	state = {
-		colorSchemeSuffix: "default",
-		fontSizeLevel: 1,
-		isMobileView: true,
-		mainPaddingLeftClassName: "padding-left-0em",
-		responsiveFloat:"none",
-		responsiveWidth:"50%",
-		navbarLinks: [{title:"Synopsis", id:"navBarLinkSynopsis"},{title:"Highlights", id:"navBarLinkHighlights"},{title:"Overview", id:"navBarLinkOverview"}]
-	}
-
 	projectInfo = {
-		title: "Everything But Apples",
+		title: "AR-Tarot",
 		synopsis:{
-			mediaType: "Video",
-			blurb: "A web-enabled social game. An experiment with a social-digital version of 'Apples to Apples'.",
+			mediaType: "video",
+			blurb: "A web app ",
 			embed: {
-				url: "",
-				title: "Everything But Apples team presentation on Vimeo."
+				src: "../assets/images/projectPhotos/tarot.gif",
+				alt: "An animated gif showcasing a tarot reading hovering above a placemarker in augmented reality."
 			},
-			year: "2017",
+			year: "2018",
 			specs: [
 				{
 					id: "applesSpecs01",
@@ -65,158 +49,72 @@ class ApplesProject extends Component {
 		]
 		
 	}
-	synopsisSectionRef = React.createRef();
-	highlightsSectionRef = React.createRef();
-	navbarRef = React.createRef();
-	overviewSectionRef = React.createRef();
 
-	componentWillMount(){
-		this.updateIsMobileVariable();
-	};
+	applesNavbarLinks = [{title:"Synopsis", id:"applesNavBarLinkSynopsis"},{title:"Highlights", id:"applesNavBarLinkHighlights"},{title:"Overview", id:"applesNavBarLinkOverview"}];
+	applesSynopsisSectionRef = React.createRef();
+	applesHighlightsSectionRef = React.createRef();
+	applesNavbarRef = React.createRef();
+	applesOverviewSectionRef = React.createRef();
+
 	componentDidMount() {
-		window.addEventListener("resize", this.updateIsMobileVariable.bind(this));
-		document.title = "WhyUEdu Info Series Project Page";
-	};
-	componentWillUnmount() {
-		window.removeEventListener('resize', this.updateIsMobileVariable.bind(this));
+		document.title = "AR-Tarot Project Page";
 	};
 	
 	handleButtonClick = event => {
 		event.preventDefault();
-		if(event.target.attributes.getNamedItem("buttontype").value === "fontSizeToggle"){
-			this.handleFontSizeToggleButtonClick();
-		};
-		if(event.target.attributes.getNamedItem("buttontype").value === "contrastToggle"){
-			this.handleContrastToggleButtonClick();
-		};
-		if(event.target.attributes.getNamedItem("buttontype").value === "scrollToTop"){
-			this.handleScrollToTopButtonClick();
-		};
 		if(event.target.attributes.getNamedItem("buttontype").value === "navbarLink"){
 			this.handleNavLinkClick();
 		};
 	}
-
-	handleContrastToggleButtonClick = () =>{
-		if (this.state.isHighContrast === true){
-			this.setState({isHighContrast: false,colorSchemeSuffix: "default", materialIconFill: "rgb(3,3,3)"});
-		}
-		else{
-			this.setState({isHighContrast: true,colorSchemeSuffix: "highContrast", materialIconFill: "rgb(251,251,251)"});
-		}
-	};
-
-	handleFontSizeToggleButtonClick = () =>{	
-		if (this.state.fontSizeLevel === 1){
-			this.setState({fontSizeLevel: 1.5}, this.updateIsMobileVariable);
-			document.body.style.fontSize ="1.5em";
-			
-		}
-		else if (this.state.fontSizeLevel === 1.5){
-			this.setState({fontSizeLevel: 1.75}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "1.75em";
-		}
-		else if (this.state.fontSizeLevel === 1.75){
-			this.setState({fontSizeLevel: 2}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "2em";
-		}
-		else {
-			this.setState({fontSizeLevel: 1}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "1em";
-		}
-	};
-
 	handleNavLinkClick = event => {
-		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkSynopsis"){
-			this.synopsisSectionRef.current.scrollIntoView();
-			this.synopsisSectionRef.current.focus();
+		if(event.target.attributes.getNamedItem("buttonId").value === "applesNavBarLinkSynopsis"){
+			this.applesSynopsisSectionRef.current.scrollIntoView();
+			this.applesSynopsisSectionRef.current.focus();
 		};
-		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkHighlights"){
-			this.highlightsSectionRef.current.scrollIntoView();
-			this.highlightsSectionRef.current.focus();
+		if(event.target.attributes.getNamedItem("buttonId").value === "applesNavBarLinkHighlights"){
+			this.applesHighlightsSectionRef.current.scrollIntoView();
+			this.applesHighlightsSectionRef.current.focus();
 		};
-		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkOverview"){
-			this.overviewSectionRef.current.scrollIntoView();
-			this.overviewSectionRef.current.focus();
+		if(event.target.attributes.getNamedItem("buttonId").value === "applesNavBarLinkOverview"){
+			this.applesOverviewSectionRef.current.scrollIntoView();
+			this.applesOverviewSectionRef.current.focus();
 		};
 	}
 
-	handleScrollToTopButtonClick = () =>{
-		this.navbarRef.current.scrollIntoView();
-		this.navbarRef.current.focus();
-	};
 
-
-	updateIsMobileVariable = () =>{
-		if(window.innerWidth < 750) {
-			this.setState({isMobileView: true,  mainPaddingLeftClassName: "padding-left-0", responsiveFloat:"none", responsiveWidth: "100%"});
-		}
-		else if(this.state.fontSizeLevel > 1.0) {
-			this.setState({isMobileView: true,  mainPaddingLeftClassName: "padding-left-0", responsiveFloat:"none", responsiveWidth: "100%"});
-		}
-		else {
-			this.setState({isMobileView: false, mainPaddingLeftClassName: "padding-left-6p5em", responsiveFloat:"left", responsiveWidth: "50%"});
-		}
-	};
 
 	render() {
 		return (
-			<div className={ "clearfix font-Assistant webProjectPage-color-scheme-" + this.state.colorSchemeSuffix }>
-				<Header
-					mainPaddingLeftClassName = { this.state.mainPaddingLeftClassName }
-					title = { this.projectInfo.title }
-					handleButtonClick = { this.handleButtonClick }
-					colorSchemeSuffix = { this.state.colorSchemeSuffix }
-				/>
-				{ this.state.isMobileView === false &&
-					<MenuBar
-						navbarLinks={ this.state.navbarLinks }
-						colorSchemeSuffix={ this.state.colorSchemeSuffix }
-						isMobileView={ this.state.isMobileView }
-					>
+			<div className={ "clearfix " + this.props.colorSchemeNameRoot + this.props.colorSchemeSuffix }>
+				{ this.props.isMobileView === false &&
+					<div className="font-Overpass position-fixed left-0">
 						<SamePageNavBar
-							colorSchemeSuffix={ this.state.colorSchemeSuffix }
+							colorSchemeSuffix={ this.props.colorSchemeSuffix }
 							handleNavLinkClick={ this.handleNavLinkClick }
-							navbarLinks={ this.state.navbarLinks }
-						/>
-						<NewPageNavBar
-							colorSchemeSuffix={ this.state.colorSchemeSuffix }
-						/>
-					</MenuBar>
-				}
-				{ this.state.isMobileView === true &&
-					<div className="margin-auto max-width-60em width-90pc">
-						<MenuBarMobile>
-							<SamePageNavBarMobile
-								colorSchemeSuffix={ this.state.colorSchemeSuffix }
-								navbarLinks={ this.state.navbarLinks }
-								handleButtonClick={ this.handleButtonClick }
-								handleNavLinkClick={ this.handleNavLinkClick }
-								navbarRef={ this.navbarRef }
-							>
-								<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
-									<p tabIndex="0" className="font-weight-600 text-center" ref={ this.navbarRef }>Jump Down</p>
-								</SheerWhiteContainer>	
-							</SamePageNavBarMobile>
-							<NewPageNavBarMobile
-								colorSchemeSuffix={ this.state.colorSchemeSuffix }
-							/>
-						</MenuBarMobile>
+							navbarLinks={ this.applesNavbarLinks }
+						/>	
 					</div>
 				}
-					
-				<main className={ "margin-auto max-width-60em width-90pc "  + this.state.mainPaddingLeftClassName }>
-					<ProjectPageMainSections
-						colorSchemeSuffix={ this.state.colorSchemeSuffix }
-						float={ this.state.responsiveFloat }
-						isMobile={ this.state.isMobileView }
-						projectInfo={ this.projectInfo }
-						width={ this.state.responsiveWidth }
-						synopsisSectionRef={ this.synopsisSectionRef }
-						highlightsSectionRef={ this.highlightsSectionRef }
-						overviewSectionRef={ this.overviewSectionRef }
-					/>
-				</main>
+				<h1 className="padding-bottom-p25em padding-left-p25em padding-right-p25em padding-top-p5em text-center">AR-Tarot</h1>
+				{ this.props.isMobileView === true &&
+					<div className="padding-left-p5em padding-right-p5em">
+						<SamePageNavBarMobile
+							colorSchemeSuffix={ this.props.colorSchemeSuffix }
+							handleNavLinkClick={ this.handleNavLinkClick }
+							navbarLinks={ this.applesNavbarLinks }
+						/>
+					</div>
+				}
+				<ProjectPageMainSections
+					colorSchemeSuffix={ this.props.colorSchemeSuffix }
+					float={ this.props.responsiveFloat }
+					isMobile={ this.props.isMobileView }
+					width={ this.props.responsiveWidth }
+					highlightsSectionRef={ this.applesHighlightsSectionRef }
+					projectInfo={ this.projectInfo }
+					overviewSectionRef={ this.applesOverviewSectionRef }
+					synopsisSectionRef={ this.applesSynopsisSectionRef }
+				/>
 			</div>
 		);
   	}

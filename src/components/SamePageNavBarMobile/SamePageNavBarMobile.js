@@ -10,8 +10,8 @@ const SamePageNavBarMobile = props => (
 			<p className="font-weight-600 text-center">Jump Down</p>
 		</SheerWhiteContainer>
 		<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px color-inherit padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + props.colorSchemeSuffix}>
-			{ props.navbarLinks.map(link =>
-				<div className="display-inline-block font-size-p8em padding-bottom-p25em padding-left-p2em padding-right-p2em padding-top-p25em font-size-p85em text-center">
+			{ props.navbarLinks.map((link, i) =>
+				<div key={ i } className="display-inline-block font-size-p8em min-width-6em padding-bottom-p25em padding-left-p2em padding-right-p2em padding-top-p25em font-size-p85em text-center">
 					<ButtonContainer colorSchemeSuffix={ props.colorSchemeSuffix }>
 						<SamePageNavBarLink
 							key={ link.id }
