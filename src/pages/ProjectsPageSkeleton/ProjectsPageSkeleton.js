@@ -191,7 +191,16 @@ class ProjectsPageSkeleton extends Component {
 									responsiveWidth={this.state.responsiveWidth}
 								/>
 							)}/>
-							<Route exact path='/projects/artemis' component={ArtemisProject}/>
+							<Route exact path='/projects/artemis' render={props => (
+								<ArtemisProject
+									colorSchemeNameRoot="videoProjectPage-color-scheme-"
+									colorSchemeSuffix={this.state.colorSchemeSuffix}
+									fontSizeLevel={this.state.fontSizeLevel}
+									isMobileView={this.state.isMobileView}
+									responsiveFloat={this.state.responsiveFloat}
+									responsiveWidth={this.state.responsiveWidth}
+								/>
+							)}/>
 							<Route exact path='/projects/bodega' render={props => (
 								<BodegaProject
 									colorSchemeNameRoot="filmProjectPage-color-scheme-"
@@ -222,7 +231,16 @@ class ProjectsPageSkeleton extends Component {
 									responsiveWidth={this.state.responsiveWidth}
 								/>
 							)}/>
-							<Route exact path='/projects/dots' component={DotsProject}/>
+							<Route exact path='/projects/dots' render={props => (
+								<DotsProject
+									colorSchemeNameRoot="artProjectPage-color-scheme-"
+									colorSchemeSuffix={this.state.colorSchemeSuffix}
+									fontSizeLevel={this.state.fontSizeLevel}
+									isMobileView={this.state.isMobileView}
+									responsiveFloat={this.state.responsiveFloat}
+									responsiveWidth={this.state.responsiveWidth}
+								/>
+							)}/>
 							<Route exact path='/projects/giftpitch' render={props => (
 								<GiftpitchProject
 									colorSchemeNameRoot="webProjectPage-color-scheme-"
@@ -244,12 +262,29 @@ class ProjectsPageSkeleton extends Component {
 									responsiveWidth={this.state.responsiveWidth}
 								/>
 							)}/>
-							<Route exact path='/projects/joliet' component={JolietProject}/>
+							<Route exact path='/projects/joliet' render={props => (
+								<JolietProject
+									colorSchemeNameRoot="videoProjectPage-color-scheme-"
+									colorSchemeSuffix={this.state.colorSchemeSuffix}
+									fontSizeLevel={this.state.fontSizeLevel}
+									isMobileView={this.state.isMobileView}
+									responsiveFloat={this.state.responsiveFloat}
+									responsiveWidth={this.state.responsiveWidth}
+								/>
+							)}/>
 							<Route exact path='/projects/lmhtf' component={LmhtfProject}/>
 							<Route exact path='/projects/media' component={MediaProject}/>
 							<Route exact path='/projects/plannedparenthood' component={PlannedparenthoodProject}/>
-							<Route exact path='/projects' component={ProjectsPageSkeleton}/>
-							<Route exact path='/projects/saigon' component={SaigonProject}/>
+							<Route exact path='/projects/saigon' render={props => (
+								<SaigonProject
+									colorSchemeNameRoot="videoProjectPage-color-scheme-"
+									colorSchemeSuffix={this.state.colorSchemeSuffix}
+									fontSizeLevel={this.state.fontSizeLevel}
+									isMobileView={this.state.isMobileView}
+									responsiveFloat={this.state.responsiveFloat}
+									responsiveWidth={this.state.responsiveWidth}
+								/>
+							)}/>
 							<Route exact path='/projects/tarot' render={props => (
 								<TarotProject
 									colorSchemeNameRoot="webProjectPage-color-scheme-"
@@ -260,9 +295,36 @@ class ProjectsPageSkeleton extends Component {
 									responsiveWidth={this.state.responsiveWidth}
 								/>
 							)}/>
-							<Route exact path='/projects/teeny' component={TeenyProject}/>
-							<Route exact path='/projects/walks' component={WalksProject}/>
-							<Route exact path='/projects/whyu' component={WhyuProject}/>
+							<Route exact path='/projects/teeny' render={props => (
+								<TeenyProject
+									colorSchemeNameRoot="videoProjectPage-color-scheme-"
+									colorSchemeSuffix={this.state.colorSchemeSuffix}
+									fontSizeLevel={this.state.fontSizeLevel}
+									isMobileView={this.state.isMobileView}
+									responsiveFloat={this.state.responsiveFloat}
+									responsiveWidth={this.state.responsiveWidth}
+								/>
+							)}/>
+							<Route exact path='/projects/walks' render={props => (
+								<WalksProject
+									colorSchemeNameRoot="artProjectPage-color-scheme-"
+									colorSchemeSuffix={this.state.colorSchemeSuffix}
+									fontSizeLevel={this.state.fontSizeLevel}
+									isMobileView={this.state.isMobileView}
+									responsiveFloat={this.state.responsiveFloat}
+									responsiveWidth={this.state.responsiveWidth}
+								/>
+							)}/>
+							<Route exact path='/projects/whyu' render={props => (
+								<WhyuProject
+									colorSchemeNameRoot="videoProjectPage-color-scheme-"
+									colorSchemeSuffix={this.state.colorSchemeSuffix}
+									fontSizeLevel={this.state.fontSizeLevel}
+									isMobileView={this.state.isMobileView}
+									responsiveFloat={this.state.responsiveFloat}
+									responsiveWidth={this.state.responsiveWidth}
+								/>
+							)}/>
 							<Route exact path='/projects/wiki' component={WikiProject}/>
 							<Route exact path='/projects/yuca' render={props => (
 								<YucaProject

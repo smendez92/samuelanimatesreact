@@ -1,7 +1,7 @@
 .artProjectPage-color-scheme-default{
 	background-color: rgb(251,251,251);
-	background: linear-gradient(to bottom, rgb(251, 251, 251) 0%, #fffffc 40%, #fdff71 85%, 
-	#f5ff64 95%);
+	background: linear-gradient(to bottom, rgb(253, 255, 231) 0%, rgb(253, 255, 231) 10%, rgb(249, 255, 177) 40%, #fdff71 85%, 
+	#f3ff47 95%);
 	color: rgb(5,5,5);
 }
 .artProjectPage-color-scheme-highContrast{
@@ -29,7 +29,7 @@
 }
 .videoProjectPage-color-scheme-default{
 	background-color: rgb(251,251,251);
-	background: linear-gradient(to bottom, rgb(251, 251, 251) 0%, rgb(255, 252, 252) 50%, rgb(255, 187, 235) 85%,rgb(255, 137, 200) 95%);
+	background: linear-gradient(to bottom, rgb(255, 237, 246) 0%,rgb(255, 237, 246) 10%,rgb(255, 190, 225) 40%, rgb(255, 167, 214) 75%, rgb(255, 141, 202) 90%,rgb(255, 92, 179) 95%);
 	color: rgb(5,5,5);
 }
 .videoProjectPage-color-scheme-highContrast{

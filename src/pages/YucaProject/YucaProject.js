@@ -62,7 +62,7 @@ class YucaProject extends Component {
 	yucaOverviewSectionRef = React.createRef();
 
 	componentDidMount() {
-		document.title = "'How to Make Yuca Frita' Projet Page";
+		document.title = "'How to Make Yuca Frita' Project Page";
 	};
 	
 	handleButtonClick = event => {
