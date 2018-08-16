@@ -106,6 +106,7 @@ class TeenyProject extends Component {
 				}
 				<ProjectPageMainSections
 					colorSchemeSuffix={ this.props.colorSchemeSuffix }
+					doNotTrack={ this.props.doNotTrack }
 					float={ this.props.responsiveFloat }
 					isMobile={ this.props.isMobileView }
 					width={ this.props.responsiveWidth }
