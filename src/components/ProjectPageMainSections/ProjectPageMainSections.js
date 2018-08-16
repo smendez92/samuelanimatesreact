@@ -8,6 +8,7 @@ const ProjectPageMainSections = props => (
 	<div>
 		<ProjectPageSynopsis
 			colorSchemeSuffix={ props.colorSchemeSuffix }
+			doNotTrack={ props.doNotTrack }
 			float={ props.float }
 			isMobile={ props.isMobileView }
 			ref={ props.synopsisSectionRef }

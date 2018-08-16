@@ -3,6 +3,7 @@ import "./BusanProject.css";
 import SamePageNavBar from '../../components/SamePageNavBar';
 import SamePageNavBarMobile from '../../components/SamePageNavBarMobile';
 import ProjectPageMainSections from '../../components/ProjectPageMainSections';
+import ProjectHeader from '../../components/ProjectHeader'
 
 
 class BusanProject extends Component {
@@ -114,7 +115,7 @@ class BusanProject extends Component {
 						/>	
 					</div>
 				}
-				<h1 className="padding-bottom-p25em padding-left-p25em padding-right-p25em padding-top-p5em text-center">By Foot: Busan and the Sea</h1>
+				<ProjectHeader title={ this.projectInfo.title } />
 				{ this.props.isMobileView === true &&
 					<div className="padding-left-p5em padding-right-p5em">
 						<SamePageNavBarMobile

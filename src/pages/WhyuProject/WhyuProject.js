@@ -3,6 +3,7 @@ import "./WhyuProject.css";
 import SamePageNavBar from '../../components/SamePageNavBar';
 import SamePageNavBarMobile from '../../components/SamePageNavBarMobile';
 import ProjectPageMainSections from '../../components/ProjectPageMainSections';
+import ProjectHeader from '../../components/ProjectHeader'
 
 class WhyuProject extends Component {
 	state = {
@@ -33,7 +34,7 @@ class WhyuProject extends Component {
 				},
 				{
 					id: "whyuSpecs02",
-					lead: "Composition",
+					lead: "Specs",
 					body: "4 videos and 5 worksheets in simplified Chinese."
 				}
 			]
@@ -102,7 +103,7 @@ class WhyuProject extends Component {
 						/>	
 					</div>
 				}
-				<h1 className="padding-bottom-p25em padding-left-p25em padding-right-p25em padding-top-p5em text-center">WhyUEdu Info Series</h1>
+				<ProjectHeader title={ this.projectInfo.title } />
 				{ this.props.isMobileView === true &&
 					<div className="padding-left-p5em padding-right-p5em">
 						<SamePageNavBarMobile

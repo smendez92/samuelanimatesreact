@@ -3,6 +3,7 @@ import "./TarotProject.css";
 import SamePageNavBar from '../../components/SamePageNavBar';
 import SamePageNavBarMobile from '../../components/SamePageNavBarMobile';
 import ProjectPageMainSections from '../../components/ProjectPageMainSections';
+import ProjectHeader from '../../components/ProjectHeader';
 
 class TarotProject extends Component {
 	projectInfo = {
@@ -18,11 +19,6 @@ class TarotProject extends Component {
 			specs: [
 				{
 					id: "artarotSpecs01",
-					lead: "",
-					body: "A-frame, "
-				},
-				{
-					id: "artarotSpecs02",
 					lead: "Composition",
 					body: "4 videos and 5 worksheets in simplified Chinese."
 				}
@@ -30,21 +26,26 @@ class TarotProject extends Component {
 		},
 		highlights: [
 			{
-				id: "artarotHighlights01",
-				lead: "Goal",
-				body: "Create resources to help Chinese high school students in the US college application process. Create material that could double as promotion for Dipont Education Management's online pilot program, 'WhyUEdu'."
-			},
-			{
 				id: "artarotHighlights02",
-				lead: "Outcome",
-				body: "2 distinct sets of video and text resources about US college application essays and interviews.The videos received over 36,000 views on the QQ Video mobile platform."
+				lead: "Lessons Learned",
+				body: "I learned a bit about using AR in a web project. I also thought more about accessibility of AR. Is a text alternative enough? Is there a better way to incorporate non-visual alternatives to common AR techniques?"
 			}
 		],
 		overview: [
 			{
-				id: "artarotOverview02",
+				id: "artarotOverview01",
 				lead: "Process",
-				body: "First, I interviewed the company's college counselors. I wanted to see what common pitfalls were in the US college application process. Then, I narrowed the scope of the project down to 2 topics that could be covered in short videos and worksheets. I decided to create 2 videos about interviews. One was about self-introductions in video interviews. The other was about common interview mistakes to avoid. I also decided to make 2 videos about admissions essays. One was a counselor critiquing an example essay filled with common mistakes. The other showed viewers how to use info from a college website write about the school's 'fit' for them. All 4 of these videos came with links to related worksheets to help draw people to the WhyUEdu website. I led a team of 6 to complete this project. Together, we did background research, wrote scripts, made subtitles, and made worksheets. I personally filmed and edited the videos."
+				body: "I started off this project with an idea to get a tarot reading in augmented reality. The most seamless way I found to do that in a web app was through A-frame and a Hiro marker. The process of picking a random card from a deck 3 times wzs pretty straightforward to program. I decided to leave the logic open to easily draw different numbers of cards and display different formations for different kinds of readings in the future. I then figured out how I wanted to display them in a simplistic Augmented reality reading, and a more detailed text alternative. The most tedious part was making a digital deck of cards with illustrations and semi-personalized interpretations so the card descriptions could make sense in wide array of topics."
+			},
+			{
+				id: "artarotOverview02",
+				lead: "Web Accessibility (A11Y) Considerations",
+				body: "This app was designed with a 2D on-screen option for displaying tarot readings, suitable for those without access to a printed Hiro marker or those who rely on a screen reader. Illustration descriptions are readable by everyone as an interpretation aid, and linked to the images in an ARIA-compatible way."
+			},
+			{
+				id: "artarotOverview03",
+				lead: "Next Steps",
+				body: "I think I may need to use local storage to take the user to a standalone URL for AR-readings. I ran into problems tryingto dynamically update the page contents with A-Frame. I would also like to add a second reading layout and fix some mobile layout issues."
 			}
 		]
 		
@@ -95,7 +96,7 @@ class TarotProject extends Component {
 						/>	
 					</div>
 				}
-				<h1 className="padding-bottom-p25em padding-left-p25em padding-right-p25em padding-top-p5em text-center">AR-Tarot</h1>
+				<ProjectHeader title={ this.projectInfo.title } />
 				{ this.props.isMobileView === true &&
 					<div className="padding-left-p5em padding-right-p5em">
 						<SamePageNavBarMobile

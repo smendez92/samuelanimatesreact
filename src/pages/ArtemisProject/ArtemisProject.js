@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
 import "./ArtemisProject.css";
-import Header from '../../components/Header';
-import MenuBar from '../../components/MenuBar';
-import MenuBarMobile from '../../components/MenuBarMobile';
-import NewPageNavBar from '../../components/NewPageNavBar';
-import NewPageNavBarMobile from '../../components/NewPageNavBarMobile';
 import SamePageNavBar from '../../components/SamePageNavBar';
 import SamePageNavBarMobile from '../../components/SamePageNavBarMobile';
-import SheerWhiteContainer from "../../components/SheerWhiteContainer";
 import ProjectPageMainSections from '../../components/ProjectPageMainSections';
+import ProjectHeader from '../../components/ProjectHeader'
 
 class ArtemisProject extends Component {
 	projectInfo = {
@@ -104,7 +99,7 @@ class ArtemisProject extends Component {
 						/>	
 					</div>
 				}
-				<h1 className="padding-bottom-p25em padding-left-p25em padding-right-p25em padding-top-p5em text-center">Artemis 1 Fundraiser Video</h1>
+				<ProjectHeader title={ this.projectInfo.title } />
 				{ this.props.isMobileView === true &&
 					<div className="padding-left-p5em padding-right-p5em">
 						<SamePageNavBarMobile

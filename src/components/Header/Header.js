@@ -15,7 +15,7 @@ const Header = props => (
 					<Button
 						buttonType="contrastToggle"
 						onClickFunction={ props.handleButtonClick }
-						text="Click to toggle high contrast view"
+						text="Click to toggle color contrast"
 						colorSchemeSuffix={ props.colorSchemeSuffix }
 						tabIndex="0"
 					/>
