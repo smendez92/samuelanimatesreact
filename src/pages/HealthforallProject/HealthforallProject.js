@@ -6,7 +6,7 @@ import ProjectHeader from '../../components/ProjectHeader';
 
 class HealthforallProject extends Component {
   projectInfo = {
-		title: "10 Days in Saigon",
+		title: "Health for All",
 		synopsis:{
 			mediaType: "video",
 			blurb: "An experimental documentary. A cross between two marks. Full film below.",

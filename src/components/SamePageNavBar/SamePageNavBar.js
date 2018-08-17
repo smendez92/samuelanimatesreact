@@ -7,7 +7,7 @@ import SamePageNavBarLink from '../SamePageNavBarLink';
 const SamePageNavBar = props => (
 	<nav className="box-shadow-3px-4px-2px-rgba-221-126-192-p3 border-style-solid border-color-rgba-150-150-150-p75 border-2px">
 		<SheerWhiteContainer colorSchemeSuffix={ props.colorSchemeSuffix }>
-			<p className="font-weight-600 text-center">Jump<br/>Down</p>
+			<p className="font-weight-600 text-center">On This<br/>Page</p>
 		</SheerWhiteContainer>
 		<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px clearfix color-inherit padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + props.colorSchemeSuffix }>
 			<ul>

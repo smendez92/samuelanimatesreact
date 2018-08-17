@@ -6,7 +6,7 @@ import ProjectHeader from '../../components/ProjectHeader';
 
 class WikiProject extends Component {
   projectInfo = {
-		title: "10 Days in Saigon",
+		title: "Wheelchair Accessibility (A11Y) Travel Wiki",
 		synopsis:{
 			mediaType: "video",
 			blurb: "An experimental documentary. A cross between two marks. Full film below.",

@@ -6,13 +6,13 @@ import ProjectHeader from '../../components/ProjectHeader';
 
 class LmhtfProject extends Component {
   projectInfo = {
-		title: "10 Days in Saigon",
+		title: "Bodegas Saludables",
 		synopsis:{
 			mediaType: "video",
 			blurb: "An experimental documentary. A cross between two marks. Full film below.",
 			embed: {
-				url: "https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fwearemuui%2Fvideos%2F1838183853120576%2F&show_text=0&width=560",
-				title: "'10 Days in Saigon' episode on Facebook."
+				url: "https://player.vimeo.com/video/231980215",
+				title: "'Bodegas Saludables' excerpt on Vimeo."
 			},
 			year: "2017",
 			specs: [

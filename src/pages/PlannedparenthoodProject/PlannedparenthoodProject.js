@@ -6,7 +6,7 @@ import ProjectHeader from '../../components/ProjectHeader';
 
 class PlannedparenthoodProject extends Component {
   projectInfo = {
-		title: "10 Days in Saigon",
+		title: "Perceptions of Planned Parenthood",
 		synopsis:{
 			mediaType: "video",
 			blurb: "An experimental documentary. A cross between two marks. Full film below.",

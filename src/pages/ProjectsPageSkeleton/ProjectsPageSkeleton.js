@@ -4,6 +4,7 @@ import "./ProjectsPageSkeleton.css";
 import Button from '../../components/Button';
 import ButtonContainer from '../../components/ButtonContainer';
 import GenericFloatingSection from '../../components/GenericFloatingSection';
+import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import MenuBar from '../../components/MenuBar';
 import MenuBarMobile from '../../components/MenuBarMobile';
@@ -177,230 +178,235 @@ class ProjectsPageSkeleton extends Component {
 						</MenuBarMobile>
 					</div>
 				}
-				<main className={"margin-auto max-width-60em width-90pc " + this.state.mainPaddingLeftClassName}>
-					<Router>
-						<GenericFloatingSection
-							colorSchemeSuffix={ this.state.colorSchemeSuffix }
-						>
-							<Route exact path='/projects/after' render={props => (
-								<AfterProject
-									colorSchemeNameRoot="filmProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									doNotTrack={ this.state.doNotTrack }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							
-							<Route exact path='/projects/apples' render={props => (
-								<ApplesProject
-									colorSchemeNameRoot="webProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									doNotTrack={ this.state.doNotTrack }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/artemis' render={props => (
-								<ArtemisProject
-									colorSchemeNameRoot="videoProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									doNotTrack={ this.state.doNotTrack }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/bodega' render={props => (
-								<BodegaProject
-									colorSchemeNameRoot="filmProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									doNotTrack={ this.state.doNotTrack }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/breakfast' render={props => (
-								<BreakfastProject
-									colorSchemeNameRoot="filmProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									doNotTrack={ this.state.doNotTrack }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/busan' render={props => (
-								<BusanProject
-									colorSchemeNameRoot="filmProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									doNotTrack={ this.state.doNotTrack }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/dots' render={props => (
-								<DotsProject
-									colorSchemeNameRoot="artProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/giftpitch' render={props => (
-								<GiftpitchProject
-									colorSchemeNameRoot="webProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									doNotTrack={ this.state.doNotTrack }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/healthforall' render={props => (
-								<HealthforallProject
-									colorSchemeNameRoot="healthProjectPage-color-scheme-"
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/hernandez' render={props => (
-								<HernandezProject
-									colorSchemeNameRoot="filmProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									doNotTrack={ this.state.doNotTrack }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/joliet' render={props => (
-								<JolietProject
-									colorSchemeNameRoot="videoProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									doNotTrack={ this.state.doNotTrack }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/lmhtf' render={props => (
-								<LmhtfProject
-									colorSchemeNameRoot="healthProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									doNotTrack={ this.state.doNotTrack }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/media' render={props => (
-								<MediaProject
-									colorSchemeNameRoot="healthProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/plannedparenthood' render={props => (
-								<PlannedparenthoodProject
-									colorSchemeNameRoot="healthProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/saigon' render={props => (
-								<SaigonProject
-									colorSchemeNameRoot="videoProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									doNotTrack={ this.state.doNotTrack }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/tarot' render={props => (
-								<TarotProject
-									colorSchemeNameRoot="webProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/teeny' render={props => (
-								<TeenyProject
-									colorSchemeNameRoot="videoProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									doNotTrack={ this.state.doNotTrack }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/walks' render={props => (
-								<WalksProject
-									colorSchemeNameRoot="artProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									doNotTrack={ this.state.doNotTrack }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/whyu' render={props => (
-								<WhyuProject
-									colorSchemeNameRoot="videoProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									doNotTrack={ this.state.doNotTrack }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-							<Route exact path='/projects/wiki' component={WikiProject}/>
-							<Route exact path='/projects/yuca' render={props => (
-								<YucaProject
-									colorSchemeNameRoot="filmProjectPage-color-scheme-"
-									colorSchemeSuffix={ this.state.colorSchemeSuffix }
-									doNotTrack={ this.state.doNotTrack }
-									fontSizeLevel={ this.state.fontSizeLevel }
-									isMobileView={ this.state.isMobileView }
-									responsiveFloat={ this.state.responsiveFloat }
-									responsiveWidth={this.state.responsiveWidth}
-								/>
-							)}/>
-						</GenericFloatingSection>
-					</Router>
-				</main>
+				<div className={"margin-auto max-width-60em width-90pc " + this.state.mainPaddingLeftClassName}>
+					<main>
+						<Router>
+							<GenericFloatingSection
+								colorSchemeSuffix={ this.state.colorSchemeSuffix }
+							>
+								<Route exact path='/projects/after' render={props => (
+									<AfterProject
+										colorSchemeNameRoot="filmProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										doNotTrack={ this.state.doNotTrack }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								
+								<Route exact path='/projects/apples' render={props => (
+									<ApplesProject
+										colorSchemeNameRoot="webProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										doNotTrack={ this.state.doNotTrack }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/artemis' render={props => (
+									<ArtemisProject
+										colorSchemeNameRoot="videoProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										doNotTrack={ this.state.doNotTrack }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/bodega' render={props => (
+									<BodegaProject
+										colorSchemeNameRoot="filmProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										doNotTrack={ this.state.doNotTrack }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/breakfast' render={props => (
+									<BreakfastProject
+										colorSchemeNameRoot="filmProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										doNotTrack={ this.state.doNotTrack }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/busan' render={props => (
+									<BusanProject
+										colorSchemeNameRoot="filmProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										doNotTrack={ this.state.doNotTrack }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/dots' render={props => (
+									<DotsProject
+										colorSchemeNameRoot="artProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/giftpitch' render={props => (
+									<GiftpitchProject
+										colorSchemeNameRoot="webProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										doNotTrack={ this.state.doNotTrack }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/healthforall' render={props => (
+									<HealthforallProject
+										colorSchemeNameRoot="healthProjectPage-color-scheme-"
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/hernandez' render={props => (
+									<HernandezProject
+										colorSchemeNameRoot="filmProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										doNotTrack={ this.state.doNotTrack }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/joliet' render={props => (
+									<JolietProject
+										colorSchemeNameRoot="videoProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										doNotTrack={ this.state.doNotTrack }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/lmhtf' render={props => (
+									<LmhtfProject
+										colorSchemeNameRoot="healthProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										doNotTrack={ this.state.doNotTrack }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/media' render={props => (
+									<MediaProject
+										colorSchemeNameRoot="healthProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/plannedparenthood' render={props => (
+									<PlannedparenthoodProject
+										colorSchemeNameRoot="healthProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/saigon' render={props => (
+									<SaigonProject
+										colorSchemeNameRoot="videoProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										doNotTrack={ this.state.doNotTrack }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/tarot' render={props => (
+									<TarotProject
+										colorSchemeNameRoot="webProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/teeny' render={props => (
+									<TeenyProject
+										colorSchemeNameRoot="videoProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										doNotTrack={ this.state.doNotTrack }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/walks' render={props => (
+									<WalksProject
+										colorSchemeNameRoot="artProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										doNotTrack={ this.state.doNotTrack }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/whyu' render={props => (
+									<WhyuProject
+										colorSchemeNameRoot="videoProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										doNotTrack={ this.state.doNotTrack }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+								<Route exact path='/projects/wiki' component={WikiProject}/>
+								<Route exact path='/projects/yuca' render={props => (
+									<YucaProject
+										colorSchemeNameRoot="filmProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.state.colorSchemeSuffix }
+										doNotTrack={ this.state.doNotTrack }
+										fontSizeLevel={ this.state.fontSizeLevel }
+										isMobileView={ this.state.isMobileView }
+										responsiveFloat={ this.state.responsiveFloat }
+										responsiveWidth={this.state.responsiveWidth}
+									/>
+								)}/>
+							</GenericFloatingSection>
+						</Router>
+					</main>
+					<Footer
+						colorSchemeSuffix={ this.state.colorSchemeSuffix }
+					/>
+				</div>
 				{ this.state.isMobileView === true &&
 					<div className="bottom-0 position-fixed right-0 width-3em">
 						<ButtonContainer colorSchemeSuffix = { this.state.colorSchemeSuffix }>

@@ -7,7 +7,7 @@ import ProjectHeader from '../../components/ProjectHeader';
 
 class MediaProject extends Component {
 	projectInfo = {
-		title: "10 Days in Saigon",
+		title: "Social Media Study",
 		synopsis:{
 			mediaType: "video",
 			blurb: "An experimental documentary. A cross between two marks. Full film below.",
