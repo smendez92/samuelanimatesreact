@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Button from './components/Button';
+import ButtonContainer from './components/ButtonContainer';
 import HomePage from "./pages/HomePage";
 import Header from './components/Header';
 
@@ -18,6 +20,8 @@ class App extends Component {
 		responsiveFloat:"none",
 		responsiveWidth:"50%"
   }
+
+  headerRef = React.createRef();
   
   componentWillMount() {
 		this.updateIsMobileVariable();
@@ -85,8 +89,13 @@ class App extends Component {
 			document.body.style.fontSize = "14pt";
 		}
   };
+
+	handleScrollToTopButtonClick = () =>{
+		this.headerRef.current.scrollIntoView();
+		this.headerRef.current.focus();
+	};
   
-  updateIsMobileVariable = () =>{
+	updateIsMobileVariable = () =>{
 		if(window.innerWidth < 800) {
 			this.setState({isMobileView: true,  mainPaddingLeftClassName: "padding-left-0", responsiveFloat:"none", responsiveWidth: "100%"});
 		}
@@ -101,38 +110,52 @@ class App extends Component {
   render() {
 		return (
       <div className={ "clearfix font-Assistant projectPage-color-scheme-" + this.state.colorSchemeSuffix }>
-				<Header
-					mainPaddingLeftClassName={ this.state.mainPaddingLeftClassName }
-					handleButtonClick={ this.handleButtonClick }
-					colorSchemeSuffix={ this.state.colorSchemeSuffix }
-					headerRef={this.headerRef}
-				/>
+		<Header
+			mainPaddingLeftClassName={ this.state.mainPaddingLeftClassName }
+			handleButtonClick={ this.handleButtonClick }
+			colorSchemeSuffix={ this.state.colorSchemeSuffix }
+			headerRef={this.headerRef}
+		/>
         <Router>
             <Switch>
-              <Route exact path="/" render={props => (
-									<HomePage
-										colorSchemeNameRoot="webProjectPage-color-scheme-"
-										colorSchemeSuffix={ this.state.colorSchemeSuffix }
-										doNotTrack={ this.state.doNotTrack }
-										fontSizeLevel={ this.state.fontSizeLevel }
-										isMobileView={ this.state.isMobileView }
-										responsiveFloat={ this.state.responsiveFloat }
-										responsiveWidth={this.state.responsiveWidth}
-									/>
-								)}/>
-              <Route path="/projects/:project" render={props => (
-									<ProjectsPageSkeleton
-										colorSchemeNameRoot="webProjectPage-color-scheme-"
-										colorSchemeSuffix={ this.state.colorSchemeSuffix }
-										doNotTrack={ this.state.doNotTrack }
-										fontSizeLevel={ this.state.fontSizeLevel }
-										isMobileView={ this.state.isMobileView }
-										responsiveFloat={ this.state.responsiveFloat }
-										responsiveWidth={this.state.responsiveWidth}
-									/>
-								)}/>
+            	<Route exact path="/" render={props => (
+					<HomePage
+						colorSchemeSuffix={ this.state.colorSchemeSuffix }
+						doNotTrack={ this.state.doNotTrack }
+						fontSizeLevel={ this.state.fontSizeLevel }
+						isMobileView={ this.state.isMobileView }
+						mainPaddingLeftClassName={ this.state.mainPaddingLeftClassName }
+						responsiveFloat={ this.state.responsiveFloat }
+						responsiveWidth={this.state.responsiveWidth}
+					/>
+				)}/>
+            	<Route path="/projects/:project" render={props => (
+					<ProjectsPageSkeleton
+						colorSchemeSuffix={ this.state.colorSchemeSuffix }
+						doNotTrack={ this.state.doNotTrack }
+						fontSizeLevel={ this.state.fontSizeLevel }
+						headerRef={ this.headerRef }
+						isMobileView={ this.state.isMobileView }
+						mainPaddingLeftClassName={ this.state.mainPaddingLeftClassName }
+						responsiveFloat={ this.state.responsiveFloat }
+						responsiveWidth={this.state.responsiveWidth}
+					/>
+				)}/>
             </Switch>
         </Router>
+		{ this.state.isMobileView === true &&
+			<div className="bottom-0 position-fixed right-0 width-3em">
+				<ButtonContainer colorSchemeSuffix = { this.state.colorSchemeSuffix }>
+					<Button
+						buttonType="scrollToTop"
+						colorSchemeSuffix={ this.state.colorSchemeSuffix }
+						onClickFunction={ this.handleButtonClick }
+						text="Top"
+						tabIndex="0"
+					/> 
+				</ButtonContainer>
+			</div>
+		}
       </div>
     )
   }

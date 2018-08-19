@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './HomePage.css';
-import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import HomepageAboutMeSection from '../../components/HomepageAboutMeSection';
 import HomepageNewsSection from '../../components/HomepageNewsSection';
@@ -704,62 +703,17 @@ class HomePage extends Component {
 	artSectionRef = React.createRef();
 	projectSectionRefs = [this.animationSectionRef, this.healthSectionRef, this.webSectionRef, this.videoSectionRef, this.artSectionRef]
 
-  	componentWillMount(){
-		this.updateIsMobileVariable();
-	};
 	componentDidMount() {
-		window.addEventListener("resize", this.updateIsMobileVariable.bind(this));
 		document.title = "Samuel Animates";
 
-	};
-	componentWillUnmount() {
-		window.removeEventListener('resize', this.updateIsMobileVariable.bind(this));
 	};
 
 	handleButtonClick = event => {
 		event.preventDefault();
-		if(event.target.attributes.getNamedItem("buttontype").value === "fontSizeToggle"){
-			this.handleFontSizeToggleButtonClick();
-		};
-		if(event.target.attributes.getNamedItem("buttontype").value === "contrastToggle"){
-			this.handleContrastToggleButtonClick();
-		};
-		if(event.target.attributes.getNamedItem("buttontype").value === "scrollToTop"){
-			this.handleScrollToTopButtonClick();
-		};
 		if(event.target.attributes.getNamedItem("buttontype").value === "navbarLink"){
 			this.handleNavLinkClick();
 		};
 	}
-
-	handleContrastToggleButtonClick = () =>{
-		if (this.state.isHighContrast === true){
-			this.setState({isHighContrast: false,colorSchemeSuffix: "default", materialIconFill: "rgb(3,3,3)"});
-		}
-		else{
-			this.setState({isHighContrast: true,colorSchemeSuffix: "highContrast", materialIconFill: "rgb(251,251,251)"});
-		}
-	};
-
-	handleFontSizeToggleButtonClick = () =>{	
-		if (this.state.fontSizeLevel === 1){
-			this.setState({fontSizeLevel: 1.5}, this.updateIsMobileVariable);
-			document.body.style.fontSize ="1.5em";
-			
-		}
-		else if (this.state.fontSizeLevel === 1.5){
-			this.setState({fontSizeLevel: 1.75}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "1.75em";
-		}
-		else if (this.state.fontSizeLevel === 1.75){
-			this.setState({fontSizeLevel: 2}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "2em";
-		}
-		else {
-			this.setState({fontSizeLevel: 1}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "1em";
-		}
-	};
 
 	handleNavLinkClick = event => {
 		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkAbout"){
@@ -796,30 +750,13 @@ class HomePage extends Component {
 		};
 	}
 
-	handleScrollToTopButtonClick = () =>{
-		this.navbarRef.current.scrollIntoView();
-		this.navbarRef.current.focus();
-	};
-
-	updateIsMobileVariable = () =>{
-		if(window.innerWidth < 750) {
-			this.setState({isMobileView: true, portraitWidth: "75%", blurbWidth: "90%", mainPaddingLeftClassName: "padding-left-0", responsiveFloat:"none"});
-		}
-		else if(this.state.fontSizeLevel > 1.0) {
-			this.setState({isMobileView: true, portraitWidth: "75%", blurbWidth: "90%", mainPaddingLeftClassName: "padding-left-0", responsiveFloat:"none"});
-		}
-		else {
-			this.setState({isMobileView: false, portraitWidth: "40%", blurbWidth: "60%", mainPaddingLeftClassName: "padding-left-6p5em", responsiveFloat:"left"});
-		}
-	};
-
   render() {
     return (
 		<div className={ "clearfix homepage-color-scheme-" + this.props.colorSchemeSuffix }>
-			{ this.state.isMobileView === false &&
+			{ this.props.isMobileView === false &&
 				<MenuBar
 					colorSchemeSuffix={ this.props.colorSchemeSuffix }
-					isMobileView={ this.state.isMobileView }
+					isMobileView={ this.props.isMobileView }
 				>
 					<SamePageNavBar
 						colorSchemeSuffix={ this.props.colorSchemeSuffix }
@@ -829,12 +766,12 @@ class HomePage extends Component {
 					/>
 				</MenuBar>
 			}
-			<div className={ "margin-auto max-width-50em width-85pc "  + this.state.mainPaddingLeftClassName }>
+			<div className={ "margin-auto max-width-50em width-85pc "  + this.props.mainPaddingLeftClassName }>
 				<main>
-					{ this.state.isMobileView === true &&
+					{ this.props.isMobileView === true &&
 						<MenuBarMobile
 							colorSchemeSuffix={ this.props.colorSchemeSuffix }
-							isMobileView={ this.state.isMobileView }
+							isMobileView={ this.props.isMobileView }
 						>
 							<SamePageNavBarMobile
 								colorSchemeSuffix={ this.props.colorSchemeSuffix }
