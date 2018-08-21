@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './HomePage.css';
 import Footer from '../../components/Footer';
 import HomepageAboutMeSection from '../../components/HomepageAboutMeSection';
-import HomepageNewsSection from '../../components/HomepageNewsSection';
 import HomepageProjectsSection from '../../components/HomepageProjectsSection';
 import MenuBar from '../../components/MenuBar';
 import MenuBarMobile from '../../components/MenuBarMobile';
@@ -157,36 +156,6 @@ class HomePage extends Component {
 							"icon": "film"
 						}
 					]
-				}
-			]
-		},
-		newsSection: {
-			id: "NEWS",
-			newsItems: [
-				{
-					"id": "news20171202",
-					"lead": "2017 Dec",
-					"body": "'By Foot: Busan and the Sea' screened at Chinh India Kids Film Festival in New Delhi, India."
-				},
-				{
-					"id": "news20171201",
-					"lead": "2017 Dec",
-					"body": "'A Bodega' selected for inclusion in the National Academy of Medicine's Visualizing Health Equity project. The film was included in a pop-up gallery, and I was personally invited to speak at a panel event in Washington DC."
-				},
-				{
-					"id": "news20171002",
-					"lead": "2017 Oct",
-					"body": "'By Foot: Busan and the Sea' won the Exceptional Artistry award for animation at the Official Latino Short Film Festival in New York City."
-				},
-				{
-					"id": "news20171001",
-					"lead": "2017 Oct",
-					"body": "'10 Days in Saigon' was nominated for Best Travel Web Series and screened in Limassol, Cyprus, as part of the TRAVEL FilmFest."
-				},
-				{
-					"id": "news20170901",
-					"lead": "2017 Sep",
-					"body": "'A Bodega' screened in three Chicago parks as part of the Chicago Onscreen program by the Chicago Park District."
 				}
 			]
 		},
@@ -807,12 +776,6 @@ class HomePage extends Component {
 						colorSchemeSuffix={ this.props.colorSchemeSuffix }
 						materialIconFill={ this.state.materialIconFill }
 						ref={ this.highlightsSectionRef }
-					/>
-					<HomepageNewsSection
-						id = { this.state.newsSection.id }
-						newsItems = { this.state.newsSection.newsItems }
-						colorSchemeSuffix = { this.props.colorSchemeSuffix }
-						ref={ this.newsSectionRef }
 					/>
 					{ this.state.projectSections.map((projectSection, index) =>
 						<HomepageProjectsSection
