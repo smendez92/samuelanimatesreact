@@ -4,9 +4,10 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "mongoose": "^5.2.9"
   },
-  "devDependencies":{
+  "devDependencies": {
     "concurrently": "^3.6.1"
   },
   "engines": {
