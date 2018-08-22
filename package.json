@@ -1,5 +1,5 @@
 {
-  "name": "samuelAnimatesReact",
+  "name": "samuelanimatesreact",
   "version": "1.0.0",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
   "main": "index.js",
@@ -19,7 +19,7 @@
     "server": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently \"npm run-script server\" \"npm run-script client\"",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "repository": {
     "type": "git",
