@@ -8,7 +8,7 @@ const InlineA = props => (
 			<Link className={ "color-inherit a-color-scheme-" + props.colorSchemeSuffix } to={ props.urlPath }>{ props.text }</Link>
 		} 
 		{props.isInternalLink === false &&
-			<a className={ "color-inherit a-color-scheme-" + props.colorSchemeSuffix } target="_blank" rel="noopener noreferrer" href={ props.urlPath }>{ props.text }</a>
+			<a className={ "color-inherit a-color-scheme-" + props.colorSchemeSuffix } target="_blank" href={ props.urlPath }>{ props.text }</a>
 		}
 	</span>
 );

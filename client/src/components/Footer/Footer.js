@@ -8,7 +8,7 @@ const Footer = props => (
 			<h2 className="text-center">Thanks for visiting!</h2>
 			<h3 className="font-size-p9em">Credits & Code</h3>
 			<p className="padding-bottom-p25em">
-				I designed and coded this portfolio using React and Express. I used an example from Nicolas Rousseau Burgess to create my Express server. I used an example from Corbin Davenport to check for Do Not Track requests across multiple browsers. Feel free to check out <InlineA colorSchemeSuffix={ props.colorSchemeSuffix } isInternalLink={ false } text={ "the GitHub repo for this portfolio site" } urlPath={ "https://github.com/smendez92/samuelAnimatesReact" } />.
+				I designed and coded this portfolio using React and Express. I used an example from Dave Ceddia to create my express server. I used an example from Corbin Davenport to check for Do Not Track requests across multiple browsers. Feel free to check out <InlineA colorSchemeSuffix={ props.colorSchemeSuffix } isInternalLink={ false } text={ "the GitHub repo for this portfolio site" } urlPath={ "https://github.com/smendez92/samuelAnimatesReact" } />.
 			</p>
 			<h3 className="font-size-p9em padding-top-p25em">Accessibility (A11Y)</h3>
 			<p className="padding-bottom-p25em">
@@ -16,7 +16,7 @@ const Footer = props => (
 			</p>
 			<h3 className="font-size-p9em padding-top-p25em">Privacy</h3>
 			<p>
-				If this site detects a DNT request from your browser, iframes from external sources will not embed unless you opt in via a placeholder button. Such content includes: embedded maps from Google, embedded videos from Facebook and Vimeo.
+				If this site detects a DNT request from your browser, iframes from external sources will not embed unless you opt in. Such content includes: embedded maps from Google, embedded videos from Facebook and Vimeo.
 			</p>
 		</div>
 	</footer>

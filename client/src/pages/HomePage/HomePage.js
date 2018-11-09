@@ -12,6 +12,12 @@ import SheerWhiteContainer from '../../components/SheerWhiteContainer';
 class HomePage extends Component {
 
 	state = { 
+		navbarClassName: "margin-auto margin-bottom-2em",
+		navbarLinksClassName: "float-left font-size-p85em padding-left-0 text-center",
+		navbarLinks: [{title:"About", id:"navBarLinkAbout"},{title:"Highlights", id:"navBarLinkHighlights"},{title:"Animation", id:"navBarLinkAnimation"},{title:"Health", id:"navBarLinkHealth"},{title:"Web", id:"navBarLinkWeb"},{title:"Video", id:"navBarLinkVideo"},{title:"Art", id:"navBarLinkArt"}]
+	};
+
+	projectData = { 
 		aboutMeSection:{
 			quote: "I could trace back about 80% of my humor to specific SpongeBob episodes.",
 			paragraphs: [
@@ -74,7 +80,7 @@ class HomePage extends Component {
 							"componentPage": "SaigonProject",
 							"id": "highlights0101",
 							"text": "'10 Days' Overview",
-							"icon": "page",
+							"icon": "page"
 						},
 						{
 							"isInternalLink": false,
@@ -113,8 +119,7 @@ class HomePage extends Component {
 							"componentPage": "WikiProject",
 							"id": "highlights0201",
 							"text": "'A11Y Wiki' Overview",
-							"icon": "page",
-							
+							"icon": "page"
 						},
 						{
 							"isInternalLink": false,
@@ -161,7 +166,7 @@ class HomePage extends Component {
 		},
 		projectSections: [
 			{
-				"title": "ANIMATED FILMS",
+				"title": "Animated Films",
 				"id": "animationSection",
 				"projects": [
 					{
@@ -178,7 +183,7 @@ class HomePage extends Component {
 								"path": "/projects/hernandez",
 								"componentPage": "HernandezProject",
 								"text": "'No One Can Hear You' Overview",
-								"icon": "page",
+								"icon": "page"
 							},
 							{
 								"isInternalLink": false,
@@ -228,7 +233,7 @@ class HomePage extends Component {
 								"path": "/projects/breakfast",
 								"componentPage": "BreakfastProject",
 								"text": "'Persefone's Breakfast' Overview",
-								"icon": "page",
+								"icon": "page"
 								
 							},
 							{
@@ -255,7 +260,7 @@ class HomePage extends Component {
 								"path": "/projects/yuca",
 								"componentPage": "YucaProject",
 								"text": "'Yuca' Overview",
-								"icon": "page",
+								"icon": "page"
 							},
 							{
 								"isInternalLink": false,
@@ -280,7 +285,7 @@ class HomePage extends Component {
 								"path": "/projects/after",
 								"componentPage": "AfterProject",
 								"text": "'After, After That' Overview",
-								"icon": "page",
+								"icon": "page"
 							},
 							{
 								"isInternalLink": false,
@@ -294,7 +299,7 @@ class HomePage extends Component {
 				]
 			},
 			{
-				"title": "PUBLIC HEALTH RESEARCH",
+				"title": "Public Health Research",
 				"id": "healthSection",
 				"projects": [
 					{
@@ -303,7 +308,7 @@ class HomePage extends Component {
 						"icon": "./assets/images/homepageIcons/homepage-icon-nlm.svg",
 						"iconAlt": "",
 						"description": "Ongoing prototype development for a clinical trial informational tool under development in partnership with Chicago Public Libraries.",
-						"projectPagePath": "/projects/health",
+						"projectPagePath": "/projects/healthforall",
 						"links": [
 							{
 								"isInternalLink": true,
@@ -368,7 +373,7 @@ class HomePage extends Component {
 				]
 			},
 			{
-				"title": "WEB DEVELOPMENT",
+				"title": "Web Development",
 				"id": "webSection",
 				"projects": [
 					{
@@ -470,7 +475,7 @@ class HomePage extends Component {
 				]
 			},
 			{
-				"title": "VIDEO",
+				"title": "Videos",
 				"id": "videoSection",
 				"projects": [
 					{
@@ -604,7 +609,7 @@ class HomePage extends Component {
 				]
 			},
 			{
-				"title": "ART IN PERSON",
+				"title": "Art In Person",
 				"id": "artSection",
 				"projects": [
 					{
@@ -645,24 +650,10 @@ class HomePage extends Component {
 					}
 				]
 			}
-		],
-		blurbWidth: "90%",
-		colorSchemeSuffix: "default",
-		fontColorClassName: "color-rgb-5-5-5",
-		fontSizeLevel: 1,
-		isHighContrast: false,
-		isMobileView: true,
-		mainPaddingLeftClassName: "padding-left-0em",
-		materialIconFill: "rgb(3,3,3)",
-		navbarClassName: "margin-auto margin-bottom-2em",
-		navbarLinksClassName: "float-left font-size-p85em padding-left-0 text-center",
-		navbarLinks: [{title:"About", id:"navBarLinkAbout"},{title:"Highlights", id:"navBarLinkHighlights"},{title:"News", id:"navBarLinkNews"},{title:"Animation", id:"navBarLinkAnimation"},{title:"Health", id:"navBarLinkHealth"},{title:"Web", id:"navBarLinkWeb"},{title:"Video", id:"navBarLinkVideo"},{title:"Art", id:"navBarLinkArt"}],
-		portraitWidth: "50%",
-		responsiveFloat: "none"
+		]
 	};
-
+	
 	aboutSectionRef = React.createRef();
-	newsSectionRef = React.createRef();
 	highlightsSectionRef = React.createRef();
 	navbarRef = React.createRef();
 	animationSectionRef = React.createRef();
@@ -756,36 +747,35 @@ class HomePage extends Component {
 						</MenuBarMobile>
 					}
 					<HomepageAboutMeSection
-						paragraphs={ this.state.aboutMeSection.paragraphs }
-						width={ this.state.portraitWidth }
+						blurbWidth={ this.props.blurbWidth }
 						colorSchemeSuffix={ this.props.colorSchemeSuffix }
-						float={ this.state.responsiveFloat }
-						quote={ this.state.aboutMeSection.quote }
-						blurbWidth={ this.state.blurbWidth }
-						links={ this.state.aboutMeSection.links }
-						materialIconFill={ this.state.materialIconFill }
-						portraitWidth={ this.state.portraitWidth }
-						responsiveFloat={ this.state.responsiveFloat }
+						float={ this.props.responsiveFloat }
+						quote={ this.projectData.aboutMeSection.quote }
+						links={ this.projectData.aboutMeSection.links }
+						materialIconFill={ this.props.materialIconFill }
+						portraitWidth={ this.props.portraitWidth }
+						paragraphs={ this.projectData.aboutMeSection.paragraphs }
+						responsiveFloat={ this.props.responsiveFloat }
 						ref={ this.aboutSectionRef }
 					/>
 					<HomepageProjectsSection
-						id={ this.state.highlightsSection.id }
-						float={ this.state.responsiveFloat }	
-						title="HIGHLIGHTED PROJECTS"
-						projects={ this.state.highlightsSection.projects }
+						id={ this.projectData.highlightsSection.id }
+						float={ this.props.responsiveFloat }	
+						title="Highlighted Projects"
+						projects={ this.projectData.highlightsSection.projects }
 						colorSchemeSuffix={ this.props.colorSchemeSuffix }
-						materialIconFill={ this.state.materialIconFill }
+						materialIconFill={ this.props.materialIconFill }
 						ref={ this.highlightsSectionRef }
 					/>
-					{ this.state.projectSections.map((projectSection, index) =>
+					{ this.projectData.projectSections.map((projectSection, index) =>
 						<HomepageProjectsSection
 							id={ projectSection.id }
 							key={ projectSection.id }
-							float={ this.state.responsiveFloat }	
+							float={ this.props.responsiveFloat }	
 							title={ projectSection.title }
 							projects={ projectSection.projects }
 							colorSchemeSuffix={ this.props.colorSchemeSuffix }
-							materialIconFill={ this.state.materialIconFill }
+							materialIconFill={ this.props.materialIconFill }
 							ref={ this.projectSectionRefs[index] }
 						/>
 					)}

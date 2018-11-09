@@ -19,7 +19,7 @@ class LmhtfProject extends Component {
 				{
 					id: "lmhtfSpecs01",
 					lead: "Length",
-					body: "02 min. 18 sec."
+					body: "03 min. 05 sec. (Shorter excerpt above)"
 				}
 			]
 		},
@@ -51,7 +51,7 @@ class LmhtfProject extends Component {
 	lmhtfOverviewSectionRef = React.createRef();
 
 	componentDidMount() {
-		document.title = "'10 Days in lmhtf' Project Page";
+		document.title = "'Bodegas Saludables' Project Page";
 	};
 	
 	handleButtonClick = event => {
