@@ -24,7 +24,7 @@ class VideoEmbedContainer extends Component {
 				{ this.state.doNotDisplayVideo === false &&
 					<div className="video-embed-container">
 						<iframe frameBorder="0" src={ this.props.embed.url } title={ this.props.embed.title } webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen="true">
-							It looks like your browser has trouble displaying this embedded video. <a href={ this.props.embed.url } target='_blank'>Go to this link if you wish to see the video.</a>
+							It looks like your browser has trouble displaying this embedded video. <a href={ this.props.embed.url } target='_blank' rel="noopener noreferrer">Go to this link if you wish to see the video.</a>
 						</iframe>
 					</div>
 				}
