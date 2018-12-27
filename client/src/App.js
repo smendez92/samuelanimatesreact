@@ -106,13 +106,13 @@ class App extends Component {
 			this.setState({isMobileView: true, blurbWidth: "100%",  mainPaddingLeftClassName: "padding-left-0", portraitWidth: "80%", responsiveFloat:"none", responsiveWidth: "100%"});
 		}
 		else {
-			this.setState({isMobileView: false, blurbWidth: "50%", mainPaddingLeftClassName: "padding-left-6p5em", portraitWidth: "50%", responsiveFloat:"left", responsiveWidth: "50%"});
+			this.setState({isMobileView: false, blurbWidth: "60%", mainPaddingLeftClassName: "padding-left-6p5em", portraitWidth: "40%", responsiveFloat:"left", responsiveWidth: "50%"});
 		}
 	};
 
   render() {
 		return (
-      <div className={ "clearfix font-Assistant projectPage-color-scheme-" + this.state.colorSchemeSuffix }>
+      <div className={ "display-flex flex-direction-column font-Assistant background-color-scheme-" + this.state.colorSchemeSuffix }>
 		<Header
 			mainPaddingLeftClassName={ this.state.mainPaddingLeftClassName }
 			handleButtonClick={ this.handleButtonClick }

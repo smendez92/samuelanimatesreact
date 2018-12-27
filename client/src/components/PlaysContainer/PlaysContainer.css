@@ -33,3 +33,9 @@
 .padding-top-p25em{
 	padding-top: 0.25em;
 }
+.text-center{
+	text-align: center;
+}
+.text-left{
+	text-align: left;
+}

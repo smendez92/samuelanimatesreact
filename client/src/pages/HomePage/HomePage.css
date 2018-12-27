@@ -1,6 +1,6 @@
 .homepage-color-scheme-default{
-	background: rgb(251, 251, 251);
-	background: linear-gradient(to bottom, rgb(251, 251, 251) 0%, #fffcfc 7%, #e3f0ff 17%,#94C6FF 25%, #e3f0ff 32% #fcffe0 35%, #fcffe0 50%, #fde9f3 65%, rgb(255, 178, 236) 77%, #fde9f3 84%, #fcffd0 89%, #f7fd9a 95%);
+	background-color: rgb(251, 251, 251);
+	background: linear-gradient(#fbfbfb 0%, #fffcfc 7%, #e8f1fc 17%,#c6e0fd 25%, #edf4fd 32%, #fdfff0 44%, #fefff4 47%, #fefff3 55%, #fff2f9 67%, #ffdcf6 77%, #fff1f8 84%, #fbfde2 97%,  #fbffbf 99%);
 	color: rgb(5,5,5);
 }
 .homepage-color-scheme-highContrast{
@@ -34,6 +34,9 @@
 }
 .display-inline{
 	display: inline;
+}
+.display-flex{
+	display: flex;
 }
 .float-left{
 	float: left;

@@ -1,6 +1,6 @@
 .artProjectPage-color-scheme-default{
 	background-color: rgb(251,251,251);
-	background: linear-gradient(to bottom, rgb(251, 251, 251) 0%, #fffffc 40%, #fdff71 85%, 
+	background: linear-gradient(to bottom, #fffffc 0%, #feffaa 66%, #fdff71 85%, 
 	#f5ff64 95%);
 	color: rgb(5,5,5);
 }
@@ -18,6 +18,12 @@
 }
 .max-width-60em{
 	max-width: 60em;
+}
+.padding-bottom-p5em{
+	padding-bottom: 0.5em;
+}
+.padding-top-p5em{
+	padding-top: 0.5em;
 }
 .padding-left-0em{
 	padding-left: 0;

@@ -19,28 +19,26 @@
 .border-2px{
 	border-width: 2px;
 }
-.clearfix:after{
-	content: "";
-	display: table;
-	clear: both;
-}
 .color-inherit{
 	color: inherit;
 }
-.display-inline-block{
-	display: inline-block;
+.display-flex{
+	display: flex;
 }
-.float-left{
-	float: left;
+.flex-direction-row{
+	flex-direction: row;
 }
-.float-none{
-	float: none;
+.flex-wrap-wrap{
+	flex-wrap: wrap;
 }
 .font-size-p85em{
 	font-size: 0.85em;
 }
 .font-weight-600{
 	font-weight: 600;
+}
+.justify-content-center{
+	justify-content: center;
 }
 .left-0{
 	left: 0;

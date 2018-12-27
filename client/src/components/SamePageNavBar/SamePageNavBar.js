@@ -9,11 +9,11 @@ const SamePageNavBar = props => (
 		<SheerWhiteContainer colorSchemeSuffix={ props.colorSchemeSuffix }>
 			<p className="font-weight-600 text-center">On This<br/>Page</p>
 		</SheerWhiteContainer>
-		<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px clearfix color-inherit padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + props.colorSchemeSuffix }>
-			<ul>
+		<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px color-inherit text-center navbar-color-scheme-" + props.colorSchemeSuffix }>
+			<ul className="display-flex flex-direction-column">
 				{ props.navbarLinks.map((link, i) =>
 					<li key={ i }>
-						<div className="font-size-p75em padding-bottom-p1em padding-top-p1em float-none width-9em">
+						<div className="font-size-p75em padding-bottom-p1em padding-top-p1em width-9em">
 							<ButtonContainer colorSchemeSuffix={ props.colorSchemeSuffix }>
 								<SamePageNavBarLink
 									key={ link.id }

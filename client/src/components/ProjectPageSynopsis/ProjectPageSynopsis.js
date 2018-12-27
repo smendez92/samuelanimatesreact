@@ -2,17 +2,13 @@ import React from "react";
 import "./ProjectPageSynopsis.css";
 import GenericFloatingSection from "../GenericFloatingSection";
 import PhotoEmbedContainer from "../PhotoEmbedContainer";
-import ResponsiveCtoLFloat from "../ResponsiveCtoLFloat";
 import UnorderedBulletlessList from "../UnorderedBulletlessList";
 import VideoEmbedContainer from "../VideoEmbedContainer";
 
 const ProjectPageSynopsis = React.forwardRef((props, ref) => (
 	
-	<ResponsiveCtoLFloat
-		float = { props.float }
-		isMobile={ props.isMobile }
-		width={ props.width }
-	>
+	<div className="margin-auto" style={{ width: props.width }}>
+
 		<div className="padding-left-p5em padding-right-p5em">
 			<GenericFloatingSection colorSchemeSuffix={ props.colorSchemeSuffix }>
 				<div className="background-color-rgb-3-3-3 clearfix color-rgb-251-251-251 padding-left-1em padding-right-1em text-center">
@@ -43,7 +39,7 @@ const ProjectPageSynopsis = React.forwardRef((props, ref) => (
 				</div>
 			</GenericFloatingSection>
 		</div>
-	</ResponsiveCtoLFloat>
+	</div>
 
 ));
 

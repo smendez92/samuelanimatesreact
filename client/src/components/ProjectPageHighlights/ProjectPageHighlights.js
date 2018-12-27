@@ -1,16 +1,11 @@
 import React from "react";
 import "./ProjectPageHighlights.css";
 import GenericFloatingSection from "../GenericFloatingSection";
-import ResponsiveCtoLFloat from "../ResponsiveCtoLFloat";
 import UnorderedBulletlessList from "../UnorderedBulletlessList";
 
 const ProjectPageHighlights = React.forwardRef((props, ref) => (
 	
-	<ResponsiveCtoLFloat
-		float = { props.float }
-		isMobile={ props.isMobile }
-		width={ props.width }
-	>
+	<div className="margin-auto" style={{ width: props.width }}>
 		<div className="padding-left-p5em padding-right-p5em">
 			<GenericFloatingSection colorSchemeSuffix={props.colorSchemeSuffix}>
 				<div className={ "color-inherit paddng-bottom-1em paddng-left-1em paddng-right-1em paddng-top-1em text-center projectPageHighlights-color-scheme-" + props.colorSchemeSuffix }> 
@@ -25,7 +20,7 @@ const ProjectPageHighlights = React.forwardRef((props, ref) => (
 				</div>
 			</GenericFloatingSection>
 		</div>
-	</ResponsiveCtoLFloat>
+	</div>
 
 ));
 

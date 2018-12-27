@@ -19,13 +19,11 @@
 .border-2px{
 	border-width: 2px;
 }
-.clearfix:after{
-	content: "";
-	display: table;
-	clear: both;
-}
 .color-inherit{
 	color: inherit;
+}
+.display-flex{
+    display: flex; /* or inline-flex */
 }
 .float-left{
 	float: left;

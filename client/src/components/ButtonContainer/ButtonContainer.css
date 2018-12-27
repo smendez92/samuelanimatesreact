@@ -4,6 +4,9 @@
 .buttonContainer-color-scheme-highContrast{
 	background-color: rgb(191,191,191);
 }
+.display-inline-block{
+	display: inline-block;
+}
 .padding-2px{
 	padding: 2px;
 }

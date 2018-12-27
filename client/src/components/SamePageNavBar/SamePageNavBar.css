@@ -19,19 +19,14 @@
 .border-2px{
 	border-width: 2px;
 }
-.clearfix:after{
-	content: "";
-	display: table;
-	clear: both;
-}
 .color-inherit{
 	color: inherit;
 }
-.float-left{
-	float: left;
+.display-flex{
+	display: flex;
 }
-.float-none{
-	float: none;
+.flex-direction-column{
+	flex-direction: column;
 }
 .font-size-p75em{
 	font-size: 0.75em;

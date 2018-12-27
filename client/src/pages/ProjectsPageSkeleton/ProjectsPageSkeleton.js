@@ -20,6 +20,7 @@ import HernandezProject from "../../pages/HernandezProject";
 import JolietProject from "../../pages/JolietProject";
 import LmhtfProject from "../../pages/LmhtfProject";
 import MediaProject from "../../pages/MediaProject";
+import PlaysProject from "../../pages/PlaysProject";
 import SaigonProject from "../../pages/SaigonProject";
 import TarotProject from "../../pages/TarotProject";
 import TeenyProject from "../../pages/TeenyProject";
@@ -71,7 +72,7 @@ class ProjectsPageSkeleton extends Component {
 
 	render() {
 		return (
-			<div className={ "clearfix font-Assistant projectPage-color-scheme-" + this.props.colorSchemeSuffix }>
+			<div className={ "font-Assistant projectPage-color-scheme-" + this.props.colorSchemeSuffix }>
 				{ this.props.isMobileView === false &&
 					<MenuBar
 						navbarLinks={ this.props.navbarLinks }
@@ -246,6 +247,18 @@ class ProjectsPageSkeleton extends Component {
 									<MediaProject
 										colorSchemeNameRoot="healthProjectPage-color-scheme-"
 										colorSchemeSuffix={ this.props.colorSchemeSuffix }
+										fontSizeLevel={ this.props.fontSizeLevel }
+										isMobileView={ this.props.isMobileView }
+										materialIconFill={ this.props.materialIconFill }
+										responsiveFloat={ this.props.responsiveFloat }
+										responsiveWidth={ this.props.responsiveWidth }
+									/>
+								)}/>
+								<Route exact path='/projects/plays' render={props => (
+									<PlaysProject
+										colorSchemeNameRoot="artProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.props.colorSchemeSuffix }
+										doNotTrack={ this.props.doNotTrack }
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }

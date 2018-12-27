@@ -6,6 +6,9 @@
 	background-color: rgb(34, 5, 18);
 	border-color: rgba(150,150,150,0.8);
 }
+.align-items-center{
+	align-items: center;
+}
 .border-style-solid{
 	border-style: solid;
 }
@@ -18,8 +21,17 @@
 .color-inherit{
 	color: inherit;
 }
-.display-inline{
-	display: inline;
+.display-flex{
+	display: flex;
+}
+.display-inline-flex{
+	display: inline-flex;
+}
+.flex-direction-row{
+	flex-direction: row;
+}
+.flex-wrap-wrap{
+	flex-wrap: wrap;
 }
 .font-size-p75em{
 	font-size: 0.75em;
@@ -41,6 +53,9 @@
 }
 .padding-top-p5em{
 	padding-top: 0.5em;
+}
+.text-left{
+	text-align: left;
 }
 .width-90pc{
 	width: 90%;

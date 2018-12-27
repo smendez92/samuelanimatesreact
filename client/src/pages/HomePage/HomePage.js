@@ -24,12 +24,28 @@ class HomePage extends Component {
 				{
 					id: "aboutMeParagraph01",
 					lead: "In short",
-					body: "I make animations. I'm a community-based researcher. And I do front end web development, with an eye on web accessibility. I see the privilege of having chances to gain these skills; I want to use these chances to open up more rom for more people in the spaces I occupy."
+					includesLink: false,
+					body: "I make animations. I'm a community-based researcher. I do front end web development, with an eye on web accessibility. I see the privilege of having chances to gain these skills; I want to use these chances to open up more seats at the table."
 				},
 				{	
 					id: "aboutMeParagraph02",
 					lead: "Interests",
-					body: "community-based research, social determinants of health, accessibility, digital documentary."
+					includesLink: false,
+					body: "community-based research, public health, digital documentary, visual art, nail polish."
+				},
+				{	
+					id: "aboutMeParagraph02",
+					lead: "Favorite song",
+					includesLink: true,
+					body: [
+						{
+							preLinkText: "Right now, it's ",
+							linkIsInternalLink: false,
+							linkText: `"Cherry" (new window)`,
+							linkUrl: "https://www.youtube.com/watch?v=wn5YFnrD1u8",
+							postLinkText: " by Rina Sawayama.",
+						}
+					]
 				}
 			],
 			links: [
@@ -75,14 +91,6 @@ class HomePage extends Component {
 					"projectPagePath": "/projects/saigon",
 					"links": [
 						{
-							"isInternalLink": true,
-							"path": "/projects/saigon",
-							"componentPage": "SaigonProject",
-							"id": "highlights0101",
-							"text": "'10 Days' Overview",
-							"icon": "page"
-						},
-						{
 							"isInternalLink": false,
 							"id": "highlights0102",
 							"text": "'10 Days' Trailer on Facebook",
@@ -114,14 +122,6 @@ class HomePage extends Component {
 					"projectPagePath": "/projects/wiki",
 					"links": [
 						{
-							"isInternalLink": true,
-							"path": "/projects/wiki",
-							"componentPage": "WikiProject",
-							"id": "highlights0201",
-							"text": "'A11Y Wiki' Overview",
-							"icon": "page"
-						},
-						{
 							"isInternalLink": false,
 							"id": "highlights0202",
 							"text": "'A11Y Wiki' GitHub Repo",
@@ -145,14 +145,6 @@ class HomePage extends Component {
 					"iconAlt": "'A Bodega' cartoon logo: a frying pan.",
 					"projectPagePath": "/projects/bodega",
 					"links": [
-						{
-							"isInternalLink": true,
-							"path": "/projects/bodega",
-							"componentPage": "BodegaProject",
-							"id": "highlights0301",
-							"text": "'A Bodega' Overview",
-							"icon": "page"
-						},
 						{
 							"isInternalLink": false,
 							"id": "highlights0302",
@@ -178,14 +170,6 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/hernandez",
 						"links": [
 							{
-								"isInternalLink": true,
-								"id": "animation0101",
-								"path": "/projects/hernandez",
-								"componentPage": "HernandezProject",
-								"text": "'No One Can Hear You' Overview",
-								"icon": "page"
-							},
-							{
 								"isInternalLink": false,
 								"id": "animation0102",
 								"text": "'No One Can Hear You' excerpt on Vimeo",
@@ -203,14 +187,6 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/busan",
 						"links": [
 							{
-								"isInternalLink": true,
-								"id": "animation0201",
-								"path": "/projects/busan",
-								"componentPage": "BusanProject",
-								"text": "'Busan' Overview",
-								"icon": "page"
-							},
-							{
 								"isInternalLink": false,
 								"id": "animation0202",
 								"text": "'Busan' Trailer on Vimeo",
@@ -227,15 +203,6 @@ class HomePage extends Component {
 						"iconAlt": "",
 						"projectPagePath": "/projects/breakfast",
 						"links": [
-							{
-								"isInternalLink": true,
-								"id": "animation0301",
-								"path": "/projects/breakfast",
-								"componentPage": "BreakfastProject",
-								"text": "'Persefone's Breakfast' Overview",
-								"icon": "page"
-								
-							},
 							{
 								"isInternalLink": false,
 								"id": "animation0302",
@@ -255,14 +222,6 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/yuca",
 						"links": [
 							{
-								"isInternalLink": true,
-								"id": "animation0401",
-								"path": "/projects/yuca",
-								"componentPage": "YucaProject",
-								"text": "'Yuca' Overview",
-								"icon": "page"
-							},
-							{
 								"isInternalLink": false,
 								"id": "animation0402",
 								"text": "'Yuca' Film on Vimeo",
@@ -280,14 +239,6 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/after",
 						"links":[
 							{
-								"isInternalLink": true,
-								"id": "animation0501",
-								"path": "/projects/after",
-								"componentPage": "AfterProject",
-								"text": "'After, After That' Overview",
-								"icon": "page"
-							},
-							{
 								"isInternalLink": false,
 								"id": "animation0502",
 								"text": "After, After That' Film on Vimeo",
@@ -299,7 +250,7 @@ class HomePage extends Component {
 				]
 			},
 			{
-				"title": "Public Health Research",
+				"title": "Public Health",
 				"id": "healthSection",
 				"projects": [
 					{
@@ -309,16 +260,7 @@ class HomePage extends Component {
 						"iconAlt": "",
 						"description": "Ongoing prototype development for a clinical trial informational tool under development in partnership with Chicago Public Libraries.",
 						"projectPagePath": "/projects/healthforall",
-						"links": [
-							{
-								"isInternalLink": true,
-								"id": "health0101",
-								"path": "/projects/healthforall",
-								"componentPage": "HealthforallProject",
-								"text": "'Health for All' Overview",
-								"icon": "page"
-							}
-						]
+						"links": []
 					},
 					{
 						"id": "health03",
@@ -328,14 +270,6 @@ class HomePage extends Component {
 						"description": "A content analysis of social media content by community-based organizations conducting health outreach.",
 						"projectPagePath": "/projects/media",
 						"links": [
-							{
-								"isInternalLink": true,
-								"id": "health0301",
-								"path": "/projects/media",
-								"componentPage": "Project",
-								"text": "Social Media Study Overview",
-								"icon": "page"
-							},
 							{
 								"isInternalLink": false,
 								"id": "health0302",
@@ -353,14 +287,6 @@ class HomePage extends Component {
 						"description": "Video explaining a community research partner's public health program.",
 						"projectPagePath": "/projects/lmhtf",
 						"links": [
-							{
-								"isInternalLink": true,
-								"id": "health0401",
-								"path": "/projects/lmhtf",
-								"componentPage": "LmhtfProject",
-								"text": "'Bodegas Saludables' Overview",
-								"icon": "page"
-							},
 							{
 								"isInternalLink": false,
 								"id": "health0402",
@@ -384,14 +310,6 @@ class HomePage extends Component {
 						"description": "An online tarot reading utilizing A-frame to embed an augmented reality display.",
 						"projectPagePath": "/projects/tarot",
 						"links": [
-							{
-								"isInternalLink": true,
-								"id": "web0101",
-								"path": "/projects/tarot",
-								"componentPage": "TarotProject",
-								"text": "'AR-Tarot' Overview",
-								"icon": "page"
-							},
 							{
 								"isInternalLink": false,
 								"id": "web0102",
@@ -417,14 +335,6 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/apples",
 						"links": [
 							{
-								"isInternalLink": true,
-								"id": "web0201",
-								"path": "/projects/apples",
-								"componentPage": "ApplesProject",
-								"text": "'Apples' Overview",
-								"icon": "page"
-							},
-							{
 								"isInternalLink": false,
 								"id": "web0202",
 								"text": "''Apples' GitHub Repo",
@@ -448,14 +358,6 @@ class HomePage extends Component {
 						"description": "Front-end logic for a web app letting users take a personality quiz to help find the perfect gift for someone from Amazon, Etsy, or Ebay.",
 						"projectPagePath": "/projects/giftpitch",
 						"links": [
-							{
-								"isInternalLink": true,
-								"id": "web0301",
-								"path": "/projects/giftpitch",
-								"componentPage": "GiftpitchProject",
-								"text": "GiftPitch Overview",
-								"icon": "page"
-							},
 							{
 								"isInternalLink": false,
 								"id": "web0302",
@@ -487,14 +389,6 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/joliet",
 						"links": [
 							{
-								"isInternalLink": true,
-								"id": "video0101",
-								"path": "/projects/joliet",
-								"componentPage": "JolietProject",
-								"text": "SCC Promo Video Overview",
-								"icon": "page"
-							},
-							{
 								"isInternalLink": false,
 								"id": "video0102",
 								"text": "SCC Promo Video on Vimeo",
@@ -511,14 +405,6 @@ class HomePage extends Component {
 						"description": "A fundraising video for a high-altitude balloon launch by South Side Hackerspace: Chicago to document the 2017 solar eclipse.",
 						"projectPagePath": "/projects/artemis",
 						"links": [
-							{
-								"isInternalLink": true,
-								"id": "video0201",
-								"path": "/projects/artemis",
-								"componentPage": "ArtemisProject",
-								"text": "'Artemis I' Video Overview",
-								"icon": "page"
-							},
 							{
 								"isInternalLink": false,
 								"id": "video0202",
@@ -543,14 +429,6 @@ class HomePage extends Component {
 						"description": "2 sets of informational videos & worksheets on aspects of the US college application process.",
 						"projectPagePath": "/projects/whyu",
 						"links": [
-							{
-								"isInternalLink": true,
-								"id": "video0301",
-								"path": "/projects/whyu",
-								"componentPage": "WhyuProject",
-								"text": "WhyUEdu Series Overview",
-								"icon": "page"
-							},
 							{
 								"isInternalLink": false,
 								"id": "video0302",
@@ -583,14 +461,6 @@ class HomePage extends Component {
 						"projectPagePath": "/projects/teeny",
 						"links": [
 							{
-								"isInternalLink": true,
-								"id": "video0401",
-								"path": "/projects/teeny",
-								"componentPage": "TeenyProject",
-								"text": "'Teeny' Video Overview",
-								"icon": "page"
-							},
-							{
 								"isInternalLink": false,
 								"id": "video0402",
 								"text": "'Teeny' Fundraising Video on Vimeo",
@@ -614,39 +484,30 @@ class HomePage extends Component {
 				"projects": [
 					{
 						"id": "art01",
+						"title": "Weird Little Plays",
+						"icon": "./assets/images/homepageIcons/homepage-icon-plays.svg",
+						"iconAlt": "",
+						"description": "Short plays in which I play myself.",
+						"projectPagePath": "/projects/plays",
+						"links": []
+					},
+					{
+						"id": "art02",
 						"title": "Connect the Dots!",
 						"icon": "./assets/images/homepageIcons/homepage-icon-dots.svg",
 						"iconAlt": "",
 						"description": "An interactive art installation taking place in a public bathroom.",
 						"projectPagePath": "/projects/dots",
-						"links": [
-							{
-								"isInternalLink": true,
-								"id": "art0101",
-								"path": "/projects/dots",
-								"componentPage": "DotsProject",
-								"text": "'Dots' Overview",
-								"icon": "page"
-							}
-						]
+						"links": []
 					},
 					{
-						"id": "art02",
+						"id": "art03",
 						"title": "Walks Through Cambridge",
 						"icon": "./assets/images/homepageIcons/homepage-icon-walks.svg",
 						"iconAlt": " ",
 						"description": "A site-specific public art installation in Harvard Yard, produced for Harvard ARTS FIRST 2011.",
 						"projectPagePath": "/projects/walks",
-						"links": [
-							{
-								"isInternalLink": true,
-								"id": "art0201",
-								"path": "/projects/walks",
-								"componentPage": "WalksProject",
-								"text": "'Walks' Overview",
-								"icon": "page"
-							}
-						]
+						"links": []
 					}
 				]
 			}
@@ -712,7 +573,7 @@ class HomePage extends Component {
 
   render() {
     return (
-		<div className={ "clearfix homepage-color-scheme-" + this.props.colorSchemeSuffix }>
+		<div className={ "homepage-color-scheme-" + this.props.colorSchemeSuffix }>
 			{ this.props.isMobileView === false &&
 				<MenuBar
 					colorSchemeSuffix={ this.props.colorSchemeSuffix }
@@ -750,6 +611,7 @@ class HomePage extends Component {
 						blurbWidth={ this.props.blurbWidth }
 						colorSchemeSuffix={ this.props.colorSchemeSuffix }
 						float={ this.props.responsiveFloat }
+						isMobile={ this.props.isMobileView }
 						quote={ this.projectData.aboutMeSection.quote }
 						links={ this.projectData.aboutMeSection.links }
 						materialIconFill={ this.props.materialIconFill }
@@ -762,6 +624,7 @@ class HomePage extends Component {
 						id={ this.projectData.highlightsSection.id }
 						float={ this.props.responsiveFloat }	
 						title="Highlighted Projects"
+						isMobile={ this.props.isMobileView }
 						projects={ this.projectData.highlightsSection.projects }
 						colorSchemeSuffix={ this.props.colorSchemeSuffix }
 						materialIconFill={ this.props.materialIconFill }
@@ -773,6 +636,7 @@ class HomePage extends Component {
 							key={ projectSection.id }
 							float={ this.props.responsiveFloat }	
 							title={ projectSection.title }
+							isMobile={ this.props.isMobileView }
 							projects={ projectSection.projects }
 							colorSchemeSuffix={ this.props.colorSchemeSuffix }
 							materialIconFill={ this.props.materialIconFill }
@@ -782,6 +646,7 @@ class HomePage extends Component {
 				</main>
 				<Footer
 					colorSchemeSuffix={ this.props.colorSchemeSuffix }
+					materialIconFill={ this.props.materialIconFill }
 				/>
 			</div>
 		</div>

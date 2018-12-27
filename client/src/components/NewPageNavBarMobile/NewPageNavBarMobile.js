@@ -8,10 +8,10 @@ const NewPageNavBarMobile = props => (
 		<SheerWhiteContainer colorSchemeSuffix={ props.colorSchemeSuffix }>
 			<p className="font-weight-600 text-center">Go To New Page</p>
 		</SheerWhiteContainer>
-		<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px clearfix color-inherit padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + props.colorSchemeSuffix }>
+		<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px color-inherit padding-bottom-p25em padding-top-p25em text-center navbar-color-scheme-" + props.colorSchemeSuffix }>
 			<ul className="list-style-type-none">
-				<li>
-					<div className="font-size-p75em padding-bottom-p1em padding-top-p1em float-left padding-left-p5em padding-right-p5em width-9em">
+				<li className="display-flex flex-direction-row flex-wrap-wrap justify-content-space-evenly">
+					<div className="font-size-p75em padding-bottom-p1em padding-top-p1em padding-left-p5em padding-right-p5em">
 						<InlineA
 							isInternalLink={true}	
 							text="Home"

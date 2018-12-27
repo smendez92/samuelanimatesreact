@@ -1,222 +1,203 @@
 import React, { Component } from 'react';
 import "./PlaysProject.css";
-import Header from '../../components/Header';
-import MenuBar from '../../components/MenuBar';
-import MenuBarMobile from '../../components/MenuBarMobile';
-import NewPageNavBar from '../../components/NewPageNavBar';
-import NewPageNavBarMobile from '../../components/NewPageNavBarMobile';
+import PlaysButton from '../../components/PlaysButton';
+import ButtonContainer from '../../components/ButtonContainer';
 import SamePageNavBar from '../../components/SamePageNavBar';
 import SamePageNavBarMobile from '../../components/SamePageNavBarMobile';
-import SheerWhiteContainer from "../../components/SheerWhiteContainer";
+import PlaysContainer from '../../components/PlaysContainer';
 import ProjectPageMainSections from '../../components/ProjectPageMainSections';
+import ProjectHeader from '../../components/ProjectHeader'
 
 class PlaysProject extends Component {
-	state = {
-		colorSchemeSuffix: "default",
-		fontSizeLevel: 5,
-		isMobileView: true,
-		mainPaddingLeftClassName: "padding-left-0em",
-		responsiveFloat:"none",
-		responsiveWidth:"50%",
-		navbarLinks: [{title:"Synopsis", id:"navBarLinkSynopsis"},{title:"Highlights", id:"navBarLinkHighlights"},{title:"Overview", id:"navBarLinkOverview"}]
+	
+	state={
+		plays: [
+			{
+				id: "plays0",
+				buttonId: "plays0Button",
+				expanded: "false",
+				shortTitle: "From the Notes of...",
+				fulltitle: "From the Notes of Samuel R. Mendez on the Discovery and Occupation of the Neo-World"
+			},
+			{
+				id: "plays1",
+				buttonId: "plays1Button",
+				expanded: "false",
+				shortTitle: "Necessary Details",
+				fulltitle: "From the Notes of Samuel R. Mendez on the Discovery and Occupation of the Neo-World"
+			},
+			{
+				id: "plays2",
+				buttonId: "plays3Button",
+				expanded: "false",
+				shortTitle: "Necessary to the...",
+				fullTitle: `"Necessary to the security of a free state..."`,
+			},
+			{
+				id: "plays3",
+				buttonId: "plays4Button",
+				expanded: "false",
+				shortTitle: "You will remember...",
+				fullTitle: ""
+			},
+			{
+				id: "plays4",
+				buttonId: "plays5Button",
+				expanded: "false",
+				shortTitle: "Trust Issues",
+				fullTitle: "Trust Issues",
+			},
+			{
+				id: "plays5",
+				buttonId: "plays6Button",
+				expanded: "false",
+				shortTitle: "...the Future...",
+				fullTitle: "What do you do when the future looks just like the past?",
+			}
+		]
 	}
 
 	projectInfo = {
-		title: "2 Minute Plays",
+		title: "Weird Little Plays",
 		synopsis:{
-			mediaType: "video",
-			blurb: "An experimental documentary. A cross between two marks. Full film below.",
+			mediaType: "photo",
+			blurb: "An ongoing collection of short plays in which I play myself.",
 			embed: {
-				url: "https://player.vimeo.com/video/128663374",
-				title: "WhyUEdu informational series excerpt on Vimeo."
+				src: "../assets/images/projectPhotos/plays.jpg",
+				alt: "A close-up of typed notes on index cards. The top card reads, 'These cards are just for you. Feel free to tell the rest of the audience whatever you think they should know, but don't let anyone else see these. NEXT CARD.'"
 			},
-			year: "2014",
+			year: "2018 - ongoing",
 			specs: [
 				{
-					id: "whyuSpecs01",
-					lead: "Role",
-					body: "Director, editor, and project manager."
-				},
-				{
-					id: "whyuSpecs02",
-					lead: "Composition",
-					body: "4 videos and 5 worksheets in simplified Chinese."
+					id: "playsSpecs01",
+					lead: "Constraints",
+					body: "I don't pretend to be someone I'm not. I don't pretend to be somewhere I'm not. And I try to keep things as short as possible."
 				}
 			]
 		},
 		highlights: [
 			{
-				id: "whyuHighlights01",
-				lead: "Goal",
-				body: "Create resources to help Chinese high school students in the US college application process. Create material that could double as promotion for Dipont Education Management's online pilot program, 'WhyUEdu'."
+				id: "playsHighlights01",
+				lead: "Performances",
+				body: "I've performed all the plays on this page in front of an audience. These performances include "
 			},
 			{
-				id: "whyuHighlights02",
-				lead: "Outcome",
-				body: "2 distinct sets of video and text resources about US college application essays and interviews.The videos received over 36,000 views on the QQ Video mobile platform."
+				id: "playsHighlights02",
+				lead: "Inspiration",
+				body: "The Neo-futurists in Chicago inspired my approach to live performance and writing. I wrote my first plays in a workshop of theirs in 2018 and I couldn't get enough of it."
 			}
 		],
 		overview: [
 			{
-				id: "whyuOverview02",
+				id: "playsOverview01",
 				lead: "Process",
-				body: "First, I interviewed the company's college counselors. I wanted to see what common pitfalls were in the US college application process. Then, I narrowed the scope of the project down to 2 topics that could be covered in short videos and worksheets. I decided to create 2 videos about interviews. One was about self-introductions in video interviews. The other was about common interview mistakes to avoid. I also decided to make 2 videos about admissions essays. One was a counselor critiquing an example essay filled with common mistakes. The other showed viewers how to use info from a college website write about the school's 'fit' for them. All 4 of these videos came with links to related worksheets to help draw people to the WhyUEdu website. I led a team of 6 to complete this project. Together, we did background research, wrote scripts, made subtitles, and made worksheets. I personally filmed and edited the videos."
+				body: "I usually have a clear idea of a task or action that matches up with a feeling I have. I don't usually have a clear idea of the words to say right away. So, I'll usually come up with a few sentences or phrases, and try them out with the movement. I'll kind of go back and forth between refining the words and refining the movement. These plays usually sit in a half-finished state until I find an opportunity for a performance. With a performance in mind, I can finally finish the play with a space and audience in mind."
+			},
+			{
+				id: "playsOverview02",
+				lead: "Personal Approach",
+				body: "I use these plays to think through my feelings and my responses to things that happen in my life. They are very useful conversation starters. So, I don't really play characters when I write them. I also tend not to get too abstract with what happens on stage. However, the movement I plan might not have a direct relationship to the words I say. I like to play myself and tell a real story from my past or create a weird, memorable moment with people in the room."
 			}
-		]
-		
+		]		
 	}
-	synopsisSectionRef = React.createRef();
-	highlightsSectionRef = React.createRef();
-	navbarRef = React.createRef();
-	overviewSectionRef = React.createRef();
 
-	componentWillMount(){
-		this.updateIsMobileVariable();
-	};
+	playsNavbarLinks = [{title:"Synopsis", id:"playsNavBarLinkSynopsis"},{title:"Highlights", id:"playsNavBarLinkHighlights"},{title:"Overview", id:"playsNavBarLinkOverview"},{title:"The Plays", id:"playsNavBarLinkPlaysContainer"}];
+	playsSynopsisSectionRef = React.createRef();
+	playsHighlightsSectionRef = React.createRef();
+	playsNavbarRef = React.createRef();
+	playsOverviewSectionRef = React.createRef();
+	playsPlaysContainerRef = React.createRef();
+
 	componentDidMount() {
-		window.addEventListener("resize", this.updateIsMobileVariable.bind(this));
-		document.title = "Page of 2-Minute Plays";
-	};
-	componentWillUnmount() {
-		window.removeEventListener('resize', this.updateIsMobileVariable.bind(this));
+		document.title = "'Weird Little Plays' Project Page";
 	};
 	
 	handleButtonClick = event => {
 		event.preventDefault();
-		if(event.target.attributes.getNamedItem("buttontype").value === "fontSizeToggle"){
-			this.handleFontSizeToggleButtonClick();
-		};
-		if(event.target.attributes.getNamedItem("buttontype").value === "contrastToggle"){
-			this.handleContrastToggleButtonClick();
-		};
-		if(event.target.attributes.getNamedItem("buttontype").value === "scrollToTop"){
-			this.handleScrollToTopButtonClick();
-		};
 		if(event.target.attributes.getNamedItem("buttontype").value === "navbarLink"){
 			this.handleNavLinkClick();
 		};
 	}
-
-	handleContrastToggleButtonClick = () =>{
-		if (this.state.isHighContrast === true){
-			this.setState({isHighContrast: false,colorSchemeSuffix: "default", materialIconFill: "rgb(3,3,3)"});
-		}
-		else{
-			this.setState({isHighContrast: true,colorSchemeSuffix: "highContrast", materialIconFill: "rgb(251,251,251)"});
-		}
-	};
-
-	handleFontSizeToggleButtonClick = () =>{	
-		if (this.state.fontSizeLevel === 1){
-			this.setState({fontSizeLevel: 1.5}, this.updateIsMobileVariable);
-			document.body.style.fontSize ="1.5em";
-			
-		}
-		else if (this.state.fontSizeLevel === 1.5){
-			this.setState({fontSizeLevel: 1.75}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "1.75em";
-		}
-		else if (this.state.fontSizeLevel === 1.75){
-			this.setState({fontSizeLevel: 2}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "2em";
-		}
-		else {
-			this.setState({fontSizeLevel: 1}, this.updateIsMobileVariable);
-			document.body.style.fontSize = "1em";
-		}
-	};
-
 	handleNavLinkClick = event => {
-		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkSynopsis"){
-			this.synopsisSectionRef.current.scrollIntoView();
-			this.synopsisSectionRef.current.focus();
+		if(event.target.attributes.getNamedItem("buttonId").value === "playsNavBarLinkSynopsis"){
+			this.playsSynopsisSectionRef.current.scrollIntoView();
+			this.playsSynopsisSectionRef.current.focus();
 		};
-		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkHighlights"){
-			this.highlightsSectionRef.current.scrollIntoView();
-			this.highlightsSectionRef.current.focus();
+		if(event.target.attributes.getNamedItem("buttonId").value === "playsNavBarLinkHighlights"){
+			this.playsHighlightsSectionRef.current.scrollIntoView();
+			this.playsHighlightsSectionRef.current.focus();
 		};
-		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkOverview"){
-			this.overviewSectionRef.current.scrollIntoView();
-			this.overviewSectionRef.current.focus();
+		if(event.target.attributes.getNamedItem("buttonId").value === "playsNavBarLinkOverview"){
+			this.playsOverviewSectionRef.current.scrollIntoView();
+			this.playsOverviewSectionRef.current.focus();
+		};
+		if(event.target.attributes.getNamedItem("buttonId").value === "playsNavBarLinkPlaysContainer"){
+			this.playsPlaysContainerRef.current.scrollIntoView();
+			this.playsPlaysContainerRef.current.focus();
 		};
 	}
 
-	handleScrollToTopButtonClick = () =>{
-		this.navbarRef.current.scrollIntoView();
-		this.navbarRef.current.focus();
-	};
-
-
-	updateIsMobileVariable = () =>{
-		if(window.innerWidth < 750) {
-			this.setState({isMobileView: true,  mainPaddingLeftClassName: "padding-left-0", responsiveFloat:"none", responsiveWidth: "100%"});
-		}
-		else if(this.state.fontSizeLevel > 1.0) {
-			this.setState({isMobileView: true,  mainPaddingLeftClassName: "padding-left-0", responsiveFloat:"none", responsiveWidth: "100%"});
-		}
-		else {
-			this.setState({isMobileView: false, mainPaddingLeftClassName: "padding-left-6p5em", responsiveFloat:"left", responsiveWidth: "50%"});
-		}
-	};
-
 	render() {
 		return (
-			<div className={ "clearfix font-Assistant artProjectPage-color-scheme-" + this.state.colorSchemeSuffix }>
-				<Header
-					mainPaddingLeftClassName = { this.state.mainPaddingLeftClassName }
-					title = { this.projectInfo.title }
-					handleButtonClick = { this.handleButtonClick }
-					colorSchemeSuffix = { this.state.colorSchemeSuffix }
-				/>
-				{ this.state.isMobileView === false &&
-					<MenuBar
-						navbarLinks={ this.state.navbarLinks }
-						colorSchemeSuffix={ this.state.colorSchemeSuffix }
-						isMobileView={ this.state.isMobileView }
-					>
+			<div className={ this.props.colorSchemeNameRoot + this.props.colorSchemeSuffix }>
+				{ this.props.isMobileView === false &&
+					<div className="font-Overpass position-fixed left-0">
 						<SamePageNavBar
-							colorSchemeSuffix={ this.state.colorSchemeSuffix }
+							colorSchemeSuffix={ this.props.colorSchemeSuffix }
 							handleNavLinkClick={ this.handleNavLinkClick }
-							navbarLinks={ this.state.navbarLinks }
-						/>
-						<NewPageNavBar
-							colorSchemeSuffix={ this.state.colorSchemeSuffix }
-						/>
-					</MenuBar>
-				}
-				{ this.state.isMobileView === true &&
-					<div className="margin-auto max-width-60em width-90pc">
-						<MenuBarMobile>
-							<SamePageNavBarMobile
-								colorSchemeSuffix={ this.state.colorSchemeSuffix }
-								navbarLinks={ this.state.navbarLinks }
-								handleButtonClick={ this.handleButtonClick }
-								handleNavLinkClick={ this.handleNavLinkClick }
-								navbarRef={ this.navbarRef }
-							>
-								<SheerWhiteContainer colorSchemeSuffix={ this.state.colorSchemeSuffix }>
-									<p tabIndex="0" className="font-weight-600 text-center" ref={ this.navbarRef }>Jump Down</p>
-								</SheerWhiteContainer>	
-							</SamePageNavBarMobile>
-							<NewPageNavBarMobile
-								colorSchemeSuffix={ this.state.colorSchemeSuffix }
-							/>
-						</MenuBarMobile>
+							navbarLinks={ this.playsNavbarLinks }
+						/>	
 					</div>
 				}
+				<ProjectHeader title={ this.projectInfo.title } />
+				{ this.props.isMobileView === true &&
+					<div className="padding-left-p5em padding-right-p5em">
+						<SamePageNavBarMobile
+							colorSchemeSuffix={ this.props.colorSchemeSuffix }
+							handleNavLinkClick={ this.handleNavLinkClick }
+							navbarLinks={ this.playsNavbarLinks }
+						/>
+					</div>
+				}
+				<ProjectPageMainSections
+					colorSchemeSuffix={ this.props.colorSchemeSuffix }
+					doNotTrack={ this.props.doNotTrack }
+					isMobile={ this.props.isMobileView }
+					width={ this.props.responsiveWidth }
+					highlightsSectionRef={ this.playsHighlightsSectionRef }
+					projectInfo={ this.projectInfo }
+					overviewSectionRef={ this.playsOverviewSectionRef }
+					synopsisSectionRef={ this.playsSynopsisSectionRef }
+				/>
+				<PlaysContainer
+					ref = { this.playsPlaysContainerRef }
+					colorSchemeSuffix={ this.props.colorSchemeSuffix }
+					doNotTrack={ this.props.doNotTrack }
+					isMobile={ this.props.isMobileView }
+					width={ this.props.responsiveWidth }
+				>
+					{ this.state.plays.map((play, index) =>
+						<div className="padding-bottom-p5em padding-top-p5em">
+							<h3>
+								<ButtonContainer colorSchemeSuffix={ this.props.colorSchemeSuffix }>
+									<PlaysButton
+										aria_expanded={ play.expanded }
+										aria_controls={ "collapsible-"+ index }
+										tabIndex="0"
+										buttonType="playsButton"
+										buttonId={ this.props.buttonId }
+										//onClickFunction={ props.onClickFunction }
+										colorSchemeSuffix={ this.props.colorSchemeSuffix }
+										text={ play.shortTitle }
+									/>
+								</ButtonContainer>
+							</h3>
+							
+						</div>
+					)}
 					
-				<main className={ "margin-auto max-width-60em width-90pc "  + this.state.mainPaddingLeftClassName }>
-					<ProjectPageMainSections
-						colorSchemeSuffix={ this.state.colorSchemeSuffix }
-						float={ this.state.responsiveFloat }
-						isMobile={ this.state.isMobileView }
-						projectInfo={ this.projectInfo }
-						width={ this.state.responsiveWidth }
-						synopsisSectionRef={ this.synopsisSectionRef }
-						highlightsSectionRef={ this.highlightsSectionRef }
-						overviewSectionRef={ this.overviewSectionRef }
-					/>
-				</main>
+
+				</PlaysContainer>
 			</div>
 		);
   	}
