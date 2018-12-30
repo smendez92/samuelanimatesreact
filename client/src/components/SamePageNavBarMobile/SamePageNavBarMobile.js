@@ -7,7 +7,7 @@ import SamePageNavBarLink from '../SamePageNavBarLink';
 const SamePageNavBarMobile = props => (
 	<nav className="box-shadow-3px-4px-2px-rgba-221-126-192-p3 border-style-solid border-color-rgba-150-150-150-p75 border-2px margin-auto margin-bottom-2em text-center">
 		<SheerWhiteContainer colorSchemeSuffix={ props.colorSchemeSuffix }>
-			<p className="font-weight-600 text-center">On This Page</p>
+			<p className="font-weight-600 text-center">Skip<br/>Down To:</p>
 		</SheerWhiteContainer>
 		<div className={ "bg-rgba-250-250-250-p7 border-style-solid border-2px color-inherit display-flex flex-direction-row flex-wrap-wrap justify-content-center padding-bottom-p25em padding-top-p25em navbar-color-scheme-" + props.colorSchemeSuffix}>
 			{ props.navbarLinks.map((link, i) =>

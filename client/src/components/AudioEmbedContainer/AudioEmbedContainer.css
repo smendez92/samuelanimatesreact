@@ -1,8 +1,11 @@
-.display-inline-block{
-	display: inline-block;
+.display-block{
+	display: block;
 }
 .margin-auto{
 	margin: auto;
+}
+.text-center{
+	text-align: center;
 }
 .width-90pc{
 	width: 90%;

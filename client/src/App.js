@@ -100,13 +100,13 @@ class App extends Component {
   
 	updateIsMobileVariable = () =>{
 		if(window.innerWidth < 800) {
-			this.setState({isMobileView: true, blurbWidth: "100%",  mainPaddingLeftClassName: "padding-left-0", portraitWidth: "80%",  responsiveFloat:"none", responsiveWidth: "100%"});
+			this.setState({isMobileView: true, blurbWidth: "100%",  mainPaddingLeftClassName: "padding-left-0", portraitWidth: "80%",  responsiveFlexEnding: "column", responsiveWidth: "100%"});
 		}
 		else if(this.state.fontSizeLevel !== "14pt") {
-			this.setState({isMobileView: true, blurbWidth: "100%",  mainPaddingLeftClassName: "padding-left-0", portraitWidth: "80%", responsiveFloat:"none", responsiveWidth: "100%"});
+			this.setState({isMobileView: true, blurbWidth: "100%",  mainPaddingLeftClassName: "padding-left-0", portraitWidth: "80%", responsiveFlexEnding: "column", responsiveWidth: "100%"});
 		}
 		else {
-			this.setState({isMobileView: false, blurbWidth: "60%", mainPaddingLeftClassName: "padding-left-6p5em", portraitWidth: "40%", responsiveFloat:"left", responsiveWidth: "50%"});
+			this.setState({isMobileView: false, blurbWidth: "60%", mainPaddingLeftClassName: "padding-left-6p5em", portraitWidth: "40%", responsiveFlexEnding: "row", responsiveWidth: "50%"});
 		}
 	};
 
@@ -131,7 +131,6 @@ class App extends Component {
 						mainPaddingLeftClassName={ this.state.mainPaddingLeftClassName }
 						materialIconFill={ this.state.materialIconFill }
 						portraitWidth={ this.state.portraitWidth }
-						responsiveFloat={ this.state.responsiveFloat }
 						responsiveWidth={this.state.responsiveWidth}
 					/>
 				)}/>
@@ -144,7 +143,7 @@ class App extends Component {
 						isMobileView={ this.state.isMobileView }
 						mainPaddingLeftClassName={ this.state.mainPaddingLeftClassName }
 						materialIconFill={ this.state.materialIconFill }
-						responsiveFloat={ this.state.responsiveFloat }
+						responsiveFlexEnding={ this.state.responsiveFlexEnding }
 						responsiveWidth={this.state.responsiveWidth}
 					/>
 				)}/>

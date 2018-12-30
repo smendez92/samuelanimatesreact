@@ -108,7 +108,7 @@ p{
 
 /*	Media Query to change the color of SVGs to correspond with Microsoft's high contrast mode.
 	From HEATHER MIGLIORISI at css-tricks.com
-	This is the only place I define this accessibility media query.
+	Note: This is the only place I define this accessibility media query.
 */
 @media screen and (-ms-high-contrast: active) {
 	.icon svg {

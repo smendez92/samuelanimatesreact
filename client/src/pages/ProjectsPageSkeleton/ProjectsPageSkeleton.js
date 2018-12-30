@@ -30,15 +30,6 @@ import WikiProject from "../../pages/WikiProject";
 import YucaProject from "../../pages/YucaProject";
 
 class ProjectsPageSkeleton extends Component {
-	state = {
-		doNotTrack: true,
-		fontSizeLevel: "14pt",
-		isMobileView: true,
-		mainPaddingLeftClassName: "padding-left-0em",
-		responsiveFloat:"none",
-		responsiveWidth:"50%",
-		navbarLinks: [{title:"Synopsis", id:"navBarLinkSynopsis"},{title:"Highlights", id:"navBarLinkHighlights"},{title:"Overview", id:"navBarLinkOverview"}]
-	}
 
 	synopsisSectionRef = React.createRef();
 	highlightsSectionRef = React.createRef();
@@ -75,7 +66,6 @@ class ProjectsPageSkeleton extends Component {
 			<div className={ "font-Assistant projectPage-color-scheme-" + this.props.colorSchemeSuffix }>
 				{ this.props.isMobileView === false &&
 					<MenuBar
-						navbarLinks={ this.props.navbarLinks }
 						colorSchemeSuffix={ this.props.colorSchemeSuffix }
 						isMobileView={ this.props.isMobileView }
 					>
@@ -107,7 +97,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -120,7 +110,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -132,7 +122,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -144,7 +134,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -156,7 +146,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -168,7 +158,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -179,7 +169,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -191,7 +181,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -203,7 +193,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -215,7 +205,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -227,7 +217,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -239,7 +229,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -250,7 +240,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -262,7 +252,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -274,7 +264,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -285,7 +275,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -297,7 +287,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -309,7 +299,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -321,7 +311,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -333,7 +323,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
@@ -345,7 +335,7 @@ class ProjectsPageSkeleton extends Component {
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
-										responsiveFloat={ this.props.responsiveFloat }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
