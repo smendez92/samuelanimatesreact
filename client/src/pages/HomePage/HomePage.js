@@ -258,7 +258,7 @@ class HomePage extends Component {
 						"title": "Health for All",
 						"icon": "./assets/images/homepageIcons/homepage-icon-nlm.svg",
 						"iconAlt": "",
-						"description": "Ongoing prototype development for a clinical trial informational tool under development in partnership with Chicago Public Libraries.",
+						"description": "Prototype development for a clinical trial informational tool under development in partnership with Chicago Public Libraries.",
 						"projectPagePath": "/projects/healthforall",
 						"links": []
 					},

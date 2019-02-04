@@ -1,36 +1,24 @@
-.artProjectPage-color-scheme-default{
-	background-color: rgb(251,251,251);
-	background: linear-gradient(to bottom, #fffffc 0%, #feffaa 66%, #fdff71 85%, 
-	#f5ff64 95%);
-	color: rgb(5,5,5);
+.display-flex{
+	display: flex;
 }
-.artProjectPage-color-scheme-highContrast{
-	background-color: rgb(0,0,0);
-	color: rgb(252,252,252);
+.flex-direction-column{
+	flex-direction: column;
 }
-.clearfix:after {
-	content: "";
-	display: table;
-	clear: both;
+.left-0{
+	left: 0;
 }
-.margin-auto{
-	margin: auto;
+.padding-left-p5em{
+	padding-left: 0.5em;
 }
-.max-width-60em{
-	max-width: 60em;
-}
-.padding-bottom-p5em{
-	padding-bottom: 0.5em;
+.padding-right-p5em{
+	padding-right: 0.5em;
 }
 .padding-top-p5em{
 	padding-top: 0.5em;
 }
-.padding-left-0em{
-	padding-left: 0;
+.position-fixed{
+	position: fixed;
 }
-.padding-left-6p5em{
-	padding-left: 6.5em;
-}
-.width-90pc{
-	width:90%;
+.text-center{
+	text-align: center;
 }

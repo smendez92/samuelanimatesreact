@@ -13,7 +13,7 @@ const ProjectPageSynopsis = React.forwardRef((props, ref) => (
 			<GenericFloatingSection colorSchemeSuffix={ props.colorSchemeSuffix }>
 				<div className="background-color-rgb-3-3-3 clearfix color-rgb-251-251-251 padding-left-1em padding-right-1em text-center">
 					<div className="padding-bottom-1em padding-top-1em">
-						<h2 className="font-weight-600" tabIndex="0" ref={ ref }>Synopsis</h2>
+						<h3 className="font-weight-600" tabIndex="0" ref={ ref }>Synopsis</h3>
 						<p className="font-size-p9em text-center">{ props.synopsis.blurb }</p>
 					</div>
 					{ props.synopsis.mediaType === "video" &&

@@ -56,18 +56,18 @@ class PlaysContainerNecessaryToThe extends Component{
 			]
 
 	playInfo = {
-		shortTitle: `"From the Notes of..."`,
+		shortTitle: `"Necessary to the security..."`,
 		buttonId: "playsButtonNotes",
 		containerId: "playsCollapsibleContainerNotes",
-		fullTitle: "From the Notes of Samuel R. Mendez on the Discovery and Occupation of the Neo-World",
+		fullTitle: "Necessary to the security of a Free State.",
 		notes: "ayyylmao",
 		audioEmbed: {
 			src: "../assets/plays/notes/fromTheNotesAudio.mp3",
 			alt: "A close-up of typed notes on index cards. The top card reads, 'These cards are just for you. Feel free to tell the rest of the audience whatever you think they should know, but don't let anyone else see these. NEXT CARD.'"
 		},
 		imageEmbed: {
-			src: "../assets/images/projectPhotos/plays.jpg",
-			alt: "A close-up of typed notes on index cards. The top card reads, 'These cards are just for you. Feel free to tell the rest of the audience whatever you think they should know, but don't let anyone else see these. NEXT CARD.'"
+			src: "../assets/plays/security/security.jpg",
+			alt: "A close-up of a hand holding a paper crane."
 		}
 	}
 
@@ -93,27 +93,65 @@ class PlaysContainerNecessaryToThe extends Component{
 				colorSchemeSuffix={ this.props.colorSchemeSuffix }
 				text={ this.state.buttonTextLead + this.playInfo.shortTitle }
 			>
-				<div id={ this.playInfo.containerId } className={ "display-flex flex-direction-column padding-bottom-p5em padding-left-p5em padding-right padding-top-p5em plays-individual-container-" + this.props.colorSchemeSuffix}>
-					<div>
-						<h4>Full Title:</h4><p>{ this.playInfo.fullTitle }</p>
-					</div>
-					<div className={"display-flex flex-direction-" + this.props.responsiveFlexEnding }>
-						<div className="margin-auto text-center" style={{"width": this.props.width }}>
+				<div id={ this.playInfo.containerId } className={ "display-flex flex-direction-column padding-bottom-p5em padding-left-p5em padding-right-p5em padding-top-p5em plays-individual-container-" + this.props.colorSchemeSuffix}>
+					<h4 className="padding-bottom-p5em padding-top-p5em text-center">
+						"{ this.playInfo.fullTitle }"
+					</h4>
+					<div className={"border-bottom-2px-double-rgba-107-0-111-0p8 padding-bottom-p5em padding-top-p5em display-flex flex-direction-" + this.props.responsiveFlexEnding }>
+						<div className="padding-bottom-p5em margin-auto text-center" style={{"width": this.props.width }}>
 							<PhotoEmbedContainer
 								embed={ this.playInfo.imageEmbed }
 							/>
 						</div>
-						<div className="margin-auto text-center" style={{"width": this.props.width }}>
+						<div className="padding-bottom-p5em margin-auto text-center" style={{"width": this.props.width }}>
 							<AudioEmbedContainer
 								embed={ this.playInfo.audioEmbed }
 							/>
 						</div>
 					</div>
-					<div>
-						<h4>Script:</h4><p></p>
+					<div className="border-bottom-2px-double-rgba-107-0-111-0p8">
+						<div className="padding-bottom-p5em padding-top-p5em">
+							<h4 className="padding-top-p5em">Script:</h4>
+							<h5 className="text-center">Set-up</h5>
+							<p>
+								Sam places a brightly colored arts-and-crafts sort of bag open on one end of the stage. He holds ten paper cranes in his right hand and a claw grabber in his left hand as he stands at the other end of stage. A drop box above stage is filled with paper cranes.
+							</p>
+						</div>
+						<div className="padding-bottom-p5em padding-top-p5em">
+							<h5  className="padding-bottom-p5em padding-top-p5em text-center">
+								Sam
+							</h5>
+							<p className="font-weight-700 padding-bottom-p5em padding-top-p5em">
+								(Sam leans over and spins around with his forehead on the handle of a claw grabber while repeating “We have to keep our kids safe” ten times. Sam should be dizzy by the end.)
+							</p>
+							<p>We have to keep our kids safe.
+								We have to keep our kids safe.
+								We have to keep our kids safe.
+								We have to keep our kids safe.
+								We have to keep our kids safe.
+								We have to keep our kids safe.
+								We have to keep our kids safe.
+								We have to keep our kids safe.
+								We have to keep our kids safe.
+								We have to keep our kids safe.
+							</p>
+							<p className="font-weight-700 padding-bottom-p5em padding-top-p5em">
+								(Sam stands up and tosses the paper cranes in the air like confetti. He keeps the claw grabber in his left hand and uses it to grab one paper crane at a time. Once Sam grabs a crane, he races with it to the other end of the stage and drops it in the open bag. When he gets the crane in the bag he says, “This is the only way to accomplish this goal.”)
+							</p>
+							<p className="padding-bottom-p5em padding-top-p5em">
+								This is the only way to accomplish this goal.
+							</p>
+							<p className="font-weight-700 padding-bottom-p5em padding-top-p5em">
+								(Sam repeats this process, trying to get all 10 cranes in the bag before the play’s 2-minute length is over. Tech lead will wait until it Sam collects 5 cranes in the bag before they release a mass of paper cranes from the dropbox overhead. Sam will start to rush in a futile attempt to collect them all in the bag before an ensemble member calls “Next!”)
+							</p>
+							<p className="font-weight-700 padding-bottom-p5em padding-top-p5em">
+								Next!
+							</p>
+						</div>
 					</div>
-					<div>
-						<h4>Notes:</h4><p></p>
+					<div className="padding-bottom-p5em padding-top-p5em">
+						<h4>Notes:</h4>
+						<p>Performed at the Neo-Futurarium in Chicago on March 25, 2018.</p>
 					</div>
 				</div>
 			</PlaysContainerIndividual>

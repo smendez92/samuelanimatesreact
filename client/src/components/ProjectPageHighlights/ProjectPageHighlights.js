@@ -10,7 +10,7 @@ const ProjectPageHighlights = React.forwardRef((props, ref) => (
 			<GenericFloatingSection colorSchemeSuffix={props.colorSchemeSuffix}>
 				<div className={ "color-inherit paddng-bottom-1em paddng-left-1em paddng-right-1em paddng-top-1em text-center projectPageHighlights-color-scheme-" + props.colorSchemeSuffix }> 
 					<div>
-						<h2 tabIndex="0" ref={ ref }>Highlights</h2>
+						<h3 tabIndex="0" ref={ ref }>Highlights</h3>
 					</div>
 					<div className="padding-top-p5em text-left">
 						<UnorderedBulletlessList

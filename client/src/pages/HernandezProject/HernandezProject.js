@@ -89,7 +89,7 @@ class HernandezProject extends Component {
 
 	render() {
 		return (
-			<div className={ "clearfix " + this.props.colorSchemeNameRoot + this.props.colorSchemeSuffix }>
+			<div className={ this.props.colorSchemeNameRoot + this.props.colorSchemeSuffix }>
 				{ this.props.isMobileView === false &&
 					<div className="font-Overpass position-fixed left-0">
 						<SamePageNavBar

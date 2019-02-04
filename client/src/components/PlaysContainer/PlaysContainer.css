@@ -24,8 +24,14 @@
 .padding-left-p25em{
 	padding-left: 0.25em;
 }
+.padding-left-p5em{
+	padding-left: 0.5em;
+}
 .padding-right-p25em{
 	padding-right: 0.25em;
+}
+.padding-right-p5em{
+	padding-right: 0.5em;
 }
 .padding-top-p5em{
 	padding-top: 0.5em;
@@ -38,4 +44,7 @@
 }
 .text-left{
 	text-align: left;
+}
+.width-100pc{
+	width: 100%;
 }
