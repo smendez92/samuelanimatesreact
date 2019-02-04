@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import "./PlaysContainerYouWillRemember.css";
-import PhotoEmbedContainer from "../PhotoEmbedContainer";
 import PlaysContainerIndividual from "../PlaysContainerIndividual";
 import VideoEmbedContainer from "../VideoEmbedContainer";
 

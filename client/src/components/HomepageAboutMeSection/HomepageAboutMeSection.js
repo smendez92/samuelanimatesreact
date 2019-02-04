@@ -69,14 +69,14 @@ const HomepageAboutMeSection = React.forwardRef((props, ref) => (
 					</div>
 					<div style={{"width": props.blurbWidth }}>
 					{props.paragraphs.map(paragraph =>
-						<div className="font-Assistant padding-left-20px padding-right-20px">
+						<div key={ paragraph.id } className="font-Assistant padding-left-20px padding-right-20px">
 								{ paragraph.includesLink === false &&
-									<p key={ paragraph.id } className="padding-top-p5em padding-bottom-p5em">
+									<p className="padding-top-p5em padding-bottom-p5em">
 										<span className="font-weight-600">{ paragraph.lead }:&nbsp;</span>{ paragraph.body }
 									</p>
 								}
 								{ paragraph.includesLink === true &&
-									<p key={ paragraph.id } className="padding-top-p5em padding-bottom-p5em">
+									<div className="padding-top-p5em padding-bottom-p5em">
 										<span className="font-weight-600">{ paragraph.lead }:&nbsp;</span>
 										{ paragraph.body[0].preLinkText }
 										<LinkContainerWithGenericIcon
@@ -90,7 +90,7 @@ const HomepageAboutMeSection = React.forwardRef((props, ref) => (
 											/>
 										</LinkContainerWithGenericIcon>
 										{ paragraph.body[0].postLinkText }
-									</p>
+									</div>
 								}
 							</div>
 						)}

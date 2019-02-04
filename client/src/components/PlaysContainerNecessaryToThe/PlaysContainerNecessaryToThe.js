@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import "./PlaysContainerNecessaryToThe.css";
 import PhotoEmbedContainer from "../PhotoEmbedContainer";
 import PlaysContainerIndividual from "../PlaysContainerIndividual";
-import AudioEmbedContainer from "../AudioEmbedContainer/AudioEmbedContainer";
 
 class PlaysContainerNecessaryToThe extends Component{
 	
@@ -94,9 +93,6 @@ class PlaysContainerNecessaryToThe extends Component{
 				text={ this.state.buttonTextLead + this.playInfo.shortTitle }
 			>
 				<div id={ this.playInfo.containerId } className={ "display-flex flex-direction-column padding-bottom-p5em padding-left-p5em padding-right-p5em padding-top-p5em plays-individual-container-" + this.props.colorSchemeSuffix}>
-					<h4 className="padding-bottom-p5em padding-top-p5em text-center">
-						"{ this.playInfo.fullTitle }"
-					</h4>
 					<div className={"border-bottom-2px-double-rgba-107-0-111-0p8 padding-bottom-p5em padding-top-p5em display-flex flex-direction-" + this.props.responsiveFlexEnding }>
 						<div className="padding-bottom-p5em margin-auto text-center" style={{"width": this.props.width }}>
 							<PhotoEmbedContainer
@@ -104,9 +100,9 @@ class PlaysContainerNecessaryToThe extends Component{
 							/>
 						</div>
 						<div className="padding-bottom-p5em margin-auto text-center" style={{"width": this.props.width }}>
-							<AudioEmbedContainer
-								embed={ this.playInfo.audioEmbed }
-							/>
+							<h4 className="padding-bottom-p5em padding-top-p5em text-center">
+								"{ this.playInfo.fullTitle }"
+							</h4>
 						</div>
 					</div>
 					<div className="border-bottom-2px-double-rgba-107-0-111-0p8">

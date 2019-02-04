@@ -34,7 +34,7 @@ class HomePage extends Component {
 					body: "community-based research, public health, digital documentary, visual art, nail polish."
 				},
 				{	
-					id: "aboutMeParagraph02",
+					id: "aboutMeParagraph03",
 					lead: "Favorite song",
 					includesLink: true,
 					body: [

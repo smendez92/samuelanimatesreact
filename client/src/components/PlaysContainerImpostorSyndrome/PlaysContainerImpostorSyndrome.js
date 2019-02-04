@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import "./PlaysContainerImpostorSyndrome.css";
 import PhotoEmbedContainer from "../PhotoEmbedContainer";
 import PlaysContainerIndividual from "../PlaysContainerIndividual";
-import AudioEmbedContainer from "../AudioEmbedContainer/AudioEmbedContainer";
 
 class PlaysContainerImpostorSyndrome extends Component{
 	
