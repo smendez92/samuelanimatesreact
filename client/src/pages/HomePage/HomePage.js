@@ -115,45 +115,39 @@ class HomePage extends Component {
 				},
 				{
 					"id": "highlights02",
-					"title": "Wheelchair Travel A11Y Wiki",
-					"description": "In-progress demo of a wheelchair travel accessibility (A11Y) wiki.",
-					"icon": "./assets/images/homepageIcons/homepage-icon-wiki.svg",
-					"iconAlt": "'A11Y Wiki' logo: a spinning gear/flower made up of geometric shapes.",
-					"projectPagePath": "/projects/wiki",
+					"title": "HER Communication",
+					"description": "A do-it-together publication of health equity.",
+					"icon": "./assets/images/homepageIcons/homepage-icon-her.svg",
+					"iconAlt": "'HER Communication' logo: triangles coming together to form a crystal.",
+					"projectPagePath": "/projects/her",
 					"links": [
 						{
 							"isInternalLink": false,
 							"id": "highlights0202",
-							"text": "'A11Y Wiki' GitHub Repo",
-							"path": "https://github.com/smendez92/wheelchairWiki",
-							"icon": "code"
-						},
-						{
-							"isInternalLink": false,
-							"id": "highlights0204",
-							"text": "'A11Y Wiki' Demo on Heroku",
-							"path": "https://wheelchairtravelwiki.herokuapp.com",
+							"text": "'HER Communication' zine-journal",
+							"path": "https://hercommunication.pubpub.org",
 							"icon": "website"
 						}
 					]
 				},
 				{
 					"id": "highlights03",
-					"title": "A Bodega",
-					"description": "An experimental documentary; an asset-based look at health equity, made with ingredients from a bodega in Lawrence, MA.",
-					"icon": "./assets/images/homepageIcons/homepage-icon-bodega.svg",
-					"iconAlt": "'A Bodega' cartoon logo: a frying pan.",
-					"projectPagePath": "/projects/bodega",
+					"title": "UNFUNDABLE",
+					"description": "A table-top card game that puts players in the role of academic health researchers.",
+					"icon": "./assets/images/homepageIcons/homepage-icon-unfundable.svg",
+					"iconAlt": "'UNFUNDABLE' logo: an overlapping function symbol and intersection symbol.",
+					"projectPagePath": "/projects/unfundable",
 					"links": [
 						{
 							"isInternalLink": false,
 							"id": "highlights0302",
-							"text": "'A Bodega' Film on Vimeo",
-							"path": "https://vimeo.com/91566613",
-							"icon": "film"
+							"text": "'UNFUNDABLE' website",
+							"path": "https://unfundable.fun",
+							"icon": "website"
 						}
 					]
 				}
+				
 			]
 		},
 		projectSections: [
@@ -215,35 +209,18 @@ class HomePage extends Component {
 					},
 					{
 						"id": "animation04",
-						"title": "How to Make Yuca Frita",
-						"description": "An instructional animation: peel, chop, remove the stringy core, boil, fry, and eat.",
-						"icon": "./assets/images/homepageIcons/homepage-icon-yuca.svg",
-						"iconAlt": "",
-						"projectPagePath": "/projects/yuca",
+						"title": "A Bodega",
+						"description": "An experimental documentary; an asset-based look at health equity, made with ingredients from a bodega in Lawrence, MA.",
+						"icon": "./assets/images/homepageIcons/homepage-icon-bodega.svg",
+						"iconAlt": "'A Bodega' cartoon logo: a frying pan.",
+						"projectPagePath": "/projects/bodega",
 						"links": [
 							{
 								"isInternalLink": false,
 								"id": "animation0402",
-								"text": "'Yuca' Film on Vimeo",
-								"path": "http://www.vimeo.com/95826024",
+								"text": "'A Bodega' Film on Vimeo",
+								"path": "https://vimeo.com/91566613",
 								"icon": "film"
-							}
-						]
-					},
-					{
-						"id": "animation05",
-						"title":"After, After That",
-						"icon":"./assets/images/homepageIcons/homepage-icon-after.svg",
-						"iconAlt": "",
-						"description":"An experimental documentary. A cross between two marks.",
-						"projectPagePath": "/projects/after",
-						"links":[
-							{
-								"isInternalLink": false,
-								"id": "animation0502",
-								"text": "After, After That' Film on Vimeo",
-								"icon": "film",
-								"path": "https://vimeo.com/55657740"
 							}
 						]
 					}
@@ -304,6 +281,30 @@ class HomePage extends Component {
 				"projects": [
 					{
 						"id": "web01",
+						"title": "Wheelchair Travel A11Y Wiki",
+						"description": "Proof-of-Concept demo of a wheelchair travel accessibility (A11Y) wiki.",
+						"icon": "./assets/images/homepageIcons/homepage-icon-wiki.svg",
+						"iconAlt": "'A11Y Wiki' logo: a spinning gear/flower made up of geometric shapes.",
+						"projectPagePath": "/projects/wiki",
+						"links": [
+							{
+								"isInternalLink": false,
+								"id": "web0102",
+								"text": "'A11Y Wiki' GitHub Repo",
+								"path": "https://github.com/smendez92/wheelchairWiki",
+								"icon": "code"
+							},
+							{
+								"isInternalLink": false,
+								"id": "web0104",
+								"text": "'A11Y Wiki' Demo on Heroku",
+								"path": "https://wheelchairtravelwiki.herokuapp.com",
+								"icon": "website"
+							}
+						]
+					},
+					{
+						"id": "web02",
 						"title": "AR-Tarot",
 						"icon": "./assets/images/homepageIcons/homepage-icon-tarot.svg",
 						"iconAlt": "",
@@ -312,65 +313,17 @@ class HomePage extends Component {
 						"links": [
 							{
 								"isInternalLink": false,
-								"id": "web0102",
+								"id": "web0202",
 								"text": "'AR-Tarot' GitHub Repo",
 								"icon": "code",
 								"path": "https://github.com/smendez92/AR-tarot"
 							},
 							{
 								"isInternalLink": false,
-								"id": "web0103",
+								"id": "web0203",
 								"text": "'AR-Tarot' Demo on GitHub Pages",
 								"icon": "website",
 								"path": "https://smendez92.github.io/AR-tarot/index"
-							}
-						]
-					},
-					{
-						"id": "web02",
-						"title": "Everything But Apples",
-						"icon": "./assets/images/homepageIcons/homepage-icon-apples.svg",
-						"iconAlt": "",
-						"description": "A multiplayer web-enabled party game; a social-digital version of Apples to Apples.",
-						"projectPagePath": "/projects/apples",
-						"links": [
-							{
-								"isInternalLink": false,
-								"id": "web0202",
-								"text": "''Apples' GitHub Repo",
-								"icon": "code",
-								"path": "https://github.com/amgault/everythingButApples"
-							},
-							{
-								"isInternalLink": false,
-								"id": "web0203",
-								"text": "'Apples' Demo on Heroku",
-								"icon": "website",
-								"path": "https://everythingbutapples.herokuapp.com"
-							}
-						]
-					},
-					{
-						"id": "web03",
-						"title": "GiftPitch Demo",
-						"icon": "./assets/images/homepageIcons/homepage-icon-giftpitch.svg",
-						"iconAlt": "",
-						"description": "Front-end logic for a web app letting users take a personality quiz to help find the perfect gift for someone from Amazon, Etsy, or Ebay.",
-						"projectPagePath": "/projects/giftpitch",
-						"links": [
-							{
-								"isInternalLink": false,
-								"id": "web0302",
-								"text": "GiftPitch Walkthrough Video on Vimeo",
-								"icon": "video",
-								"path": "http://www.vimeo.com/235300604"
-							},
-							{
-								"isInternalLink": false,
-								"id": "web0303",
-								"text": "GiftPitch GitHub Repo",
-								"icon": "code",
-								"path": "https://github.com/jmoc1181/GiftProject"
 							}
 						]
 					}
@@ -449,30 +402,6 @@ class HomePage extends Component {
 								"text": "WhyUEdu Series Worksheet PDF",
 								"icon": "document",
 								"path": "./assets/documents/Why+Essay+Planning+Worksheet.pdf"
-							}
-						]
-					},
-					{
-						"id": "video04",
-						"title": "'Teeny' Kickstarter Video",
-						"icon": "./assets/images/homepageIcons/homepage-icon-teeny.svg",
-						"iconAlt": "",
-						"description": "A fundraising video for a Kickstarter campaign promoting a Taiwanese artisan's work.",
-						"projectPagePath": "/projects/teeny",
-						"links": [
-							{
-								"isInternalLink": false,
-								"id": "video0402",
-								"text": "'Teeny' Fundraising Video on Vimeo",
-								"icon": "video",
-								"path": "http://www.vimeo.com/172990828"
-							},
-							{
-								"isInternalLink": false,
-								"id": "video0403",
-								"text": "Teeny' Fundraising Campaign",
-								"icon": "website",
-								"path": "https://www.kickstarter.com/projects/849732009/teeny-artisan-coin-holders-for-your-change-and-ess"
 							}
 						]
 					}
@@ -623,7 +552,7 @@ class HomePage extends Component {
 					<HomepageProjectsSection
 						id={ this.projectData.highlightsSection.id }
 						float={ this.props.responsiveFloat }	
-						title="Highlighted Projects"
+						title="Key Projects"
 						isMobile={ this.props.isMobileView }
 						projects={ this.projectData.highlightsSection.projects }
 						colorSchemeSuffix={ this.props.colorSchemeSuffix }

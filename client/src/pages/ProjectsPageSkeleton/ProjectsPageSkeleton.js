@@ -16,6 +16,7 @@ import BusanProject from "../../pages/BusanProject";
 import DotsProject from "../../pages/DotsProject";
 import GiftpitchProject from "../../pages/GiftpitchProject";
 import HealthforallProject from "../../pages/HealthforallProject";
+import HerProject from "../../pages/HerProject";
 import HernandezProject from "../../pages/HernandezProject";
 import JolietProject from "../../pages/JolietProject";
 import LmhtfProject from "../../pages/LmhtfProject";
@@ -24,6 +25,7 @@ import PlaysProject from "../../pages/PlaysProject";
 import SaigonProject from "../../pages/SaigonProject";
 import TarotProject from "../../pages/TarotProject";
 import TeenyProject from "../../pages/TeenyProject";
+import UnfundableProject from "../../pages/UnfundableProject";
 import WalksProject from "../../pages/WalksProject";
 import WhyuProject from "../../pages/WhyuProject";
 import WikiProject from "../../pages/WikiProject";
@@ -197,6 +199,18 @@ class ProjectsPageSkeleton extends Component {
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
+								<Route exact path='/projects/her' render={props => (
+									<HerProject
+										colorSchemeNameRoot="artProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.props.colorSchemeSuffix }
+										doNotTrack={ this.props.doNotTrack }
+										fontSizeLevel={ this.props.fontSizeLevel }
+										isMobileView={ this.props.isMobileView }
+										materialIconFill={ this.props.materialIconFill }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
+										responsiveWidth={ this.props.responsiveWidth }
+									/>
+								)}/>
 								<Route exact path='/projects/hernandez' render={props => (
 									<HernandezProject
 										colorSchemeNameRoot="filmProjectPage-color-scheme-"
@@ -282,6 +296,18 @@ class ProjectsPageSkeleton extends Component {
 								<Route exact path='/projects/teeny' render={props => (
 									<TeenyProject
 										colorSchemeNameRoot="videoProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.props.colorSchemeSuffix }
+										doNotTrack={ this.props.doNotTrack }
+										fontSizeLevel={ this.props.fontSizeLevel }
+										isMobileView={ this.props.isMobileView }
+										materialIconFill={ this.props.materialIconFill }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
+										responsiveWidth={ this.props.responsiveWidth }
+									/>
+								)}/>
+								<Route exact path='/projects/unfundable' render={props => (
+									<UnfundableProject
+										colorSchemeNameRoot="healthProjectPage-color-scheme-"
 										colorSchemeSuffix={ this.props.colorSchemeSuffix }
 										doNotTrack={ this.props.doNotTrack }
 										fontSizeLevel={ this.props.fontSizeLevel }
