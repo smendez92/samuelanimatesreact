@@ -235,9 +235,17 @@ class HomePage extends Component {
 						"title": "Health for All",
 						"icon": "./assets/images/homepageIcons/homepage-icon-nlm.svg",
 						"iconAlt": "",
-						"description": "Prototype development for a clinical trial informational tool under development in partnership with Chicago Public Libraries.",
+						"description": "Clinical trial informational tool I did lo-fi prototying and user testing for.",
 						"projectPagePath": "/projects/healthforall",
-						"links": []
+						"links": [
+							{
+								"isInternalLink": false,
+								"id": "health0101",
+								"text": "Health for All website",
+								"icon": "website",
+								"path": "https://healthforallproject.org/"
+							}
+						]
 					},
 					{
 						"id": "health03",
@@ -250,7 +258,7 @@ class HomePage extends Component {
 							{
 								"isInternalLink": false,
 								"id": "health0302",
-								"text": "Research Article on BMC Public Healt",
+								"text": "Research Article on BMC Public Health",
 								"icon": "website",
 								"path": "https://bmcpublichealth.biomedcentral.com/articles/10.1186/1471-2458-13-1129"
 							}
