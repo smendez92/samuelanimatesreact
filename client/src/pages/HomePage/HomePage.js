@@ -3,6 +3,7 @@ import './HomePage.css';
 import Footer from '../../components/Footer';
 import HomepageAboutMeSection from '../../components/HomepageAboutMeSection';
 import HomepageProjectsSection from '../../components/HomepageProjectsSection';
+import HomepageWritingSection from '../../components/HomepageWritingSection';
 import MenuBar from '../../components/MenuBar';
 import MenuBarMobile from '../../components/MenuBarMobile';
 import SamePageNavBar from '../../components/SamePageNavBar';
@@ -14,7 +15,7 @@ class HomePage extends Component {
 	state = { 
 		navbarClassName: "margin-auto margin-bottom-2em",
 		navbarLinksClassName: "float-left font-size-p85em padding-left-0 text-center",
-		navbarLinks: [{title:"About", id:"navBarLinkAbout"},{title:"Highlights", id:"navBarLinkHighlights"},{title:"Animation", id:"navBarLinkAnimation"},{title:"Health", id:"navBarLinkHealth"},{title:"Web", id:"navBarLinkWeb"},{title:"Video", id:"navBarLinkVideo"},{title:"Art", id:"navBarLinkArt"}]
+		navbarLinks: [{title:"About", id:"navBarLinkAbout"},{title:"Highlights", id:"navBarLinkHighlights"},{title:"Animation", id:"navBarLinkAnimation"},{title:"Edu", id:"navBarLinkEdu"},{title:"Web", id:"navBarLinkWeb"},{title:"Video", id:"navBarLinkVideo"},{title:"Art", id:"navBarLinkArt"}]
 	};
 
 	projectData = { 
@@ -150,6 +151,67 @@ class HomePage extends Component {
 				
 			]
 		},
+		writingSection:{
+			quote: "I could trace back about 80% of my humor to specific SpongeBob episodes.",
+			paragraphs: [
+				{
+					id: "aboutMeParagraph01",
+					lead: "In short",
+					includesLink: false,
+					body: "I make animations. I'm a community-based researcher. I do front end web development, with an eye on web accessibility. I see the privilege of having chances to gain these skills; I want to use these chances to open up more seats at the table."
+				},
+				{	
+					id: "aboutMeParagraph02",
+					lead: "Interests",
+					includesLink: false,
+					body: "community-based research, public health, digital documentary, visual art, nail polish."
+				},
+				{	
+					id: "aboutMeParagraph03",
+					lead: "Favorite song",
+					includesLink: true,
+					body: [
+						{
+							preLinkText: "Right now, it's ",
+							linkIsInternalLink: false,
+							linkText: `"Cherry" (new window)`,
+							linkUrl: "https://www.youtube.com/watch?v=wn5YFnrD1u8",
+							postLinkText: " by Rina Sawayama.",
+						}
+					]
+				}
+			],
+			links: [
+				{
+					"isInternalLink": false,
+					"id": "aboutLink01",
+					"text": "My CV as a Published Google Doc",
+					"icon": "document",
+					"path": "https://docs.google.com/document/d/e/2PACX-1vSMS4XleOQlHUDp5mbn00Z29u8Pbg3EhHyVDzDJag1cWMi6uTh6vCOnqk6BYG7L16BAlchdHuvuq5zb/pub"
+				},
+				{
+					"isInternalLink": false,
+					"id": "aboutLink02",
+					"text": "My Vimeo Profile",
+					"icon": "video",
+					"path": "https://www.vimeo.com/user15152945"
+				},
+				{
+					"isInternalLink": false,
+					"id": "aboutLink03",
+					"text": "My GitHub Profile",
+					"icon": "code",
+					"path": "https://github.com/smendez92"
+				},
+				{
+					"isInternalLink": false,
+					"id": "aboutLink04",
+					"text": "My LinkedIn Profile",
+					"icon": "accountCircle",
+					"path": "https://www.linkedin.com/in/samuel-r-mendez/"
+				},
+			]
+		},
 		projectSections: [
 			{
 				"title": "Animated Films",
@@ -227,11 +289,11 @@ class HomePage extends Component {
 				]
 			},
 			{
-				"title": "Public Health",
-				"id": "healthSection",
+				"title": "Education",
+				"id": "eduSection",
 				"projects": [
 					{
-						"id": "health01",
+						"id": "edu01",
 						"title": "Health for All",
 						"icon": "./assets/images/homepageIcons/homepage-icon-nlm.svg",
 						"iconAlt": "",
@@ -247,40 +309,6 @@ class HomePage extends Component {
 							}
 						]
 					},
-					{
-						"id": "health03",
-						"title": "Social Media Use by Community-Based Organizations",
-						"icon": "./assets/images/homepageIcons/homepage-icon-media.svg",
-						"iconAlt": "",
-						"description": "A content analysis of social media content by community-based organizations conducting health outreach.",
-						"projectPagePath": "/projects/media",
-						"links": [
-							{
-								"isInternalLink": false,
-								"id": "health0302",
-								"text": "Research Article on BMC Public Health",
-								"icon": "website",
-								"path": "https://bmcpublichealth.biomedcentral.com/articles/10.1186/1471-2458-13-1129"
-							}
-						]
-					},
-					{
-						"id": "health04",
-						"title": "Bodegas Saludables",
-						"icon": "./assets/images/homepageIcons/homepage-icon-lmhtf.svg",
-						"iconAlt": "",
-						"description": "Video explaining a community research partner's public health program.",
-						"projectPagePath": "/projects/lmhtf",
-						"links": [
-							{
-								"isInternalLink": false,
-								"id": "health0402",
-								"text": "'Bodegas Saludables'excerpt on Vimeo",
-								"icon": "video",
-								"path": "http://www.vimeo.com/231980215"
-							}
-						]
-					}
 				]
 			},
 			{
@@ -338,7 +366,7 @@ class HomePage extends Component {
 				]
 			},
 			{
-				"title": "Videos",
+				"title": "Video",
 				"id": "videoSection",
 				"projects": [
 					{
@@ -412,6 +440,23 @@ class HomePage extends Component {
 								"path": "./assets/documents/Why+Essay+Planning+Worksheet.pdf"
 							}
 						]
+					},
+					{
+						"id": "video04",
+						"title": "Bodegas Saludables",
+						"icon": "./assets/images/homepageIcons/homepage-icon-lmhtf.svg",
+						"iconAlt": "",
+						"description": "Video explaining a community research partner's public health program.",
+						"projectPagePath": "/projects/lmhtf",
+						"links": [
+							{
+								"isInternalLink": false,
+								"id": "health0402",
+								"text": "'Bodegas Saludables'excerpt on Vimeo",
+								"icon": "video",
+								"path": "http://www.vimeo.com/231980215"
+							}
+						]
 					}
 				]
 			},
@@ -455,11 +500,11 @@ class HomePage extends Component {
 	highlightsSectionRef = React.createRef();
 	navbarRef = React.createRef();
 	animationSectionRef = React.createRef();
-	healthSectionRef = React.createRef();
+	eduSectionRef = React.createRef();
 	webSectionRef = React.createRef();
 	videoSectionRef = React.createRef();
 	artSectionRef = React.createRef();
-	projectSectionRefs = [this.animationSectionRef, this.healthSectionRef, this.webSectionRef, this.videoSectionRef, this.artSectionRef]
+	projectSectionRefs = [this.animationSectionRef, this.eduSectionRef, this.webSectionRef, this.videoSectionRef, this.artSectionRef]
 
 	componentDidMount() {
 		document.title = "Samuel Animates";
@@ -490,9 +535,9 @@ class HomePage extends Component {
 			this.animationSectionRef.current.scrollIntoView();
 			this.animationSectionRef.current.focus();
 		};
-		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkHealth"){
-			this.healthSectionRef.current.scrollIntoView();
-			this.healthSectionRef.current.focus();
+		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkEdu"){
+			this.eduSectionRef.current.scrollIntoView();
+			this.eduSectionRef.current.focus();
 		};
 		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkWeb"){
 			this.webSectionRef.current.scrollIntoView();
@@ -566,6 +611,14 @@ class HomePage extends Component {
 						colorSchemeSuffix={ this.props.colorSchemeSuffix }
 						materialIconFill={ this.props.materialIconFill }
 						ref={ this.highlightsSectionRef }
+					/>
+					<HomepageWritingSection
+						colorSchemeSuffix={ this.props.colorSchemeSuffix }
+						quote={ this.projectData.aboutMeSection.quote }
+						links={ this.projectData.aboutMeSection.links }
+						materialIconFill={ this.props.materialIconFill }
+						paragraphs={ this.projectData.aboutMeSection.paragraphs }
+						ref={ this.aboutSectionRef }
 					/>
 					{ this.projectData.projectSections.map((projectSection, index) =>
 						<HomepageProjectsSection

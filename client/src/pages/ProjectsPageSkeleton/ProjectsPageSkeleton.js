@@ -20,16 +20,14 @@ import HerProject from "../../pages/HerProject";
 import HernandezProject from "../../pages/HernandezProject";
 import JolietProject from "../../pages/JolietProject";
 import LmhtfProject from "../../pages/LmhtfProject";
-import MediaProject from "../../pages/MediaProject";
 import PlaysProject from "../../pages/PlaysProject";
 import SaigonProject from "../../pages/SaigonProject";
 import TarotProject from "../../pages/TarotProject";
-import TeenyProject from "../../pages/TeenyProject";
 import UnfundableProject from "../../pages/UnfundableProject";
 import WalksProject from "../../pages/WalksProject";
 import WhyuProject from "../../pages/WhyuProject";
 import WikiProject from "../../pages/WikiProject";
-import YucaProject from "../../pages/YucaProject";
+import WritingProject from "../../pages/WritingProject";
 
 class ProjectsPageSkeleton extends Component {
 
@@ -189,7 +187,7 @@ class ProjectsPageSkeleton extends Component {
 								)}/>
 								<Route exact path='/projects/healthforall' render={props => (
 									<HealthforallProject
-										colorSchemeNameRoot="healthProjectPage-color-scheme-"
+										colorSchemeNameRoot="eduProjectPage-color-scheme-"
 										colorSchemeSuffix={ this.props.colorSchemeSuffix }
 										doNotTrack={ this.props.doNotTrack }
 										fontSizeLevel={ this.props.fontSizeLevel }
@@ -237,20 +235,9 @@ class ProjectsPageSkeleton extends Component {
 								)}/>
 								<Route exact path='/projects/lmhtf' render={props => (
 									<LmhtfProject
-										colorSchemeNameRoot="healthProjectPage-color-scheme-"
+										colorSchemeNameRoot="videoProjectPage-color-scheme-"
 										colorSchemeSuffix={ this.props.colorSchemeSuffix }
 										doNotTrack={ this.props.doNotTrack }
-										fontSizeLevel={ this.props.fontSizeLevel }
-										isMobileView={ this.props.isMobileView }
-										materialIconFill={ this.props.materialIconFill }
-										responsiveFlexEnding={ this.props.responsiveFlexEnding }
-										responsiveWidth={ this.props.responsiveWidth }
-									/>
-								)}/>
-								<Route exact path='/projects/media' render={props => (
-									<MediaProject
-										colorSchemeNameRoot="healthProjectPage-color-scheme-"
-										colorSchemeSuffix={ this.props.colorSchemeSuffix }
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
@@ -293,21 +280,9 @@ class ProjectsPageSkeleton extends Component {
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
-								<Route exact path='/projects/teeny' render={props => (
-									<TeenyProject
-										colorSchemeNameRoot="videoProjectPage-color-scheme-"
-										colorSchemeSuffix={ this.props.colorSchemeSuffix }
-										doNotTrack={ this.props.doNotTrack }
-										fontSizeLevel={ this.props.fontSizeLevel }
-										isMobileView={ this.props.isMobileView }
-										materialIconFill={ this.props.materialIconFill }
-										responsiveFlexEnding={ this.props.responsiveFlexEnding }
-										responsiveWidth={ this.props.responsiveWidth }
-									/>
-								)}/>
 								<Route exact path='/projects/unfundable' render={props => (
 									<UnfundableProject
-										colorSchemeNameRoot="healthProjectPage-color-scheme-"
+										colorSchemeNameRoot="eduProjectPage-color-scheme-"
 										colorSchemeSuffix={ this.props.colorSchemeSuffix }
 										doNotTrack={ this.props.doNotTrack }
 										fontSizeLevel={ this.props.fontSizeLevel }
@@ -353,9 +328,9 @@ class ProjectsPageSkeleton extends Component {
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
-								<Route exact path='/projects/yuca' render={props => (
-									<YucaProject
-										colorSchemeNameRoot="filmProjectPage-color-scheme-"
+								<Route exact path='/projects/writing' render={props => (
+									<WritingProject
+										colorSchemeNameRoot="eduProjectPage-color-scheme-"
 										colorSchemeSuffix={ this.props.colorSchemeSuffix }
 										doNotTrack={ this.props.doNotTrack }
 										fontSizeLevel={ this.props.fontSizeLevel }
