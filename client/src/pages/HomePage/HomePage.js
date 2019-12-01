@@ -152,65 +152,50 @@ class HomePage extends Component {
 			]
 		},
 		writingSection:{
-			quote: "I could trace back about 80% of my humor to specific SpongeBob episodes.",
 			paragraphs: [
-				{
-					id: "aboutMeParagraph01",
-					lead: "In short",
-					includesLink: false,
-					body: "I make animations. I'm a community-based researcher. I do front end web development, with an eye on web accessibility. I see the privilege of having chances to gain these skills; I want to use these chances to open up more seats at the table."
-				},
 				{	
-					id: "aboutMeParagraph02",
-					lead: "Interests",
-					includesLink: false,
-					body: "community-based research, public health, digital documentary, visual art, nail polish."
-				},
-				{	
-					id: "aboutMeParagraph03",
-					lead: "Favorite song",
+					id: "writingParagraph01",
+					lead: "Sundance VR",
 					includesLink: true,
 					body: [
 						{
-							preLinkText: "Right now, it's ",
+							preLinkText: "2019. IndieWire.",
 							linkIsInternalLink: false,
-							linkText: `"Cherry" (new window)`,
-							linkUrl: "https://www.youtube.com/watch?v=wn5YFnrD1u8",
-							postLinkText: " by Rina Sawayama.",
+							linkText: `"Sundance VR: The 2019 Festival Showed That the Future Is Not Passive Viewing"`,
+							linkUrl: "https://www.indiewire.com/2019/02/sundance-new-frontiers-2019-vr-mechanical-souls-1202042700/",
+							postLinkText: ".",
+						}
+					]
+				},
+				{	
+					id: "writingParagraph02",
+					lead: "Planned Parenthood",
+					includesLink: true,
+					body: [
+						{
+							preLinkText: "2018. Frontiers in Women's Health.",
+							linkIsInternalLink: false,
+							linkText: `"The only place I know that I can send patients to": Chicago-area generalist providers’ perceptions of Planned Parenthood`,
+							linkUrl: "https://www.oatext.com/the-only-place-i-know-that-i-can-send-patients-to-chicago-area-generalist-providers-perceptions-of-planned-parenthood.php",
+							postLinkText: ".",
+						}
+					]
+				},
+				{	
+					id: "writingParagraph03",
+					lead: "Social Media",
+					includesLink: true,
+					body: [
+						{
+							preLinkText: "2013. BMC Public Health.",
+							linkIsInternalLink: false,
+							linkText: `"Social media use by community-based organizations conducting health promotion: a content analysis"`,
+							linkUrl: "https://bmcpublichealth.biomedcentral.com/articles/10.1186/1471-2458-13-1129",
+							postLinkText: ".",
 						}
 					]
 				}
 			],
-			links: [
-				{
-					"isInternalLink": false,
-					"id": "aboutLink01",
-					"text": "My CV as a Published Google Doc",
-					"icon": "document",
-					"path": "https://docs.google.com/document/d/e/2PACX-1vSMS4XleOQlHUDp5mbn00Z29u8Pbg3EhHyVDzDJag1cWMi6uTh6vCOnqk6BYG7L16BAlchdHuvuq5zb/pub"
-				},
-				{
-					"isInternalLink": false,
-					"id": "aboutLink02",
-					"text": "My Vimeo Profile",
-					"icon": "video",
-					"path": "https://www.vimeo.com/user15152945"
-				},
-				{
-					"isInternalLink": false,
-					"id": "aboutLink03",
-					"text": "My GitHub Profile",
-					"icon": "code",
-					"path": "https://github.com/smendez92"
-				},
-				{
-					"isInternalLink": false,
-					"id": "aboutLink04",
-					"text": "My LinkedIn Profile",
-					"icon": "accountCircle",
-					"path": "https://www.linkedin.com/in/samuel-r-mendez/"
-				},
-			]
 		},
 		projectSections: [
 			{
@@ -383,30 +368,6 @@ class HomePage extends Component {
 								"text": "SCC Promo Video on Vimeo",
 								"icon": "video",
 								"path": "http://www.vimeo.com/221224584"
-							}
-						]
-					},
-					{
-						"id": "video02",
-						"title": "Artemis I Fundraiser Video",
-						"icon": "./assets/images/homepageIcons/homepage-icon-artemis.svg",
-						"iconAlt": "",
-						"description": "A fundraising video for a high-altitude balloon launch by South Side Hackerspace: Chicago to document the 2017 solar eclipse.",
-						"projectPagePath": "/projects/artemis",
-						"links": [
-							{
-								"isInternalLink": false,
-								"id": "video0202",
-								"text": "'Artemis I' Video on Vimeo",
-								"icon": "video",
-								"path": "http://www.vimeo.com/223448852"
-							},
-							{
-								"isInternalLink": false,
-								"id": "video0203",
-								"text": "'Artemis I' Fundraising Campaign",
-								"icon": "website",
-								"path": "https://www.generosity.com/education-fundraising/experience-the-2017-eclipse-with-us-artemis-i"
 							}
 						]
 					},
@@ -614,10 +575,8 @@ class HomePage extends Component {
 					/>
 					<HomepageWritingSection
 						colorSchemeSuffix={ this.props.colorSchemeSuffix }
-						quote={ this.projectData.aboutMeSection.quote }
-						links={ this.projectData.aboutMeSection.links }
 						materialIconFill={ this.props.materialIconFill }
-						paragraphs={ this.projectData.aboutMeSection.paragraphs }
+						paragraphs={ this.projectData.writingSection.paragraphs }
 						ref={ this.aboutSectionRef }
 					/>
 					{ this.projectData.projectSections.map((projectSection, index) =>

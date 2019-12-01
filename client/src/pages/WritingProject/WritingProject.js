@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./WritingProject.css";
 import SamePageNavBar from '../../components/SamePageNavBar';
 import SamePageNavBarMobile from '../../components/SamePageNavBarMobile';
+import PlaysAndWritingsContainer from '../../components/PlaysAndWritingsContainer';
 import ProjectPageMainSections from '../../components/ProjectPageMainSections';
 import ProjectHeader from '../../components/ProjectHeader'
 
@@ -17,7 +18,7 @@ class WritingProject extends Component {
 	}
 
 	projectInfo = {
-		title: "WhyUEdu Info Series",
+		title: "Writings",
 		synopsis:{
 			mediaType: "video",
 			blurb: "An experimental documentary. A cross between two marks. Full film below.",
@@ -43,28 +44,29 @@ class WritingProject extends Component {
 			{
 				id: "writingHighlights01",
 				lead: "Goal",
-				body: "Create resources to help Chinese high school students in the US college application process. Create material that could double as promotion for Dipont Education Management's online pilot program, 'WhyUEdu'."
+				body: "I write to share my work with different audiences. Sometimes I write to share my research with other academics. Sometimes I write for other artists."
 			},
 			{
 				id: "writingHighlights02",
 				lead: "Outcome",
-				body: "2 distinct sets of video and text resources about US college application essays and interviews.The videos received over 36,000 views on the QQ Video mobile platform."
+				body: "So far I've published my work in academic journals and arts websites."
 			}
 		],
 		overview: [
 			{
 				id: "writingOverview02",
 				lead: "Process",
-				body: "First, I interviewed the company's college counselors. I wanted to see what common pitfalls were in the US college application process. Then, I narrowed the scope of the project down to 2 topics that could be covered in short videos and worksheets. I decided to create 2 videos about interviews. One was about self-introductions in video interviews. The other was about common interview mistakes to avoid. I also decided to make 2 videos about admissions essays. One was a counselor critiquing an example essay filled with common mistakes. The other showed viewers how to use info from a college website write about the school's 'fit' for them. All 4 of these videos came with links to related worksheets to help draw people to the WhyUEdu website. I led a team of 6 to complete this project. Together, we did background research, wrote scripts, made subtitles, and made worksheets. I personally filmed and edited the videos."
+				body: "Honestly, writing is still a painful process for me. But it's getting better every time I try. I try to get feedback early and often. Sometimes that works better than others. I outline heavily and slowly fill it in. I constantly move paragraphs around. I switch between structural edits and changes in wording. At the and I try to simplify my language as best I can. Sometimes that works better than others."
 			}
 		]
 		
 	}
-	writingNavbarLinks = [{title:"Synopsis", id:"writingNavBarLinkSynopsis"},{title:"Highlights", id:"writingNavBarLinkHighlights"},{title:"Overview", id:"writingNavBarLinkOverview"}];
+	writingNavbarLinks = [{title:"Synopsis", id:"writingNavBarLinkSynopsis"},{title:"Highlights", id:"writingNavBarLinkHighlights"},{title:"Overview", id:"writingNavBarLinkOverview"},{title:"The Writings", id:"writingNavBarLinkWritingsContainer"}];
 	writingSynopsisSectionRef = React.createRef();
 	writingHighlightsSectionRef = React.createRef();
 	writingNavbarRef = React.createRef();
 	writingOverviewSectionRef = React.createRef();
+	writingWritingsContainerRef = React.createRef();
 
 	componentDidMount() {
 		document.title = "Writing Projects Page";
@@ -88,6 +90,10 @@ class WritingProject extends Component {
 		if(event.target.attributes.getNamedItem("buttonId").value === "writingNavBarLinkOverview"){
 			this.writingOverviewSectionRef.current.scrollIntoView();
 			this.writingOverviewSectionRef.current.focus();
+		};
+		if(event.target.attributes.getNamedItem("buttonId").value === "writingNavBarLinkWritingsContainer"){
+			this.writingWritingsContainerRef.current.scrollIntoView();
+			this.writingWritingsContainerRef.current.focus();
 		};
 	}
 
@@ -113,17 +119,36 @@ class WritingProject extends Component {
 						/>
 					</div>
 				}
-				<ProjectPageMainSections
-					colorSchemeSuffix={ this.props.colorSchemeSuffix }
-					doNotTrack={ this.props.doNotTrack }
-					float={ this.props.responsiveFloat }
-					isMobile={ this.props.isMobileView }
-					width={ this.props.responsiveWidth }
-					highlightsSectionRef={ this.writingHighlightsSectionRef }
-					projectInfo={ this.projectInfo }
-					overviewSectionRef={ this.writingOverviewSectionRef }
-					synopsisSectionRef={ this.writingSynopsisSectionRef }
-				/>
+				<div className="display-flex flex-direction-column">
+					<ProjectPageMainSections
+						colorSchemeSuffix={ this.props.colorSchemeSuffix }
+						doNotTrack={ this.props.doNotTrack }
+						float={ this.props.responsiveFloat }
+						isMobile={ this.props.isMobileView }
+						width={ this.props.responsiveWidth }
+						highlightsSectionRef={ this.writingHighlightsSectionRef }
+						projectInfo={ this.projectInfo }
+						overviewSectionRef={ this.writingOverviewSectionRef }
+						synopsisSectionRef={ this.writingSynopsisSectionRef }
+					/>
+					<PlaysAndWritingsContainer
+						ref={ this.writingWritingsContainerRef }
+						colorSchemeSuffix={ this.props.colorSchemeSuffix }
+						title={ "Writings" }
+						lede={ "writing" }
+					>
+						<div className="display-flex flex-direction-column padding-bottom-p25em padding-left-p5em padding-right-p5em padding-top-p25em">
+							<ul className="list-style-square padding-left-1em">
+								<li>
+									A
+								</li>
+								<li>
+									B
+								</li>
+							</ul>
+						</div>
+					</PlaysAndWritingsContainer>
+				</div>				
 			</div>
 		);
   	}

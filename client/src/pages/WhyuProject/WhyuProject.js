@@ -20,7 +20,7 @@ class WhyuProject extends Component {
 		title: "WhyUEdu Info Series",
 		synopsis:{
 			mediaType: "video",
-			blurb: "An experimental documentary. A cross between two marks. Full film below.",
+			blurb: "A hybrid informational and promotional video series.",
 			embed: {
 				url: "https://player.vimeo.com/video/128663374",
 				title: "WhyUEdu informational series excerpt on Vimeo."

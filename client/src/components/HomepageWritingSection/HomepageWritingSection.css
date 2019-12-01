@@ -33,8 +33,17 @@
 .height-100pc{
 	height: 100%;
 }
+.list-style-square{
+	list-style: square;
+}
 .margin-auto{
 	margin: auto;
+}
+.padding-bottom-p5em{
+	padding-bottom: 0.5em;
+}
+.padding-bottom-1em{
+	padding-bottom: 1em;
 }
 .padding-left-p5em{
 	padding-left: .5em;
@@ -47,6 +56,9 @@
 }
 .padding-right-3em{
 	padding-right: 3em;
+}
+.padding-top-1em{
+	padding-top: 1em;
 }
 .padding-top-2em{
 	padding-top: 2em;

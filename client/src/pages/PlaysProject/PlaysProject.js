@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "./PlaysProject.css";
 import SamePageNavBar from '../../components/SamePageNavBar';
 import SamePageNavBarMobile from '../../components/SamePageNavBarMobile';
-import PlaysContainer from '../../components/PlaysContainer';
+import PlaysAndWritingsContainer from '../../components/PlaysAndWritingsContainer';
 import PlaysContainerImposterSyndrome from '../../components/PlaysContainerImpostorSyndrome'
 import PlaysContainerNotesOf from '../../components/PlaysContainerNotesOf';
 import PlaysContainerNecessaryToThe from '../../components/PlaysContainerNecessaryToThe/PlaysContainerNecessaryToThe';
@@ -122,54 +122,70 @@ class PlaysProject extends Component {
 						overviewSectionRef={ this.playsOverviewSectionRef }
 						synopsisSectionRef={ this.playsSynopsisSectionRef }
 					/>
-					<PlaysContainer
+					<PlaysAndWritingsContainer
 						ref = { this.playsPlaysContainerRef }
 						colorSchemeSuffix={ this.props.colorSchemeSuffix }
+						title={ "Plays" }
+						lede={ "play" }
 					>
-						<PlaysContainerNotesOf
-							isMobile={ this.props.isMobileView }
-							colorSchemeSuffix={ this.props.colorSchemeSuffix }
-							responsiveFlexEnding={ this.props.responsiveFlexEnding }
-							width={ this.props.responsiveWidth }
-						/>
-						<PlaysContainerYouWillRemember
-							isMobile={ this.props.isMobileView }
-							colorSchemeSuffix={ this.props.colorSchemeSuffix }
-							doNotTrack={ this.props.doNotTrack }
-							responsiveFlexEnding={ this.props.responsiveFlexEnding }
-							width={ this.props.responsiveWidth }
-						/>
-						<PlaysContainerNecessaryDetails
-							isMobile={ this.props.isMobileView }
-							colorSchemeSuffix={ this.props.colorSchemeSuffix }
-							responsiveFlexEnding={ this.props.responsiveFlexEnding }
-							width={ this.props.responsiveWidth }	
-						/>
-						<PlaysContainerNecessaryToThe
-							isMobile={ this.props.isMobileView }
-							colorSchemeSuffix={ this.props.colorSchemeSuffix }
-							responsiveFlexEnding={ this.props.responsiveFlexEnding }
-							width={ this.props.responsiveWidth }
-						/>
-						<PlaysContainerTrustIssues
-							isMobile={ this.props.isMobileView }
-							colorSchemeSuffix={ this.props.colorSchemeSuffix }
-							responsiveFlexEnding={ this.props.responsiveFlexEnding }
-							width={ this.props.responsiveWidth }	
-						/>
-						<PlaysContainerImposterSyndrome
-							isMobile={ this.props.isMobileView }
-							colorSchemeSuffix={ this.props.colorSchemeSuffix }
-							responsiveFlexEnding={ this.props.responsiveFlexEnding }
-							width={ this.props.responsiveWidth }
-						/>
-						<PlaysContainerTheFuture
-							isMobile={ this.props.isMobileView }
-							colorSchemeSuffix={ this.props.colorSchemeSuffix }
-							responsiveFlexEnding={ this.props.responsiveFlexEnding }
-							width={ this.props.responsiveWidth }	
-						/>	
-					</PlaysContainer>
+						<ul>
+							<li>
+								<PlaysContainerNotesOf
+									isMobile={ this.props.isMobileView }
+									colorSchemeSuffix={ this.props.colorSchemeSuffix }
+									responsiveFlexEnding={ this.props.responsiveFlexEnding }
+									width={ this.props.responsiveWidth }
+								/>								
+							</li>
+								<PlaysContainerYouWillRemember
+									isMobile={ this.props.isMobileView }
+									colorSchemeSuffix={ this.props.colorSchemeSuffix }
+									doNotTrack={ this.props.doNotTrack }
+									responsiveFlexEnding={ this.props.responsiveFlexEnding }
+									width={ this.props.responsiveWidth }
+								/>
+							<li>
+								<PlaysContainerNecessaryDetails
+									isMobile={ this.props.isMobileView }
+									colorSchemeSuffix={ this.props.colorSchemeSuffix }
+									responsiveFlexEnding={ this.props.responsiveFlexEnding }
+									width={ this.props.responsiveWidth }	
+								/>								
+							</li>
+							<li>
+								<PlaysContainerNecessaryToThe
+									isMobile={ this.props.isMobileView }
+									colorSchemeSuffix={ this.props.colorSchemeSuffix }
+									responsiveFlexEnding={ this.props.responsiveFlexEnding }
+									width={ this.props.responsiveWidth }
+								/>								
+							</li>
+							<li>
+								<PlaysContainerTrustIssues
+									isMobile={ this.props.isMobileView }
+									colorSchemeSuffix={ this.props.colorSchemeSuffix }
+									responsiveFlexEnding={ this.props.responsiveFlexEnding }
+									width={ this.props.responsiveWidth }	
+								/>								
+							</li>
+							<li>
+								<PlaysContainerImposterSyndrome
+									isMobile={ this.props.isMobileView }
+									colorSchemeSuffix={ this.props.colorSchemeSuffix }
+									responsiveFlexEnding={ this.props.responsiveFlexEnding }
+									width={ this.props.responsiveWidth }
+								/>
+							</li>
+							<li>
+								<PlaysContainerTheFuture
+									isMobile={ this.props.isMobileView }
+									colorSchemeSuffix={ this.props.colorSchemeSuffix }
+									responsiveFlexEnding={ this.props.responsiveFlexEnding }
+									width={ this.props.responsiveWidth }	
+								/>
+							</li>
+						</ul>	
+					</PlaysAndWritingsContainer>
 				</div>
 			</div>
 		);

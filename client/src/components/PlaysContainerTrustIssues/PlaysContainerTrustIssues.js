@@ -11,49 +11,6 @@ class PlaysContainerTrustIssues extends Component{
 		cssDisplay: "display-none",
 	}
 
-	placeholder = [
-				{
-					id: "plays01",
-					buttonId: "playsButton01",
-					expanded: "false",
-					shortTitle: `"Necessary Details"`,
-					fullTitle: "Necessary Details",
-					buttonTextLead: "Click to show "
-				},
-				{
-					id: "plays02",
-					buttonId: "playsButton02",
-					expanded: "false",
-					shortTitle: `"Necessary to the..."`,
-					fullTitle: `"Necessary to the security of a free state..."`,
-					buttonTextLead: "Click to show "
-				},
-				{
-					id: "plays03",
-					buttonId: "playsButton03",
-					expanded: "false",
-					shortTitle: `"You will remember..."`,
-					fullTitle: "",
-					buttonTextLead: "Click to show "
-				},
-				{
-					id: "plays04",
-					buttonId: "playsButton04",
-					expanded: "false",
-					shortTitle: `"Trust Issues"`,
-					fullTitle: "Trust Issues",
-					buttonTextLead: "Click to show "
-				},
-				{
-					id: "plays05",
-					buttonId: "playsButton05",
-					expanded: "false",
-					shortTitle: `"...the Future..."`,
-					fullTitle: "What do you do when the future looks just like the past?",
-					buttonTextLead: "Click to show "
-				}
-			]
-
 	playInfo = {
 		shortTitle: `"Trust Issues"`,
 		buttonId: "playsButtonNotes",

@@ -1,3 +1,9 @@
+.display-flex{
+	display: flex;
+}
+.flex-direction-column{
+	flex-direction: column;
+}
 .left-0{
 	left: 0;
 }
@@ -7,8 +13,14 @@
 .padding-left-p25em{
 	padding-left: 0.25em;
 }
+.padding-left-p5em{
+	padding-left: 0.5em;
+}
 .padding-right-p25em{
 	padding-right: 0.25em;
+}
+.padding-right-p5em{
+	padding-right: 0.5em;
 }
 .padding-top-p5em{
 	padding-top: 0.5em;

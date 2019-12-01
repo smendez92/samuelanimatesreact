@@ -20,7 +20,7 @@ const Header = props => (
 					<Button
 						buttonType="contrastToggle"
 						onClickFunction={ props.handleButtonClick }
-						text="Click to toggle color contrast"
+						text="Toggle dark mode."
 						colorSchemeSuffix={ props.colorSchemeSuffix }
 						tabIndex="0"
 					/>
@@ -31,7 +31,7 @@ const Header = props => (
 					<Button
 						buttonType="fontSizeToggle"
 						onClickFunction={ props.handleButtonClick }
-						text="Click to toggle font size"
+						text="Toggle font size."
 						colorSchemeSuffix={ props.colorSchemeSuffix }
 						tabIndex="0"
 					/>
