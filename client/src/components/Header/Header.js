@@ -5,12 +5,12 @@ import ButtonContainer from "../ButtonContainer";
 
 const Header = props => (
 	<header className={ "header-color-scheme-" + props.colorSchemeSuffix + " margin-auto padding-bottom-1em padding-top-1em text-center width-85pc " + props.mainPaddingLeftClassName }>
-		<div className="align-items-center justify-content-center display-flex">
+		<div className="align-items-center display-flex flex-direction-row flex-wrap justify-content-center text-center">
 			{ props.colorSchemeSuffix==="default" &&
-				<img alt="Samuel Animates: Portfolio Page" src="../assets/images/branding/logo.svg" className="display-inline height-4p5em padding-left-p25em padding-right-p25em width-auto"/>
+				<img alt="Samuel Animates: Portfolio Page" src="../assets/images/branding/logo.svg" className="display-inline height-4p5em padding-bottom-p25em padding-left-p25em padding-right-p25em width-auto"/>
 			}
 			{ props.colorSchemeSuffix==="highContrast" &&
-				<img alt="Samuel Animates: Portfolio Page" src="../assets/images/branding/logo-inverse.svg" className="display-inline height-4p5em padding-left-p25em padding-right-p25em width-auto"/>
+				<img alt="Samuel Animates: Portfolio Page" src="../assets/images/branding/logo-inverse.svg" className="display-inline height-4p5em padding-bottom-p25em padding-left-p25em padding-right-p25em width-auto"/>
 			}
 			<h1 ref={ props.headerRef } tabIndex="0" className="display-inline padding-left-p25em padding-right-p25em"><span className="font-size-p4em">By </span>Samuel R. Mendez</h1>
 		</div>
