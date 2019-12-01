@@ -15,7 +15,7 @@ class HomePage extends Component {
 	state = { 
 		navbarClassName: "margin-auto margin-bottom-2em",
 		navbarLinksClassName: "float-left font-size-p85em padding-left-0 text-center",
-		navbarLinks: [{title:"About", id:"navBarLinkAbout"},{title:"Highlights", id:"navBarLinkHighlights"},{title:"Animation", id:"navBarLinkAnimation"},{title:"Edu", id:"navBarLinkEdu"},{title:"Web", id:"navBarLinkWeb"},{title:"Video", id:"navBarLinkVideo"},{title:"Art", id:"navBarLinkArt"}]
+		navbarLinks: [{title:"About", id:"navBarLinkAbout"},{title:"Highlights", id:"navBarLinkHighlights"},{title:"Writing", id:"navBarLinkWriting"},{title:"Animation", id:"navBarLinkAnimation"},{title:"Edu", id:"navBarLinkEdu"},{title:"Web", id:"navBarLinkWeb"},{title:"Video", id:"navBarLinkVideo"},{title:"Art", id:"navBarLinkArt"}]
 	};
 
 	projectData = { 
@@ -36,15 +36,15 @@ class HomePage extends Component {
 				},
 				{	
 					id: "aboutMeParagraph03",
-					lead: "Favorite song",
+					lead: "Favorite music video",
 					includesLink: true,
 					body: [
 						{
 							preLinkText: "Right now, it's ",
 							linkIsInternalLink: false,
-							linkText: `"Cherry" (new window)`,
-							linkUrl: "https://www.youtube.com/watch?v=wn5YFnrD1u8",
-							postLinkText: " by Rina Sawayama.",
+							linkText: `"Nobody"`,
+							linkUrl: "https://www.youtube.com/watch?v=qooWnw5rEcI",
+							postLinkText: " by Mitski.",
 						}
 					]
 				}
@@ -459,6 +459,7 @@ class HomePage extends Component {
 	
 	aboutSectionRef = React.createRef();
 	highlightsSectionRef = React.createRef();
+	writingSectionRef = React.createRef();
 	navbarRef = React.createRef();
 	animationSectionRef = React.createRef();
 	eduSectionRef = React.createRef();
@@ -488,9 +489,9 @@ class HomePage extends Component {
 			this.highlightsSectionRef.current.scrollIntoView();
 			this.highlightsSectionRef.current.focus();
 		};
-		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkNews"){
-			this.newsSectionRef.current.scrollIntoView();
-			this.newsSectionRef.current.focus();
+		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkWriting"){
+			this.writingSectionRef.current.scrollIntoView();
+			this.writingSectionRef.current.focus();
 		};
 		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkAnimation"){
 			this.animationSectionRef.current.scrollIntoView();
@@ -577,7 +578,7 @@ class HomePage extends Component {
 						colorSchemeSuffix={ this.props.colorSchemeSuffix }
 						materialIconFill={ this.props.materialIconFill }
 						paragraphs={ this.projectData.writingSection.paragraphs }
-						ref={ this.aboutSectionRef }
+						ref={ this.writingSectionRef }
 					/>
 					{ this.projectData.projectSections.map((projectSection, index) =>
 						<HomepageProjectsSection

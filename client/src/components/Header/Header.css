@@ -6,14 +6,26 @@
 	background-color: rgb(3,3,3);
 	color: rgb(251,251,251);
 }
+.align-items-center{
+	align-items: center;
+}
+.display-flex{
+	display: flex;
+}
 .font-size-p4em{
 	font-size: 0.4em;
 }
 .font-size-p85em{
 	font-size: 0.85em;
 }
-.height-2p75em{
-	height: 2.75em;
+.height-4p5em{
+	height: 4.5em;
+}
+.justify-content-center{
+	justify-content: center;
+}
+.padding-bottom-p5em{
+	padding-bottom: 0.5em;
 }
 .padding-bottom-1em{
 	padding-bottom: 1em;

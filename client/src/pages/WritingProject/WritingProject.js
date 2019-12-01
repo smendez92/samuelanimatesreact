@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import "./WritingProject.css";
+import GenericFloatingSection from '../../components/GenericFloatingSection';
 import SamePageNavBar from '../../components/SamePageNavBar';
 import SamePageNavBarMobile from '../../components/SamePageNavBarMobile';
-import PlaysAndWritingsContainer from '../../components/PlaysAndWritingsContainer';
 import ProjectPageMainSections from '../../components/ProjectPageMainSections';
-import ProjectHeader from '../../components/ProjectHeader'
+import ProjectHeader from '../../components/ProjectHeader';
+import WritingItem from '../../components/WritingItem';
 
 class WritingProject extends Component {
 	state = {
@@ -20,25 +21,14 @@ class WritingProject extends Component {
 	projectInfo = {
 		title: "Writings",
 		synopsis:{
-			mediaType: "video",
-			blurb: "An experimental documentary. A cross between two marks. Full film below.",
+			mediaType: "photo",
+			blurb: "A mix of research articles, interviews, and reviews.",
 			embed: {
-				url: "https://player.vimeo.com/video/128663374",
-				title: "WhyUEdu informational series excerpt on Vimeo."
+				src: "../assets/images/projectPhotos/writing.svg",
+				alt: "A close-up of typed notes on index cards. The top card reads, 'These cards are just for you. Feel free to tell the rest of the audience whatever you think they should know, but don't let anyone else see these. NEXT CARD.'"
 			},
-			year: "2014",
-			specs: [
-				{
-					id: "writingSpecs01",
-					lead: "Role",
-					body: "Director, editor, and project manager."
-				},
-				{
-					id: "writingSpecs02",
-					lead: "Specs",
-					body: "4 videos and 5 worksheets in simplified Chinese."
-				}
-			]
+			year: "2013 to present",
+			specs: []
 		},
 		highlights: [
 			{
@@ -58,9 +48,45 @@ class WritingProject extends Component {
 				lead: "Process",
 				body: "Honestly, writing is still a painful process for me. But it's getting better every time I try. I try to get feedback early and often. Sometimes that works better than others. I outline heavily and slowly fill it in. I constantly move paragraphs around. I switch between structural edits and changes in wording. At the and I try to simplify my language as best I can. Sometimes that works better than others."
 			}
-		]
-		
+		]		
 	}
+
+	writingsList = [
+		{
+			authors: "Mendez SR",
+			id: "writingsList04",
+			link: "https://immerse.news/four-feet-blind-date-bde31a7d06d",
+			publisher: "Immerse",
+			title: "Doing Inclusion, Making Strong VR Experiences",
+			year: "2019"
+		},
+		{
+			authors: "Mendez SR",
+			id: "writingsList03",
+			link: "https://www.indiewire.com/2019/02/sundance-new-frontiers-2019-vr-mechanical-souls-1202042700/",
+			publisher: "IndieWire",
+			title: "Sundance VR: The 2019 Festival Showed That the Future Is Not Passive Viewing",
+			year: "2019"
+		},
+		{
+			authors: "Mendez SR, Linton A, Tom L, & Simon M",
+			id: "writingsList02",
+			link: "https://doi.org/10.15761/FWH.1000153",
+			publisher: "Frontiers in Women's Health",
+			title: `"The only place I know that I can send patients to": Chicago-area generalist providers’ perceptions of Planned Parenthood `,
+			year: "2018"
+		},
+		{
+			authors: "Ramanadhan S, Mendez SR, Rao M, & Viswanath K",
+			id: "writingsList01",
+			link: "https://bmcpublichealth.biomedcentral.com/articles/10.1186/1471-2458-13-1129",
+			publisher: "BMC Public Health",
+			title: "Social media use by community-based organizations conducting health promotion: a content analysis",
+			year: "2013"
+		}
+
+	]
+
 	writingNavbarLinks = [{title:"Synopsis", id:"writingNavBarLinkSynopsis"},{title:"Highlights", id:"writingNavBarLinkHighlights"},{title:"Overview", id:"writingNavBarLinkOverview"},{title:"The Writings", id:"writingNavBarLinkWritingsContainer"}];
 	writingSynopsisSectionRef = React.createRef();
 	writingHighlightsSectionRef = React.createRef();
@@ -131,23 +157,38 @@ class WritingProject extends Component {
 						overviewSectionRef={ this.writingOverviewSectionRef }
 						synopsisSectionRef={ this.writingSynopsisSectionRef }
 					/>
-					<PlaysAndWritingsContainer
-						ref={ this.writingWritingsContainerRef }
-						colorSchemeSuffix={ this.props.colorSchemeSuffix }
-						title={ "Writings" }
-						lede={ "writing" }
-					>
-						<div className="display-flex flex-direction-column padding-bottom-p25em padding-left-p5em padding-right-p5em padding-top-p25em">
-							<ul className="list-style-square padding-left-1em">
-								<li>
-									A
-								</li>
-								<li>
-									B
-								</li>
-							</ul>
+					<div className="margin-auto width-100pc">
+						<div className="padding-left-p5em padding-right-p5em">
+							<GenericFloatingSection colorSchemeSuffix={ this.props.colorSchemeSuffix }>
+								<div className={ "color-inherit paddng-bottom-1em paddng-left-1em paddng-right-1em paddng-top-1em text-center writingProjectPageOverview-color-scheme-" + this.props.colorSchemeSuffix }> 
+									<div>
+										<h2 tabIndex="0" ref={ this.writingWritingsContainerRef }>The Writings!</h2>
+									</div>
+									<div className="padding-bottom-p5em padding-top-p5em text-left">
+										<div className="display-flex flex-direction-column padding-bottom-p25em padding-left-p5em padding-right-p5em padding-top-p25em">
+											<ul className="list-style-square padding-left-1em">
+											{ this.writingsList.map(writing =>
+												<li className="padding-bottom-p25em padding-top-p25em">
+													<WritingItem
+														authors={ writing.authors }
+														colorSchemeSuffix={ this.props.colorSchemeSuffix }
+														key={ writing.id }
+														link={ writing.link }
+														materialIconFill={this.props.materialIconFill}
+														publisher={ writing.publisher }
+														title={ writing.title }
+														year={ writing.year }
+													/>
+												</li>
+											)}
+											</ul>
+										</div>
+									</div>
+								</div>
+							</GenericFloatingSection>
 						</div>
-					</PlaysAndWritingsContainer>
+					</div>
+						
 				</div>				
 			</div>
 		);

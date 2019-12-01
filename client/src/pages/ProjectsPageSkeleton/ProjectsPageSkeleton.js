@@ -8,13 +8,10 @@ import MenuBarMobile from '../../components/MenuBarMobile';
 import NewPageNavBar from '../../components/NewPageNavBar';
 import NewPageNavBarMobile from '../../components/NewPageNavBarMobile';
 import AfterProject from "../../pages/AfterProject";
-import ApplesProject from "../../pages/ApplesProject";
-import ArtemisProject from "../../pages/ArtemisProject";
 import BodegaProject from "../../pages/BodegaProject";
 import BreakfastProject from "../../pages/BreakfastProject";
 import BusanProject from "../../pages/BusanProject";
 import DotsProject from "../../pages/DotsProject";
-import GiftpitchProject from "../../pages/GiftpitchProject";
 import HealthforallProject from "../../pages/HealthforallProject";
 import HerProject from "../../pages/HerProject";
 import HernandezProject from "../../pages/HernandezProject";
@@ -101,31 +98,6 @@ class ProjectsPageSkeleton extends Component {
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
-								
-								<Route exact path='/projects/apples' render={props => (
-									<ApplesProject
-										colorSchemeNameRoot="webProjectPage-color-scheme-"
-										colorSchemeSuffix={ this.props.colorSchemeSuffix }
-										doNotTrack={ this.props.doNotTrack }
-										fontSizeLevel={ this.props.fontSizeLevel }
-										isMobileView={ this.props.isMobileView }
-										materialIconFill={ this.props.materialIconFill }
-										responsiveFlexEnding={ this.props.responsiveFlexEnding }
-										responsiveWidth={ this.props.responsiveWidth }
-									/>
-								)}/>
-								<Route exact path='/projects/artemis' render={props => (
-									<ArtemisProject
-										colorSchemeNameRoot="videoProjectPage-color-scheme-"
-										colorSchemeSuffix={ this.props.colorSchemeSuffix }
-										doNotTrack={ this.props.doNotTrack }
-										fontSizeLevel={ this.props.fontSizeLevel }
-										isMobileView={ this.props.isMobileView }
-										materialIconFill={ this.props.materialIconFill }
-										responsiveFlexEnding={ this.props.responsiveFlexEnding }
-										responsiveWidth={ this.props.responsiveWidth }
-									/>
-								)}/>
 								<Route exact path='/projects/bodega' render={props => (
 									<BodegaProject
 										colorSchemeNameRoot="filmProjectPage-color-scheme-"
@@ -166,18 +138,6 @@ class ProjectsPageSkeleton extends Component {
 									<DotsProject
 										colorSchemeNameRoot="artProjectPage-color-scheme-"
 										colorSchemeSuffix={ this.props.colorSchemeSuffix }
-										fontSizeLevel={ this.props.fontSizeLevel }
-										isMobileView={ this.props.isMobileView }
-										materialIconFill={ this.props.materialIconFill }
-										responsiveFlexEnding={ this.props.responsiveFlexEnding }
-										responsiveWidth={ this.props.responsiveWidth }
-									/>
-								)}/>
-								<Route exact path='/projects/giftpitch' render={props => (
-									<GiftpitchProject
-										colorSchemeNameRoot="webProjectPage-color-scheme-"
-										colorSchemeSuffix={ this.props.colorSchemeSuffix }
-										doNotTrack={ this.props.doNotTrack }
 										fontSizeLevel={ this.props.fontSizeLevel }
 										isMobileView={ this.props.isMobileView }
 										materialIconFill={ this.props.materialIconFill }
