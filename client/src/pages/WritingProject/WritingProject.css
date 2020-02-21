@@ -16,6 +16,9 @@
 .left-0{
 	left: 0;
 }
+.list-style-type-none{
+	list-style-type: none;
+}
 .padding-bottom-p25em{
 	padding-bottom: 0.25em;
 }
@@ -51,6 +54,9 @@
 }
 .text-center{
 	text-align: center;
+}
+.text-indent-neg1p7em{
+	text-indent: -1.7em;
 }
 .text-left{
 	text-align: left;

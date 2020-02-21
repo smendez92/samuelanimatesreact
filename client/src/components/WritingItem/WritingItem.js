@@ -6,6 +6,7 @@ import LinkContainerWithGenericIcon from "../LinkContainerWithGenericIcon";
 const WritingItem = props => (
 
 	<div>
+		<span className="font-weight-700">{ props.lede }:</span>&nbsp;
 		{ props.year }. { props.authors }.&nbsp;
 		<LinkContainerWithGenericIcon
 			materialIconFill={ props.materialIconFill }

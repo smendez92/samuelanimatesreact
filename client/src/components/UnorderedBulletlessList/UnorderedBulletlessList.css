@@ -10,6 +10,9 @@
 .list-style-position-outside{
 	list-style-position: outside;
 }
+.list-style-type-none{
+	list-style-type: none;
+}
 .text-indent-neg1p7em{
 	text-indent: -1.7em;
 }
