@@ -17,7 +17,7 @@ const Footer = props => (
 			</p>
 			<h3 className="font-size-p9em padding-top-p25em">Credits & Code</h3>
 			<div>
-				I designed and coded this portfolio using React, Express, and Node. I used an example from Dave Ceddia to create my express server. I used an example from Corbin Davenport to check for Do Not Track requests across multiple browsers. Feel free to check out &nbsp;
+				I designed and coded this portfolio using React, Express, and Node. I used an example from Dave Ceddia to create my express server. I used an example from Corbin Davenport to check for Do Not Track requests across multiple browsers. Note I do not currently check for a Do Not Track setting in Internet Explorer 10 and earlier. Feel free to check out &nbsp;
 				<LinkContainerWithGenericIcon
 					materialIconFill={ props.materialIconFill }
 				>

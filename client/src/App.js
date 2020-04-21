@@ -30,7 +30,7 @@ class App extends Component {
 		this.updateIsMobileVariable();
 		
 		//The following "Do Not Track" request check logic is adapted from Corbin Davenport's example at https://dev.to/corbindavenport/how-to-correctly-check-for-do-not-track-with-javascript-135d
-		if (window.doNotTrack || navigator.doNotTrack || navigator.msDoNotTrack || 'msTrackingProtectionEnabled' in window.external) {
+		if (window.doNotTrack || navigator.doNotTrack || navigator.msDoNotTrack) {
 			if (window.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.doNotTrack === "1" || navigator.msDoNotTrack === "1") {
 				this.setState({doNotTrack:true});
 			} else {
