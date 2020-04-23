@@ -36,15 +36,15 @@ class HomePage extends Component {
 				},
 				{	
 					id: "aboutMeParagraph03",
-					lead: "Favorite music video",
+					lead: "Favorite song",
 					includesLink: true,
 					body: [
 						{
 							preLinkText: "Right now, it's ",
 							linkIsInternalLink: false,
-							linkText: `"Nobody"`,
-							linkUrl: "https://www.youtube.com/watch?v=qooWnw5rEcI",
-							postLinkText: " by Mitski.",
+							linkText: `"XS"`,
+							linkUrl: "https://www.youtube.com/watch?v=TO2c06p6m5w",
+							postLinkText: " by Rina Sawayama.",
 						}
 					]
 				}
@@ -85,32 +85,32 @@ class HomePage extends Component {
 			projects:	[
 				{
 					"id": "highlights01",
-					"title": "10 Days in Saigon",
-					"description": "A 10-week web series documenting wheelchair travel in Ho Chi Minh City, Vietnam.",
-					"icon": "./assets/images/homepageIcons/homepage-icon-saigon.svg",
-					"iconAlt": "'10 Days' logo: three overlayed Accessible Icons, suggesting fast forward movement.",
-					"projectPagePath": "/projects/saigon",
+					"title": "Abstract",
+					"description": "A livestream performance of my master's thesis, on public health communication. (Emoji designed by OpenMoji. License: CC BY-SA 4.0)",
+					"icon": "./assets/images/homepageIcons/homepage-icon-abstract.svg",
+					"iconAlt": "'Abstract' logo: sparkle emoji.",
+					"projectPagePath": "/projects/abstract",
 					"links": [
 						{
 							"isInternalLink": false,
+							"id": "highlights0101",
+							"text": "'Abstract' Video on Vimeo",
+							"path": "https://vimeo.com/410859161",
+							"icon": "video"
+						},
+						{
+							"isInternalLink": false,
 							"id": "highlights0102",
-							"text": "'10 Days' Trailer on Facebook",
-							"icon": "video",
-							"path": "https://www.facebook.com/wearemuui/videos/1834490626823232/"
+							"text": "'Abstact' interactive script (note: a11y issues)",
+							"path": "https://abstract-prod.herokuapp.com/",
+							"icon": "website"
 						},
 						{
 							"isInternalLink": false,
 							"id": "highlights0103",
-							"text": "'10 Days' Google Map",
-							"icon": "map",
-							"path": "https://www.google.com/maps/d/viewer?mid=1msCQD_ab_Lz6mLz80wyu1qHXCBk&hl=en_US&ll=10.798291852220926%2C106.67387433398437&z=13"
-						},
-						{
-							"isInternalLink": false,
-							"id": "highlights0104",
-							"text": "'10 Days' Article",
-							"icon": "website",
-							"path": "https://www.giantrobot.media/stories/2017/5/30/muui"
+							"text": "'Abstract' script as a published Google Doc",
+							"path": "https://docs.google.com/document/d/e/2PACX-1vR1ranb_nwblA8zJu8qqIkMSsS3PeQpSzXukuC5iEf6QTEI_ValdQZvYyTiMu_3nPS5ezJmMiT1mW9n/pub",
+							"icon": "document"
 						}
 					]
 				},
@@ -356,6 +356,37 @@ class HomePage extends Component {
 				"projects": [
 					{
 						"id": "video01",
+						"title": "10 Days in Saigon",
+						"description": "A 10-week web series documenting wheelchair travel in Ho Chi Minh City, Vietnam.",
+						"icon": "./assets/images/homepageIcons/homepage-icon-saigon.svg",
+						"iconAlt": "'10 Days' logo: three overlayed Accessible Icons, suggesting fast forward movement.",
+						"projectPagePath": "/projects/saigon",
+						"links": [
+							{
+								"isInternalLink": false,
+								"id": "highlights0102",
+								"text": "'10 Days' Trailer on Facebook",
+								"icon": "video",
+								"path": "https://www.facebook.com/wearemuui/videos/1834490626823232/"
+							},
+							{
+								"isInternalLink": false,
+								"id": "highlights0103",
+								"text": "'10 Days' Google Map",
+								"icon": "map",
+								"path": "https://www.google.com/maps/d/viewer?mid=1msCQD_ab_Lz6mLz80wyu1qHXCBk&hl=en_US&ll=10.798291852220926%2C106.67387433398437&z=13"
+							},
+							{
+								"isInternalLink": false,
+								"id": "highlights0104",
+								"text": "'10 Days' Article",
+								"icon": "website",
+								"path": "https://www.giantrobot.media/stories/2017/5/30/muui"
+							}
+						]
+					},
+					{
+						"id": "video02",
 						"title": "Spanish Community Center (SCC) Promo Video",
 						"icon": "./assets/images/homepageIcons/homepage-icon-joliet.svg",
 						"iconAlt": "",
@@ -567,7 +598,7 @@ class HomePage extends Component {
 					<HomepageProjectsSection
 						id={ this.projectData.highlightsSection.id }
 						float={ this.props.responsiveFloat }	
-						title="Key Projects"
+						title="Highlights"
 						isMobile={ this.props.isMobileView }
 						projects={ this.projectData.highlightsSection.projects }
 						colorSchemeSuffix={ this.props.colorSchemeSuffix }

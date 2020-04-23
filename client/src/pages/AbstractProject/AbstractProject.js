@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "./HerProject.css";
+import "./AbstractProject.css";
 import HomepageProjectLinksContainer from '../../components/HomepageProjectLinksContainer';
 import SamePageNavBar from '../../components/SamePageNavBar';
 import SamePageNavBarMobile from '../../components/SamePageNavBarMobile';
@@ -7,7 +7,7 @@ import ProjectPageMainSections from '../../components/ProjectPageMainSections';
 import ProjectHeader from '../../components/ProjectHeader'
 
 
-class HerProject extends Component {
+class AbstractProject extends Component {
 	state = {
 		colorSchemeSuffix: "default",
 		fontSizeLevel: 1,
@@ -19,49 +19,68 @@ class HerProject extends Component {
 	}
 
 	projectInfo = {
-		title: "HER Communication",
+		title: "Abstract",
 		synopsis:{
-			mediaType: "photo",
-			blurb: "A do-it-together publication of health equity.",
+			mediaType: "video",
+			blurb: "A representation of my thesis in comparative media studies.",
 			embed: {
-				src: "../assets/images/projectPhotos/her.png",
-				alt: "Health Equity Rituals Communication"
+				url: "https://player.vimeo.com/video/410859161",
+				title: "Abstract"
 			},
-			year: "2019, ongoing",
+			year: "2020",
 			specs: [
 				{
-					id: "herSpecs01",
-					lead: "Components",
-					body: "Workshops and submitted pieces"
+					id: "abstractSpecs01",
+					lead: "Techniques",
+					body: "livestream, web design, live performance"
+				},
+				{
+					id: "abstractSpecs02",
+					lead: "Length",
+					body: "45 min. 19 sec."
 				}
 			]
 		},
 		highlights: [
 			{
-				id: "herHighlights01",
+				id: "abstractHighlights01",
 				lead: "Lessons learned",
-				body: "It's been great to see how excited people are about this project. I can't wait to see more pieces of this in action."
+				body: "This project was a lot of fun! That in itself was a lesson for me. It encouraged me to keep tryng to use arts and livestreaming for community engagement with public health researchers."
 			}
 		],
 		overview: [
 			{
-				id: "herOverview01",
+				id: "abstractOverview01",
 				lead: "Background",
-				body: "This project began as part of the preparation for my master's thesis in Comparative Media Studies at MIT. I was interested in how I could help bring under-represented concerns, questions, and ideas of into research universities. Beyond that, I was interested in how I might be able to prompt more researchers to learn from these voices."
+				body: "I originally planned for a version of this performance as an in-person performance. However, this ended up taking place during the coronavirus pandemic. I still wanted to see how I could bring this performance online. I still wanted my thesis presentation to be surprising, fun, and interactive."
 			},
 			{
-				id: "herOverview02",
+				id: "abstractOverview02",
 				lead: "Process",
-				body: "Right now, I am the editor of this online publication. I run workshops to imagine futures of health equity and look for submissions from artists and writers of all walks of life."
+				body: `Honestly, this process was a bit of a mess. I had the idea for short "plays" illustrating short lessons from my thesis. Most of those did not transfer well to an online setting. But, the livestream setting opened up new possibilities for using photos, videos, and other websites. I looked to Twitch streamers for inspiration and came up with this format pretty last-minute.`
 			}
 		],
 		"links": [
 			{
 				"isInternalLink": false,
-				"id": "her01",
-				"text": "'HER Communication' Zine-Journal",
-				"path": "https://hercommunication.pubpub.org",
+				"id": "abstractLink01",
+				"text": "'Abstract' Video on Vimeo",
+				"path": "https://vimeo.com/410859161",
+				"icon": "video"
+			},
+			{
+				"isInternalLink": false,
+				"id": "abstractLink02",
+				"text": "'Abstact' interactive script (note: a11y issues)",
+				"path": "https://abstract-prod.herokuapp.com/",
 				"icon": "website"
+			},
+			{
+				"isInternalLink": false,
+				"id": "abstractLink03",
+				"text": "'Abstract' script as a published Google Doc",
+				"path": "https://docs.google.com/document/d/e/2PACX-1vR1ranb_nwblA8zJu8qqIkMSsS3PeQpSzXukuC5iEf6QTEI_ValdQZvYyTiMu_3nPS5ezJmMiT1mW9n/pub",
+				"icon": "document"
 			}
 		]
 		
@@ -74,7 +93,7 @@ class HerProject extends Component {
 	herOverviewSectionRef = React.createRef();
 
 	componentDidMount() {
-		document.title = "HER Communication Project Page";
+		document.title = "Abstract Project Page";
 	};
 	
 	handleButtonClick = event => {
@@ -141,4 +160,4 @@ class HerProject extends Component {
   	}
 }
 
-export default HerProject;
+export default AbstractProject;

@@ -7,6 +7,7 @@ import MenuBar from '../../components/MenuBar';
 import MenuBarMobile from '../../components/MenuBarMobile';
 import NewPageNavBar from '../../components/NewPageNavBar';
 import NewPageNavBarMobile from '../../components/NewPageNavBarMobile';
+import AbstractProject from "../../pages/AbstractProject";
 import AfterProject from "../../pages/AfterProject";
 import BodegaProject from "../../pages/BodegaProject";
 import BreakfastProject from "../../pages/BreakfastProject";
@@ -86,6 +87,18 @@ class ProjectsPageSkeleton extends Component {
 							<GenericFloatingSection
 								colorSchemeSuffix={ this.props.colorSchemeSuffix }
 							>
+								<Route exact path='/projects/abstract' render={props => (
+									<AbstractProject
+										colorSchemeNameRoot="artProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.props.colorSchemeSuffix }
+										doNotTrack={ this.props.doNotTrack }
+										fontSizeLevel={ this.props.fontSizeLevel }
+										isMobileView={ this.props.isMobileView }
+										materialIconFill={ this.props.materialIconFill }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
+										responsiveWidth={ this.props.responsiveWidth }
+									/>
+								)}/>
 								<Route exact path='/projects/after' render={props => (
 									<AfterProject
 										colorSchemeNameRoot="filmProjectPage-color-scheme-"
