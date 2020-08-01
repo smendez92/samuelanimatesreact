@@ -13,11 +13,11 @@ const Footer = props => (
 			</p>
 			<h3 className="font-size-p9em padding-top-p25em">Privacy</h3>
 			<p>
-				If this site detects a "Do Not Track" request from your browser, iframes from external sources will not load unless you opt in via button input. Such content includes: embedded maps from Google, embedded videos from Facebook and Vimeo. I do not use Google Analytics or any other activity monitoring tools.
+				If this site detects a "Do Not Track" request from your browser, iframes from external sources will not load unless you opt in via button input. Such content includes: embedded maps from Google, embedded videos from Facebook and Vimeo. I do not use Google Analytics or any other activity monitoring tools. (Note I do not currently check for a Do Not Track setting in Internet Explorer 10 and earlier.)
 			</p>
 			<h3 className="font-size-p9em padding-top-p25em">Credits & Code</h3>
 			<div>
-				I designed and coded this portfolio using React, Express, and Node. I used an example from Dave Ceddia to create my express server. I used an example from Corbin Davenport to check for Do Not Track requests across multiple browsers. Note I do not currently check for a Do Not Track setting in Internet Explorer 10 and earlier. Feel free to check out &nbsp;
+				I designed and coded this portfolio using React, Express, and Node. I used an example from Dave Ceddia to create my express server. I used an example from Corbin Davenport to check for Do Not Track requests across multiple browsers. Feel free to check out &nbsp;
 				<LinkContainerWithGenericIcon
 					materialIconFill={ props.materialIconFill }
 				>

@@ -1,83 +1,168 @@
 import React, { Component } from 'react';
 import "./MediaProject.css";
-import HomepageProjectLinksContainer from '../../components/HomepageProjectLinksContainer';
+import GenericFloatingSection from '../../components/GenericFloatingSection';
+import MediaItem from '../../components/MediaItem';
 import SamePageNavBar from '../../components/SamePageNavBar';
 import SamePageNavBarMobile from '../../components/SamePageNavBarMobile';
 import ProjectPageMainSections from '../../components/ProjectPageMainSections';
 import ProjectHeader from '../../components/ProjectHeader';
+import WritingItem from '../../components/WritingItem';
 
 class MediaProject extends Component {
+	state = {
+		colorSchemeSuffix: "default",
+		fontSizeLevel: 1,
+		isMobileView: true,
+		mainPaddingLeftClassName: "padding-left-0em",
+		responsiveFloat:"none",
+		responsiveWidth:"50%",
+		navbarLinks: [{title:"Synopsis", id:"navBarLinkSynopsis"},{title:"Highlights", id:"navBarLinkHighlights"},{title:"Overview", id:"navBarLinkOverview"}]
+	}
+
 	projectInfo = {
-		title: "Social Media Use by Community-based Organizations (CBOs)",
+		title: "Writings",
 		synopsis:{
 			mediaType: "photo",
-			blurb: "A content analysis of CBOs social media posts.",
+			blurb: "A mix of research articles, interviews, and reviews.",
 			embed: {
-				src: "../assets/images/projectPhotos/media.png",
-				alt: "An illustration highlighting the one-way nature of social media communication we found."
+				src: "../assets/images/projectPhotos/writing.svg",
+				alt: "A close-up of typed notes on index cards. The top card reads, 'These cards are just for you. Feel free to tell the rest of the audience whatever you think they should know, but don't let anyone else see these. NEXT CARD.'"
 			},
-			year: "2013",
-			specs: [
-				{
-					id: "mediaSpecs01",
-					lead: "Role",
-					body: "Co-author, data collection, & codebook design."
-				}
-			]
+			year: "2013 to present",
+			specs: []
 		},
 		highlights: [
 			{
-				id: "mediaHighlights01",
-				lead: "Key Finding",
-				body: "CBOs in our study used social media to push promotional information. This one-way pattern resembled that of a  newsletter or a static website."
+				id: "writingHighlights01",
+				lead: "Goal",
+				body: "I write to share my work with different audiences. Sometimes I write to share my research with other academics. Sometimes I write for other artists."
 			},
 			{
-				id: "mediaHighlights02",
-				lead: "Citation",
-				body: "Ramanadhan S, Mendez SR, Rao M, Viswanath K. Social media use by community-based organizations conducting health promotion: a content analysis. BMC Public Health. 2013;13(1). doi:10.1186/1471-2458-13-1129."
+				id: "writingHighlights02",
+				lead: "Outcome",
+				body: "So far I've published my work in academic journals and arts websites."
 			}
 		],
 		overview: [
 			{
-				id: "mediaOverview01",
-				lead: "Background",
-				body: "Many community-based  organizations (CBOs) help deliver programs that promote public health. They have a lot of influence because of their relationships with local communities and stakeholders. They  may be able to use social media build and  maintain these relationships. Yet, there is a lack of data describing if and how CBOs use social media. This study looks at how CBOs doing health promotion use popular social media. What content do they share? What, if any, interactive social media tools do they use?"
-			},
-			{
-				id: "mediaOverview02",
-				lead: "Methods",
-				body: "We looked at the social media profiles of CBOs doing health promotion in three MA cities. We focused on Facebook,  Twitter, and YouTube. We used content analysis techniques to  quantitatively summarize social media content. For each organization, we coded all content put forth on the three channels in a 30-day window."
-			},
-			{
-				id: "mediaOverview03",
-				lead: "Results",
-				body: "We included a total of 166 organizations in our study. We found that 42% of organizations used at least one of the three channels we focused on. Self-promotion was the most common  theme for content. This accounted for 66% of posts, 63% of tweets, and 93% of videos. Most organizations updated Facebook and Twitter content at rates close to industry-recommended frequencies. We found limited interaction with audience members."
-			},
-			{
-				id: "mediaOverview04",
-				lead: "Conclusions",
-				body: " Much of the CBO social media use seemed to be a one-way flow  of information to the audience. There is room for these  organizations to increase interaction and user engagement. CBOs can reap greater benefits from their time using social media. Future research should look at some of the factors that might affect social media use patterns."
+				id: "writingOverview02",
+				lead: "Process",
+				body: "Honestly, writing is still a painful process for me. But it's getting better every time I try. I try to get feedback early and often. Sometimes that works better than others. I outline heavily and slowly fill it in. I constantly move paragraphs around. I switch between structural edits and changes in wording. At the and I try to simplify my language as best I can. Sometimes that works better than others."
 			}
-		],
-		links: [
-			{
-				"id": "health0302",
-				"isInternalLink": false,
-				"text": "Research Article on BMC Public Health",
-				"icon": "website",
-				"path": "https://bmcpublichealth.biomedcentral.com/articles/10.1186/1471-2458-13-1129"
-			}
-		]	
-  }
-  
-  mediaNavbarLinks = [{title:"Synopsis", id:"mediaNavBarLinkSynopsis"},{title:"Highlights", id:"mediaNavBarLinkHighlights"},{title:"Overview", id:"mediaNavBarLinkOverview"}];
-	mediaSynopsisSectionRef = React.createRef();
-	mediaHighlightsSectionRef = React.createRef();
-	mediaNavbarRef = React.createRef();
-	mediaOverviewSectionRef = React.createRef();
+		]		
+	}
+
+	mediaList = [
+		{
+			authors: "Staats D",
+			id: "mediaList01",
+			lede: "Podcast interview about my UNFUNDABLE board game",
+			link: "https://player.fm/series/board-gaming-with-education/episode-97-designing-a-game-for-academic-application-and-appealing-to-a-game-hobbyists-feat-sam-mendez",
+			publisher: "Board Gaming with Education",
+			title: "Designing a Game for Academic Application and Appealing to Game Hobbyists",
+			year: "2020"
+		},
+		{
+			authors: "Robinson R",
+			id: "mediaList02",
+			lede: `Magazine coverage about "10 Days in Saigon"`,
+			link: "https://www.giantrobot.media/stories/2017/5/30/muui",
+			publisher: "Giant Robot Media",
+			title: "Wanderlust in a Wheelchair: How Muui is Changing Travel for the Disabled",
+			year: "2017"
+		}
+
+	]
+
+	writingsListArtsTech = [
+		{
+			authors: "Narain J,	Ananthabhotla I, Mendez SR,	Taylor C, Siu HC, Brugnaro L, Mallozzi A",
+			id: "writingsList08",
+			lede: "Assistve Technology Hackathon",
+			link: "https://chi2020.acm.org/",
+			publisher: "Poster presented at: ACM CHI Conference on Human Factors in Computing Systems",
+			title: "ATHack: Co-Design and Education in Assistive Technology Development",
+			year: "2020"
+		},
+		{
+			authors: "Mendez SR",
+			id: "writingsList07",
+			lede: "Climate Change VR",
+			link: "https://www.indiewire.com/2020/02/sundance-2020-vr-climate-change-1202208386/",
+			publisher: "IndieWire",
+			title: "Sundance VR Tackled Climate Change With Groundbreaking New Projects",
+			year: "2020"
+		},
+		{
+			authors: "Mendez SR",
+			id: "writingsList06",
+			lede: "Intersectional Hackathon",
+			link: "https://immerse.news/building-irreverent-and-intersectional-futures-7b8401185683",
+			publisher: "Immerse",
+			title: "Building Irreverent and Intersectional Futures: Design justice and co-creation in the ‘Make the Breast Pump Not Suck’ Hackathon",
+			year: "2019"
+		},
+		{
+			authors: "Mendez SR",
+			id: "writingsList04",
+			lede: "Disability & VR",
+			link: "https://immerse.news/four-feet-blind-date-bde31a7d06d",
+			publisher: "Immerse",
+			title: "Doing Inclusion, Making Strong VR Experiences",
+			year: "2019"
+		},
+		{
+			authors: "Mendez SR",
+			id: "writingsList03",
+			lede: "Participatory VR",
+			link: "https://www.indiewire.com/2019/02/sundance-new-frontiers-2019-vr-mechanical-souls-1202042700/",
+			publisher: "IndieWire",
+			title: "Sundance VR: The 2019 Festival Showed That the Future Is Not Passive Viewing",
+			year: "2019"
+		}
+
+	]
+
+	writingsListHealth = [
+		{
+			authors: "Linton A, Mendez SR, Simon MA",
+			id: "writingsList06",
+			lede: "Abortion Referrals",
+			link: "https://doi.org/10.1016/j.contraception.2019.10.009",
+			publisher: "Contraception. 101(2): 132-136",
+			title: "Abortion referral patterns among generalist OB/GYNs and primary care practitioners: A qualitative study",
+			year: "2020"
+		},
+		{
+			authors: "Mendez SR, Linton A, Tom L, & Simon M",
+			id: "writingsList02",
+			lede: "Planned Parenthood",
+			link: "https://doi.org/10.15761/FWH.1000153",
+			publisher: "Frontiers in Women's Health",
+			title: `"The only place I know that I can send patients to": Chicago-area generalist providers’ perceptions of Planned Parenthood `,
+			year: "2018"
+		},
+		{
+			authors: "Ramanadhan S, Mendez SR, Rao M, & Viswanath K",
+			id: "writingsList01",
+			lede: "Social Media & CBOs",
+			link: "https://bmcpublichealth.biomedcentral.com/articles/10.1186/1471-2458-13-1129",
+			publisher: "BMC Public Health",
+			title: "Social media use by community-based organizations conducting health promotion: a content analysis",
+			year: "2013"
+		}
+
+	]
+
+	writingNavbarLinks = [{title:"Synopsis", id:"writingNavBarLinkSynopsis"},{title:"Highlights", id:"writingNavBarLinkHighlights"},{title:"Overview", id:"writingNavBarLinkOverview"},{title:"The Writings", id:"writingNavBarLinkWritingsContainer"}];
+	writingSynopsisSectionRef = React.createRef();
+	writingHighlightsSectionRef = React.createRef();
+	writingNavbarRef = React.createRef();
+	writingOverviewSectionRef = React.createRef();
+	writingMediaContainerRef = React.createRef();
 
 	componentDidMount() {
-		document.title = "Social Meda Study Page";
+		document.title = "Writing Projects Page";
 	};
 	
 	handleButtonClick = event => {
@@ -87,17 +172,21 @@ class MediaProject extends Component {
 		};
 	}
 	handleNavLinkClick = event => {
-		if(event.target.attributes.getNamedItem("buttonId").value === "mediaNavBarLinkSynopsis"){
-			this.mediaSynopsisSectionRef.current.scrollIntoView();
-			this.mediaSynopsisSectionRef.current.focus();
+		if(event.target.attributes.getNamedItem("buttonId").value === "writingNavBarLinkSynopsis"){
+			this.writingSynopsisSectionRef.current.scrollIntoView();
+			this.writingSynopsisSectionRef.current.focus();
 		};
-		if(event.target.attributes.getNamedItem("buttonId").value === "mediaNavBarLinkHighlights"){
-			this.mediaHighlightsSectionRef.current.scrollIntoView();
-			this.mediaHighlightsSectionRef.current.focus();
+		if(event.target.attributes.getNamedItem("buttonId").value === "writingNavBarLinkHighlights"){
+			this.writingHighlightsSectionRef.current.scrollIntoView();
+			this.writingHighlightsSectionRef.current.focus();
 		};
-		if(event.target.attributes.getNamedItem("buttonId").value === "mediaNavBarLinkOverview"){
-			this.mediaOverviewSectionRef.current.scrollIntoView();
-			this.mediaOverviewSectionRef.current.focus();
+		if(event.target.attributes.getNamedItem("buttonId").value === "writingNavBarLinkOverview"){
+			this.writingOverviewSectionRef.current.scrollIntoView();
+			this.writingOverviewSectionRef.current.focus();
+		};
+		if(event.target.attributes.getNamedItem("buttonId").value === "writingNavBarLinkWritingsContainer"){
+			this.writingMediaContainerRef.current.scrollIntoView();
+			this.writingMediaContainerRef.current.focus();
 		};
 	}
 
@@ -109,7 +198,7 @@ class MediaProject extends Component {
 						<SamePageNavBar
 							colorSchemeSuffix={ this.props.colorSchemeSuffix }
 							handleNavLinkClick={ this.handleNavLinkClick }
-							navbarLinks={ this.mediaNavbarLinks }
+							navbarLinks={ this.writingNavbarLinks }
 						/>	
 					</div>
 				}
@@ -119,25 +208,93 @@ class MediaProject extends Component {
 						<SamePageNavBarMobile
 							colorSchemeSuffix={ this.props.colorSchemeSuffix }
 							handleNavLinkClick={ this.handleNavLinkClick }
-							navbarLinks={ this.mediaNavbarLinks }
+							navbarLinks={ this.writingNavbarLinks }
 						/>
 					</div>
 				}
-				<ProjectPageMainSections
-					colorSchemeSuffix={ this.props.colorSchemeSuffix }
-					float={ this.props.responsiveFloat }
-					isMobile={ this.props.isMobileView }
-					width={ this.props.responsiveWidth }
-					highlightsSectionRef={ this.mediaHighlightsSectionRef }
-					projectInfo={ this.projectInfo }
-					overviewSectionRef={ this.mediaOverviewSectionRef }
-					synopsisSectionRef={ this.mediaSynopsisSectionRef }
-				/>
-				<HomepageProjectLinksContainer
-					links={ this.projectInfo.links }
-					colorSchemeSuffix={ this.props.colorSchemeSuffix }
-					materialIconFill={ this.props.materialIconFill }
-				/>
+				<div className="display-flex flex-direction-column">
+					<ProjectPageMainSections
+						colorSchemeSuffix={ this.props.colorSchemeSuffix }
+						doNotTrack={ this.props.doNotTrack }
+						float={ this.props.responsiveFloat }
+						isMobile={ this.props.isMobileView }
+						width={ this.props.responsiveWidth }
+						highlightsSectionRef={ this.writingHighlightsSectionRef }
+						projectInfo={ this.projectInfo }
+						overviewSectionRef={ this.writingOverviewSectionRef }
+						synopsisSectionRef={ this.writingSynopsisSectionRef }
+					/>
+					<div className="margin-auto width-100pc">
+						<div className="padding-left-p5em padding-right-p5em">
+							<GenericFloatingSection colorSchemeSuffix={ this.props.colorSchemeSuffix }>
+								<div className={ "color-inherit paddng-bottom-1em paddng-left-1em paddng-right-1em paddng-top-1em text-center mediaProjectPageOverview-color-scheme-" + this.props.colorSchemeSuffix }> 
+									<div>
+										<h2 tabIndex="0" ref={ this.MediaContainerRef }>The Media!</h2>
+									</div>
+									<div className="padding-bottom-p5em padding-top-p5em text-left">
+										<div className="display-flex flex-direction-column padding-bottom-p25em padding-left-p5em padding-right-p5em padding-top-p25em">
+										<h3 className=" padding-top-p5em text-center">Media Coverage</h3>
+											<ul className="list-style-type-none list-style-position-outside padding-left-1em padding-bottom-1em">
+											{ this.mediaList.map(media =>
+												<li className="padding-bottom-p25em padding-top-p25em text-indent-neg1p7em">
+													<MediaItem
+														authors={ media.authors }
+														colorSchemeSuffix={ this.props.colorSchemeSuffix }
+														key={ media.id }
+														lede={ media.lede }
+														link={ media.link }
+														materialIconFill={this.props.materialIconFill}
+														publisher={ media.publisher }
+														title={ media.title }
+														year={ media.year }
+													/>
+												</li>
+											)}
+											</ul>
+											<h3 className=" padding-top-p5em text-center">Writing: Arts & Tech</h3>
+											<ul className="list-style-type-none list-style-position-outside padding-left-1em padding-bottom-1em">
+											{ this.writingsListArtsTech.map(writing =>
+												<li className="padding-bottom-p25em padding-top-p25em text-indent-neg1p7em">
+													<WritingItem
+														authors={ writing.authors }
+														colorSchemeSuffix={ this.props.colorSchemeSuffix }
+														key={ writing.id }
+														lede={ writing.lede }
+														link={ writing.link }
+														materialIconFill={this.props.materialIconFill}
+														publisher={ writing.publisher }
+														title={ writing.title }
+														year={ writing.year }
+													/>
+												</li>
+											)}
+											</ul>
+											<h3 className="padding-top-p5em text-center">Writing: Health</h3>
+											<ul className="list-style-type-none padding-left-1em">
+											{ this.writingsListHealth.map(writing =>
+												<li className="padding-bottom-p25em padding-top-p25em text-indent-neg1p7em">
+													<WritingItem
+														authors={ writing.authors }
+														colorSchemeSuffix={ this.props.colorSchemeSuffix }
+														key={ writing.id }
+														lede={ writing.lede }
+														link={ writing.link }
+														materialIconFill={this.props.materialIconFill}
+														publisher={ writing.publisher }
+														title={ writing.title }
+														year={ writing.year }
+													/>
+												</li>
+											)}
+											</ul>
+										</div>
+									</div>
+								</div>
+							</GenericFloatingSection>
+						</div>
+					</div>
+						
+				</div>				
 			</div>
 		);
   	}

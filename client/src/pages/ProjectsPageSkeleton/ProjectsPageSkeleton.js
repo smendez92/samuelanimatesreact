@@ -18,6 +18,7 @@ import HerProject from "../../pages/HerProject";
 import HernandezProject from "../../pages/HernandezProject";
 import JolietProject from "../../pages/JolietProject";
 import LmhtfProject from "../../pages/LmhtfProject";
+import MediaProject from "../../pages/MediaProject";
 import PlaysProject from "../../pages/PlaysProject";
 import SaigonProject from "../../pages/SaigonProject";
 import TarotProject from "../../pages/TarotProject";
@@ -25,7 +26,6 @@ import UnfundableProject from "../../pages/UnfundableProject";
 import WalksProject from "../../pages/WalksProject";
 import WhyuProject from "../../pages/WhyuProject";
 import WikiProject from "../../pages/WikiProject";
-import WritingProject from "../../pages/WritingProject";
 
 class ProjectsPageSkeleton extends Component {
 
@@ -218,6 +218,18 @@ class ProjectsPageSkeleton extends Component {
 										responsiveWidth={ this.props.responsiveWidth }
 									/>
 								)}/>
+								<Route exact path='/projects/media' render={props => (
+									<MediaProject
+										colorSchemeNameRoot="eduProjectPage-color-scheme-"
+										colorSchemeSuffix={ this.props.colorSchemeSuffix }
+										doNotTrack={ this.props.doNotTrack }
+										fontSizeLevel={ this.props.fontSizeLevel }
+										isMobileView={ this.props.isMobileView }
+										materialIconFill={ this.props.materialIconFill }
+										responsiveFlexEnding={ this.props.responsiveFlexEnding }
+										responsiveWidth={ this.props.responsiveWidth }
+									/>
+								)}/>
 								<Route exact path='/projects/plays' render={props => (
 									<PlaysProject
 										colorSchemeNameRoot="artProjectPage-color-scheme-"
@@ -292,18 +304,6 @@ class ProjectsPageSkeleton extends Component {
 								<Route exact path='/projects/wiki' render={props => (
 									<WikiProject
 										colorSchemeNameRoot="webProjectPage-color-scheme-"
-										colorSchemeSuffix={ this.props.colorSchemeSuffix }
-										doNotTrack={ this.props.doNotTrack }
-										fontSizeLevel={ this.props.fontSizeLevel }
-										isMobileView={ this.props.isMobileView }
-										materialIconFill={ this.props.materialIconFill }
-										responsiveFlexEnding={ this.props.responsiveFlexEnding }
-										responsiveWidth={ this.props.responsiveWidth }
-									/>
-								)}/>
-								<Route exact path='/projects/writing' render={props => (
-									<WritingProject
-										colorSchemeNameRoot="eduProjectPage-color-scheme-"
 										colorSchemeSuffix={ this.props.colorSchemeSuffix }
 										doNotTrack={ this.props.doNotTrack }
 										fontSizeLevel={ this.props.fontSizeLevel }

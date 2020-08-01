@@ -3,7 +3,7 @@ import './HomePage.css';
 import Footer from '../../components/Footer';
 import HomepageAboutMeSection from '../../components/HomepageAboutMeSection';
 import HomepageProjectsSection from '../../components/HomepageProjectsSection';
-import HomepageWritingSection from '../../components/HomepageWritingSection';
+import HomepageMediaSection from '../../components/HomepageMediaSection';
 import MenuBar from '../../components/MenuBar';
 import MenuBarMobile from '../../components/MenuBarMobile';
 import SamePageNavBar from '../../components/SamePageNavBar';
@@ -15,7 +15,7 @@ class HomePage extends Component {
 	state = { 
 		navbarClassName: "margin-auto margin-bottom-2em",
 		navbarLinksClassName: "float-left font-size-p85em padding-left-0 text-center",
-		navbarLinks: [{title:"About", id:"navBarLinkAbout"},{title:"Highlights", id:"navBarLinkHighlights"},{title:"Writing", id:"navBarLinkWriting"},{title:"Animation", id:"navBarLinkAnimation"},{title:"Edu", id:"navBarLinkEdu"},{title:"Web", id:"navBarLinkWeb"},{title:"Video", id:"navBarLinkVideo"},{title:"Art", id:"navBarLinkArt"}]
+		navbarLinks: [{title:"About", id:"navBarLinkAbout"},{title:"Highlights", id:"navBarLinkHighlights"},{title:"Media", id:"navBarLinkMedia"},{title:"Animation", id:"navBarLinkAnimation"},{title:"Edu", id:"navBarLinkEdu"},{title:"Web", id:"navBarLinkWeb"},{title:"Video", id:"navBarLinkVideo"},{title:"Art", id:"navBarLinkArt"}]
 	};
 
 	projectData = { 
@@ -151,38 +151,38 @@ class HomePage extends Component {
 				
 			]
 		},
-		writingSection:{
+		mediaSection:{
 			paragraphs: [
 				{	
-					id: "writingParagraph01",
+					id: "mediaParagraph01",
+					lead: "Podcast Interview",
+					includesLink: true,
+					body: [
+						{
+							preLinkText: "2020. Board Gaming with Education",
+							linkIsInternalLink: false,
+							linkText: `"Designing a Game for Academic Application and Appealing to Game Hobbyists"`,
+							linkUrl: "https://player.fm/series/board-gaming-with-education/episode-97-designing-a-game-for-academic-application-and-appealing-to-a-game-hobbyists-feat-sam-mendez",
+							postLinkText: ".",
+						}
+					]
+				},
+				{	
+					id: "mediaParagraph02",
 					lead: "Sundance VR",
 					includesLink: true,
 					body: [
 						{
-							preLinkText: "2019. IndieWire.",
+							preLinkText: "2020. IndieWire.",
 							linkIsInternalLink: false,
-							linkText: `"Sundance VR: The 2019 Festival Showed That the Future Is Not Passive Viewing"`,
-							linkUrl: "https://www.indiewire.com/2019/02/sundance-new-frontiers-2019-vr-mechanical-souls-1202042700/",
+							linkText: `"Sundance VR Tackled Climate Change With Groundbreaking New Projects"`,
+							linkUrl: "https://www.indiewire.com/2020/02/sundance-2020-vr-climate-change-1202208386/",
 							postLinkText: ".",
 						}
 					]
 				},
 				{	
-					id: "writingParagraph02",
-					lead: "Planned Parenthood",
-					includesLink: true,
-					body: [
-						{
-							preLinkText: "2018. Frontiers in Women's Health.",
-							linkIsInternalLink: false,
-							linkText: `"The only place I know that I can send patients to": Chicago-area generalist providers’ perceptions of Planned Parenthood`,
-							linkUrl: "https://www.oatext.com/the-only-place-i-know-that-i-can-send-patients-to-chicago-area-generalist-providers-perceptions-of-planned-parenthood.php",
-							postLinkText: ".",
-						}
-					]
-				},
-				{	
-					id: "writingParagraph03",
+					id: "mediaParagraph03",
 					lead: "Social Media",
 					includesLink: true,
 					body: [
@@ -490,7 +490,7 @@ class HomePage extends Component {
 	
 	aboutSectionRef = React.createRef();
 	highlightsSectionRef = React.createRef();
-	writingSectionRef = React.createRef();
+	mediaSectionRef = React.createRef();
 	navbarRef = React.createRef();
 	animationSectionRef = React.createRef();
 	eduSectionRef = React.createRef();
@@ -520,9 +520,9 @@ class HomePage extends Component {
 			this.highlightsSectionRef.current.scrollIntoView();
 			this.highlightsSectionRef.current.focus();
 		};
-		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkWriting"){
-			this.writingSectionRef.current.scrollIntoView();
-			this.writingSectionRef.current.focus();
+		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkMedia"){
+			this.mediaSectionRef.current.scrollIntoView();
+			this.mediaSectionRef.current.focus();
 		};
 		if(event.target.attributes.getNamedItem("buttonId").value === "navBarLinkAnimation"){
 			this.animationSectionRef.current.scrollIntoView();
@@ -605,11 +605,11 @@ class HomePage extends Component {
 						materialIconFill={ this.props.materialIconFill }
 						ref={ this.highlightsSectionRef }
 					/>
-					<HomepageWritingSection
+					<HomepageMediaSection
 						colorSchemeSuffix={ this.props.colorSchemeSuffix }
 						materialIconFill={ this.props.materialIconFill }
-						paragraphs={ this.projectData.writingSection.paragraphs }
-						ref={ this.writingSectionRef }
+						paragraphs={ this.projectData.mediaSection.paragraphs }
+						ref={ this.mediaSectionRef }
 					/>
 					{ this.projectData.projectSections.map((projectSection, index) =>
 						<HomepageProjectsSection

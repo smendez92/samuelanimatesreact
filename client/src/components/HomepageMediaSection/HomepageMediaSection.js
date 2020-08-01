@@ -1,17 +1,18 @@
 import React from "react";
-import "./HomepageWritingSection.css";
+import "./HomepageMediaSection.css";
 import GenericFloatingSection from "../GenericFloatingSection";
 import LinkContainerWithGenericIcon from "../LinkContainerWithGenericIcon"
 import InlineA from "../InlineA";
 import SheerWhiteContainer from '../SheerWhiteContainer';
 
-const HomepageWritingSection = React.forwardRef((props, ref) => (
+const HomepageMediaSection = React.forwardRef((props, ref) => (
 	<GenericFloatingSection colorSchemeSuffix={ props.colorSchemeSuffix }>
-		<div className={ "homepageWritingSection-color-scheme-" + props.colorSchemeSuffix + " color-inherit padding-left-p5em padding-right-p5em"}>
+		<div className={ "homepageMediaSection-color-scheme-" + props.colorSchemeSuffix + " color-inherit padding-left-p5em padding-right-p5em"}>
 			<SheerWhiteContainer colorSchemeSuffix={ props.colorSchemeSuffix }>
-				<h2 tabIndex="0" className="text-center" ref={ ref }>Writing</h2>
+				<h2 tabIndex="0" className="text-center" ref={ ref }>Media</h2>
 			</SheerWhiteContainer>
 			<div className="display-flex flex-direction-column padding-bottom-1em padding-left-p5em padding-right-p5em padding-top-1em">
+				<p>Here's a mix of my writing, co-authored work, and media coverage of my projects:</p>
 				<ul className="list-style-square padding-left-1em">
 				{props.paragraphs.map(paragraph =>
 					<li key={ paragraph.id } className="font-Assistant padding-left-20px padding-right-20px">
@@ -46,8 +47,8 @@ const HomepageWritingSection = React.forwardRef((props, ref) => (
 					<LinkContainerWithGenericIcon>
 						<InlineA
 							isInternalLink={ true }	
-							text={ "See all writings." }
-							urlPath={ "/projects/writing" }
+							text={ "See more media coverage and writing." }
+							urlPath={ "/projects/media" }
 							colorSchemeSuffix ={ props.colorSchemeSuffix }
 						/>
 					</LinkContainerWithGenericIcon>
@@ -58,4 +59,4 @@ const HomepageWritingSection = React.forwardRef((props, ref) => (
 	</GenericFloatingSection>
 ));
 
-export default HomepageWritingSection;
+export default HomepageMediaSection;
